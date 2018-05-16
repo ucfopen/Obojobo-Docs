@@ -1,0 +1,120 @@
+/* your custom css */
+
+.container.paddingTop {
+	padding-top: 0;
+}
+
+.productShowcaseSection.paddingBottom {
+	padding-bottom: 0;
+}
+
+.fixedHeaderContainer header h2 {
+	display: none;
+}
+
+nav.toc .toggleNav .navGroup h3 {
+	color: #efefef;
+	background-color: #145bad;
+	text-align: center;
+}
+
+#github-footer {
+	text-align: center;
+}
+
+#github-footer > * {
+	padding: 0 0.5em;
+	vertical-align: middle;
+}
+
+.mainContainer .wrapper .post h2 {
+	text-align: center;
+	color: #efefef;
+	background-color: #145bad;
+}
+
+.mainContainer .wrapper .post h3 {
+	font-size: 140%;
+	display: inline-block;
+	background-color: #afb3c7;
+	color: white;
+	padding: 0.1em 1em;
+}
+
+.mainContainer .wrapper ul li {
+	margin: 0 0 12px 0;
+	font-size: 15px;
+}
+
+.postHeader {
+	margin-bottom: 0.8em;
+}
+
+.mainContainer .wrapper p,
+.blockElement p,
+.mainContainer .wrapper ul li,
+.mainContainer .wrapper ol li {
+	line-height: 1.7;
+	max-width: 50rem;
+	font-size: 16px;
+}
+
+.mainContainer .wrapper ul {
+	list-style: none;
+}
+
+h4 + ul {
+	font-size: 12px;
+}
+
+h2 {
+	margin-bottom: 0.4em;
+}
+
+.mainContainer .wrapper p,
+.blockElement p {
+	padding: 0;
+}
+
+blockquote {
+	text-align: center;
+}
+
+/* changing list style */
+ol {
+	margin: 0 0 1.5em;
+	padding: 0;
+	counter-reset: item;
+}
+
+ol > li {
+	margin: 0;
+	padding: 0 0 0 2em;
+	text-indent: -2em;
+	list-style-type: none;
+	counter-increment: item;
+}
+
+ol > li:before {
+	display: inline-block;
+	width: 1em;
+	padding-right: 0.9em;
+	font-weight: bold;
+	text-align: right;
+	content: counter(item) '.';
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
