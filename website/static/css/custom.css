@@ -88,6 +88,25 @@ code {
 	box-shadow: 0 0;
 }
 
+@media only screen and (min-width: 1024px) {
+	.onPageNav ul li {
+		word-wrap: break-word;
+	}
+	.doc.separateOnPageNav .docsNavContainer {
+		flex: 0 0 205px;
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 900px) {
+	nav.toc .toggleNav .navGroup h3 {
+		padding-right: 60px;
+	}
+}
+
+.mainContainer .wrapper .post h2 {
+	word-break: break-word;
+}
+
 /* changing list style */
 ol {
 	margin: 0 0 1.5em;
