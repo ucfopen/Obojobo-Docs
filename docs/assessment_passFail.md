@@ -49,4 +49,4 @@ In this example any attempt score under 75% will result in the `no-score` score.
 
 A mod is included in the rubric above - Should the student pass (achieve an Assessment Attempt Score of 75% or higher) on the first attempt they will be rewarded 5 additional points. Mods are only applied on passing scores.
 
-There are several options for `'pass-fail'` rubrics. Several more examples are provided later on in this document, and a full specification is listed in the ObojoboDraft.Sections.Assessment section of the OboNode specification documentation.
+There are several options for `'pass-fail'` rubrics. Several more examples are provided later on in this document, and a full specification is listed in the [**ObojoboDraft.Sections.Assessment**](obo_reference.md#obojobodraftsectionsassessment) section of the [**OboNode specification**](obo_reference.md) documentation.

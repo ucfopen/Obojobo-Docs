@@ -6,7 +6,7 @@ sidebar_label: OboNode Reference
 
 This section defines the current list of nodes and their expected **content** values, expected **children** nodes, **triggers** that they respond to and any **variables** they expose. Unless specified all content values are optional.
 
-## Note on id values in examples:
+## Note on id values in examples
 
 `id`s are required in the JSON format. In cases where the id is not referenced in the examples below they are simply coded as
 
@@ -27,7 +27,7 @@ This **MUST** be the root OboNode of every Obojobo Draft Document.
 
 ### Children
 
-* Expects one or more of **ObojoboDraft.Sections.Content** or **ObojoboDraft.Sections.Assessment**
+* Expects one or more of [**ObojoboDraft.Sections.Content**](obo_reference.md#obojobodraftsectionscontent) or [**ObojoboDraft.Sections.Assessment**](obo_reference.md#obojobodraftsectionsassessment)
 
 ### Variables
 
@@ -69,7 +69,7 @@ The content section is contains one or more pages of material.
 
 ### Children
 
-* Expects one or more of **ObojoboDraft.Pages.Page**
+* Expects one or more of [**ObojoboDraft.Pages.Page**](obo_reference.md#obojobodraftpagespage)
 
 ### Variables
 
@@ -104,20 +104,20 @@ The Assessment contains one or more questions. Students start the Assessment the
 
 ### Content Values
 
-* `scoreActions` **REQUIRED**: <Array>ScoreAction: This defines one or more landing pages after the student submits their assessment attempt. Students can be sent to different pages based on their highest Assessment Score.
+* `scoreActions` **REQUIRED**: Array<[ScoreAction](obo_reference.md#scoreaction)>: This defines one or more landing pages after the student submits their assessment attempt. Students can be sent to different pages based on their highest Assessment Score.
 * `attempts`: Integer or `"unlimited"` (Default: `"unlimited"`): The number of attempts allowed for this assessment. There is no limit if set to `"unlimited"`.
 * `review`: String (Default: `"never"`): Specifies if a full Assessment Review should be shown after an Assessment Attempt Quiz. One of `"never"`, `"always"` or `"no-attempts-remaining"`. Description of each setting:
   * `"never"`: After each Assessment Attempt Quiz students only see which questions they got correct or incorrect. Students never see their responses or the correct and incorrect answers.
   * `"always"`: After each Assessment Attempt Quiz students can see their responses and the incorrect and correct answers.
   * `"no-attempts-remaining"`: If any attempts remain then review acts equivalent to `"never"`. If no attempts remain then review acts equivalent to `"always"`. This means that students only see their responses and correct and incorrect answers once they have no attempts left.
-* `rubric`: Rubric: Rules that specify how an Assessment Score is calculated from an Attempt Score (See **Assessment Rubric** below)
+* `rubric`: [Rubric](obo_reference.md#assessmentrubric): Rules that specify how an Assessment Score is calculated from an Attempt Score
 
 #### ScoreAction
 
 A ScoreAction object contains two properties: **for** and **page**:
 
 * `for` **REQUIRED**: Range or Integer or `'no-score'`: A range of score values or a single score.
-* `page` **REQUIRED**: Obojobo.Pages.Page: The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
+* `page` **REQUIRED**: [**Obojobo.Pages.Page**](obo_reference.md#obojobopagespage): The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
 
 An example of the structure is shown below:
 
@@ -191,7 +191,7 @@ You must either specify `for` or specify both `from` and `to`. `from` and `to` a
 
 ###### Properties:
 
-* `attemptCondition`: AttemptRange or Integer or `'$last_attempt'`: Specifies for which attempt numbers this mod will be applied towards. `'$last_attempt'` is a variable that will be replaced with the value of the `attempts` property of the ObojoboDraft.Sections.Assessment OboNode.
+* `attemptCondition`: AttemptRange or Integer or `'$last_attempt'`: Specifies for which attempt numbers this mod will be applied towards. `'$last_attempt'` is a variable that will be replaced with the value of the `attempts` property of the **[ObojoboDraft.Sections.Assessment](obo_reference.md#obojobodraftsectionsassessment)** OboNode.
 * `reward`: Integer **REQUIRED**: The reward amount. Positive values are extra credit and negative values or penalties.
 
 A future release may specify additional potential conditions such as a condition based on date/time (`timeCondition`).
@@ -224,8 +224,8 @@ Full syntax: `('(' | '[') + Number + ',' + (Number | '$last_attempt') + (')' | '
 
 Assessment expects exactly two children in order:
 
-1.  **ObojoboDraft.Pages.Page**: The initial page shown when a student first navigates to the assessment. This page should contain a ObojoboDraft.Chunks.ActionButton to start the assessment.
-2.  **ObojoboDraft.Chunks.QuestionBank**: A question bank that contains all the possible questions contained in the Assessment.
+1.  [**ObojoboDraft.Pages.Page**](obo_reference.md#obojobodraftpagespage): The initial page shown when a student first navigates to the assessment. This page should contain a ObojoboDraft.Chunks.ActionButton to start the assessment.
+2.  [**ObojoboDraft.Chunks.QuestionBank**](obo_reference.md#obojobodraftchunksquestionbank): A question bank that contains all the possible questions contained in the Assessment.
 
 ### Variables
 
@@ -371,7 +371,7 @@ A generic "page" - they can be thought of as a page in a online article.
 
 ### Children
 
-* One or more **ObojoboDraft.Chunks.\*** nodes.
+* One or more **[ObojoboDraft.Chunks](obo_reference.md#obojobodraft.chunks)** nodes.
 
 ### Variables
 
@@ -401,7 +401,7 @@ A single block of text similar to a paragraph (`<p>`) tag in HTML.
 
 ### Content Values
 
-* `textGroup` **REQUIRED**: TextGroup: The text to render **(Refer to the "TextGroup" section later in this document for the structure of a TextGroup object)**. Expects 1 or more text items.
+* `textGroup` **REQUIRED**: **[TextGroup](obo_content_reference.md#textgroup)**: Expects 1 or more text items.
 
 ### Children
 
@@ -417,17 +417,17 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Text",
-  "id": "...",
-  "content": {
-    "textGroup": [
-      {
-        "text": {
-          "value": "Hello world!"
-        }
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.Text",
+	"id": "...",
+	"content": {
+		"textGroup": [
+			{
+				"text": {
+					"value": "Hello world!"
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -455,7 +455,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
 ### Content Values
 
-* `textGroup` **REQUIRED**: TextGroup. Expects 1 or more text items.
+* `textGroup` **REQUIRED**: **[TextGroup](obo_content_reference.md#textgroup)**. Expects 1 or more text items.
 * `listStyles`: ListStyles Object: This defines various options on the list - see definition below:
 
 ### Children
@@ -468,6 +468,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
 #### ListStyles
 
+A list style can be optionally specified for a list.
 The ListStyles object has two properties: **`type`** and **`indents`**:
 
 * `type`: String (Default: `'unordered'`): MUST be one of the following values:
@@ -514,19 +515,19 @@ An example is shown below:
 
 ```json
 {
-  "listStyles": {
-    "type": "ordered",
-    "indents": {
-      "2": {
-        "type": "unordered",
-        "bulletStyle": "square"
-      },
-      "4": {
-        "start": 5,
-        "bulletStyle": "upper-roman"
-      }
-    }
-  }
+	"listStyles": {
+		"type": "ordered",
+		"indents": {
+			"2": {
+				"type": "unordered",
+				"bulletStyle": "square"
+			},
+			"4": {
+				"start": 5,
+				"bulletStyle": "upper-roman"
+			}
+		}
+	}
 }
 ```
 
@@ -556,25 +557,25 @@ JSON (Unordered list):
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.List",
-  "id": "...",
-  "content": {
-    "textGroup": [
-      {
-        "text": {
-          "value": "List item 1"
-        }
-      },
-      {
-        "text": {
-          "value": "List item 2"
-        },
-        "data": {
-          "indent": 1
-        }
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.List",
+	"id": "...",
+	"content": {
+		"textGroup": [
+			{
+				"text": {
+					"value": "List item 1"
+				}
+			},
+			{
+				"text": {
+					"value": "List item 2"
+				},
+				"data": {
+					"indent": 1
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -602,28 +603,28 @@ JSON (Ordered list):
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.List",
-  "id": "...",
-  "content": {
-    "listStyles": {
-      "type": "ordered"
-    },
-    "textGroup": [
-      {
-        "text": {
-          "value": "List item 1"
-        }
-      },
-      {
-        "text": {
-          "value": "List item 2"
-        },
-        "data": {
-          "indent": 1
-        }
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.List",
+	"id": "...",
+	"content": {
+		"listStyles": {
+			"type": "ordered"
+		},
+		"textGroup": [
+			{
+				"text": {
+					"value": "List item 1"
+				}
+			},
+			{
+				"text": {
+					"value": "List item 2"
+				},
+				"data": {
+					"indent": 1
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -658,7 +659,7 @@ Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 
 ### Content Values
 
-* `textGroup` **REQUIRED**: TextGroup. Expects 1 text item.
+* `textGroup` **REQUIRED**: **[TextGroup](obo_content_reference.md#textgroup)**. Expects 1 text item.
 * `headingLevel`: Integer (Default: `1`): A value from 1-6 representing the heading level where 1 is the primary heading.
 
 ### Children
@@ -675,18 +676,18 @@ JSON
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Heading",
-  "id": "...",
-  "content": {
-    "headingLevel": 1,
-    "textGroup": [
-      {
-        "text": {
-          "value": "Heading 1"
-        }
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.Heading",
+	"id": "...",
+	"content": {
+		"headingLevel": 1,
+		"textGroup": [
+			{
+				"text": {
+					"value": "Heading 1"
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -710,11 +711,11 @@ OboHTML
 
 ## ObojoboDraft.Chunks.Code
 
-This chunk is fundamentally identical to the **ObojoboDraft.Chunks.Text** node except the styling of the rendered output is mono-spaced.
+This chunk is fundamentally identical to the **[ObojoboDraft.Chunks.Text](obo_reference.md#obojobodraftchunkstext)** node except the styling of the rendered output is mono-spaced.
 
 ### Content Values
 
-* `textGroup` **REQUIRED**: TextGroup: The text to render **(Refer to the "TextGroup" section later in this document for the structure of a TextGroup object)**. Expects 1 or more text items.
+* `textGroup` **REQUIRED**: **[TextGroup](obo_content_reference.md#textgroup)**: Expects 1 or more text items.
 
 ### Children
 
@@ -789,11 +790,11 @@ Inserts a break in the document similar to a `<hr>` tag in HTML.
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Break",
-  "id": "...",
-  "content": {
-    "width": "large"
-  }
+	"type": "ObojoboDraft.Chunks.Break",
+	"id": "...",
+	"content": {
+		"width": "large"
+	}
 }
 ```
 
@@ -818,7 +819,7 @@ Displays a button which can use the `onClick` trigger to perform an action - typ
 ### Content values
 
 * `label`: String: The label for the button - since this is a string it is not possible to style the button. If you wish to style the text use `textGroup` instead. If this property is not specified then you must specify `textGroup`.
-* `textGroup`: TextGroup: The text for the button. If this property is not specified then you must specify `label`.
+* `textGroup`: **[TextGroup](obo_content_reference.md#textgroup)**: The text for the button. If this property is not specified then you must specify `label`.
 * `triggers` **REQUIRED**: Object: Should contain a trigger for `onClick` - see example below:
 
 ### Triggers
@@ -839,23 +840,23 @@ JSON (Using label):
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.ActionButton",
-  "content": {
-    "label": "Start Assessment",
-    "triggers": [
-      {
-        "type": "onClick",
-        "actions": [
-          {
-            "type": "assessment:startAttempt",
-            "value": {
-              "id": "assessment"
-            }
-          }
-        ]
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.ActionButton",
+	"content": {
+		"label": "Start Assessment",
+		"triggers": [
+			{
+				"type": "onClick",
+				"actions": [
+					{
+						"type": "assessment:startAttempt",
+						"value": {
+							"id": "assessment"
+						}
+					}
+				]
+			}
+		]
+	}
 }
 ```
 
@@ -879,29 +880,29 @@ JSON (Using textGroup):
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.ActionButton",
-  "content": {
-    "textGroup": [
-      {
-        "text": {
-          "value": "Begin"
-        }
-      }
-    ],
-    "triggers": [
-      {
-        "type": "onClick",
-        "actions": [
-          {
-            "type": "assessment:startAttempt",
-            "value": {
-              "id": "assessment"
-            }
-          }
-        ]
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.ActionButton",
+	"content": {
+		"textGroup": [
+			{
+				"text": {
+					"value": "Begin"
+				}
+			}
+		],
+		"triggers": [
+			{
+				"type": "onClick",
+				"actions": [
+					{
+						"type": "assessment:startAttempt",
+						"value": {
+							"id": "assessment"
+						}
+					}
+				]
+			}
+		]
+	}
 }
 ```
 
@@ -959,20 +960,20 @@ JSON (With caption):
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Figure",
-  "id": "...",
-  "content": {
-    "size": "medium",
-    "url": "http://lorempixel.com/640/480/city",
-    "alt": "Description of the image",
-    "textGroup": [
-      {
-        "text": {
-          "value": "Caption here"
-        }
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.Figure",
+	"id": "...",
+	"content": {
+		"size": "medium",
+		"url": "http://lorempixel.com/640/480/city",
+		"alt": "Description of the image",
+		"textGroup": [
+			{
+				"text": {
+					"value": "Caption here"
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -999,14 +1000,14 @@ JSON (No caption):
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Figure",
-  "id": "...",
-  "content": {
-    "size": "custom",
-    "width": "500",
-    "url": "http://lorempixel.com/640/480/city",
-    "alt": "Description of the image"
-  }
+	"type": "ObojoboDraft.Chunks.Figure",
+	"id": "...",
+	"content": {
+		"size": "custom",
+		"width": "500",
+		"url": "http://lorempixel.com/640/480/city",
+		"alt": "Description of the image"
+	}
 }
 ```
 
@@ -1051,12 +1052,12 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.MathEquation",
-  "id": "...",
-  "content": {
-    "latex": "y=sin(2x)",
-    "label": "(1.1)"
-  }
+	"type": "ObojoboDraft.Chunks.MathEquation",
+	"id": "...",
+	"content": {
+		"latex": "y=sin(2x)",
+		"label": "(1.1)"
+	}
 }
 ```
 
@@ -1090,11 +1091,11 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.HTML",
-  "id": "...",
-  "content": {
-    "html": "<marquee>Custom HTML Here!</marquee>"
-  }
+	"type": "ObojoboDraft.Chunks.HTML",
+	"id": "...",
+	"content": {
+		"html": "<marquee>Custom HTML Here!</marquee>"
+	}
 }
 ```
 
@@ -1132,36 +1133,36 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Table",
-  "content": {
-    "header": true,
-    "textGroup": {
-      "numRows": 2,
-      "numCols": 2,
-      "textGroup": [
-        {
-          "text": {
-            "value": "First column heading"
-          }
-        },
-        {
-          "text": {
-            "value": "Second column heading"
-          }
-        },
-        {
-          "text": {
-            "value": "First column second row"
-          }
-        },
-        {
-          "text": {
-            "value": "Second column second row"
-          }
-        }
-      ]
-    }
-  }
+	"type": "ObojoboDraft.Chunks.Table",
+	"content": {
+		"header": true,
+		"textGroup": {
+			"numRows": 2,
+			"numCols": 2,
+			"textGroup": [
+				{
+					"text": {
+						"value": "First column heading"
+					}
+				},
+				{
+					"text": {
+						"value": "Second column heading"
+					}
+				},
+				{
+					"text": {
+						"value": "First column second row"
+					}
+				},
+				{
+					"text": {
+						"value": "Second column second row"
+					}
+				}
+			]
+		}
+	}
 }
 ```
 
@@ -1223,11 +1224,11 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.YouTube",
-  "id": "...",
-  "content": {
-    "videoId": "dQw4w9WgXcQ"
-  }
+	"type": "ObojoboDraft.Chunks.YouTube",
+	"id": "...",
+	"content": {
+		"videoId": "dQw4w9WgXcQ"
+	}
 }
 ```
 
@@ -1249,11 +1250,11 @@ XML:
 * `select`: String (default: `'sequential'`): Describes how the question bank selects children - Expected to be one of the following values:
   * `sequential`: Children will be selected in document order. If `choose` is less than the number of children then each attempt will start at the next unseen question.
   * `random`: Children will be selected randomly.
-  * `random-unseen`: Children will be selected randomly. If `choose` is less than the number of children then each attempt will priortize children that were not shown previously.
+  * `random-unseen`: Children will be selected randomly. If `choose` is less than the number of children then each attempt will prioritize children that were not shown previously.
 
 ### Children
 
-* One or more of **ObojoboDraft.Chunks.QuestionBank** and/or **ObojoboDraft.Chunks.Question** nodes.
+* One or more of [**ObojoboDraft.Chunks.QuestionBank**](obo_reference.md#obojobodraftchunksquestionbank) and/or [**ObojoboDraft.Chunks.Question**](obo_reference.md#obojobodraftchunksquestion) nodes.
 
 ### Variables
 
@@ -1294,7 +1295,7 @@ Either an assessment or practice question. Questions are designed to support mul
 ### Children
 
 1.  One or more "content type" chunk nodes (**Break**, **Code**, **Figure**, **Heading**, **List**, **MathEquation**, **Table**, **Text** and/or **YouTube**) - This is how you create the actual question
-2.  An **ObojoboDraft.Chunks.MCAssessment** node - this MUST be the last child.
+2.  An **[ObojoboDraft.Chunks.MCAssessment](obo_reference.md#obojobodraftchunksmcassessment)** node - this MUST be the last child.
 
 ### Variables
 
@@ -1306,113 +1307,113 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Question",
-  "content": {
-    "solution": {
-      "type": "ObojoboDraft.Pages.Page",
-      "children": [
-        {
-          "type": "ObojoboDraft.Chunks.Text",
-          "content": {
-            "textGroup": [
-              {
-                "text": {
-                  "value": "Provide a solution here..."
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "children": [
-    {
-      "type": "ObojoboDraft.Chunks.Text",
-      "content": {
-        "textGroup": [
-          {
-            "text": {
-              "value": "What is 2+2?"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "type": "ObojoboDraft.Chunks.MCAssessment",
-      "content": {
-        "responseType": "pick-one",
-        "shuffle": false
-      },
-      "children": [
-        {
-          "type": "ObojoboDraft.Chunks.MCAssessment.MCChoice",
-          "content": {
-            "score": 0
-          },
-          "children": [
-            {
-              "type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
-              "content": {
-                "textGroup": [
-                  {
-                    "text": {
-                      "value": "2"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
-              "content": {
-                "textGroup": [
-                  {
-                    "text": {
-                      "value": "The correct answer is higher"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "type": "ObojoboDraft.Chunks.MCAssessment.MCChoice",
-          "content": {
-            "score": 100
-          },
-          "children": [
-            {
-              "type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
-              "content": {
-                "textGroup": [
-                  {
-                    "text": {
-                      "value": "4"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
-              "content": {
-                "textGroup": [
-                  {
-                    "text": {
-                      "value": "Exactly!"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"type": "ObojoboDraft.Chunks.Question",
+	"content": {
+		"solution": {
+			"type": "ObojoboDraft.Pages.Page",
+			"children": [
+				{
+					"type": "ObojoboDraft.Chunks.Text",
+					"content": {
+						"textGroup": [
+							{
+								"text": {
+									"value": "Provide a solution here..."
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"children": [
+		{
+			"type": "ObojoboDraft.Chunks.Text",
+			"content": {
+				"textGroup": [
+					{
+						"text": {
+							"value": "What is 2+2?"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "ObojoboDraft.Chunks.MCAssessment",
+			"content": {
+				"responseType": "pick-one",
+				"shuffle": false
+			},
+			"children": [
+				{
+					"type": "ObojoboDraft.Chunks.MCAssessment.MCChoice",
+					"content": {
+						"score": 0
+					},
+					"children": [
+						{
+							"type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
+							"content": {
+								"textGroup": [
+									{
+										"text": {
+											"value": "2"
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
+							"content": {
+								"textGroup": [
+									{
+										"text": {
+											"value": "The correct answer is higher"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"type": "ObojoboDraft.Chunks.MCAssessment.MCChoice",
+					"content": {
+						"score": 100
+					},
+					"children": [
+						{
+							"type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
+							"content": {
+								"textGroup": [
+									{
+										"text": {
+											"value": "4"
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
+							"content": {
+								"textGroup": [
+									{
+										"text": {
+											"value": "Exactly!"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
 }
 ```
 
@@ -1467,7 +1468,7 @@ This is the multiple choice portion of a question containing several answer choi
 
 ### Children
 
-* One or more **ObojoboDraft.Chunks.MCAssessment.MCChoice** nodes.
+* One or more **[ObojoboDraft.Chunks.MCAssessment.MCChoice](obo_reference.md#obojobodraftchunksmcassessmentmcchoice)** nodes.
 
 ### Variables
 
@@ -1533,8 +1534,8 @@ A single answer choice in a multiple choice question containing the contents of 
 
 Expects one or two children in order:
 
-1.  **REQUIRED**: An **ObojoboDraft.Chunks.MCAssessment.MCAnswer** OboNode.
-2.  An **ObojoboDraft.Chunks.MCAssessment.MCFeedback** OboNode. This is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).
+1.  **REQUIRED**: An **[ObojoboDraft.Chunks.MCAssessment.MCAnswer](obo_reference.md#obojobodraftchunksmcassessmentmcanswer)** OboNode.
+2.  An **[ObojoboDraft.Chunks.MCAssessment.MCFeedback](obo_reference.md#obojobodraftchunksmcassessmentmcfeedback)** OboNode. This is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).
 
 ### Variables
 
@@ -1546,39 +1547,39 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.MCAssessment.MCChoice",
-  "id": "...",
-  "content": {
-    "score": 100
-  },
-  "children": [
-    {
-      "type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
-      "id": "...",
-      "content": {
-        "textGroup": [
-          {
-            "text": {
-              "value": "Fourty two"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
-      "id": "...",
-      "content": {
-        "textGroup": [
-          {
-            "text": {
-              "value": "That is the answer!"
-            }
-          }
-        ]
-      }
-    }
-  ]
+	"type": "ObojoboDraft.Chunks.MCAssessment.MCChoice",
+	"id": "...",
+	"content": {
+		"score": 100
+	},
+	"children": [
+		{
+			"type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
+			"id": "...",
+			"content": {
+				"textGroup": [
+					{
+						"text": {
+							"value": "Fourty two"
+						}
+					}
+				]
+			}
+		},
+		{
+			"type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
+			"id": "...",
+			"content": {
+				"textGroup": [
+					{
+						"text": {
+							"value": "That is the answer!"
+						}
+					}
+				]
+			}
+		}
+	]
 }
 ```
 
@@ -1619,23 +1620,23 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
-  "id": "...",
-  "children": [
-    {
-      "type": "ObojoboDraft.Chunks.Text",
-      "id": "...",
-      "content": {
-        "textGroup": [
-          {
-            "text": {
-              "value": "Answer choice"
-            }
-          }
-        ]
-      }
-    }
-  ]
+	"type": "ObojoboDraft.Chunks.MCAssessment.MCAnswer",
+	"id": "...",
+	"children": [
+		{
+			"type": "ObojoboDraft.Chunks.Text",
+			"id": "...",
+			"content": {
+				"textGroup": [
+					{
+						"text": {
+							"value": "Answer choice"
+						}
+					}
+				]
+			}
+		}
+	]
 }
 ```
 
@@ -1651,7 +1652,7 @@ XML (With OboHTML):
 
 ## ObojoboDraft.Chunks.MCAssessment.MCFeedback
 
-* This represents the contents of the feedback of a multiple choice answer choice. It is fundamentally identical to an **ObojoboDraft.Chunks.MCAssessment.MCAnswer** node.
+* This represents the contents of the feedback of a multiple choice answer choice. It is fundamentally identical to an **[ObojoboDraft.Chunks.MCAssessment.MCAnswer](obo_reference.md#obojobodraftchunksmcassessmentmcanswer)** node.
 
 ### Content Values
 
@@ -1671,23 +1672,23 @@ JSON:
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
-  "id": "...",
-  "children": [
-    {
-      "type": "ObojoboDraft.Chunks.Text",
-      "id": "...",
-      "content": {
-        "textGroup": [
-          {
-            "text": {
-              "value": "Example Feedback"
-            }
-          }
-        ]
-      }
-    }
-  ]
+	"type": "ObojoboDraft.Chunks.MCAssessment.MCFeedback",
+	"id": "...",
+	"children": [
+		{
+			"type": "ObojoboDraft.Chunks.Text",
+			"id": "...",
+			"content": {
+				"textGroup": [
+					{
+						"text": {
+							"value": "Example Feedback"
+						}
+					}
+				]
+			}
+		}
+	]
 }
 ```
 

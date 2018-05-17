@@ -3,14 +3,14 @@
 		"Obojobo Reference": [
 			"obo_summary",
 			"obo_definitions",
-			"obo_structure",
-			"obo_reference",
 			"obo_xml",
 			"obo_html",
+			"obo_variables",
+			"obo_structure",
+			"obo_reference",
 			"obo_html_reference",
 			"obo_content_reference",
 			"obo_node_behavior",
-			"obo_variables",
 			"obo_minimal_document"
 		],
 		"Assessments": [
@@ -47,13 +47,6 @@
 			"caliper_3.3_issues",
 			"caliper_3.3_iris",
 			"caliper_3.3_events_all"
-		],
-		"3.2 Events": ["events_3.2_intro", "events_3.2_new", "events_3.2_updated", "events_3.2_all"],
-		"3.2 Caliper Events": [
-			"caliper_3.2_intro",
-			"caliper_3.2_issues",
-			"caliper_3.2_iris",
-			"caliper_3.2_events_all"
 		]
 	}
 }

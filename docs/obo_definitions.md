@@ -11,9 +11,9 @@ sidebar_label: Obojobo Definitions
 * **OboXML Document**: XML file following the OboXML format.
 * **OboXML Parser**: Code which parses an OboXML Document to produce an Obojobo Draft Document.
 * **Obojobo Component**: An installed sub-module with code defining the logic and display of this module. An OboNode references an installed Obojobo Component via its Component Identifier.
-* **Component Identifier**: Obojobo components are indentified and registered by an identifier in the format of `[Component namespace].[Component name]`. Default components are prefixed with `ObojoboDraft`, for example `ObojoboDraft.Chunks.Text`.
-* **Component Namespace**: The prefix in an Obojobo component identifier, for example `ObojoboDraft.Chunks`. May contain alphanumeric characters and periods. Namespaces allows Obojobo components with the same component name to be differentated and installed.
-* **Component Name**: The ending term in an Obojobo component identifier, for example `Text` in `ObojoboDraft.Chunks.Text`.
+* **Component Identifier**: Obojobo components are identified and registered by an identifier in the format of `[Component namespace].[Component name]`. Default components are prefixed with `ObojoboDraft`, for example [`ObojoboDraft.Chunks.Text`](obo_reference.md#obojobodraftchunkstext).
+* **Component Namespace**: The prefix in an Obojobo component identifier, for example [`ObojoboDraft.Chunks`](obo_reference.md#obojobodraftchunks). May contain alphanumeric characters and periods. Namespaces allows Obojobo components with the same component name to be differentated and installed.
+* **Component Name**: The ending term in an Obojobo component identifier, for example `Text` in [`ObojoboDraft.Chunks.Text`](obo_reference.md#obojobodraftchunkstext).
 * **OboXML Element**: An XML element in an OboXML document representing an Obojobo component, for example `<ObojoboDraft.Chunks.Text>`. Uppercase.
 * **OboXML Content Element**: An XML element in an OboXML document representing a content attribute of an Obojobo component, for example `<scoreActions>`. Lowercased. Additional parsers or extensions can parse these elements to construct a conformant content attribute for the resulting Obojobo Draft Document.
 * **OboHTML Element**: An XML element which mimics the syntax of HTML elements (for example `<p>` or `<h1>`). These elements are read by the OboXML Parser and are converted into their OboXML representation. These are provided to make writing OboXML easier by providing a familar and less verbose syntax for common tasks.

@@ -4,8 +4,8 @@ title: How Assessment Works
 sidebar_label: How Assessment Works
 ---
 
-1.  The student clicks on a button or interacts with a Obojobo Draft Document which fires an `assessment:startAttempt` action.
-1.  The student is presented with a list of questions, chosen by the **Assessment Attempt Quiz Question Selection Algorithm**.
+1.  The student clicks on a button or interacts with a Obojobo Draft Document which fires an [`assessment:startAttempt`](obo_content_reference.md#actions) action.
+1.  The student is presented with a list of questions, chosen by the [**Assessment Attempt Quiz Question Selection Algorithm**](assessment_questionAlgorithm.md).
 1.  The student clicks on the Assessment Attempt submit button which ends the attempt.
 1.  The Assessment Attempt Score is calculated and recorded.
 1.  The Assessment Score and Assessment Status is calculated from the Assessment Rubric and is recorded. The Recorded Score is the current highest Assessment Score.

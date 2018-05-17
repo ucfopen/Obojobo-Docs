@@ -25,6 +25,15 @@ sidebar_label: All Events
 
 ## Viewer
 
+### viewer:alert
+
+* **Version**: 1.0.0
+* **Triggered by**: ViewerClient
+* **Outcome**: ViewerClient has shown a dialog message
+* **Properties**:
+  * `title`: Title of the dialog
+  * `message`: Message contents of the dialog
+
 ### viewer:open
 
 * **Version**: 1.1.0

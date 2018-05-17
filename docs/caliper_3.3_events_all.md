@@ -18,10 +18,10 @@ In addition, the following events contain additional properties:
 
 * Use cases:
   1.  **User** navigates to another page (When **Viewer Client** sends one of the following Obojobo events):
-  * [`nav:prev`](obo_reference.md#actions)
-  * [`nav:next`](obo_reference.md#actions)
-  * [`nav:goto`](obo_reference.md#actions)
-  * [`nav:gotoPath`](obo_reference.md#actions)
+  * [`nav:prev`](events_3.3_all.md#nav-prev)
+  * [`nav:next`](events_3.3_all.md#nav-next)
+  * [`nav:goto`](events_3.3_all.md#nav-goto)
+  * [`nav:gotoPath`](events_3.3_all.md#nav-gotopath)
 * Properties:
 
   * actor: **User** (`/api/user/:userId`)
@@ -46,8 +46,7 @@ In addition, the following events contain additional properties:
 ## AssessmentItemEvent
 
 * Use cases:
-  1.  **User** selects a response to a practice question (When **Viewer Client** sends a [`question:setResponse`](events_3.3_all.md#question-setresponse) event).
-  2.  **User** selects a response to an assessment question (When **Viewer Client** sends an `assessment:setResponse` event).
+  1.  **User** selects a response to a question (When **Viewer Client** sends a [`question:setResponse`](events_3.3_all.md#question-setresponse) event).
 * Properties:
   * actor: **User** (`/api/user/:userId`)
   * action: **Completed**
@@ -60,7 +59,7 @@ In addition, the following events contain additional properties:
 ## GradeEvent
 
 * Use cases:
-  1.  A practice question is scored (When **Viewer Client** sends a [`score:set`](#question-setresponse) Obojobo event).
+  1.  A practice question is scored (When **Viewer Client** sends a [`question:scoreSet`](events_3.3_all.md#question-scoreset) Obojobo event).
   2.  An attempt is scored
 * Properties for when a practice question is scored:
   * actor: **Viewer Client** (`/api/viewer/client`)
@@ -82,8 +81,8 @@ In addition, the following events contain additional properties:
 ## SessionEvent
 
 * Use cases:
-  1.  **User** starts a new Visit (When **App Server** sends a [`visit:start`](#events_3.3_all.md#visit-start) Obojobo event)
-  2.  **User** leaves a Draft (When **Viewer Client** sends a [`viewer:close`](#events_3.3_all.md#viewer-close) Obojobo event)
+  1.  **User** starts a new Visit (When **App Server** sends a [`visit:start`](events_3.3_all.md#visit-start) Obojobo event)
+  2.  **User** leaves a Draft (When **Viewer Client** sends a [`viewer:close`](events_3.3_all.md#viewer-close) Obojobo event)
 * Properties:
   * actor: **User** (`/api/user/:userId`)
   * object: **System** (`/api/system`)
@@ -193,7 +192,7 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Reset" Event
 
 * Use cases:
-  1.  A practice question is reset (When **Viewer Client** sends a [`score:clear`](events_3.3_all.md#score-clear) Obojobo event)
+  1.  A practice question is reset (When **Viewer Client** sends a [`question:scoreClear`](events_3.3_all.md#question-scoreclear) Obojobo event)
   2.  **User** is retrying a practice question (When **Viewer Client** sends a [`question:retry`](events_3.3_all.md#question-retry) Obojobo event)
 * Properties:
   * action: **Reset**

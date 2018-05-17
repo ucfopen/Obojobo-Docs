@@ -12,7 +12,7 @@ A TextGroup is a series of one or more lines of text with optional styling and a
 
 A TextGroup is an array of one or more **TextItem** objects each containing two properties: **text** and **data**:
 
-* `text` **REQUIRED**: A **StyleableText** object
+* `text` **REQUIRED**: A [**StyleableText**](obo_content_reference.md#styleabletext) object
 * `data`: Object: An object containing one or more properties. Currently only `indent` is understood. If specified this sets the indentation level of the text item if the chunk type supports indentation (`"indent": 1` inserts one tab before the text item, `"indent": 2` inserts two tabs and so on).
 
 ### StyleableText
@@ -237,7 +237,7 @@ A list of all current triggers are listed below:
 * `onEndAttempt` - Fired when an assessment attempt is submitted
 * `onNavEnter` - Fired when a node is navigated to
 * `onNavExit` - Fired when a node is navigated away from
-* `onClick` (Used by **ObojoboDraft.Chunks.ActionButton**) - Fired when the ActionButton button is clicked
+* `onClick` (Used by **[ObojoboDraft.Chunks.ActionButton](obo_reference.md#obojobodraftchunksactionbutton)**) - Fired when the ActionButton button is clicked
 
 ### Actions
 
@@ -248,10 +248,10 @@ Actions have two properties: **type** and **value**:
 
 ```json
 {
-  "type": "nav:goto",
-  "value": {
-    "id": "page-1"
-  }
+	"type": "nav:goto",
+	"value": {
+		"id": "page-1"
+	}
 }
 ```
 
@@ -268,6 +268,6 @@ A list of actions to fire and their corresponding expected values are listed bel
 * `nav:open` - Opens the left-hand navigation drawer.
 * `nav:close` - Closes the left-hand navigation drawer.
 * `nav:toggle` - Toggles open or close the navigation drawer.
-* `assessment:startAttempt` - Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the **ObojoboDraft.Sections.Assessment** node containing the assessment to start.
-* `assessment:endAttempt` - Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the **ObojoboDraft.Sections.Assessment** node containing the assessment to start.
+* `assessment:startAttempt` - Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obo_reference.md#obojobodraftsectionsassessment)** node containing the assessment to start.
+* `assessment:endAttempt` - Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obo_reference.md#obojobodraftsectionsassessment)** node containing the assessment to start.
 * `js` - Runs arbitrary javascript. `value` should be a string of javascript code to execute.

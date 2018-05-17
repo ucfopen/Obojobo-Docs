@@ -44,4 +44,4 @@ QuestionBanks can also be nested. This can allow you to generate new quizzes for
 
 Now each new attempt will display the next inner QuestionBank. On the fourth attempt the selection algorithm will "wrap around" and select the first QuestionBank again. These inner QuestionBanks can contain as many questions as desired.
 
-QuestionBanks can be infinitely be nested but this is not recommended. Limiting the amount of nested QuestionBanks to two levels (as in the above example) is preferred. For a complete technical description on how questions are chosen for Assessment Attempts refer to the **Assessment Attempt Quiz Question Selection Algorithm** later on in this document.
+QuestionBanks can be infinitely be nested but this is not recommended. Limiting the amount of nested QuestionBanks to two levels (as in the above example) is preferred. For a complete technical description on how questions are chosen for Assessment Attempts refer to the [**Assessment Attempt Quiz Question Selection Algorithm**](assessment_questionAlgorithm.md) later on in this document.

@@ -19,25 +19,25 @@ An example of a "Page" OboNode is shown below:
 
 ```json
 {
-  "id": "page-1",
-  "content": {
-    "title": "Projectile Motion"
-  },
-  "metadata": {},
-  "index": 0,
-  "type": "ObojoboDraft.Pages.Page",
-  "children": []
+	"id": "page-1",
+	"content": {
+		"title": "Projectile Motion"
+	},
+	"metadata": {},
+	"index": 0,
+	"type": "ObojoboDraft.Pages.Page",
+	"children": []
 }
 ```
 
 ## Properties
 
 * `id` **REQUIRED**: String: A unique string to identify the node. No node should share an id with another node. Typically these would be automatically generated but if editing manually these can be set to any valid string, much like a DOM node.
-* `type` **REQUIRED**: String: The Component Identifier describing the type of node, for example `ObojoboDraft.Pages.Page` in the above example. Obojobo reads the type of node and then references its related Obojobo Component code to process, update and render this item.
+* `type` **REQUIRED**: String: The Component Identifier describing the type of node, for example [`ObojoboDraft.Pages.Page`](obo_reference.md#obojobodraftpagespage) in the above example. Obojobo reads the type of node and then references its related Obojobo Component code to process, update and render this item.
 * `content`: Object: Properties specific to this type of node go here. The page node in the example above understands the `title` property - each node defines which properties (if any) it understands or expects.
 * `children`: Array\<OboNode>: Each OboNode can have an array of children OboNode. While the document structure allows for any node to parent any other node it is important to note that nodes may ignore or expect specific types of children.
 
-Refer to the **OboNode Reference** section for documentation on expected content values and children for each node.
+Refer to the [**OboNode Reference**](obo_reference.md) section for documentation on expected content values and children for each node.
 
 ## Unused Properties
 

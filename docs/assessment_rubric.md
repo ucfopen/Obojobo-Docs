@@ -18,7 +18,7 @@ Allows you to specify a "passing" Attempt Score, as well as the resulting Assess
 
 ## Properties
 
-See the **ObojoboDraft.Sections.Assessment** section of the OboNode specification for a complete list of properties and their descriptions for Assessment Rubrics.
+See the **[ObojoboDraft.Sections.Assessment](obo_reference.md#obojobodraftsectionsassessment)** section of the OboNode specification for a complete list of properties and their descriptions for Assessment Rubrics.
 
 ## Rubric Examples
 

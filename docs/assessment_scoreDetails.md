@@ -4,7 +4,7 @@ title: Assessment Score Details properties
 sidebar_label: Assessment Score Details properties
 ---
 
-These properties are stored in the `assessment_scores` table (in the `score_details` column) as well as in an `assessment:attemptScored` event:
+These properties are stored in the `assessment_scores` table (in the `score_details` column) as well as in an [`assessment:attemptScored`](events_3.3_all.md#assessment-attemptscored) event:
 
 * `attemptNumber`: This is the attempt number that is being used in calculating the Assessment Score. If `status` is `'unableToPass'` and `unableToPassResult` is `'$highest_attempt_score'` then this number will be the earliest highest attempt score, otherwise this will be equal to the number of attempt scores when this value was calculated
 * `attemptScore`: The Assessment Attempt Score (a number 0-100)
