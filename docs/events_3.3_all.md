@@ -48,7 +48,7 @@ sidebar_label: All Events
   * `lastActiveTime`: ECMAScript Date string representation of the last recorded time of interactivity
   * `inactiveDuration`: The amount of time in milliseconds recorded with no measured interactivity (10 minutes)
 
-### viewer:inactive
+### viewer:returnFromInactive
 
 * **Version**: 2.0.0
 * **Triggered by**: ViewerClient

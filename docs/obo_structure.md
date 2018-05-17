@@ -8,12 +8,12 @@ sidebar_label: OboNode Structure
 
 OboNodes follow a consistent structure with six properties:
 
-* **id**
-* **content**
-* **metadata**
-* **index**
-* **type**
-* **children**
+* `id`
+* `content`
+* `metadata`
+* `index`
+* `type`
+* `children`
 
 An example of a "Page" OboNode is shown below:
 

@@ -2,14 +2,16 @@
 	"docs": {
 		"Obojobo Reference": [
 			"obo_summary",
-			"obo_structure",
 			"obo_definitions",
+			"obo_structure",
 			"obo_reference",
-			"obo_minimal_document",
+			"obo_xml",
+			"obo_html",
+			"obo_html_reference",
+			"obo_content_reference",
 			"obo_node_behavior",
 			"obo_variables",
-			"obo_xml",
-			"obo_html"
+			"obo_minimal_document"
 		],
 		"Assessments": [
 			"assessment_intro",

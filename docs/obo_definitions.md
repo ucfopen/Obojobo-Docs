@@ -1,6 +1,6 @@
 ---
 id: obo_definitions
-title: Obojobo
+title: Obojobo Definitions
 sidebar_label: Obojobo Definitions
 ---
 

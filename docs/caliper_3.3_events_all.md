@@ -18,10 +18,10 @@ In addition, the following events contain additional properties:
 
 * Use cases:
   1.  **User** navigates to another page (When **Viewer Client** sends one of the following Obojobo events):
-  * `nav:prev`
-  * `nav:next`
-  * `nav:goto`
-  * `nav:gotoPath`
+  * [`nav:prev`](obo_reference.md#actions)
+  * [`nav:next`](obo_reference.md#actions)
+  * [`nav:goto`](obo_reference.md#actions)
+  * [`nav:gotoPath`](obo_reference.md#actions)
 * Properties:
 
   * actor: **User** (`/api/user/:userId`)
@@ -34,8 +34,8 @@ In addition, the following events contain additional properties:
 ## ViewEvent
 
 * Use cases:
-  1.  **User** views a question (When **Viewer Client** sends a `question:view` Obojobo event).
-  2.  **User** views a question explanation (When **Viewer Client** sends a `question:viewExplanation` Obojobo event).
+  1.  **User** views a question (When **Viewer Client** sends a [`question:view`](events_3.3_all.md#question-view) Obojobo event).
+  2.  **User** views a question explanation (When **Viewer Client** sends a [`question:showExplanation`](events_3.3_all.md#question-showexplanation) Obojobo event).
 * Properties:
   * actor: **User** (`/api/user/:userId`)
   * action: **Viewed**
@@ -46,7 +46,7 @@ In addition, the following events contain additional properties:
 ## AssessmentItemEvent
 
 * Use cases:
-  1.  **User** selects a response to a practice question (When **Viewer Client** sends a `question:setResponse` event).
+  1.  **User** selects a response to a practice question (When **Viewer Client** sends a [`question:setResponse`](events_3.3_all.md#question-setresponse) event).
   2.  **User** selects a response to an assessment question (When **Viewer Client** sends an `assessment:setResponse` event).
 * Properties:
   * actor: **User** (`/api/user/:userId`)
@@ -60,7 +60,7 @@ In addition, the following events contain additional properties:
 ## GradeEvent
 
 * Use cases:
-  1.  A practice question is scored (When **Viewer Client** sends a `score:set` Obojobo event).
+  1.  A practice question is scored (When **Viewer Client** sends a [`score:set`](#question-setresponse) Obojobo event).
   2.  An attempt is scored
 * Properties for when a practice question is scored:
   * actor: **Viewer Client** (`/api/viewer/client`)
@@ -82,8 +82,8 @@ In addition, the following events contain additional properties:
 ## SessionEvent
 
 * Use cases:
-  1.  **User** starts a new Visit (When **App Server** sends a `visit:start` Obojobo event)
-  2.  **User** leaves a Draft (When **Viewer Client** sends a `viewer:close` Obojobo event)
+  1.  **User** starts a new Visit (When **App Server** sends a [`visit:start`](#events_3.3_all.md#visit-start) Obojobo event)
+  2.  **User** leaves a Draft (When **Viewer Client** sends a [`viewer:close`](#events_3.3_all.md#viewer-close) Obojobo event)
 * Properties:
   * actor: **User** (`/api/user/:userId`)
   * object: **System** (`/api/system`)
@@ -111,7 +111,7 @@ In addition, the following events contain additional properties:
 
 * Use cases:
   1.  **User** launches the lti picker
-  2.  **User** visits a Draft (When App Server sends a viewer:open Obojobo event)
+  2.  **User** visits a Draft (When App Server sends a [`viewer:open`](events_3.3_all.md#viewer-open) Obojobo event)
 * Properties:
   * actor: **User** (`/api/user/:userId`)
   * action: **Used**
@@ -123,14 +123,14 @@ In addition, the following events contain additional properties:
   * extensions:
     * deactivatedVisitId: The visit id that was deactivated when this visit was generated
 
-Additionally some generic events are created where existing Caliper events aren't appropiate:
+Additionally some generic events are created where existing Caliper events aren't appropriate:
 
 ## "Hid" Event
 
 * Use cases:
-  1.  A question is hidden (When **Viewer Client** sends a `question:hide` Obojobo event)
-  2.  A question explanation is hidden (When **Viewer Client** sends a `question:hideExplanation` Obojobo event)
-  3.  Nav menu is hidden (When **Viewer Client** sends a `nav:close` Obojobo event)
+  1.  A question is hidden (When **Viewer Client** sends a [`question:hide`](events_3.3_all.md#question-hide) Obojobo event)
+  2.  A question explanation is hidden (When **Viewer Client** sends a [`question:hideExplanation`](events_3.3_all.md#question-hideexplanation) Obojobo event)
+  3.  Nav menu is hidden (When **Viewer Client** sends a [`nav:close`](events_3.3_all.md#nav-close) Obojobo event)
 * Properties for when a question is hidden:
   * actor: **User** (`/api/user/:userId`)
   * action: **Hid**
@@ -148,7 +148,7 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Showed" Event
 
 * Use cases:
-  1.  Nav menu is showed (When **Viewer Client** sends a `nav:open` Obojobo event)
+  1.  Nav menu is showed (When **Viewer Client** sends a [`nav:open`](events_3.3_all.md#nav-open) Obojobo event)
 * Properties for when nav menu showed:
   * actor: **User** (`/api/user/:userId`) or **Viewer Client** (`/api/viewer/client`)
   * action: **Showed**
@@ -157,7 +157,7 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Toggled" Event
 
 * Use cases:
-  1.  Nav menu is showed (When **Viewer Client** sends a `nav:toggle` Obojobo event)
+  1.  Nav menu is showed (When **Viewer Client** sends a [`nav:toggle`](events_3.3_all.md#nav-toggle) Obojobo event)
 * Properties for when nav menu toggled:
   * actor: **User** (`/api/user/:userId`) or **Viewer Client** (`/api/viewer/client`)
   * action: **Toggled**
@@ -166,7 +166,7 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Activated" Event
 
 * Use cases:
-  1.  Nav menu is unlocked (When **Viewer Client** sends a `nav:unlock` Obojobo event)
+  1.  Nav menu is unlocked (When **Viewer Client** sends a [`nav:unlock`](events_3.3_all.md#nav-unlock) Obojobo event)
 * Properties for when nav menu unlocked:
   * actor: **Viewer Client** (`/api/viewer/client`)
   * action: **Activated**
@@ -175,7 +175,7 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Deactivated" Event
 
 * Use cases:
-  1.  Nav menu is locked (When **Viewer Client** sends a `nav:lock` Obojobo event)
+  1.  Nav menu is locked (When **Viewer Client** sends a [`nav:lock`](events_3.3_all.md#nav-lock) Obojobo event)
 * Properties for when nav menu locked:
   * actor: **Viewer Client** (`/api/viewer/client`)
   * action: **Deactivated**
@@ -184,7 +184,7 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Submitted" Event
 
 * Use cases:
-  1.  **User** checks their answer for a practice question (When **Viewer Client** sends a `question:checkAnswer` Obojobo event)
+  1.  **User** checks their answer for a practice question (When **Viewer Client** sends a [`question:checkAnswer`](events_3.3_all.md#question-checkanswer) Obojobo event)
 * Properties:
   * actor: **User** (`/api/user/:userId`)
   * action: **Submitted**
@@ -193,8 +193,8 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Reset" Event
 
 * Use cases:
-  1.  A practice question is reset (When **Viewer Client** sends a `score:clear` Obojobo event)
-  2.  **User** is retrying a practice question (When **Viewer Client** sends a `question:retry` Obojobo event)
+  1.  A practice question is reset (When **Viewer Client** sends a [`score:clear`](events_3.3_all.md#score-clear) Obojobo event)
+  2.  **User** is retrying a practice question (When **Viewer Client** sends a [`question:retry`](events_3.3_all.md#question-retry) Obojobo event)
 * Properties:
   * action: **Reset**
 * Additional properties when a practice question is reset
@@ -209,8 +209,8 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Abandoned" Event
 
 * Use cases:
-  1.  **User** has gone idle (When **Viewer Client** sends a `viewer:inactive` Obojobo event)
-  2.  **User** is no longer looking at the draft (When **Viewer Client** sends a `viewer:leave` Obojobo event)
+  1.  **User** has gone idle (When **Viewer Client** sends a [`viewer:inactive`](events_3.3_all.md#viewer-inactive) Obojobo event)
+  2.  **User** is no longer looking at the draft (When **Viewer Client** sends a [`viewer:leave`](events_3.3_all.md#viewer-leave) Obojobo event)
 * Properties:
   * action: **Abandoned**
   * actor: **User** (`/api/user/:userId`)
@@ -227,8 +227,8 @@ Additionally some generic events are created where existing Caliper events aren'
 ## "Resumed" Event
 
 * Use cases:
-  1.  **User** has returned from idle (When **Viewer Client** sends a `viewer:returnFromIdle` Obojobo event)
-  2.  **User** is again looking at the draft (When **Viewer Client** sends a `viewer:return` Obojobo event)
+  1.  **User** has returned from idle (When **Viewer Client** sends a [`viewer:returnFromInactive`](events_3.3_all.md#viewer-returnfrominactive) Obojobo event)
+  2.  **User** is again looking at the draft (When **Viewer Client** sends a [`viewer:return`](events_3.3_all.md#viewer-return) Obojobo event)
 * Properties:
   * action: **Resumed**
   * actor: **User** (`/api/user/:userId`)

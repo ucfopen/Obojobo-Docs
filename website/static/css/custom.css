@@ -80,6 +80,14 @@ blockquote {
 	text-align: center;
 }
 
+code {
+	font-weight: bold;
+	background-color: transparent;
+	background-color: lightgray;
+	padding: 0.2em;
+	box-shadow: 0 0;
+}
+
 /* changing list style */
 ol {
 	margin: 0 0 1.5em;

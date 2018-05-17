@@ -34,7 +34,7 @@ In addition, the following events contain additional properties:
 
   * Use cases:
     1.  **User** views a question (When **Viewer Client** sends a `question:view` Obojobo event).
-    1.  **User** views a question explanation (When **Viewer Client** sends a `question:viewExplanation` Obojobo event).
+    1.  **User** views a question explanation (When **Viewer Client** sends a `question:showExplanation` Obojobo event).
   * Properties:
     * actor: **User** (`/api/user/:userId`)
     * action: **Viewed**
@@ -158,7 +158,7 @@ Additionally some generic events are created where existing Caliper events aren'
 
 * **"Resumed" Event**
   * Use cases:
-    1.  **User** has returned from idle (When **Viewer Client** sends a `viewer:returnFromIdle` Obojobo event)
+    1.  **User** has returned from idle (When **Viewer Client** sends a `viewer:returnFromInactive` Obojobo event)
     2.  **User** is again looking at the draft (When **Viewer Client** sends a `viewer:return` Obojobo event)
   * Properties:
     * action: **Resumed**
