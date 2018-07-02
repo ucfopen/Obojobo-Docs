@@ -13,6 +13,35 @@
 			"obo_node_behavior",
 			"obo_minimal_document"
 		],
+		"Obojobo Nodes": [
+			"obonode_module",
+			"obonode_content",
+			"obonode_assessment",
+			"obonode_page",
+			"obonode_text",
+			"obonode_list",
+			"obonode_heading",
+			"obonode_code",
+			"obonode_break",
+			"obonode_actionbutton",
+			"obonode_figure",
+			"obonode_mathequation",
+			"obonode_html",
+			"obonode_table",
+			"obonode_youtube",
+			"obonode_questionbank",
+			"obonode_question",
+			"obonode_mcassessment",
+			"obonode_mcchoice",
+			"obonode_mcanswer",
+			"obonode_mcfeedback"
+		],
+		"Content Attributes": [
+			"content_textgroup",
+			"content_styleabletext",
+			"content_stylelist",
+			"content_scoreaction"
+		],
 		"Assessments": [
 			"assessment_intro",
 			"assessment_explanation",
