@@ -6,21 +6,21 @@ sidebar_label: ObojoboDraft.Pages.Page
 
 A generic "page" that can be thought of as a page in a book or an online article.
 
-### Content Values
+## Content Values
 
 * `title` String: The title of the page (used in the generated navigation).
 
-### Children
+## Children
 
 * One or more **ObojoboDraft.Chunks** nodes.
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON
+### JSON
 
 ```json
 {
@@ -30,7 +30,7 @@ A generic "page" that can be thought of as a page in a book or an online article
 }
 ```
 
-#### XML
+### XML
 
 ```xml
 <Page>

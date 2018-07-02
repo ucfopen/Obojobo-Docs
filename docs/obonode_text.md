@@ -6,21 +6,21 @@ sidebar_label: ObojoboDraft.Chunks.Text
 
 A single block of text similar to a paragraph (`<p>`) tag in HTML.
 
-### Content Values
+## Content Values
 
 * `textGroup` **REQUIRED** **[TextGroup](content_textgroup.md)**: Expects 1 or more text items.
 
-### Children
-
-* No children
-
-### Variables Registered
+## Children
 
 * None
 
-### Example
+## Variables Registered
 
-#### JSON:
+* None
+
+## Example
+
+### JSON
 
 ```json
 {
@@ -38,7 +38,7 @@ A single block of text similar to a paragraph (`<p>`) tag in HTML.
 }
 ```
 
-#### XML:
+### XML
 
 ```xml
 <Text>
@@ -48,7 +48,7 @@ A single block of text similar to a paragraph (`<p>`) tag in HTML.
 </Text>
 ```
 
-#### OboHTML:
+### OboHTML
 
 ```xml
 <p>Hello world!</p>

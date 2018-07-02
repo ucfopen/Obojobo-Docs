@@ -6,7 +6,7 @@ sidebar_label: ObojoboDraft.Chunks.QuestionBank
 
 * Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.
 
-### Content Values
+## Content Values
 
 * `choose` Integer or `Infinity` (default: `Infinity`): The number of children to "choose" when selecting which children to display. All children are chosen if set to `Infinity`.
 * `select` String (default: `'sequential'`): Describes how the question bank selects children - Expected to be one of the following values:
@@ -14,17 +14,17 @@ sidebar_label: ObojoboDraft.Chunks.QuestionBank
   * `random`: Children will be selected randomly.
   * `random-unseen`: Children will be selected randomly. If `choose` is less than the number of children then each attempt will prioritize children that were not shown previously.
 
-### Children
+## Children
 
 * One or more of [**ObojoboDraft.Chunks.QuestionBank**](obonode_questionbank.md) and/or [**ObojoboDraft.Chunks.Question**](obonode_question.md) nodes.
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON:
+### JSON
 
 ```json
 {
@@ -38,7 +38,7 @@ sidebar_label: ObojoboDraft.Chunks.QuestionBank
 }
 ```
 
-#### XML:
+### XML
 
 ```xml
 <QuestionBank choose="2" select="random">

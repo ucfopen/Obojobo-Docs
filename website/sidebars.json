@@ -7,9 +7,7 @@
 			"obo_html",
 			"obo_variables",
 			"obo_structure",
-			"obo_reference",
 			"obo_html_reference",
-			"obo_content_reference",
 			"obo_node_behavior",
 			"obo_minimal_document"
 		],
@@ -40,7 +38,13 @@
 			"content_textgroup",
 			"content_styleabletext",
 			"content_stylelist",
-			"content_scoreaction"
+			"content_scoreaction",
+			"content_rubric",
+			"content_mod",
+			"content_liststyles",
+			"content_listindent",
+			"content_trigger",
+			"content_action"
 		],
 		"Assessments": [
 			"assessment_intro",

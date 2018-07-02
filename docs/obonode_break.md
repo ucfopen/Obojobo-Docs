@@ -6,21 +6,21 @@ sidebar_label: ObojoboDraft.Chunks.Break
 
 Inserts a break in the document similar to a `<hr>` tag in HTML.
 
-### Content Values
+## Content Values
 
 * `width` String (Default: `"normal"`): Must be either `"normal"` or `"large"`. Specifies if width of the break.
 
-### Children
+## Children
 
 * No children
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON
+### JSON
 
 ```json
 {
@@ -32,14 +32,14 @@ Inserts a break in the document similar to a `<hr>` tag in HTML.
 }
 ```
 
-#### XML
+### XML
 
 ```xml
 <Break width="large" />
 ```
 
-#### OboHTML:
+### OboHTML
 
 ```xml
-<hr />
+<hr width="large"/>
 ```

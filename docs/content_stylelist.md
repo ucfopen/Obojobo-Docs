@@ -6,7 +6,7 @@ sidebar_label: StyleList
 
 A StyleList is a series of one or more styles to apply to a block of text
 
-### Structure
+## Structure
 
 A **StyleList** is an array of one or more **StyleListItem** objects containing four properties: **type**, **start**, **end** and **data**
 
@@ -25,9 +25,9 @@ A **StyleList** is an array of one or more **StyleListItem** objects containing 
   * `sup`: Expects an integer representing the number of levels to superscript or subscript (1 meaning one level of superscript, 2 meaning two levels, -1 meaning one level of subscript and so on)
   * All other types do not require this object
 
-### Example
+## Example
 
-#### JSON
+### JSON
 
 ```json
 "styleList": [

@@ -6,22 +6,22 @@ sidebar_label: ObojoboDraft.Chunks.Heading
 
 Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 
-### Content Values
+## Content Values
 
 * `textGroup` **REQUIRED** **[TextGroup](content_textgroup.md)**. Expects 1 text item.
 * `headingLevel` Integer (Default: `1`): A value from 1-6 representing the heading level where 1 is the primary heading.
 
-### Children
+## Children
 
 * No children
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Examples
+## Examples
 
-#### JSON
+### JSON
 
 ```json
 {
@@ -40,7 +40,7 @@ Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 }
 ```
 
-#### XML
+### XML
 
 ```xml
 <Heading headingLevel="1">
@@ -50,7 +50,7 @@ Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 </Heading>
 ```
 
-#### OboHTML
+### OboHTML
 
 ```xml
 <h1>Heading 1</h1>

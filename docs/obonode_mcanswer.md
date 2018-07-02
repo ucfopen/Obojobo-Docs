@@ -6,21 +6,21 @@ sidebar_label: ObojoboDraft.Chunks.MCAssessment.MCAnswer
 
 This represents the contents of the answer portion of a multiple choice answer choice.
 
-### Content Values
+## Content Values
 
 * None
 
-### Children
+## Children
 
-* One or more "content type" chunk nodes (**[Break](obonode_break.md)**, **[Code](obonode_code.md)**, **[Figure](obonode_figure.md)**, **[Heading](obonode_heading.md)**, **[List](obonode_list.md)**, **[MathEquation](obonode_mathequation.md)**, **[Table](obonode_table)**, **[Text](obonode_text.md)** and/or **[YouTube](obonode_youtube)**).
+* One or more "content type" chunk nodes (**[Break](obonode_break.md)**, **[Code](obonode_code.md)**, **[Figure](obonode_figure.md)**, **[Heading](obonode_heading.md)**, **[List](obonode_list.md)**, **[MathEquation](obonode_mathequation.md)**, **[Table](obonode_table.md)**, **[Text](obonode_text.md)** and/or **[YouTube](obonode_youtube.md)**).
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON:
+### JSON
 
 ```json
 {
@@ -44,7 +44,7 @@ This represents the contents of the answer portion of a multiple choice answer c
 }
 ```
 
-#### XML (With OboHTML):
+### XML (With OboHTML)
 
 ```xml
 <MCAnswer>

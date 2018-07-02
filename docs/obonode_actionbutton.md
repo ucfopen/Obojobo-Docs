@@ -6,27 +6,27 @@ sidebar_label: ObojoboDraft.Chunks.ActionButton
 
 Displays a button which can use the `onClick` trigger to perform an action - typically to start assessment or navigate the user elsewhere.
 
-### Content values
+## Content values
 
 * `label` String: The label for the button - since this is a string it is not possible to style the button. If you wish to style the text use `textGroup` instead. If this property is not specified then you must specify `textGroup`.
 * `textGroup` **[TextGroup](content_textgroup.md)**: The text for the button. If this property is not specified then you must specify `label`.
 * `triggers` **REQUIRED** **[Trigger](content_trigger)**: Should contain a trigger for `onClick` - see example below:
 
-### Triggers
+## Triggers
 
 * `onClick` - Runs when the button is clicked
 
-### Children
-
-* No children
-
-### Variables Registered
+## Children
 
 * None
 
-### Example
+## Variables Registered
 
-#### JSON (Using label):
+* None
+
+## Example
+
+### JSON (Using label)
 
 ```json
 {
@@ -50,7 +50,7 @@ Displays a button which can use the `onClick` trigger to perform an action - typ
 }
 ```
 
-#### XML (Using label):
+### XML (Using label)
 
 ```xml
 <ActionButton label="Begin">
@@ -66,7 +66,7 @@ Displays a button which can use the `onClick` trigger to perform an action - typ
 </ActionButton>
 ```
 
-#### JSON (Using textGroup):
+### JSON (Using textGroup)
 
 ```json
 {
@@ -96,7 +96,7 @@ Displays a button which can use the `onClick` trigger to perform an action - typ
 }
 ```
 
-#### XML (Using textGroup):
+### XML (Using textGroup)
 
 ```xml
 <ActionButton>

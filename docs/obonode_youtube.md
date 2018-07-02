@@ -6,21 +6,21 @@ sidebar_label: ObojoboDraft.Chunks.YouTube
 
 A YouTube video
 
-### Content Values
+## Content Values
 
 * `videoId` String: The YouTube ID of the video (example: `dQw4w9WgXcQ`)
 
-### Children
-
-* No children
-
-### Variables Registered
+## Children
 
 * None
 
-### Example
+## Variables Registered
 
-#### JSON:
+* None
+
+## Example
+
+### JSON
 
 ```json
 {
@@ -32,8 +32,10 @@ A YouTube video
 }
 ```
 
-#### XML:
+### XML
 
 ```xml
 <YouTube videoId="dQw4w9WgXcQ">
 ```
+
+This will display the youtube video that can be found at the address youtube.com/watch?v=dQw4w9WgXcQ

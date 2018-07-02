@@ -6,21 +6,21 @@ sidebar_label: ObojoboDraft.Sections.Content
 
 The content section contains one or more pages of material.
 
-### Content Values
+## Content Values
 
 * None
 
-### Children
+## Children
 
 * Expects one or more of [**ObojoboDraft.Pages.Page**](obonode_page.md)
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON:
+### JSON
 
 ```json
 {
@@ -30,11 +30,10 @@ The content section contains one or more pages of material.
 }
 ```
 
-#### XML:
+### XML
 
 ```xml
 <Content>
-
   <!-- ... -->
 </Content>
 ```

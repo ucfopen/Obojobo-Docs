@@ -6,7 +6,7 @@ sidebar_label: ObojoboDraft.Chunks.Figure
 
 An image with an optional image caption shown below.
 
-### Content Values
+## Content Values
 
 * `alt` **RECOMMENDED** String: Sets the alt tag of the image.
 * `textGroup` [TextGroup](content_textgroup): Used as the caption below the image - expects **only** 1 text item if set.
@@ -21,17 +21,17 @@ An image with an optional image caption shown below.
 
 Note: Setting either `width` or `height` on a `custom` image will modify the non-specified dimension proportionally. It's not recommended to set both `width` and `height` as this will not respect the natural aspect-ratio of the image.
 
-### Children
-
-* No children
-
-### Variables Registered
+## Children
 
 * None
 
-### Example
+## Variables Registered
 
-#### JSON (With caption):
+* None
+
+## Example
+
+### JSON (With caption)
 
 ```json
 {
@@ -52,7 +52,7 @@ Note: Setting either `width` or `height` on a `custom` image will modify the non
 }
 ```
 
-#### XML (With caption):
+### XML (With caption)
 
 ```xml
 <Figure size="medium" url="http://lorempixel.com/640/480/city" alt="Description of the image">
@@ -62,8 +62,9 @@ Note: Setting either `width` or `height` on a `custom` image will modify the non
 </Figure>
 ```
 
-#### OboHTML (With caption - Captions are always displayed below an image):
+### OboHTML (With caption)
 
+Captions are always displayed below an image, regardless of the order of the tags
 ```xml
 <figure>
   <img src="http://lorempixel.com/640/480/city" size="medium" alt="Description of the image">
@@ -71,7 +72,7 @@ Note: Setting either `width` or `height` on a `custom` image will modify the non
 </figure>
 ```
 
-#### JSON (No caption):
+### JSON (No caption)
 
 ```json
 {
@@ -86,13 +87,13 @@ Note: Setting either `width` or `height` on a `custom` image will modify the non
 }
 ```
 
-#### XML (No caption):
+### XML (No caption)
 
 ```xml
 <Figure size="custom" width="500" url="http://lorempixel.com/640/480/city" alt="Description of the image" />
 ```
 
-#### OboHTML (No caption):
+### OboHTML (No caption)
 
 ```xml
 <img src="http://lorempixel.com/640/480/city" width="500" alt="Description of the image">

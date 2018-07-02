@@ -6,7 +6,7 @@ sidebar_label: ObojoboDraft.Chunks.MCAssessment
 
 This is the multiple choice portion of a question containing several answer choices.
 
-### Content Values
+## Content Values
 
 * `responseType` String (Default: `'pick-one'`): Defines what type of multiple choice question this is - Must be one of the following values
   * `'pick-one'`: Student must choose the single correct answer among the other incorrect answers. Answer choices are presented as a list of radio buttons. Question prompt reads "Pick the correct answer".
@@ -16,17 +16,17 @@ This is the multiple choice portion of a question containing several answer choi
 * `incorrectLabels` String (Default: `'Incorrect'`): A `|` seperated list of labels to display when a non-assessment Question is answered incorrectly. One label will be selected at random.
 * `shuffle` Boolean (Default: `true`): If `false` then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.
 
-### Children
+## Children
 
 * One or more **[ObojoboDraft.Chunks.MCAssessment.MCChoice](obonode_mcchoice.md)** nodes.
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON:
+### JSON
 
 ```json
 {
@@ -57,7 +57,7 @@ This is the multiple choice portion of a question containing several answer choi
 }
 ```
 
-#### XML:
+### XML
 
 ```xml
 <MCAssessment responseType="pick-all" shuffle="false">

@@ -6,7 +6,7 @@ sidebar_label: ObojoboDraft.Chunks.Table
 
 A table with an optional header row.
 
-### Content Values
+## Content Values
 
 * `header` Boolean: If `true` then the first row of this table will be presented as a header row. Will default to `false` if not set.
 * `textGroup` **REQUIRED** [GridTextGroup](content_gridtextgroup): An object containing three properties: **numRows**, **numCols** and **textGroup**.
@@ -14,17 +14,17 @@ A table with an optional header row.
   * `numCols` **REQUIRED**: Integer.
   * `textGroup` **REQUIRED**: TextGroup - Expects a TextGroup of text items equal to `numRows * numCols`. The first `numCols` number text items will construct the first row of the table and so on. An example is shown below:
 
-### Children
+## Children
 
 * No children
 
-### Variables Registered
+## Variables Registered
 
 * None
 
-### Example
+## Example
 
-#### JSON:
+### JSON
 
 ```json
 {
@@ -61,13 +61,7 @@ A table with an optional header row.
 }
 ```
 
-This will produce a table similar to the following:
-
-| First column heading    | Second column heading    |
-| ----------------------- | ------------------------ |
-| First column second row | Second column second row |
-
-#### XML:
+### XML
 
 ```xml
 <Table numRows="2" numCols="2" header="true">
@@ -80,7 +74,7 @@ This will produce a table similar to the following:
 </Table>
 ```
 
-#### OboHTML:
+### OboHTML
 
 ```xml
 <table>
@@ -94,3 +88,9 @@ This will produce a table similar to the following:
   </tr>
 </table>
 ```
+
+This will produce a table similar to the following:
+
+| First column heading    | Second column heading    |
+| ----------------------- | ------------------------ |
+| First column second row | Second column second row |

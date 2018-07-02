@@ -6,22 +6,22 @@ sidebar_label: ObojoboDraft.Chunks.List
 
 A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
-### Content Values
+## Content Values
 
 * `textGroup` **REQUIRED** **[TextGroup](content_textgroup.md)**: Expects 1 or more text items.
-* `listStyles` **[ListStyles](content_listsyles.md)**: This defines various options on the list - see definition below:
+* `listStyles` **[ListStyles](content_liststyles.md)**: This defines various options for the list
 
-### Children
-
-* No children
-
-### Variables Registered
+## Children
 
 * None
 
-### Example
+## Variables Registered
 
-#### JSON (Unordered list):
+* None
+
+## Example
+
+### JSON (Unordered list)
 
 ```json
 {
@@ -47,7 +47,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 }
 ```
 
-#### XML (Unordered list):
+### XML (Unordered list)
 
 ```xml
 <List>
@@ -58,7 +58,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 </List>
 ```
 
-#### OboHTML (Unordered list):
+### OboHTML (Unordered list)
 
 ```xml
 <ul>
@@ -67,7 +67,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 </ul>
 ```
 
-#### JSON (Ordered list):
+### JSON (Ordered list)
 
 ```json
 {
@@ -96,7 +96,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 }
 ```
 
-#### XML (Ordered list):
+### XML (Ordered list)
 
 ```xml
 <List>
@@ -110,7 +110,7 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 </List>
 ```
 
-#### OboHTML (Ordered list):
+### OboHTML (Ordered list)
 
 ```xml
 <ol>

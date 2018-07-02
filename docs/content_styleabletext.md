@@ -6,7 +6,7 @@ sidebar_label: StyleableText
 
 A StyleableText is a string of text with defined styles for specified ranges.
 
-### Structure
+## Structure
 
 A **StyleableText** object contains two properties: **value** and **styleList**:
 
@@ -15,7 +15,7 @@ A **StyleableText** object contains two properties: **value** and **styleList**:
 
 In OboXML, `<t>` and `<p>` elements allow styling with a subset of HTML-like styling tags.
 
-##### Allowed HTML-like style tags
+### Allowed HTML-like style tags
 
 * `<b>`: Bold
 * `<i>`: Italic
@@ -26,12 +26,12 @@ In OboXML, `<t>` and `<p>` elements allow styling with a subset of HTML-like sty
 * `<q>`: Quote
 * `<del>`: Strikethrough
 
-### Example
+## Example
 
-#### JSON
+### JSON
 
 ```json
-{
+"text": {
   value: "Hello World",
   styleList: [
     {
@@ -43,7 +43,7 @@ In OboXML, `<t>` and `<p>` elements allow styling with a subset of HTML-like sty
 }
 ```
 
-#### OboXML
+### OboXML
 
 ```xml
 <b>Hello</b> World
@@ -53,7 +53,7 @@ This would produce the following text:
 
 **Hello** World
 
-#### JSON (Inline Math)
+### JSON (Inline Math)
 
 ```json
 "text": {
@@ -73,7 +73,7 @@ This would produce the following text:
 }
 ```
 
-#### OboXML (Inline Math)
+### OboXML (Inline Math)
 
 ```xml
 Theta is <latex>\theta</latex> and pi is <latex>\pi</latex>.

@@ -4,45 +4,48 @@ title: ScoreAction
 sidebar_label: ScoreAction
 ---
 
-A ScoreAction object contains two properties: **for** and **page**, and are always wrpped in a scoreActions array:
+A ScoreAction object contains two properties: **for** and **page**, and are always wrapped in a scoreActions array:
 
-### Structure
+## Structure
 
 * `for` **REQUIRED** **[Range](content_range.md)** or Integer or `'no-score'`: A range of score values or a single score.
 * `page` **REQUIRED**: [**Obojobo.Pages.Page**](obonode_page.md): The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
 
-### Example
+### Legacy properties (Deprecated):
 
-#### JSON
+The `from` and `to` properties have been replaced by the `for` property.
+
+* `from`: Integer: The start of the score range
+* `to`: Integer: The end of the score range
+
+You must either specify `for` or specify both `from` and `to`. `from` and `to` are deprecated and may be removed in a future release.
+
+## Example
+
+### JSON
 
 ```json
-{
-  "type": "ObojoboDraft.Sections.Assessment",
-  "content": {
-    "scoreActions": [
-      {
-        "for": "[0,100)",
-        "page": {
-          "type": "ObojoboDraft.Pages.Page",
-          "id": "...",
-          "children": [ ... ]
-        }
-      },
-      {
-        "for": "100",
-        "page": {
-          "type": "ObojoboDraft.Pages.Page",
-          "id": "...",
-          "children": [ ... ]
-        }
-      }
-    ]
+"scoreActions": [
+  {
+    "for": "[0,100)",
+    "page": {
+      "type": "ObojoboDraft.Pages.Page",
+      "id": "...",
+      "children": [ ... ]
+    }
+  },
+  {
+    "for": "100",
+    "page": {
+      "type": "ObojoboDraft.Pages.Page",
+      "id": "...",
+      "children": [ ... ]
+    }
   }
-  ...
-}
+]
 ```
 
-#### OboXML
+### OboXML
 
 ```xml
 <scoreActions>
