@@ -16,8 +16,8 @@ sidebar_label: Action
   * `nav:open` - Opens the left-hand navigation drawer.
   * `nav:close` - Closes the left-hand navigation drawer.
   * `nav:toggle` - Toggles open or close the navigation drawer.
-  * `assessment:startAttempt` - Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obo_reference.md#obojobodraftsectionsassessment)** node containing the assessment to start.
-  * `assessment:endAttempt` - Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obo_reference.md#obojobodraftsectionsassessment)** node containing the assessment to start.
+  * `assessment:startAttempt` - Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obonode_assessment.md)** node containing the assessment to start.
+  * `assessment:endAttempt` - Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obonode_assessment.md)** node containing the assessment to start.
   * `js` - Runs arbitrary javascript. `value` should be a string of javascript code to execute.
 * `value` Object: An object that can send one or more values along with the action event. The system can then use these values as desired. An example is shown below:
 

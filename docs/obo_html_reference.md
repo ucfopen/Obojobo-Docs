@@ -111,7 +111,7 @@ becomes
 
 `<table>`
 
-An [**ObojoboDraft.Chunks.Table**](obo_reference.md#obojobodraftchunkstable) expects an un-nested textGroup of items equal to the number of rows times the number of columns. This HTML-like `<table>` syntax provides a more friendly way to construct a table.
+An [**ObojoboDraft.Chunks.Table**](obonode_table.md) expects an un-nested textGroup of items equal to the number of rows times the number of columns. This HTML-like `<table>` syntax provides a more friendly way to construct a table.
 
 ```xml
 <table>
