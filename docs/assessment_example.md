@@ -53,6 +53,6 @@ Here's an example of a simple assessment
 
 In this setup the student will click the Start Attempt button to begin taking the assessment. The student will be shown all questions in the Assessment Question Bank, and the student will be able to navigate away from the assessment freely. There is no limit to the number of attempts available for the student.
 
-Note that the `Assessment` has been given an `id` property. This id is used in the [`assessment:startAttempt`](obo_content_reference.md#actions) value field. This is the wiring necessary to set up assessments.
+Note that the `Assessment` has been given an `id` property. This id is used in the [`assessment:startAttempt`](content_action.md) value field. This is the wiring necessary to set up assessments.
 
 The scoreAction page is required - this is the page that will be displayed once the Assessment Attempt has been completed. You can create multiple scoreAction pages - the page that is displayed is determined by the `for` property: The first `for` range that includes the Recorded Score will be displayed. Since this example doesn't specify multiple scoreAction pages you must set `for` to `"[0,100]"` as this will match any possible score.
