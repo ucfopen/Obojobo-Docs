@@ -1,0 +1,23 @@
+{% if menu %}
+  {% for item in menu %}
+
+    {% if item.sort == 'alphabetical' %}
+      {% assign childen = (item.children | sort_natural: 'title') %}
+    {% else %}
+      {% assign childen = item.children %}
+    {% endif %}
+
+    <div class="navGroup">
+      <h3 class="navGroupCategoryTitle">{{ item.title }}</h3>
+        <ul>
+        {% for item in childen %}
+          <li class="navListItem">
+            <a class="navItem" href="{{ item.url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+  {% endfor %}
+{% endif %}
+

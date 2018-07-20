@@ -1,0 +1,22 @@
+authors:
+  - title: Getting Started
+    identifier: authors_getting_started
+
+  - title: How To
+    identifier: authors_how_to
+
+teachers:
+  - title: Getting Started
+    identifier: teachers_getting_started
+
+developers:
+  - title: Getting Started
+    identifier: developers_getting_started
+
+  - title: Events Reference
+    identifier: developers_events
+
+  - title: OboNodes Reference
+    identifier: chunks
+    sort: alphabetical
+
