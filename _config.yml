@@ -13,21 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Obojobo User Documentation
-email: techrangers@ucf.exclude
-description: >- # this means to ignore newlines until "baseurl:"
+title: Obojobo Next Documentation
+description: >-
   Learning Objects, Reinvented
 baseurl: "/Obojobo-Docs" # the subpath of your site, e.g. /blog
 url: "https://ucfopen.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: materia_ucf
 github_username:  ucfopen
+obo_version: v3.3.2
 
-# Build settings
 markdown: kramdown
-# theme: minima
+
 plugins:
-  - jekyll-menus
-  - jekyll-toc
+  - jekyll-menus # left side group navigation menu
+  - jekyll-toc # right side in-page table of contents menu
 
 toc:
   min_level: 1 # default: 1
@@ -39,16 +38,4 @@ defaults:
       path: ""
     values:
       layout: "default"
-      toc: true
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+      toc: true # turn on toc by default
