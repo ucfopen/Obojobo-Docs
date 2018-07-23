@@ -21,6 +21,7 @@ url: "https://ucfopen.github.io" # the base hostname & protocol for your site, e
 twitter_username: materia_ucf
 github_username:  ucfopen
 obo_version: v3.3.2
+destination: docs
 
 markdown: kramdown
 
