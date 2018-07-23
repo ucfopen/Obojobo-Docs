@@ -1,7 +1,7 @@
 ---
 title: MCChoice
 menus: chunks
-full_name: OboDraft.Chunks.MCChoice
+full_name: OboDraft.Chunks.MCAssessment.MCChoice
 node_class: chunk
 ---
 A single answer choice in a multiple choice question containing the contents of the answer and optional feedback. Feedback is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).
