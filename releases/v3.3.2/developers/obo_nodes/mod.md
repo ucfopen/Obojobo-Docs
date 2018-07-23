@@ -6,9 +6,6 @@ menus:
 full_name: mod
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A Mod is a condition under which the assessment score will have additional points added or removed.  Mods are only rewarded if the `'passed'` status is achieved.
 
 Mods should most likely be kept to one or two at most. In a planned future release mod rules will be specified to the student through an automatically generated table and several mods will be difficult for a student to read clearly. There is a limit of **20** mod rules allowed (any additional mods after the 20th mod will be ignored).

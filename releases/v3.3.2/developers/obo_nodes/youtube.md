@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.YouTube
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A YouTube video
 
 ## Properties

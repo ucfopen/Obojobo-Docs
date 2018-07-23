@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.MCFeedback
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 This represents the contents of the feedback of a multiple choice answer choice. It is functionally identical to an **[ObojoboDraft.Chunks.MCAssessment.MCAnswer](obonode_mcanswer.md)** node, but displays below a MCAssessment after the question has been answered
 
 ## Properties

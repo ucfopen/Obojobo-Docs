@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.MCAnswer
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 This represents the contents of the answer portion of a multiple choice answer choice.
 
 ## Properties

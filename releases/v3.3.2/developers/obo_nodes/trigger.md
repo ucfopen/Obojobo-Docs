@@ -6,9 +6,6 @@ menus:
 full_name: trigger
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A trigger is a condition that will allow an action to take place when met, and must always be wrapped in a triggers array.
 
 Triggers are linked to the OboNode that contains them, and are only fired when the condition is met for that particular node. Ergo, an `onClick` trigger is only linked to the clicking of one specific button.

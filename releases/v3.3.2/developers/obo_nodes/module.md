@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Modules.Module
 node_class: module
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 This **MUST** be the root OboNode of every Obojobo Draft Document.
 
 ## Properties

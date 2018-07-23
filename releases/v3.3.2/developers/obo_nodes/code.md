@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.Code
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 This chunk is fundamentally identical to the **[ObojoboDraft.Chunks.Text](obonode_text.md)** node except the styling of the rendered output is mono-spaced.
 
 ## Properties

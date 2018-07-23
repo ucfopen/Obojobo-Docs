@@ -65,9 +65,19 @@ These properties haven't been completed and are not required but you will see th
 
 ### Chunk
 
+> @TODO
+
 ### Section
 
+> @TODO
+
+### Page
+
+> @TODO
+
 ### Content
+
+> @TODO
 
 ## OboNode Reference
 

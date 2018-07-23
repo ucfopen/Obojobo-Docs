@@ -278,14 +278,15 @@
           <div class="post">
             <header class="postHeader">
               <h1 class="postHeaderTitle">QuestionBank</h1>
+                  
+                    <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#chunk">Chunk</a></em>
+                    <strong>Full Name:</strong> <em>OboDraft.Chunks.QuestionBank</em>
+                  
             </header>
             <article>
               <div>
                 <span>
-                  <p><strong>Node Class:</strong> <em><a href="/developers/obo_node_structure.html#chunk">Chunk</a></em>
-<strong>Full Name:</strong> <em>OboDraft.Chunks.QuestionBank</em></p>
-
-<p>Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.</p>
+                  <p>Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.</p>
 
 <h2 id="properties">
 <a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
@@ -305,7 +306,7 @@
       <td>no</td>
       <td>Integer or <code class="highlighter-rouge">Infinity</code>
 </td>
-      <td>Default: <code class="highlighter-rouge">Infinity</code>. The number of children to “choose” when selecting which children to display. All children are chosen if set to <code class="highlighter-rouge">Infinity</code>.</td>
+      <td>Default: <code class="highlighter-rouge">Infinity</code>. The number of children to “choose” when selecting which children to display. All children are chosen if set to <code class="highlighter-rouge">Infinity</code>. If choose is greater then the number of children, QuestionBank will simply act as if choose was equal to the number of children.</td>
     </tr>
     <tr>
       <td>select</td>

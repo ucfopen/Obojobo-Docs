@@ -6,9 +6,6 @@ menus:
 full_name: scoreAction
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A ScoreAction object contains two properties: **for** and **page**, and are always wrapped in a scoreActions array:
 
 ## Structure

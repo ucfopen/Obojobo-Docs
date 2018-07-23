@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.ActionButton
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 Displays a button which can use the `onClick` trigger to perform an action - typically to start assessment or navigate the user elsewhere.
 
 ## Properties

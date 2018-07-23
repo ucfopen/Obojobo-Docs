@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.Break
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 Inserts a break in the document similar to a `<hr>` tag in HTML.
 
 ## Properties

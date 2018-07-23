@@ -6,9 +6,6 @@ menus:
 full_name: lineStyles
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A ListStyle is a description of how to format an **[ObojoboDraft.Chunks.List](obonode_list.md)**
 
 ## Structure

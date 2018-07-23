@@ -6,9 +6,6 @@ menus:
 full_name: rubric
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 An AssessmentRubric is a rubric that marks the overall assessment score based on the attempt scores. For a more in-depth breakdown, see [AssessmentScoring](assessment_scoring.md)
 
 ## Structure

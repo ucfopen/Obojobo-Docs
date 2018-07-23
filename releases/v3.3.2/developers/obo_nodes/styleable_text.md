@@ -4,9 +4,6 @@ menus: chunks
 full_name:
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A StyleableText is a string of text with defined styles for specified ranges.
 
 ## Structure

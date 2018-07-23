@@ -6,9 +6,6 @@ menus:
 full_name: action
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 > @TODO link to what types support action?
 
 > @TODO Needs Description

@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.List
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
 ## Properties

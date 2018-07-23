@@ -6,9 +6,6 @@ menus:
 full_name: styleList
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A StyleList is a series of one or more styles to apply to a block of text
 
 ## Structure

@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.Figure
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 An image with an optional image caption shown below.
 
 ## Properties

@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.Heading
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 
 ## Properties

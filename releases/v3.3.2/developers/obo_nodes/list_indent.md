@@ -6,9 +6,6 @@ menus:
 full_name: indent
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A ListIndent is a single indent style in a **[ListSyle](content_liststyles.md)**.  ListIndents must be contained in a ListIndents array.
 
 For indent levels not defined in a ListIndent, the following defaults will apply:

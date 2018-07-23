@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Chunks.Text
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A single block of text similar to a paragraph (`<p>`) tag in HTML.
 
 ## Properties

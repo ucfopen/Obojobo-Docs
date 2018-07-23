@@ -4,16 +4,13 @@ menus: chunks
 full_name: OboDraft.Chunks.QuestionBank
 node_class: chunk
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| choose | no | Integer or `Infinity` | Default: `Infinity`. The number of children to "choose" when selecting which children to display. All children are chosen if set to `Infinity`.
+| choose | no | Integer or `Infinity` | Default: `Infinity`. The number of children to "choose" when selecting which children to display. All children are chosen if set to `Infinity`. If choose is greater then the number of children, QuestionBank will simply act as if choose was equal to the number of children.
 | select | no | String | Default: `sequential`. Describes how the question bank selects children - Expected to be one of the following values:
 
 ### Allowed 'select' Property Values

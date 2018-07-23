@@ -6,9 +6,6 @@ menus:
 full_name: textGroup
 node_class: content
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A TextGroup is a series of one or more lines of text with optional styling and additional data defined.
 
 ## Structure

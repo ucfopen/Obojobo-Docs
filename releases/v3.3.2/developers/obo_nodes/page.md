@@ -4,9 +4,6 @@ menus: chunks
 full_name: OboDraft.Pages.Page
 node_class: page
 ---
-**Node Class:** *[{{ page.node_class | capitalize }}](/developers/obo_node_structure.html#{{ page.node_class }})*
-**Full Name:** *{{ page.full_name }}*
-
 A generic "page" that can be thought of as a page in a book or an online article.
 
 ## Properties
