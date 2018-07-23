@@ -22,6 +22,8 @@ url: "https://ucfopen.github.io" # the base hostname & protocol for your site, e
 twitter_username: materia_ucf
 github_username:  ucfopen
 
+production_url : //ucfopen.github.io/Obojobo-Docs/
+
 # Build settings
 markdown: kramdown
 # theme: minima
