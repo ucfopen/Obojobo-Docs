@@ -2,7 +2,7 @@
 title: StyleList
 menus:
   chunks:
-    title: styleList
+    title: StyleableText > styleList
 full_name: styleList
 node_class: content
 ---

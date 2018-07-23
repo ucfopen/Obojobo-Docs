@@ -91,6 +91,8 @@
               <h1 class="postHeaderTitle">{{ page.title }}</h1>
                   {% if page.node_class %}
                     <strong>Node Class:</strong> <em><a href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/obo_node_structure.html#{{ page.node_class }}">{{ page.node_class | capitalize }}</a></em>
+                  {% endif %}
+                  {% if page.full_name %}
                     <strong>Full Name:</strong> <em>{{ page.full_name }}</em>
                   {% endif %}
             </header>

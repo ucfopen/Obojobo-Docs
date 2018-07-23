@@ -1,6 +1,8 @@
 ---
 title: MCFeedback
-menus: chunks
+menus:
+  chunks:
+    title: MCAssessment > MCChoice > MCFeedback
 full_name: OboDraft.Chunks.MCFeedback
 node_class: chunk
 ---

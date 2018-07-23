@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Authors Getting Started Guide - Obojobo Next Documentation</title>
+  <title>Assessment Scoring - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
   <meta name="description" content="By default after an Assessment Attempt is completed the student is shown which questions they got correct and incorrect, however they are not able to see the question choices, their responses or the correct answers. Additionally if any Assessment Questions have feedback or solutions these will not be displayed."/>
@@ -193,27 +193,146 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Authors Getting Started Guide</h1>
+              <h1 class="postHeaderTitle">Assessment Scoring</h1>
                   
                   
             </header>
             <article>
               <div>
                 <span>
-                  <h2 id="the-role-of-an-author">
-<a id="the-role-of-an-author" class="anchor" href="#the-role-of-an-author" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Role of an Author</h2>
+                  <p>After each Assessment Attempt Quiz the Assessment Attempt Score, Assessment Score and Assessment Status is calculated.</p>
 
-<p>write and create edu documents</p>
+<h2 id="assessment-attempt-score">
+<a id="assessment-attempt-score" class="anchor" href="#assessment-attempt-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment Attempt Score</h2>
 
-<h2 id="accessing-the-editor">
-<a id="accessing-the-editor" class="anchor" href="#accessing-the-editor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing the Editor</h2>
+<p>Assessment Attempt Scores are calculated as an average of every response:</p>
 
-<p>editor vs viewer</p>
+<h3 id="expected-values">
+<a id="expected-values" class="anchor" href="#expected-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected Values</h3>
 
-<h2 id="obojobo-document-format">
-<a id="obojobo-document-format" class="anchor" href="#obojobo-document-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>Obojobo Document Format</h2>
+<ul>
+  <li>0-100</li>
+</ul>
 
-<p>it’s xml, it’s like html, its specialized</p>
+<h3 id="calculation">
+<a id="calculation" class="anchor" href="#calculation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculation</h3>
+
+<p><strong>Assessment Attempt Score</strong> = <strong>Number of questions answered correctly</strong> / <strong>Number of questions</strong> × 100</p>
+
+<h2 id="assessment-status">
+<a id="assessment-status" class="anchor" href="#assessment-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment Status</h2>
+
+<p>This identifies the completed state of an Assessment Attempt.</p>
+
+<h3 id="expected-values-1">
+<a id="expected-values-1" class="anchor" href="#expected-values-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected Values</h3>
+
+<ul>
+  <li>
+<code class="highlighter-rouge">'passed'</code>: Student passed the Assessment.</li>
+  <li>
+<code class="highlighter-rouge">'failed'</code>: Student failed the Assessment.</li>
+  <li>
+<code class="highlighter-rouge">'unableToPass'</code>: Student has no Assessment Attempt remaining and did not achieve a <code class="highlighter-rouge">'passed'</code> status for any of thier Assessment Attempts.</li>
+</ul>
+
+<h3 id="calculation-1">
+<a id="calculation-1" class="anchor" href="#calculation-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculation</h3>
+
+<p>After an Assessment Attempt is completed the Assessment Status is calculated as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rubric Type</th>
+      <th>Attempt Score &gt;= <code class="highlighter-rouge">passingAttemptScore</code>?</th>
+      <th>Attempts Remain?</th>
+      <th>Status =</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">'attempt'</code></td>
+      <td>–</td>
+      <td>–</td>
+      <td><code class="highlighter-rouge">'passed'</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td>Yes</td>
+      <td>–</td>
+      <td><code class="highlighter-rouge">'passed'</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td>No</td>
+      <td>Yes</td>
+      <td><code class="highlighter-rouge">'failed'</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td>No</td>
+      <td>No</td>
+      <td><code class="highlighter-rouge">'unableToPass'</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>(Note that any completed Assessment Attempt in the <code class="highlighter-rouge">'attempt'</code> rubric mode results in a <code class="highlighter-rouge">'passed'</code> status)</p>
+
+<h2 id="assessment-score">
+<a id="assessment-score" class="anchor" href="#assessment-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment Score</h2>
+
+<p>The Assessment Score is calculated based on the Assessment Rubric</p>
+
+<h3 id="expected-values-2">
+<a id="expected-values-2" class="anchor" href="#expected-values-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected Values</h3>
+
+<ul>
+  <li>0-100</li>
+  <li>
+<code class="highlighter-rouge">null</code> (no-score)</li>
+</ul>
+
+<h3 id="calcuation">
+<a id="calcuation" class="anchor" href="#calcuation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calcuation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rubric Type</th>
+      <th>Rewarded Assessment Status</th>
+      <th>Assessment Score =</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">'attempt'</code></td>
+      <td>–</td>
+      <td>Assessment Attempt Score + Rewarded Mods</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td><code class="highlighter-rouge">'passed'</code></td>
+      <td>
+<code class="highlighter-rouge">passedResult</code> + Rewarded Mods</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td><code class="highlighter-rouge">'failed'</code></td>
+      <td><code class="highlighter-rouge">failedResult</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td><code class="highlighter-rouge">'unableToPass'</code></td>
+      <td><code class="highlighter-rouge">unableToPassResult</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="highlighter-rouge">null</code> (or <code class="highlighter-rouge">no-score</code>) Assessment Scores represent that the module has no grade (and no score will be sent via LTI). This allows you to require a student to retry an Assessment to achieve a certain passing score.</p>
+
+<p>The Assessment Score is always bound to the range of 0-100, regardless of rewarded mods. For example, if the Assessment Attempt Score = 100 and Rewarded Mods = +5 the resulting Assessment Score would be 100, not 105.</p>
 
                 </span>
               </div>
@@ -227,9 +346,24 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#the-role-of-an-author">The Role of an Author</a></li>
-<li class="toc-entry toc-h2"><a href="#accessing-the-editor">Accessing the Editor</a></li>
-<li class="toc-entry toc-h2"><a href="#obojobo-document-format">Obojobo Document Format</a></li>
+<li class="toc-entry toc-h2"><a href="#assessment-attempt-score">Assessment Attempt Score</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#expected-values">Expected Values</a></li>
+<li class="toc-entry toc-h3"><a href="#calculation">Calculation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#assessment-status">Assessment Status</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#expected-values-1">Expected Values</a></li>
+<li class="toc-entry toc-h3"><a href="#calculation-1">Calculation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#assessment-score">Assessment Score</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#expected-values-2">Expected Values</a></li>
+<li class="toc-entry toc-h3"><a href="#calcuation">Calcuation</a></li>
+</ul>
+</li>
 </ul>
 
     </nav>

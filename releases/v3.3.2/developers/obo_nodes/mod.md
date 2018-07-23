@@ -2,7 +2,7 @@
 title: Mod
 menus:
   chunks:
-    title: mod
+    title: Assessment > rubric > mod
 full_name: mod
 node_class: content
 ---

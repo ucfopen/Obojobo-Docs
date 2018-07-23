@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Rubric - Obojobo Next Documentation</title>
+  <title>Assessment > rubric - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
   <meta name="description" content="By default after an Assessment Attempt is completed the student is shown which questions they got correct and incorrect, however they are not able to see the question choices, their responses or the correct answers. Additionally if any Assessment Questions have feedback or solutions these will not be displayed."/>
@@ -114,15 +114,23 @@
         <ul>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a>
-          </li>
-        
-          <li class="navListItem">
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a>
           </li>
         
           <li class="navListItem">
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a>
+          </li>
+        
+          <li class="navListItem">
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">Assessment > rubric</a>
+          </li>
+        
+          <li class="navListItem">
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">Assessment > rubric > mod</a>
+          </li>
+        
+          <li class="navListItem">
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment > scoreActions</a>
           </li>
         
           <li class="navListItem">
@@ -166,23 +174,19 @@
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAnswer</a>
-          </li>
-        
-          <li class="navListItem">
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">mod</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem">
@@ -202,19 +206,11 @@
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a>
-          </li>
-        
-          <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">scoreActions</a>
-          </li>
-        
-          <li class="navListItem">
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">styleList</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
           </li>
         
           <li class="navListItem">
@@ -231,6 +227,10 @@
         
           <li class="navListItem">
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a>
+          </li>
+        
+          <li class="navListItem">
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">trigger > action</a>
           </li>
         
           <li class="navListItem">
@@ -277,9 +277,11 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Rubric</h1>
+              <h1 class="postHeaderTitle">Assessment > rubric</h1>
                   
                     <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#content">Content</a></em>
+                  
+                  
                     <strong>Full Name:</strong> <em>rubric</em>
                   
             </header>
@@ -291,20 +293,55 @@
 <h2 id="structure">
 <a id="structure" class="anchor" href="#structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structure</h2>
 
-<ul>
-  <li>
-<code class="highlighter-rouge">type</code> <strong>REQUIRED</strong> String : Must be <code class="highlighter-rouge">'pass-fail'</code> (future versions may introduce additional rubrics).</li>
-  <li>
-<code class="highlighter-rouge">mods</code> Array&lt;<strong><a href="content_mod.md">Mod</a></strong>&gt;: A list of Mods which provide extra credit or penalties.</li>
-  <li>
-<code class="highlighter-rouge">passingAttemptScore</code> Integer 0-100 (Default: <code class="highlighter-rouge">100</code>): The Assessment Attempt score required to be rewarded a <code class="highlighter-rouge">'passed'</code> status.</li>
-  <li>
-<code class="highlighter-rouge">passedResult</code> Integer 0-100 or <code class="highlighter-rouge">'$attempt_score'</code> (Default: <code class="highlighter-rouge">100</code>): The base Assessment Score if rewarded a <code class="highlighter-rouge">'passed'</code> status. If <code class="highlighter-rouge">'$attempt_score'</code> is specified this Assessment Attempt score will be used for this value.</li>
-  <li>
-<code class="highlighter-rouge">failedResult</code> Integer 0-100 or <code class="highlighter-rouge">'$attempt_score'</code> or <code class="highlighter-rouge">'no-score'</code> (Default: <code class="highlighter-rouge">0</code>): The base Assessment Score if rewarded a <code class="highlighter-rouge">'failed'</code> status.</li>
-  <li>
-<code class="highlighter-rouge">unableToPassResult</code> Integer 0-100 or <code class="highlighter-rouge">'no-score'</code> or <code class="highlighter-rouge">'$highest_attempt_score'</code> (Default: Not set): The base Assessment Score if rewarded an <code class="highlighter-rouge">unableToPass</code> status. If <code class="highlighter-rouge">'$highest_attempt_score'</code> is specified then the highest Assessment Attempt score will be used for this value. If this value is not set then the <code class="highlighter-rouge">unableToPass</code> status will not be rewarded and this result will not be triggered.</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Propterty</th>
+      <th>Required</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>Required</td>
+      <td>String</td>
+      <td>
+<code class="highlighter-rouge">pass-fail</code> is the only supported value.</td>
+    </tr>
+    <tr>
+      <td>mods</td>
+      <td>no</td>
+      <td>Array&lt;<em><a href="content_mod.md">mod</a></em>&gt;</td>
+      <td>A list of mods which provide extra credit or penalties.</td>
+    </tr>
+    <tr>
+      <td>passingAttemptScore</td>
+      <td>no</td>
+      <td>Integer 0-100</td>
+      <td>Default: <code class="highlighter-rouge">100</code>. The assessment attempt score required to be rewarded a <code class="highlighter-rouge">passed</code> status.</td>
+    </tr>
+    <tr>
+      <td>passedResult</td>
+      <td>no</td>
+      <td>Integer 0-100</td>
+      <td>Default: <code class="highlighter-rouge">100</code>. The base assessment score if rewarded a <code class="highlighter-rouge">passed</code> status. If set to <code class="highlighter-rouge">$attempt_score</code> this assessment attempt score will be used for this value.</td>
+    </tr>
+    <tr>
+      <td>failedResult</td>
+      <td>no</td>
+      <td>Integer 0-100</td>
+      <td>Default: <code class="highlighter-rouge">0</code>. The base Assessment score if rewarded a <code class="highlighter-rouge">failed</code> status. If set to <code class="highlighter-rouge">$attempt_score</code> the current assessment attempt score will be used.  If set to <code class="highlighter-rouge">no-score</code>, no score will be awarded and scores will not be sent to the LMS.</td>
+    </tr>
+    <tr>
+      <td>unableToPassResult</td>
+      <td>no</td>
+      <td>Integer 0-100</td>
+      <td>The base Assessment Score if rewarded an <code class="highlighter-rouge">unableToPass</code> status. If set to <code class="highlighter-rouge">$highest_attempt_score</code> the highest assessment attempt score will be used. If not set, the <code class="highlighter-rouge">unableToPass</code> status will not be rewarded and this result will not be triggered.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="required-children">
 <a id="required-children" class="anchor" href="#required-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Children</h2>

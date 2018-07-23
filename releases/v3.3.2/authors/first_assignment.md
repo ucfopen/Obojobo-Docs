@@ -1,8 +1,6 @@
 ---
 title: Creating Your First Assessment
-menus:
-  authors_getting_started:
-    weight: 5
+menus: writing_assessments
 ---
 
 ## The Role of Assessments

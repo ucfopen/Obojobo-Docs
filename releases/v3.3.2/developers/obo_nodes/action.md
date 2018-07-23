@@ -2,7 +2,7 @@
 title: Action
 menus:
   chunks:
-    title: action
+    title: trigger > action
 full_name: action
 node_class: content
 ---

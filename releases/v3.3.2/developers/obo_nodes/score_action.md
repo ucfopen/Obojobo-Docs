@@ -2,7 +2,7 @@
 title: ScoreAction
 menus:
   chunks:
-    title: scoreActions
+    title: Assessment > scoreActions
 full_name: scoreAction
 node_class: content
 ---

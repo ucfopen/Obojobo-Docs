@@ -1,21 +1,23 @@
 ---
-title: Rubric
-menus:
-  chunks:
-    title: rubric
+title: Assessment > rubric
+menus: chunks
 full_name: rubric
 node_class: content
+
 ---
 An AssessmentRubric is a rubric that marks the overall assessment score based on the attempt scores. For a more in-depth breakdown, see [AssessmentScoring](assessment_scoring.md)
 
 ## Structure
 
-* `type` **REQUIRED** String : Must be `'pass-fail'` (future versions may introduce additional rubrics).
-* `mods` Array\<**[Mod](content_mod.md)**>: A list of Mods which provide extra credit or penalties.
-* `passingAttemptScore` Integer 0-100 (Default: `100`): The Assessment Attempt score required to be rewarded a `'passed'` status.
-* `passedResult` Integer 0-100 or `'$attempt_score'` (Default: `100`): The base Assessment Score if rewarded a `'passed'` status. If `'$attempt_score'` is specified this Assessment Attempt score will be used for this value.
-* `failedResult` Integer 0-100 or `'$attempt_score'` or `'no-score'` (Default: `0`): The base Assessment Score if rewarded a `'failed'` status.
-* `unableToPassResult` Integer 0-100 or `'no-score'` or `'$highest_attempt_score'` (Default: Not set): The base Assessment Score if rewarded an `unableToPass` status. If `'$highest_attempt_score'` is specified then the highest Assessment Attempt score will be used for this value. If this value is not set then the `unableToPass` status will not be rewarded and this result will not be triggered.
+
+| Propterty | Required | Type | Description
+|-
+| type | Required | String | `pass-fail` is the only supported value.
+| mods | no | Array\<*[mod](content_mod.md)*> | A list of mods which provide extra credit or penalties.
+| passingAttemptScore | no | Integer 0-100 | Default: `100`. The assessment attempt score required to be rewarded a `passed` status.
+| passedResult | no | Integer 0-100 | Default: `100`. The base assessment score if rewarded a `passed` status. If set to `$attempt_score` this assessment attempt score will be used for this value.
+| failedResult | no | Integer 0-100 | Default: `0`. The base Assessment score if rewarded a `failed` status. If set to `$attempt_score` the current assessment attempt score will be used.  If set to `no-score`, no score will be awarded and scores will not be sent to the LMS.
+| unableToPassResult | no | Integer 0-100 | The base Assessment Score if rewarded an `unableToPass` status. If set to `$highest_attempt_score` the highest assessment attempt score will be used. If not set, the `unableToPass` status will not be rewarded and this result will not be triggered.
 
 ## Required Children
 
