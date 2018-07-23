@@ -24,6 +24,30 @@ github_username:  ucfopen
 
 production_url : //ucfopen.github.io/Obojobo-Docs/
 
+# All links will be namespaced by BASE_PATH if defined.
+# Links in your website should always be prefixed with {{BASE_PATH}}
+# however this value will be dynamically changed depending on your deployment situation.
+#
+# CNAME (http://yourcustomdomain.com)
+#   DO NOT SET BASE_PATH
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Pages (http://username.github.com)
+#   DO NOT SET BASE_PATH
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Project Pages (http://username.github.com/project-name)
+#
+#   A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
+#  REQUIRED! Set BASE_PATH to: http://username.github.com/project-name
+#
+# CAUTION:
+#   - When in Localhost, your site will run from root "/" regardless of BASE_PATH
+#   - Only the following values are falsy: ["", null, false]
+#   - When setting BASE_PATH it must be a valid url.
+#     This means always setting the protocol (http|https) or prefixing with "/"
+BASE_PATH : //ucfopen.github.io/Obojobo-Docs/
+
 # Build settings
 markdown: kramdown
 # theme: minima
