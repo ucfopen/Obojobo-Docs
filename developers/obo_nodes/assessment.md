@@ -110,7 +110,7 @@ Assessment expects exactly two children in order:
     </scoreAction>
   </scoreActions>
   <Page>
-    <p>You have {{assessment:attemptsRemaining}} attempts remaining. Click begin below to attempt the assessment. Scoring a 100% will move you to the next module, otherwise you will have a chance to review the content and retake the assessment with different questions.</p>
+    <p>You have {% raw %}{{assessment:attemptsRemaining}}{% endraw %} attempts remaining. Click begin below to attempt the assessment. Scoring a 100% will move you to the next module, otherwise you will have a chance to review the content and retake the assessment with different questions.</p>
     <ActionButton label="Begin">
       <triggers>
         <trigger type="onClick">
