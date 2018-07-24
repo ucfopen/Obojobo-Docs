@@ -15,7 +15,7 @@ This **MUST** be the root OboNode of every Obojobo Draft Document.
 
 ## Required Children
 
-Expects one or more of [**ObojoboDraft.Sections.Content**](obonode_content.md) or [**ObojoboDraft.Sections.Assessment**](obonode_assessment.md)
+Expects one or more of [*Content*](content.html) or [*Assessment*](assessment.html)
 
 ## Variables Registered
 

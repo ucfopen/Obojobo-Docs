@@ -11,7 +11,7 @@
       <h3 class="navGroupCategoryTitle">{{ item.title }}</h3>
         <ul>
         {% for item in childen %}
-          <li class="navListItem">
+          <li class="navListItem{% if page.url == item.url %} navListItemActive{% endif %}" >
             <a class="navItem" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
           </li>
         {% endfor %}

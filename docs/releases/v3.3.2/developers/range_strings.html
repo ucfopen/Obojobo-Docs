@@ -5,10 +5,10 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>OboNode Structure - Obojobo Next Documentation</title>
+  <title>Range Strings - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="The OboNode is a Data structure which defines the use of an OboNode Component and its related data &amp;amp; content. Multiple OboNodes comprise an Obojobo Draft Document.Our goal is to allow this structure to be open-ended so that new nodes can be developed and added to the system.StructureEach OboN..."/>
+  <meta name="description" content="Range strings are used to briefly describe a range of values.Range String Syntax( or [ + Integer + , + Integer + ) or ]Where supported, you can use variables in place of Integers.Examples            Example      Description                  [1,3]      Square brackets are inclusive. This matches 1..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -67,7 +67,7 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/">Developers Getting Started Guide</a>
           </li>
         
-          <li class="navListItem navListItemActive" >
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html">OboNode Structure</a>
           </li>
         
@@ -252,7 +252,7 @@
       <h3 class="navGroupCategoryTitle">Misc Dev Topics</h3>
         <ul>
         
-          <li class="navListItem" >
+          <li class="navListItem navListItemActive" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/range_strings.html">Range Strings</a>
           </li>
         
@@ -296,280 +296,57 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">OboNode Structure</h1>
+              <h1 class="postHeaderTitle">Range Strings</h1>
                   
                   
             </header>
             <article>
               <div>
                 <span>
-                  <p>The OboNode is a Data structure which defines the use of an OboNode Component and its related data &amp; content. Multiple OboNodes comprise an Obojobo Draft Document.</p>
+                  <p>Range strings are used to briefly describe a range of values.</p>
 
-<p>Our goal is to allow this structure to be open-ended so that new nodes can be developed and added to the system.</p>
+<h2 id="range-string-syntax">
+<a id="range-string-syntax" class="anchor" href="#range-string-syntax" aria-hidden="true"><span class="octicon octicon-link"></span></a>Range String Syntax</h2>
 
-<h2 id="structure">
-<a id="structure" class="anchor" href="#structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structure</h2>
+<p><code class="highlighter-rouge">( or [</code> + <code class="highlighter-rouge">Integer</code> + <code class="highlighter-rouge">,</code> + <code class="highlighter-rouge">Integer</code> + <code class="highlighter-rouge">) or ]</code></p>
 
-<p>Each OboNode has a native JSON representation.  All nodes share the same basic structure.</p>
+<p>Where supported, you can use variables in place of Integers.</p>
 
-<p>Here’s an example <strong>JSON</strong> structure of a <a href="obo_reference.md#obojobodraftpagespage"><code class="highlighter-rouge">ObojoboDraft.Chunks.Break</code></a> OboNode:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.Break"</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"large"</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Each node can be represented in <strong>XML</strong>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Break</span> <span class="na">width=</span><span class="s">"large"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<p>Furthermore, some nodes have an alternate HTML-like form called <strong>OboHTML</strong>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;hr</span> <span class="na">width=</span><span class="s">"large"</span><span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<blockquote>
-  <p><strong>OboHTML:</strong> An XML element which mimics the syntax of HTML elements (for example &lt;p&gt; or &lt;h1&gt;). These elements are read by the OboXML Parser and are converted into their OboXML representation. These are provided to make writing OboXML easier by providing a familiar and less verbose syntax for common tasks.</p>
-</blockquote>
-
-<h2 id="properties">
-<a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
+<h2 id="examples">
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Property</th>
-      <th>Required</th>
-      <th>Type</th>
+      <th>Example</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>id</td>
-      <td>Required</td>
-      <td>String</td>
-      <td>A unique string to identify the node. No node can share an id with another node. Id’s are automatically generated when omitted, but can be set if a reference to this node is needed for extended functionality.</td>
+      <td><code class="highlighter-rouge">[1,3]</code></td>
+      <td>Square brackets are <strong>inclusive</strong>. This matches <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code> and <code class="highlighter-rouge">3</code>.</td>
     </tr>
     <tr>
-      <td>type</td>
-      <td>Required</td>
-      <td>String</td>
-      <td>An OboNode Component Identifier that determines which OboNode Component will be used process and render this item.</td>
+      <td><code class="highlighter-rouge">(1,3]</code></td>
+      <td>Parentheses are <strong>exclusive</strong>. This matches <code class="highlighter-rouge">2</code> and <code class="highlighter-rouge">3</code>.</td>
     </tr>
     <tr>
-      <td>content</td>
-      <td>no</td>
-      <td>Object</td>
-      <td>Properties that define the contents of this node. The <a href="obo_reference.md#obojobodraftpagespage">ObojoboDraft.Pages.Page</a> node in the example only understands a single property; <strong>title</strong>. Each type of node supports different properties.</td>
+      <td><code class="highlighter-rouge">[1,3)</code></td>
+      <td>Matches <code class="highlighter-rouge">1</code> and <code class="highlighter-rouge">2</code>
+</td>
     </tr>
     <tr>
-      <td>children</td>
-      <td>no</td>
-      <td>Array&lt;OboNode&gt;</td>
-      <td>Each OboNode can have an array of children OboNodes. Different OboNode types may ignore or expect specific types of children.</td>
+      <td><code class="highlighter-rouge">(1,3)</code></td>
+      <td>Matches <code class="highlighter-rouge">2</code> (This is functionally equivalent to <code class="highlighter-rouge">2</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">[1,$last_attempt)</code></td>
+      <td>Matches from <code class="highlighter-rouge">1</code> to the value of <code class="highlighter-rouge">$last_attempt</code>
+</td>
     </tr>
   </tbody>
 </table>
-
-<h2 id="unused-properties">
-<a id="unused-properties" class="anchor" href="#unused-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unused Properties</h2>
-
-<p>These properties haven’t been completed and are not required but you will see them in the JSON output of an Obojobo document so they are included here for reference:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>metadata</td>
-      <td>Object</td>
-      <td>Meta information about this node. Currently this information is ignored and should be left as <code class="highlighter-rouge">{}</code> if set. This may be removed in a future release.</td>
-    </tr>
-    <tr>
-      <td>index</td>
-      <td>Integer</td>
-      <td>The position of this item relative to its siblings. Currently this information is ignored - the order of nodes in the document dictate the rendering order instead. These values should be left as <code class="highlighter-rouge">0</code> (or any integer) if set. This may be removed in a future release.</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p><strong>Note:</strong> OboNode examples in the rest of the document will exclude these properties</p>
-</blockquote>
-
-<h2 id="obonode-clasifications">
-<a id="obonode-clasifications" class="anchor" href="#obonode-clasifications" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboNode Clasifications</h2>
-
-<h3 id="chunk">
-<a id="chunk" class="anchor" href="#chunk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chunk</h3>
-
-<blockquote>
-  <p>@TODO</p>
-</blockquote>
-
-<h3 id="section">
-<a id="section" class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Section</h3>
-
-<blockquote>
-  <p>@TODO</p>
-</blockquote>
-
-<h3 id="page">
-<a id="page" class="anchor" href="#page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Page</h3>
-
-<blockquote>
-  <p>@TODO</p>
-</blockquote>
-
-<h3 id="content">
-<a id="content" class="anchor" href="#content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Content</h3>
-
-<blockquote>
-  <p>@TODO</p>
-</blockquote>
-
-<h2 id="obonode-reference">
-<a id="obonode-reference" class="anchor" href="#obonode-reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboNode Reference</h2>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/youtube.html">YouTube</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/break.html">Break</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/code.html">Code</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/content.html">Content</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/html.html">HTML</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/list.html">List</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/list_indent.html">List &gt; listStyle &gt; indent</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/list_style.html">List &gt; listStyle</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/math_equation.html">MathEquation</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment &gt; MCChoice &gt; MCAnswer</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment &gt; MCChoice</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment &gt; MCChoice &gt; MCFeedback</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mod.html">Assessment &gt; rubric &gt; mod</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/module.html">Module</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/page.html">Page</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/question.html">Question</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/rubric.html">Assessment &gt; rubric</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment &gt; scoreActions</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText &gt; styleList</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/text.html">Text</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup &gt; textItem</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/action.html">trigger &gt; action</a>
-</li>
-
 
                 </span>
               </div>
@@ -583,18 +360,8 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#structure">Structure</a></li>
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
-<li class="toc-entry toc-h2"><a href="#unused-properties">Unused Properties</a></li>
-<li class="toc-entry toc-h2"><a href="#obonode-clasifications">OboNode Clasifications</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#chunk">Chunk</a></li>
-<li class="toc-entry toc-h3"><a href="#section">Section</a></li>
-<li class="toc-entry toc-h3"><a href="#page">Page</a></li>
-<li class="toc-entry toc-h3"><a href="#content">Content</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#obonode-reference">OboNode Reference</a></li>
+<li class="toc-entry toc-h2"><a href="#range-string-syntax">Range String Syntax</a></li>
+<li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
 </ul>
 
     </nav>

@@ -23,7 +23,7 @@ Question banks contain one or more questions or other question banks with rules 
 
 ## Required Children
 
-One or more of [**ObojoboDraft.Chunks.QuestionBank**](obonode_questionbank.md) and/or [**ObojoboDraft.Chunks.Question**](obonode_question.md) nodes.
+One or more of [*QuestionBank*](questionbank.html) and/or [*Question*](question.html) nodes.
 
 ## Variables Registered
 

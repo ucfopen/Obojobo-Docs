@@ -10,13 +10,16 @@ Either an assessment or practice question. Questions are designed to support mul
 
 | Property | Required | Type | Description |
 |-
-| solution | no | [ObojoboDraft.Chunks.Page](obonode_page.md) | A page containing a full-text description of the solution to the problem. If set a button will be available after the question is attempted which will reveal the solution if pressed.
+| solution | no | [*Page*](page.html) | A page containing a full-text description of the solution to the problem. If set a button will be available after the question is attempted which will reveal the solution if pressed.
 
 
 ## Required Children
 
-1.  One or more "content type" chunk nodes (**[Break](obonode_break.md)**, **[Code](obonode_code.md)**, **[Figure](obonode_figure.md)**, **[Heading](obonode_heading.md)**, **[List](obonode_list.md)**, **[MathEquation](obonode_mathequation.md)**, **[Table](obonode_table)**, **[Text](obonode_text.md)** and/or **[YouTube](obonode_youtube)**) - This is how you create the actual question
-2.  An **[ObojoboDraft.Chunks.MCAssessment](obonode_mcassessment.md)** node - this MUST be the last child.
+{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+
+
+1. One or more [Chunk nodes](../obo_node_structure.html#content) ({% for chunk in chunks %} [*{{ chunk.title }}*]({{ site.baseurl }}/{{ chunk.url }}){% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question
+2.  An [*MCAssessment*](mcassessment.html) node - this MUST be the last child.
 
 ## Variables Registered
 

@@ -4,14 +4,14 @@ menus: chunks
 full_name: lineStyles
 node_class: content
 ---
-A ListStyle is a description of how to format an **[ObojoboDraft.Chunks.List](obonode_list.md)**
+A ListStyle is a description of how to format an [*List*](list.html).
 
-## Structure
+## Properties
 
-* `type` String (Default: `'unordered'`): MUST be one of the following values:
-  * `'unordered'`: Creates an unordered list
-  * `'ordered'`: Creates an ordered list
-* `indents` Array\<**[ListIndent](content_listindent.md)**>: An object where the keys are various indent levels and the corresponding values are objects defining the styling options for items at that indent level which override the default styles. Indent levels are zero-indexed so 0 describes the first indent level, 1 is the second indent level and so on.
+| Property | Required | Type | Description |
+|-
+| type | - | String | Default: `unordered`. Allowed values: `unordered`, `ordered`
+| indents | - | Array\<*[indent](list_indent.html)*> | An object where the keys are various indent levels and the corresponding values are objects defining the styling options for items at that indent level which override the default styles. Indent levels are zero-indexed so 0 describes the first indent level, 1 is the second indent level and so on.
 
 ## Required Children
 

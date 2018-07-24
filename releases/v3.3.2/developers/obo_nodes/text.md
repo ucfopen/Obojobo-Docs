@@ -3,6 +3,7 @@ title: Text
 menus: chunks
 full_name: OboDraft.Chunks.Text
 node_class: chunk
+can_be_in_a_question: yes
 ---
 A single block of text similar to a paragraph (`<p>`) tag in HTML.
 

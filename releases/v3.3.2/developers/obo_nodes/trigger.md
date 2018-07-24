@@ -10,20 +10,22 @@ Triggers are linked to the OboNode that contains them, and are only fired when t
 
 ## Structure
 
-* `type` **REQUIRED**: String: This is the event that causes this trigger to run. Currently, the system only supports a limited range of triggers in the following OboNodes:
-  * Any OboNode
-    * `onMount` - Fired when a node is added to the DOM
-    * `onUnmount` - Fired when a node is removed from the DOM
-  * OboNodes that register to the navigation menu
-    * `onNavEnter` - Fired when a node is navigated to
-    * `onNavExit` - Fired when a node is navigated away from
-  * **[ObojoboDraft.Sections.Assessment](obonode_assessment)**
-    * `onStartAttempt` - Fired when an assessment attempt is started
-    * `onEndAttempt` - Fired when an assessment attempt is submitted
-  * **[ObojoboDraft.Chunks.ActionButton](obonode_actionbutton)**
-    * `onClick` - Fired when an ActionButton button is clicked
-* `actions` **REQUIRED**: Array\<**[Action](content_action.md)**>: One or more actions to perform when this trigger is run.
+| Property | Required | Type | Description |
+|-
+| type | Required | String | This is the event that causes this trigger to run. Currently, the system only supports a limited range of triggers in the following OboNodes:
+| actions | Required | Array{{ 'action' | obo_node }} | One or more actions to perform when this trigger is run.
 
+### Supported Action Types
+
+| Action Type | Node Types | Description
+|-
+| onMount | All | Fired when a node is added to the DOM
+| onUnmount | All | Fired when a node is removed from the DOM
+| onNavEnter | {{ 'Heading' | obo_node }} {{ 'Page' | obo_node }} {{ 'Question' | obo_node }} {{ 'Assessment' | obo_node }}  | Fired when a node is navigated to
+| onNavExit | {{ 'Heading' | obo_node }} {{ 'Page' | obo_node }} {{ 'Question' | obo_node }} {{ 'Assessment' | obo_node }} | Fired when a node is navigated away from
+| onStartAttempt | {{ 'Assessment' | obo_node }} | Fired when an assessment attempt is started
+| onEndAttempt | {{ 'Assessment' | obo_node }} | Fired when an assessment attempt is submitted
+| onClick | {{ 'ActionButton' | obo_node }} | Fired when an ActionButton button is clicked
 
 ## Required Children
 

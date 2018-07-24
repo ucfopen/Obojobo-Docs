@@ -3,6 +3,7 @@ title: Table
 menus: chunks
 full_name: OboDraft.Chunks.Table
 node_class: chunk
+can_be_in_a_question: yes
 ---
 A table with an optional header row.
 

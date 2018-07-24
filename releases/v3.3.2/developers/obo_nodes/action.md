@@ -29,8 +29,8 @@ node_class: content
 | nav:open | Opens the left-hand navigation drawer.
 | nav:close | Closes the left-hand navigation drawer.
 | nav:toggle | Toggles open or close the navigation drawer.
-| assessment:startAttempt | Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obonode_assessment.md)** node containing the assessment to start.
-| assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the **[ObojoboDraft.Sections.Assessment](obonode_assessment.md)** node containing the assessment to start.
+| assessment:startAttempt | Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the [*Assessment*](assessment.html) node containing the assessment to start.
+| assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the [*Assessment*](assessment.html) node containing the assessment to start.
 | js | Runs arbitrary javascript. `value` should be a string of javascript code to execute.
 
 ## Required Children

@@ -12,7 +12,9 @@ None
 
 ## Required Children
 
-One or more "content type" chunk nodes (**[Break](obonode_break.md)**, **[Code](obonode_code.md)**, **[Figure](obonode_figure.md)**, **[Heading](obonode_heading.md)**, **[List](obonode_list.md)**, **[MathEquation](obonode_mathequation.md)**, **[Table](obonode_table.md)**, **[Text](obonode_text.md)** and/or **[YouTube](obonode_youtube.md)**).
+{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+
+One or more of the following Chunks: {% for chunk in chunks %} [*{{ chunk.title }}*]({{ site.baseurl }}/{{ chunk.url }}){% if forloop.last == false %},{% endif %}{% endfor %}.
 
 ## Variables Registered
 

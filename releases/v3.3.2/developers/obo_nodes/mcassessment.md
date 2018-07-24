@@ -26,7 +26,7 @@ This is the multiple choice portion of a question containing several answer choi
 
 ## Required Children
 
-One or more **[ObojoboDraft.Chunks.MCAssessment.MCChoice](obonode_mcchoice.md)** nodes.
+One or more [*MCChoice*](mcchoice.html) nodes.
 
 ## Variables Registered
 

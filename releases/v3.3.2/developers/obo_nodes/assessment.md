@@ -28,8 +28,8 @@ The Assessment contains one or more questions. Students start the Assessment the
 
 Assessment expects exactly two children in order:
 
-1.  [**ObojoboDraft.Pages.Page**](obonode_page.md): The initial page shown when a student first navigates to the assessment. This page should contain a ObojoboDraft.Chunks.ActionButton to start the assessment.
-2.  [**ObojoboDraft.Chunks.QuestionBank**](obonode_questionbank.md): A question bank that contains all the possible questions contained in the Assessment.
+1.  [*Page*](obonode_page.md): The initial page shown when a student first navigates to the assessment. This page should contain a [*ActionButton*](action_button.html) to start the assessment.
+2.  [*QuestionBank*](question_bank.html): A question bank that contains all the possible questions contained in the Assessment.
 
 ## Registered Variables
 

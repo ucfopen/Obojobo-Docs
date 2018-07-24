@@ -6,12 +6,10 @@ node_class: content
 ---
 A TextGroup is a series of one or more lines of text with optional styling and additional data defined.
 
-## Structure
+## Properties
 
-A TextGroup is an array of one or more **TextItem** objects, each containing two properties: **text** and **data**:
+A *textGroup* is an **array** of one or more [*textItem*](text_item.html) objects.
 
-* `text` **REQUIRED**: A [**StyleableText**](content_styleabletext.md) object
-* `data` Object: An object containing one or more properties. Currently only `indent` is understood. If specified this sets the indentation level of the text item if the chunk type supports indentation (`"indent": 1` inserts one tab before the text item, `"indent": 2` inserts two tabs and so on).
 
 ## Required Children
 

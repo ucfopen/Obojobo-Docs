@@ -3,6 +3,7 @@ title: List
 menus: chunks
 full_name: OboDraft.Chunks.List
 node_class: chunk
+can_be_in_a_question: yes
 ---
 A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
@@ -10,8 +11,8 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
 | Property | Required | Type | Description |
 |-
-| textGroup | Required | [TextGroup](content_textgroup.md) | Expects 1 or more text items.
-| listStyles | no | [ListStyles](content_liststyles.md) | This defines various options for the list
+| textGroup | Required | [*textGroup*](text_group.html) | Expects 1 or more text items.
+| listStyles | no | [*listStyle*](list_style.html) | This defines various options for the list
 
 
 ## Required Children

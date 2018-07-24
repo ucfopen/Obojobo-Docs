@@ -3,6 +3,7 @@ title: MathEquation
 menus: chunks
 full_name: OboDraft.Chunks.MathEquation
 node_class: chunk
+can_be_in_a_question: yes
 ---
 A LaTeX math equation rendered with [Katex](https://github.com/Khan/KaTeX)
 

@@ -10,7 +10,7 @@ Assessment attempt score will be sent to the LMS (via LTI's [`replaceResult`](ht
 1. Not in preview mode
 2. The module was launched from an LMS using LTI
 3. The LTI launch included a [`lis_outcome_service_url`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2) paramater
-4. Assessment Score is not `null` (no-score)
+4. [Final Attempt Score](assessment_scoring.html#final-attempt-score) is not `null` (no-score)
 
 If these conditions are met the following will be sent:
 
@@ -19,11 +19,11 @@ If these conditions are met the following will be sent:
 
 ## Limiting Score Passback
 
-Obojobo normally sends every attempt score to the LMS assignment it's linked to.
+Obojobo normally sends the [Final Attempt Score](assessment_scoring.html#final-attempt-score) to the LMS assignment it's linked to.
 
-The Rubric attributes can be configured to conditionally send scores when they are above a value.
+The [*rubric*](../developers/obo_nodes/rubric.html) attributes can be configured to conditionally send scores when they are above a value.
 
-Set the rubric attribute `failingResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
+Set the [*rubric*](../developers/obo_nodes/rubric.html) attribute `failingResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
 
 This can be useful when the assignment in the LMS is used to prevent access to other parts of the course. By not sending a score back, the LMS will not unlock content that requires a passing score.
 

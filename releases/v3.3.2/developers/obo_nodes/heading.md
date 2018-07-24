@@ -3,6 +3,7 @@ title: Heading
 menus: chunks
 full_name: OboDraft.Chunks.Heading
 node_class: chunk
+can_be_in_a_question: yes
 ---
 Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 

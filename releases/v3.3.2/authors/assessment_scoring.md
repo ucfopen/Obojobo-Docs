@@ -24,7 +24,7 @@ Raw Attempt Score = *Correct questions* / *Total questions* × 100
 
 ## Attempt Status
 
-Attempt Status represents the state of an attempt. It is determined by rules set in the [*rubric*](../developers/obo_nodes/rubric.html). The Attempt Status is used to calulate the Final Attempt Score.
+Attempt Status represents the state of an attempt. It is determined by rules set in the [*rubric*](../developers/obo_nodes/rubric.html). The Attempt Status is used to calculate the Final Attempt Score.
 
 ### Possible Values
 
@@ -49,7 +49,7 @@ After an attempt is completed the Attempt Status is determined using rules from 
 
 ## Final Attempt Score
 
-The Final Attempt Score is the score the student recieves for an Attempt.  This score is what they'll see when reviewing an attempt.  It can include changes like bonuses or deductions from score [*mods*](../developers/obo_nodes/mod.html)
+The Final Attempt Score is the score the student receives for an Attempt.  This score is what they'll see when reviewing an attempt.  It can include changes like bonuses or deductions from score [*mods*](../developers/obo_nodes/mod.html)
 
 ### Possible Values
 
@@ -62,16 +62,16 @@ The Final Attempt Score is the score the student recieves for an Attempt.  This 
 
 | Rubric Type   | Assessment Status | Assessment Score |
 |-
-| attempt   | --             | Raw Attempt Score + [*mods*](../developers/obo_nodes/mod.html) |
+| no rubric   | --         | Raw Attempt Score |
 | pass-fail | passed       | `passedResult` + [*mods*](../developers/obo_nodes/mod.html)           |
 | pass-fail | failed       | `failedResult`                          |
 | pass-fail | unableToPass |` unableToPassResult`                     |
 
-> Final Attempt Score is limited to the range bewtween 0-100, regardless of mods.
+> Final Attempt Score is limited to the range between 0-100, regardless of mods.
 >
 > | property | value
 > |:------------------|-----------:|
-> | Attempt Attempt Score | 98
+> | `passedResult` | 98
 > | mods | +5
 > | **Final Attempt Score** | **100**
 
@@ -79,11 +79,12 @@ The Final Attempt Score is the score the student recieves for an Attempt.  This 
 
 The Overall Assessment Score combines multiple attempts into a single score for this Assessment.  In cases where Obojobo sends scores to an LMS (like an LTI assignment), this score is what is sent to the LMS.
 
-> It is possible to control what Obojobo sends to an integrated LMS. See [Lti Score Passback](../authors/assessment_lti_replace_result.html)
+> It is possible to control what Obojobo sends to an integrated LMS. See [LTI Score Passback](../authors/assessment_lti_replace_result.html)
 
 ### Possible Values
 
 * 0 - 100
+* `null` (no-score)
 
 ### Calculation
 

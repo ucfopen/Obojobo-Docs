@@ -8,7 +8,7 @@
   <title>LTI Score Passback - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="When are Scores SentAssessment attempt score will be sent to the LMS (via LTI’s replaceResult) if the following conditions are met:  Not in preview mode  The module was launched from an LMS using LTI  The LTI launch included a lis_outcome_service_url paramater  Assessment Score is not null (no-sc..."/>
+  <meta name="description" content="When are Scores SentAssessment attempt score will be sent to the LMS (via LTI’s replaceResult) if the following conditions are met:  Not in preview mode  The module was launched from an LMS using LTI  The LTI launch included a lis_outcome_service_url paramater  Final Attempt Score is not null (no..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -63,15 +63,15 @@
       <h3 class="navGroupCategoryTitle">Getting Started</h3>
         <ul>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/">Authors Getting Started Guide</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/first_document.html">Writing Your First Obojobo Document</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/content_types.html">Content Types</a>
           </li>
         
@@ -86,11 +86,11 @@
       <h3 class="navGroupCategoryTitle">Writing Assessments</h3>
         <ul>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_scoring.html">Assessment Scoring</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/first_assignment.html">Creating Your First Assessment</a>
           </li>
         
@@ -105,51 +105,51 @@
       <h3 class="navGroupCategoryTitle">How To</h3>
         <ul>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_show_assessment_reviews.html">Assesment Reviews & Question Feedback</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem navListItemActive" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_lti_replace_result.html">LTI Score Passback</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_new_quizzes.html">New Questions for each Attempt</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_pretest.html">Adding a Pre-Test</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_showing_feedback.html">Assesment Reviews & Question Feedback</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html">Threshold Scoring</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/authors_triggers_and_actions.html">Triggers and Actions</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/authors_variables.html">Variables</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_limit_attempts.html">Limiting Assessment Attempts</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_lock_navigation.html">Locking Navigation</a>
           </li>
         
-          <li class="navListItem">
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_displaying_attempts.html">Displaying Remaining Attempts</a>
           </li>
         
@@ -209,7 +209,8 @@
   <li>Not in preview mode</li>
   <li>The module was launched from an LMS using LTI</li>
   <li>The LTI launch included a <a href="https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2"><code class="highlighter-rouge">lis_outcome_service_url</code></a> paramater</li>
-  <li>Assessment Score is not <code class="highlighter-rouge">null</code> (no-score)</li>
+  <li>
+<a href="assessment_scoring.html#final-attempt-score">Final Attempt Score</a> is not <code class="highlighter-rouge">null</code> (no-score)</li>
 </ol>
 
 <p>If these conditions are met the following will be sent:</p>
@@ -219,11 +220,11 @@
 <h2 id="limiting-score-passback">
 <a id="limiting-score-passback" class="anchor" href="#limiting-score-passback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limiting Score Passback</h2>
 
-<p>Obojobo normally sends every attempt score to the LMS assignment it’s linked to.</p>
+<p>Obojobo normally sends the <a href="assessment_scoring.html#final-attempt-score">Final Attempt Score</a> to the LMS assignment it’s linked to.</p>
 
-<p>The Rubric attributes can be configured to conditionally send scores when they are above a value.</p>
+<p>The <a href="../developers/obo_nodes/rubric.html"><em>rubric</em></a> attributes can be configured to conditionally send scores when they are above a value.</p>
 
-<p>Set the rubric attribute <code class="highlighter-rouge">failingResult="no-score"</code> to prevent any score below the value of <code class="highlighter-rouge">passingAttemptScore</code> from being sent to the LMS.</p>
+<p>Set the <a href="../developers/obo_nodes/rubric.html"><em>rubric</em></a> attribute <code class="highlighter-rouge">failingResult="no-score"</code> to prevent any score below the value of <code class="highlighter-rouge">passingAttemptScore</code> from being sent to the LMS.</p>
 
 <p>This can be useful when the assignment in the LMS is used to prevent access to other parts of the course. By not sending a score back, the LMS will not unlock content that requires a passing score.</p>
 

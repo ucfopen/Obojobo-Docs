@@ -3,14 +3,15 @@ title: Code
 menus: chunks
 full_name: OboDraft.Chunks.Code
 node_class: chunk
+can_be_in_a_question: yes
 ---
-This chunk is fundamentally identical to the **[ObojoboDraft.Chunks.Text](obonode_text.md)** node except the styling of the rendered output is mono-spaced.
+This chunk is fundamentally identical to the [*Text*](text.html) node except the styling of the rendered output is mono-spaced.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| textGroup | Required | [TextGroup](content_textgroup.md) | Expects 1 or more text items.
+| textGroup | Required | [*textGroup*](text_group.html) | Expects 1 or more text items.
 
 ## Required Children
 

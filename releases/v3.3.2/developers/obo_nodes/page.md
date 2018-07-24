@@ -15,7 +15,7 @@ A generic "page" that can be thought of as a page in a book or an online article
 
 ## Required Children
 
-One or more **ObojoboDraft.Chunks** nodes.
+One or more Chunk nodes.
 
 ## Variables Registered
 

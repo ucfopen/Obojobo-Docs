@@ -3,6 +3,7 @@ title: Figure
 menus: chunks
 full_name: OboDraft.Chunks.Figure
 node_class: chunk
+can_be_in_a_question: yes
 ---
 An image with an optional image caption shown below.
 

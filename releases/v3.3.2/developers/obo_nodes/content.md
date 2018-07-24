@@ -12,7 +12,7 @@ None
 
 ## Required Children
 
-Expects one or more of [**ObojoboDraft.Pages.Page**](obonode_page.md)
+Expects one or more of [*Page*](page.html)
 
 ## Variables Registered
 

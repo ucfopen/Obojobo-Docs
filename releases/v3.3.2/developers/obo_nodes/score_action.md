@@ -6,19 +6,23 @@ node_class: content
 ---
 A ScoreAction object contains two properties: **for** and **page**, and are always wrapped in a scoreActions array:
 
-## Structure
+## Properties
 
-* `for` **REQUIRED** **[Range](content_range.md)** or Integer or `'no-score'`: A range of score values or a single score.
-* `page` **REQUIRED**: [**Obojobo.Pages.Page**](obonode_page.md): The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
+| Property | Required | Type | Description |
+|-
+| for | Required | [Range String](../range_strings.html), Integer, `'no-score'` | A range of score values or a single score.
+| page | Required | [*Page*](page.html) | The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
 
-### Legacy properties (Deprecated):
+## Deprecated Properties:
 
 The `from` and `to` properties have been replaced by the `for` property.
 
-* `from`: Integer: The start of the score range
-* `to`: Integer: The end of the score range
+| Property | Type | Description |
+|-
+| from | Integer | The start of the score range
+| to | Integer | The end of the score range
 
-You must either specify `for` or specify both `from` and `to`. `from` and `to` are deprecated and may be removed in a future release.
+> You must either specify `for` or specify both `from` and `to`. `from` and `to` are deprecated and may be removed in a future release.
 
 ## Required Children
 

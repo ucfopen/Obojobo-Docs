@@ -3,6 +3,7 @@ title: YouTube
 menus: chunks
 full_name: OboDraft.Chunks.YouTube
 node_class: chunk
+can_be_in_a_question: yes
 ---
 A YouTube video
 

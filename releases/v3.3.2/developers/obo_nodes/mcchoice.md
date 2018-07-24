@@ -17,8 +17,8 @@ A single answer choice in a multiple choice question containing the contents of 
 
 Expects one or two children in order:
 
-1.  **REQUIRED**: An **[ObojoboDraft.Chunks.MCAssessment.MCAnswer](obonode_mcanswer.md)** OboNode.
-2.  An **[ObojoboDraft.Chunks.MCAssessment.MCFeedback](obonode_mcfeedback.md)** OboNode. This is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).
+1.  **REQUIRED**: An [*MCAnswer*](mcanswer.html) OboNode.
+2.  An [*MCFeedback*](mcfeedback.html) OboNode. This is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).
 
 ## Variables Registered
 

@@ -6,14 +6,14 @@ node_class: content
 ---
 A StyleableText is a string of text with defined styles for specified ranges.
 
-## Structure
+## Properties
 
-A **StyleableText** object contains two properties: **value** and **styleList**:
+| Property | Required | Type | Description |
+|-
+| value | Required | String | The string of text to display.
+| styleList | no | [*StyleList*](stylelist.html) | The styles to apply to the text
 
-* `value` **REQUIRED** String: The string of text to display.
-* `styleList` **[StyleList](content_stylelist.md)**: The styles to apply to the text
-
-In OboXML, `<t>` and `<p>` elements allow styling with a subset of HTML-like styling tags.
+> In OboXML, `<t>` and `<p>` elements allow styling with a subset of HTML-like styling tags.
 
 ### Allowed HTML-like style tags
 
