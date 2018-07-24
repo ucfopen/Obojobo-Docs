@@ -1,8 +1,6 @@
 ---
-title: MCChoice
-menus:
-  chunks:
-    title: MCAssessment > MCChoice
+title: MCAssessment > MCChoice
+menus: chunks
 full_name: OboDraft.Chunks.MCAssessment.MCChoice
 node_class: chunk
 ---

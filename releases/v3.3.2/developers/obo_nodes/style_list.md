@@ -1,8 +1,6 @@
 ---
-title: StyleList
-menus:
-  chunks:
-    title: StyleableText > styleList
+title: StyleableText > styleList
+menus: chunks
 full_name: styleList
 node_class: content
 ---

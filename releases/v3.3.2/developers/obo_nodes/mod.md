@@ -1,8 +1,6 @@
 ---
-title: Mod
-menus:
-  chunks:
-    title: Assessment > rubric > mod
+title: Assessment > rubric > mod
+menus: chunks
 full_name: mod
 node_class: content
 ---

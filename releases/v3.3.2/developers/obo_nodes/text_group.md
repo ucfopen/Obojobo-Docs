@@ -1,8 +1,6 @@
 ---
-title: TextGroup
-menus:
-  chunks:
-    title: textGroup
+title: textGroup
+menus: chunks
 full_name: textGroup
 node_class: content
 ---

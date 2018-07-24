@@ -1,8 +1,6 @@
 ---
-title: ListStyle
-menus:
-  chunks:
-    title: List > listStyle
+title: List > listStyle
+menus: chunks
 full_name: lineStyles
 node_class: content
 ---

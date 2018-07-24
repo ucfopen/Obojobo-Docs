@@ -1,8 +1,6 @@
 ---
-title: ScoreAction
-menus:
-  chunks:
-    title: Assessment > scoreActions
+title: Assessment > scoreActions
+menus: chunks
 full_name: scoreAction
 node_class: content
 ---

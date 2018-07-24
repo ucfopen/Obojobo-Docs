@@ -1,8 +1,6 @@
 ---
-title: ListStyle Indent
-menus:
-  chunks:
-    title: List > listStyle > indent
+title: List > listStyle > indent
+menus: chunks
 full_name: indent
 node_class: content
 ---

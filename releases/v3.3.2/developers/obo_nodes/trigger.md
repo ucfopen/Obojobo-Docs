@@ -1,8 +1,6 @@
 ---
-title: Trigger
-menus:
-  chunks:
-    title: trigger
+title: trigger
+menus: chunks
 full_name: trigger
 node_class: content
 ---

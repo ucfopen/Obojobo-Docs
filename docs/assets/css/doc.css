@@ -243,6 +243,13 @@ table {
   margin-top: 0;
   overflow: auto;
   width: 100%;
+  background-color: white;
+}
+
+/*For tables in blockquotes */
+.post blockquote table {
+  width: auto;
+  margin: 0 auto;
 }
 
 table tr {

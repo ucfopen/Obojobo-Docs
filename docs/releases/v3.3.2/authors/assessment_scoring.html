@@ -87,11 +87,11 @@
         <ul>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/first_assignment.html">Creating Your First Assessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_scoring.html">Assessment Scoring</a>
           </li>
         
           <li class="navListItem">
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/writing_assessments.html">Assessment Scoring</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/first_assignment.html">Creating Your First Assessment</a>
           </li>
         
         </ul>
@@ -200,15 +200,24 @@
             <article>
               <div>
                 <span>
-                  <p>After each Assessment Attempt Quiz the Assessment Attempt Score, Assessment Score and Assessment Status is calculated.</p>
+                  <p>Assessment scoring is one of Obojobo’s more powerful features.  Giving Obojobo flexible scoring rules has the side effect of making it a little complex.  This section will outline how Obojobo scores Assessments.</p>
 
-<h2 id="assessment-attempt-score">
-<a id="assessment-attempt-score" class="anchor" href="#assessment-attempt-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment Attempt Score</h2>
+<ol>
+  <li>Raw Attempt Score is calculated based on question answers.</li>
+  <li>
+<a href="../developers/obo_nodes/rubric.html"><em>rubric</em></a> is used to determine the Attempt Status.</li>
+  <li>
+<a href="../developers/obo_nodes/rubric.html"><em>rubric</em></a> combines Attempt Status and Raw Score into Final Attempt Score.</li>
+  <li>The highest of all Final Attempt Scores becomes the Overall Assessment Score.</li>
+</ol>
 
-<p>Assessment Attempt Scores are calculated as an average of every response:</p>
+<h2 id="raw-attempt-score">
+<a id="raw-attempt-score" class="anchor" href="#raw-attempt-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Raw Attempt Score</h2>
 
-<h3 id="expected-values">
-<a id="expected-values" class="anchor" href="#expected-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected Values</h3>
+<p>Raw Attempt Scores are calculated as an average of all question responses:</p>
+
+<h3 id="possible-values">
+<a id="possible-values" class="anchor" href="#possible-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible Values</h3>
 
 <ul>
   <li>0-100</li>
@@ -217,82 +226,102 @@
 <h3 id="calculation">
 <a id="calculation" class="anchor" href="#calculation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculation</h3>
 
-<p><strong>Assessment Attempt Score</strong> = <strong>Number of questions answered correctly</strong> / <strong>Number of questions</strong> × 100</p>
+<p>Raw Attempt Score = <em>Correct questions</em> / <em>Total questions</em> × 100</p>
 
-<h2 id="assessment-status">
-<a id="assessment-status" class="anchor" href="#assessment-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment Status</h2>
+<h2 id="attempt-status">
+<a id="attempt-status" class="anchor" href="#attempt-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attempt Status</h2>
 
-<p>This identifies the completed state of an Assessment Attempt.</p>
+<p>Attempt Status represents the state of an attempt. It is determined by rules set in the <a href="../developers/obo_nodes/rubric.html"><em>rubric</em></a>. The Attempt Status is used to calulate the Final Attempt Score.</p>
 
-<h3 id="expected-values-1">
-<a id="expected-values-1" class="anchor" href="#expected-values-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected Values</h3>
+<h3 id="possible-values-1">
+<a id="possible-values-1" class="anchor" href="#possible-values-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible Values</h3>
 
-<ul>
-  <li>
-<code class="highlighter-rouge">'passed'</code>: Student passed the Assessment.</li>
-  <li>
-<code class="highlighter-rouge">'failed'</code>: Student failed the Assessment.</li>
-  <li>
-<code class="highlighter-rouge">'unableToPass'</code>: Student has no Assessment Attempt remaining and did not achieve a <code class="highlighter-rouge">'passed'</code> status for any of thier Assessment Attempts.</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>passed</td>
+      <td>Student passed the attempt.</td>
+    </tr>
+    <tr>
+      <td>failed</td>
+      <td>Student failed the attempt.</td>
+    </tr>
+    <tr>
+      <td>unableToPass</td>
+      <td>Student has no attempts remaining and did not achieve a <code class="highlighter-rouge">passed</code> status for any of thier attempts.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="calculation-1">
-<a id="calculation-1" class="anchor" href="#calculation-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculation</h3>
+<h3 id="how-status-is-determined">
+<a id="how-status-is-determined" class="anchor" href="#how-status-is-determined" aria-hidden="true"><span class="octicon octicon-link"></span></a>How Status is Determined</h3>
 
-<p>After an Assessment Attempt is completed the Assessment Status is calculated as follows:</p>
+<p>After an attempt is completed the Attempt Status is determined using rules from the <a href="../developers/obo_nodes/rubric.html"><em>rubric</em></a> as follows:</p>
 
 <table>
   <thead>
     <tr>
       <th>Rubric Type</th>
-      <th>Attempt Score &gt;= <code class="highlighter-rouge">passingAttemptScore</code>?</th>
+      <th>Raw Attempt Score &gt;= rubric’s passingAttemptScore?</th>
       <th>Attempts Remain?</th>
-      <th>Status =</th>
+      <th>Resulting Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">'attempt'</code></td>
+      <td>attempt</td>
       <td>–</td>
       <td>–</td>
-      <td><code class="highlighter-rouge">'passed'</code></td>
+      <td>passed</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td>pass-fail</td>
       <td>Yes</td>
       <td>–</td>
-      <td><code class="highlighter-rouge">'passed'</code></td>
+      <td>passed</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td>pass-fail</td>
       <td>No</td>
       <td>Yes</td>
-      <td><code class="highlighter-rouge">'failed'</code></td>
+      <td>failed</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">'pass-fail'</code></td>
+      <td>pass-fail</td>
       <td>No</td>
       <td>No</td>
-      <td><code class="highlighter-rouge">'unableToPass'</code></td>
+      <td>unableToPass</td>
     </tr>
   </tbody>
 </table>
 
-<p>(Note that any completed Assessment Attempt in the <code class="highlighter-rouge">'attempt'</code> rubric mode results in a <code class="highlighter-rouge">'passed'</code> status)</p>
+<blockquote>
+  <p>Any completed Attempt using the <code class="highlighter-rouge">attempt</code> rubric type will result in a <code class="highlighter-rouge">passed</code> status.</p>
+</blockquote>
 
-<h2 id="assessment-score">
-<a id="assessment-score" class="anchor" href="#assessment-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment Score</h2>
+<h2 id="final-attempt-score">
+<a id="final-attempt-score" class="anchor" href="#final-attempt-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Attempt Score</h2>
 
-<p>The Assessment Score is calculated based on the Assessment Rubric</p>
+<p>The Final Attempt Score is the score the student recieves for an Attempt.  This score is what they’ll see when reviewing an attempt.  It can include changes like bonuses or deductions from score <a href="../developers/obo_nodes/mod.html"><em>mods</em></a></p>
 
-<h3 id="expected-values-2">
-<a id="expected-values-2" class="anchor" href="#expected-values-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected Values</h3>
+<h3 id="possible-values-2">
+<a id="possible-values-2" class="anchor" href="#possible-values-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible Values</h3>
 
 <ul>
   <li>0-100</li>
   <li>
 <code class="highlighter-rouge">null</code> (no-score)</li>
 </ul>
+
+<blockquote>
+  <p><code class="highlighter-rouge">null</code> (or <code class="highlighter-rouge">no-score</code>) values represent that the module has no grade. In this case, no score will be sent to an LMS.</p>
+</blockquote>
 
 <h3 id="calcuation">
 <a id="calcuation" class="anchor" href="#calcuation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calcuation</h3>
@@ -301,38 +330,84 @@
   <thead>
     <tr>
       <th>Rubric Type</th>
-      <th>Rewarded Assessment Status</th>
-      <th>Assessment Score =</th>
+      <th>Assessment Status</th>
+      <th>Assessment Score</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">'attempt'</code></td>
+      <td>attempt</td>
       <td>–</td>
-      <td>Assessment Attempt Score + Rewarded Mods</td>
+      <td>Raw Attempt Score + <a href="../developers/obo_nodes/mod.html"><em>mods</em></a>
+</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">'pass-fail'</code></td>
-      <td><code class="highlighter-rouge">'passed'</code></td>
+      <td>pass-fail</td>
+      <td>passed</td>
       <td>
-<code class="highlighter-rouge">passedResult</code> + Rewarded Mods</td>
+<code class="highlighter-rouge">passedResult</code> + <a href="../developers/obo_nodes/mod.html"><em>mods</em></a>
+</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">'pass-fail'</code></td>
-      <td><code class="highlighter-rouge">'failed'</code></td>
+      <td>pass-fail</td>
+      <td>failed</td>
       <td><code class="highlighter-rouge">failedResult</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">'pass-fail'</code></td>
-      <td><code class="highlighter-rouge">'unableToPass'</code></td>
-      <td><code class="highlighter-rouge">unableToPassResult</code></td>
+      <td>pass-fail</td>
+      <td>unableToPass</td>
+      <td><code class="highlighter-rouge"> unableToPassResult</code></td>
     </tr>
   </tbody>
 </table>
 
-<p><code class="highlighter-rouge">null</code> (or <code class="highlighter-rouge">no-score</code>) Assessment Scores represent that the module has no grade (and no score will be sent via LTI). This allows you to require a student to retry an Assessment to achieve a certain passing score.</p>
+<blockquote>
+  <p>Final Attempt Score is limited to the range bewtween 0-100, regardless of mods.</p>
 
-<p>The Assessment Score is always bound to the range of 0-100, regardless of rewarded mods. For example, if the Assessment Attempt Score = 100 and Rewarded Mods = +5 the resulting Assessment Score would be 100, not 105.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">property</th>
+        <th style="text-align: right">value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">Attempt Attempt Score</td>
+        <td style="text-align: right">98</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">mods</td>
+        <td style="text-align: right">+5</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><strong>Final Attempt Score</strong></td>
+        <td style="text-align: right"><strong>100</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="overall-assessment-score">
+<a id="overall-assessment-score" class="anchor" href="#overall-assessment-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overall Assessment Score</h2>
+
+<p>The Overall Assessment Score combines multiple attempts into a single score for this Assessment.  In cases where Obojobo sends scores to an LMS (like an LTI assignment), this score is what is sent to the LMS.</p>
+
+<blockquote>
+  <p>It is possible to control what Obojobo sends to an integrated LMS. See <a href="../authors/assessment_lti_replace_result.html">Lti Score Passback</a></p>
+</blockquote>
+
+<h3 id="possible-values-3">
+<a id="possible-values-3" class="anchor" href="#possible-values-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible Values</h3>
+
+<ul>
+  <li>0 - 100</li>
+</ul>
+
+<h3 id="calculation-1">
+<a id="calculation-1" class="anchor" href="#calculation-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculation</h3>
+
+<p>The highest Final Attempt Score for a student, for this assessment, across all attempts.</p>
 
                 </span>
               </div>
@@ -346,22 +421,28 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#assessment-attempt-score">Assessment Attempt Score</a>
+<li class="toc-entry toc-h2"><a href="#raw-attempt-score">Raw Attempt Score</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#expected-values">Expected Values</a></li>
+<li class="toc-entry toc-h3"><a href="#possible-values">Possible Values</a></li>
 <li class="toc-entry toc-h3"><a href="#calculation">Calculation</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#assessment-status">Assessment Status</a>
+<li class="toc-entry toc-h2"><a href="#attempt-status">Attempt Status</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#expected-values-1">Expected Values</a></li>
-<li class="toc-entry toc-h3"><a href="#calculation-1">Calculation</a></li>
+<li class="toc-entry toc-h3"><a href="#possible-values-1">Possible Values</a></li>
+<li class="toc-entry toc-h3"><a href="#how-status-is-determined">How Status is Determined</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#assessment-score">Assessment Score</a>
+<li class="toc-entry toc-h2"><a href="#final-attempt-score">Final Attempt Score</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#expected-values-2">Expected Values</a></li>
+<li class="toc-entry toc-h3"><a href="#possible-values-2">Possible Values</a></li>
 <li class="toc-entry toc-h3"><a href="#calcuation">Calcuation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#overall-assessment-score">Overall Assessment Score</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#possible-values-3">Possible Values</a></li>
+<li class="toc-entry toc-h3"><a href="#calculation-1">Calculation</a></li>
 </ul>
 </li>
 </ul>

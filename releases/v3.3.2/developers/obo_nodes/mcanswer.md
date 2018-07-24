@@ -1,8 +1,6 @@
 ---
-title: MCAnswer
-menus:
-  chunks:
-    title: MCAssessment > MCChoice > MCAnswer
+title: MCAssessment > MCChoice > MCAnswer
+menus: chunks
 full_name: OboDraft.Chunks.MCAnswer
 node_class: chunk
 ---
