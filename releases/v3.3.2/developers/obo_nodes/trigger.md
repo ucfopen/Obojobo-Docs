@@ -13,7 +13,7 @@ Triggers are linked to the OboNode that contains them, and are only fired when t
 | Property | Required | Type | Description |
 |-
 | type | Required | String | This is the event that causes this trigger to run. Currently, the system only supports a limited range of triggers in the following OboNodes:
-| actions | Required | Array{{ 'action' | obo_node }} | One or more actions to perform when this trigger is run.
+| actions | Required | Array\<{{ 'action' | obo_node }}\> | One or more actions to perform when this trigger is run.
 
 ### Supported Action Types
 
