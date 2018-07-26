@@ -82,7 +82,7 @@ Reviews modes dictate how students are allowed to review their answers for this 
 
 Rubrics specify how an Assessment Score is calculated.
 
-Rubrics allow complex scoring rules outlined by [`Assessment`](obo_reference.md#assessmentrubric).
+Rubrics allow complex scoring rules outlined by {{ 'Assessment' | obo_node }}.
 
 This example will use the default rubric type.
 
@@ -148,7 +148,7 @@ Use the assessment's `id` value to indicate which assessment should be started.
 
 ### 7. Add a Question Bank
 
-The second **required** child of the Assessment tag is a [`QuestionBank`](obo_reference.md#obojobodraftchunksquestionbank).
+The second **required** child of the Assessment tag is a {{ 'QuestionBank' | obo_node }}.
 
 ```xml
 <Assessment id="my-assessment" attempts="3" review="always">
@@ -163,7 +163,7 @@ The second **required** child of the Assessment tag is a [`QuestionBank`](obo_re
 
 ### 7. Add a Question
 
-Add a [`Question`](obo_reference.md#obojobodraftchunksquestion) to the Question Bank.
+Add a {{ 'Question' | obo_node }} to the Question Bank.
 
 Below is a simple multiple choice question with 2 possible answers.
 
@@ -196,7 +196,7 @@ Below is a simple multiple choice question with 2 possible answers.
 
 It's a **required** page that is displayed after the assessment.
 
-The simplest example is a single page for all scores. Define a [`ScoreAction`](obo_reference.html#scoreaction) for all scores (`[0,100]`) and a Page containing another ActionButton used to begin another attempt.
+The simplest example is a single page for all scores. Define a {{ 'scoreAction' | obo_node }} for all scores (`[0,100]`) and a Page containing another ActionButton used to begin another attempt.
 
 Multiple pages can be added for different feedback depending on attempt score. Perhaps words of encouragement or advice when the student's score is below a certain threshold.
 
@@ -255,7 +255,7 @@ Add 2 triggers to the Assessment, one that locks the nav when the attempt begins
 </Assessment>
 ```
 
-> **NOTE**: Although `Page` must be first, and `QuestionBank` must be second, the order of any `scoreActions`, `rubric` and `triggers` tags are not important.
+> **NOTE**: Although {{ 'Page' | obo_node }} must be first, and {{ 'QuestionBank' | obo_node }} must be second, the order of any {{ 'scoreAction' | obo_node }}, {{ 'rubric' | obo_node }} and {{ 'trigger' | obo_node }} tags are not important.
 
 
 ## Complete Example XML
@@ -355,4 +355,5 @@ Here's a full example of the step-by-step assessment created in the previous ste
 11. The answer review is displayed
 12. The student can click the post-attempt page's ActionButton to try again.
 
-![Assessment Walk Through](/Obojobo-Docs/docs/assets/assessment_walk_through.gif)
+![Assessment Walk Through]({{ site.baseurl }}{% link /assets/images/assessment_walk_through.gif %})
+

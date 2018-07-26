@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -312,7 +316,7 @@
 
 <p>Each OboNode has a native JSON representation.  All nodes share the same basic structure.</p>
 
-<p>Here’s an example <strong>JSON</strong> structure of a <a href="obo_reference.md#obojobodraftpagespage"><code class="highlighter-rouge">ObojoboDraft.Chunks.Break</code></a> OboNode:</p>
+<p>Here’s an example <strong>JSON</strong> structure of a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/break.html">Break</a></em> OboNode:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
 	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.Break"</span><span class="p">,</span><span class="w">
@@ -366,7 +370,7 @@
       <td>content</td>
       <td>no</td>
       <td>Object</td>
-      <td>Properties that define the contents of this node. The <a href="obo_reference.md#obojobodraftpagespage">ObojoboDraft.Pages.Page</a> node in the example only understands a single property; <strong>title</strong>. Each type of node supports different properties.</td>
+      <td>Properties that define the contents of this node. The <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em> node in the example only understands a single property; <strong>title</strong>. Each type of node supports different properties.</td>
     </tr>
     <tr>
       <td>children</td>
@@ -435,140 +439,112 @@
 <h3 id="content">
 <a id="content" class="anchor" href="#content" aria-hidden="true"><span class="octicon octicon-link"></span></a>Content</h3>
 
-<blockquote>
-  <p>@TODO</p>
-</blockquote>
+<p>A class of node used in the <code class="highlighter-rouge">content</code> attribute of other OboNode Components. For example, <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">scoreAction</a></em> is a content class node used in the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em> node. These <strong>always start with a lowercased letter</strong> to differentiate them from the other classifications.</p>
 
 <h2 id="obonode-reference">
 <a id="obonode-reference" class="anchor" href="#obonode-reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboNode Reference</h2>
 
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/youtube.html">YouTube</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/break.html">Break</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/code.html">Code</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/content.html">Content</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/html.html">HTML</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/list.html">List</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/list_indent.html">List &gt; listStyle &gt; indent</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/list_style.html">List &gt; listStyle</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/math_equation.html">MathEquation</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment &gt; MCChoice &gt; MCAnswer</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment &gt; MCChoice</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment &gt; MCChoice &gt; MCFeedback</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/mod.html">Assessment &gt; rubric &gt; mod</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/module.html">Module</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/page.html">Page</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/question.html">Question</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/rubric.html">Assessment &gt; rubric</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment &gt; scoreActions</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText &gt; styleList</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/text.html">Text</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup &gt; textItem</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a>
-</li>
-
-<li class="navListItem">
-<a class="navItem" href="/releases/v3.3.2/developers/obo_nodes/action.html">trigger &gt; action</a>
-</li>
+<ul>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">mod</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_actions.html">scoreActions</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/break.html">Break</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/code.html">Code</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/content.html">Content</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/html.html">HTML</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list.html">List</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_style.html">listStyle</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">indent</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/math_equation.html">MathEquation</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCChoice</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAnswer</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCFeedback</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/module.html">Module</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html">Question</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">gridTextGroup</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text.html">Text</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textItem</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">styleableText</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">styleList</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em></p>
+  </li>
+  <li>
+    <p><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/you_tube.html">YouTube</a></em></p>
+  </li>
+</ul>
 
 
                 </span>

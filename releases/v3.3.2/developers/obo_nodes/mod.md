@@ -14,7 +14,7 @@ Mods must always be wrapped in a Mods array.
 
 | Property | Required | Type | Description |
 |-
-| attemptCondition | - | [Range String](../range_strings.html), Integer, `$last_attempt` | Default: `[1,$last_attempt]`. Specifies which attempt numbers this mod will be applied towards. Use a [Range String](../range_strings.html) to specify a range of values. `$last_attempt` is a variable that will be replaced with the value of *[Assessment](assessment.html)*'s `attempts` property. As the default value shows, `$last_attempt` can be used in the Range String syntax.
+| attemptCondition | - | [Range String](../range_strings.html), Integer, `$last_attempt` | Default: `[1,$last_attempt]`. Specifies which attempt numbers this mod will be applied towards. Use a [Range String](../range_strings.html) to specify a range of values. `$last_attempt` is a variable that will be replaced with the value of {{ 'Assessment' | obo_node }}'s `attempts` property. As the default value shows, `$last_attempt` can be used in the Range String syntax.
 | reward | Required | Integer | The reward amount from -100 to 100. Positive values are extra credit and negative values are penalties.
 
 ## Required Children

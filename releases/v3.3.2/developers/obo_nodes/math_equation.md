@@ -16,6 +16,13 @@ A LaTeX math equation rendered with [Katex](https://github.com/Khan/KaTeX)
 | label | no | String | If specified adds a label to the right side of the equation, for example `(1.1)`
 | size | no | Number | Default: `1`: The font size of the equation. `1` is the standard size, `2` is twice as big and `0.5` is half as big.
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+
 ## Required Children
 
 None

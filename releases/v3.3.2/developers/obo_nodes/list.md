@@ -11,9 +11,15 @@ A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
 | Property | Required | Type | Description |
 |-
-| textGroup | Required | [*textGroup*](text_group.html) | Expects 1 or more text items.
-| listStyles | no | [*listStyle*](list_style.html) | This defines various options for the list
+| textGroup | Required | {{ 'textGroup' | obo_node }} | Expects 1 or more text items.
+| listStyles | no | {{ 'listStyle' | obo_node }} | This defines various options for the list
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
 

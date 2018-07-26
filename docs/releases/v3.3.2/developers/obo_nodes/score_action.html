@@ -8,7 +8,7 @@
   <title>Assessment > scoreActions - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="A ScoreAction object contains two properties: for and page, and are always wrapped in a scoreActions array:Properties            Property      Required      Type      Description                  for      Required      Range String, Integer, &#39;no-score&#39;      A range of score values or a single sco..."/>
+  <meta name="description" content="Defines a Page to display for certain scoring conditions at the end of an assessment attempt.Properties            Property      Required      Type      Description                  for      Required      Range String, Integer, &#39;no-score&#39;      A range of score values or a single score.           ..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -307,7 +311,7 @@
             <article>
               <div>
                 <span>
-                  <p>A ScoreAction object contains two properties: <strong>for</strong> and <strong>page</strong>, and are always wrapped in a scoreActions array:</p>
+                  <p>Defines a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em> to display for certain scoring conditions at the end of an assessment attempt.</p>
 
 <h2 id="properties">
 <a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
@@ -333,7 +337,7 @@
     <tr>
       <td>page</td>
       <td>Required</td>
-      <td><a href="page.html"><em>Page</em></a></td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em></td>
       <td>The page to display when a student’s highest Assessment Score is matched by the range specified by <code class="highlighter-rouge">for</code>.</td>
     </tr>
   </tbody>

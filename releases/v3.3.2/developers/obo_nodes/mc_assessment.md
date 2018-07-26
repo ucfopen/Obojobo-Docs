@@ -16,7 +16,7 @@ This is the multiple choice portion of a question containing several answer choi
 | shuffle | no | Boolean | Default: `true`. If `false` then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.
 
 
-### Values Allowed For 'responseType'
+### Supported Values for  'responseType'
 
 | Value | Description
 |-
@@ -24,9 +24,16 @@ This is the multiple choice portion of a question containing several answer choi
 | pick-one-multiple-correct | Student must choose one correct answer but more than one correct answer may be available. Answer choices are presented as a list of radio buttons. Question prompt reads "Pick one of the correct answers".
 | pick-all | Student is able to choose multiple answers and must select each correct answer without selecting an incorrect answer. Answer choices are presented as a list of checkboxes. Question prompt reads "Pick **all** of the correct answers".
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+
 ## Required Children
 
-One or more [*MCChoice*](mcchoice.html) nodes.
+One or more {{ 'MCChoice' | obo_node }} nodes.
 
 ## Variables Registered
 

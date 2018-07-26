@@ -23,10 +23,10 @@ All events (unless otherwise noted) contain these properties:
 
 Occurs when Viewer Client sends one of the following Obojobo events:
 
-* [`nav:prev`](/developers/events/events_all.html#navprev)
-* [`nav:next`](/developers/events/events_all.html#navnext)
-* [`nav:goto`](/developers/events/events_all.html#navgoto)
-* [`nav:gotoPath`](/developers/events/events_all.html#navgotopath)
+* [`nav:prev`](obojobo_events.html#navprev)
+* [`nav:next`](obojobo_events.html#navnext)
+* [`nav:goto`](obojobo_events.html#navgoto)
+* [`nav:gotoPath`](obojobo_events.html#navgotopath)
 
 #### Properties:
 
@@ -43,7 +43,7 @@ Occurs when Viewer Client sends one of the following Obojobo events:
 
 #### User views a question
 
-Occurs when Viewer Client sends a [`question:view`](/developers/events/events_all.html#questionview) Obojobo event.
+Occurs when Viewer Client sends a [`question:view`](obojobo_events.html#questionview) Obojobo event.
 
 | Property | Value |
 |-
@@ -53,7 +53,7 @@ Occurs when Viewer Client sends a [`question:view`](/developers/events/events_al
 
 #### User views a question explanation
 
-Occurs when Viewer Client sends a [`question:showExplanation`](/developers/events/events_all.html#questionshowexplanation) Obojobo event.
+Occurs when Viewer Client sends a [`question:showExplanation`](obojobo_events.html#questionshowexplanation) Obojobo event.
 
 | Property | Value |
 |-
@@ -65,7 +65,7 @@ Occurs when Viewer Client sends a [`question:showExplanation`](/developers/event
 
 ### AssessmentItemEvent
 
-User selects a response to a question. Viewer Client sends a [`question:setResponse`](/developers/events/events_all.html#questionsetresponse) event.
+User selects a response to a question. Viewer Client sends a [`question:setResponse`](obojobo_events.html#questionsetresponse) event.
 
 #### Answering a Practice Question
 
@@ -88,7 +88,7 @@ User selects a response to a question. Viewer Client sends a [`question:setRespo
 
 ### GradeEvent
 
-#### A practice question is scored (When Viewer Client sends a [`question:scoreSet`](/developers/events/events_all.html#questionscoreset) Obojobo event).
+#### A practice question is scored (When Viewer Client sends a [`question:scoreSet`](obojobo_events.html#questionscoreset) Obojobo event).
 
 | Property | Value |
 |-
@@ -116,7 +116,7 @@ User selects a response to a question. Viewer Client sends a [`question:setRespo
 
 #### User starts a new Visit
 
-Occurs when App Server sends a [`visit:start`](/developers/events/events_all.html#visitstart) Obojobo event
+Occurs when App Server sends a [`visit:start`](obojobo_events.html#visitstart) Obojobo event
 
 | Property | Value |
 |-
@@ -127,7 +127,7 @@ Occurs when App Server sends a [`visit:start`](/developers/events/events_all.htm
 
 #### User leaves a Draft
 
-Occurs when Viewer Client sends a [`viewer:close`](/developers/events/events_all.html#viewerclose) Obojobo event
+Occurs when Viewer Client sends a [`viewer:close`](obojobo_events.html#viewerclose) Obojobo event
 
 | Property | Value |
 |-
@@ -171,7 +171,7 @@ Occurs when Viewer Client sends a [`viewer:close`](/developers/events/events_all
 
 #### User visits a Draft
 
-Occurs when App Server sends a [`viewer:open`](/developers/events/events_all.html#vieweropen) Obojobo event
+Occurs when App Server sends a [`viewer:open`](obojobo_events.html#vieweropen) Obojobo event
 
 | Property | Value |
 |-
@@ -192,7 +192,7 @@ Additionally some generic events are created where existing Caliper events aren'
 
 #### A question is hidden
 
-When Viewer Client sends a [`question:hide`](/developers/events/events_all.html#questionhide) Obojobo event.
+When Viewer Client sends a [`question:hide`](obojobo_events.html#questionhide) Obojobo event.
 
 | Property | Value |
 |-
@@ -202,7 +202,7 @@ When Viewer Client sends a [`question:hide`](/developers/events/events_all.html#
 
 #### A question explanation is hidden
 
-When Viewer Client sends a [`question:hideExplanation`](/developers/events/events_all.html#questionhideexplanation) Obojobo event.
+When Viewer Client sends a [`question:hideExplanation`](obojobo_events.html#questionhideexplanation) Obojobo event.
 
 | Property | Value |
 |-
@@ -213,7 +213,7 @@ When Viewer Client sends a [`question:hideExplanation`](/developers/events/event
 
 #### Nav menu is hidden
 
-When Viewer Client sends a [`nav:close`](/developers/events/events_all.html#navclose) Obojobo event.
+When Viewer Client sends a [`nav:close`](obojobo_events.html#navclose) Obojobo event.
 
 | Property | Value |
 |-
@@ -226,7 +226,7 @@ When Viewer Client sends a [`nav:close`](/developers/events/events_all.html#navc
 
 #### Nav menu is showed
 
-When Viewer Client sends a [`nav:open`](/developers/events/events_all.html#navopen) Obojobo event.
+When Viewer Client sends a [`nav:open`](obojobo_events.html#navopen) Obojobo event.
 
 | Property | Value |
 |-
@@ -239,7 +239,7 @@ When Viewer Client sends a [`nav:open`](/developers/events/events_all.html#navop
 
 #### Nav menu is showed
 
-When Viewer Client sends a [`nav:toggle`](/developers/events/events_all.html#navtoggle) Obojobo event.
+When Viewer Client sends a [`nav:toggle`](obojobo_events.html#navtoggle) Obojobo event.
 
 | Property | Value |
 |-
@@ -252,7 +252,7 @@ When Viewer Client sends a [`nav:toggle`](/developers/events/events_all.html#nav
 
 ####User is no longer loo Nav menu is unlocked
 
-When Viewer Client sends a [`nav:unlock`](/developers/events/events_all.html#navunlock) Obojobo event.
+When Viewer Client sends a [`nav:unlock`](obojobo_events.html#navunlock) Obojobo event.
 
 | Property | Value |
 |-
@@ -265,7 +265,7 @@ When Viewer Client sends a [`nav:unlock`](/developers/events/events_all.html#nav
 
 #### Nav menu is locked
 
-When Viewer Client sends a [`nav:lock`](/developers/events/events_all.html#navlock) Obojobo event.
+When Viewer Client sends a [`nav:lock`](obojobo_events.html#navlock) Obojobo event.
 
 | Property | Value |
 |-
@@ -278,7 +278,7 @@ When Viewer Client sends a [`nav:lock`](/developers/events/events_all.html#navlo
 
 #### User checks answer for a practice question
 
-When Viewer Client sends a [`question:checkAnswer`](/developers/events/events_all.html#questioncheckanswer) Obojobo event.
+When Viewer Client sends a [`question:checkAnswer`](obojobo_events.html#questioncheckanswer) Obojobo event.
 
 | Property | Value |
 |-
@@ -291,7 +291,7 @@ When Viewer Client sends a [`question:checkAnswer`](/developers/events/events_al
 
 #### A practice question is reset
 
-When Viewer Client sends a [`question:scoreClear`](/developers/events/events_all.html#questionscoreclear) Obojobo event
+When Viewer Client sends a [`question:scoreClear`](obojobo_events.html#questionscoreclear) Obojobo event
 
 | Property | Value |
 |-
@@ -302,7 +302,7 @@ When Viewer Client sends a [`question:scoreClear`](/developers/events/events_all
 
 #### User is retries a practice question
 
-When Viewer Client sends a [`question:retry`](/developers/events/events_all.html#questionretry) Obojobo event
+When Viewer Client sends a [`question:retry`](obojobo_events.html#questionretry) Obojobo event
 
 | Property | Value |
 |-
@@ -316,7 +316,7 @@ When Viewer Client sends a [`question:retry`](/developers/events/events_all.html
 
 #### User has gone idle
 
-When Viewer Client sends a [`viewer:inactive`](/developers/events/events_all.html#viewerinactive) Obojobo event.
+When Viewer Client sends a [`viewer:inactive`](obojobo_events.html#viewerinactive) Obojobo event.
 
 | Property | Value |
 |-
@@ -330,7 +330,7 @@ When Viewer Client sends a [`viewer:inactive`](/developers/events/events_all.htm
 
 #### User is no longer looking at the draft
 
-When Viewer Client sends a [`viewer:leave`](/developers/events/events_all.html#viewerleave) Obojobo event.
+When Viewer Client sends a [`viewer:leave`](obojobo_events.html#viewerleave) Obojobo event.
 
 | Property | Value |
 |-
@@ -344,7 +344,7 @@ When Viewer Client sends a [`viewer:leave`](/developers/events/events_all.html#v
 
 #### User has returned from idle
 
-When Viewer Client sends a [`viewer:returnFromInactive`](/developers/events/events_all.html#viewerreturnfrominactive) Obojobo event.
+When Viewer Client sends a [`viewer:returnFromInactive`](obojobo_events.html#viewerreturnfrominactive) Obojobo event.
 
 | Property | Value |
 |-
@@ -356,7 +356,7 @@ When Viewer Client sends a [`viewer:returnFromInactive`](/developers/events/even
 
 #### User is again looking at the draft
 
-When Viewer Client sends a [`viewer:return`](/developers/events/events_all.html#viewerreturn) Obojobo event
+When Viewer Client sends a [`viewer:return`](obojobo_events.html#viewerreturn) Obojobo event
 
 | Property | Value |
 |-

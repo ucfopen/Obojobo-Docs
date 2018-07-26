@@ -25,7 +25,7 @@ menus:
 
 **OboXML Parser**: Code which parses an OboXML Document to produce an Obojobo Draft Document.
 
-**OboXML Element**: An XML element in an OboXML document representing an OboNode Component, for example `<ObojoboDraft.Chunks.Text>`. Uppercase.
+**OboXML Element**: An XML element in an OboXML document representing an OboNode Component, for example `<ObojoboDraft.Chunks.Text>`. They always start with an Uppercase letter.
 
 **OboXML Content Element**: An XML element in an OboXML document representing a content attribute of an OboNode Component, for example `<scoreActions>`. Lowercased. Additional parsers or extensions can parse these elements to construct a conformant content attribute for the resulting Obojobo Draft Document.
 

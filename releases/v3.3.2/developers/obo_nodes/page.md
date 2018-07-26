@@ -13,6 +13,15 @@ A generic "page" that can be thought of as a page in a book or an online article
 | title | no | String | The title of the page displayed in the navigation menu.
 
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+| onNavEnter | Fired when a node is navigated to
+| onNavExit | Fired when a node is navigated away from
+
 ## Required Children
 
 One or more Chunk nodes.

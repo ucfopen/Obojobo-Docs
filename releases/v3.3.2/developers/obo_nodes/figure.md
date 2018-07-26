@@ -12,7 +12,7 @@ An image with an optional image caption shown below.
 | Property | Required | Type | Description |
 |-
 | alt | Recomended | String | Sets the alt tag of the image.
-| textGroup | no | [TextGroup](content_textgroup) | Used as the caption below the image - expects **only** 1 text item if set.
+| textGroup | no | {{ 'textGroup' | obo_node }} | Used as the caption below the image - expects **only** 1 text item if set.
 | url | no | String | The external URL to the image.
 | size | no | String | Default: `small`. One of the following values representing the desired size of the image
 | width | no | String | If size is set to `custom` then this specifies the width. Has no effect otherwise.
@@ -20,7 +20,7 @@ An image with an optional image caption shown below.
 | type | Required | String | The type of action. This is limited to the values shown in the table below.
 | value | no | Object |  An object that can send one or more values along with the action event. The system can then use these values as desired.
 
-## Values Allowed For 'size'
+### Supported Values for  `size`
 
 | Value | Description |
 |-
@@ -30,6 +30,13 @@ An image with an optional image caption shown below.
 | custom | An image set at native size (image is still restricted by the width of the page)
 
 > Note: Setting either `width` or `height` on a `custom` image will modify the non-specified dimension proportionally. It's not recommended to set both `width` and `height` as this will not respect the natural aspect-ratio of the image.
+
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
 

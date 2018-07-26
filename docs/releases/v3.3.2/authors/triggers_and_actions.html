@@ -8,7 +8,7 @@
   <title>Triggers and Actions - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="Additionally nodes can fire events which other nodes in the system can hear and respond to via triggers and actions. For example an Assessment section can lock out the navigation of the module so that students cannot view the content until the assessment is completed. An example of this is shown ..."/>
+  <meta name="description" content="OboNodes can fire events which other nodes in the system can hear and respond to via trigger and action. For example an Assessment section can lock out the navigation of the module so that students cannot view the content until the assessment is completed.Example ScenarioWhen an attempt is starte..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/content_types.html">Content Types</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/content_types.html">OboXML Content Types</a>
           </li>
         
         </ul>
@@ -106,23 +106,11 @@
         <ul>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_show_assessment_reviews.html">Assesment Reviews & Question Feedback</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_lti_replace_result.html">LTI Score Passback</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_new_quizzes.html">New Questions for each Attempt</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_pretest.html">Adding a Pre-Test</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_show_assessment_reviews.html">Assesment Reviews & Question Feedback</a>
           </li>
         
           <li class="navListItem" >
@@ -130,15 +118,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html">Threshold Scoring</a>
-          </li>
-        
-          <li class="navListItem navListItemActive" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/authors_triggers_and_actions.html">Triggers and Actions</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_displaying_attempts.html">Displaying Remaining Attempts</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/authors_variables.html">Variables</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
           </li>
         
           <li class="navListItem" >
@@ -150,7 +134,23 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_displaying_attempts.html">Displaying Remaining Attempts</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_lti_replace_result.html">LTI Score Passback</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_new_quizzes.html">New Questions for each Attempt</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html">Threshold Scoring</a>
+          </li>
+        
+          <li class="navListItem navListItemActive" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/triggers_and_actions.html">Triggers and Actions</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/variables.html">Variables</a>
           </li>
         
         </ul>
@@ -200,7 +200,19 @@
             <article>
               <div>
                 <span>
-                  <p>Additionally nodes can fire events which other nodes in the system can hear and respond to via <strong>triggers</strong> and <strong>actions</strong>. For example an Assessment section can lock out the navigation of the module so that students cannot view the content until the assessment is completed. An example of this is shown below:</p>
+                  <p>OboNodes can fire events which other nodes in the system can hear and respond to via <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em> and <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em>. For example an Assessment section can lock out the navigation of the module so that students cannot view the content until the assessment is completed.</p>
+
+<h2 id="example-scenario">
+<a id="example-scenario" class="anchor" href="#example-scenario" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Scenario</h2>
+
+<p>When an attempt is started the <code class="highlighter-rouge">onStartAttempt</code> event that <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em> emits will be broadcast in the Obojobo Draft Viewer.</p>
+
+<p>In the example above, two <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em>s are triggered by that event.  One using the <code class="highlighter-rouge">nav:lock</code> action which disables the navigation menu. The other uses the <code class="highlighter-rouge">viewer:alert</code> action that will cause a dialog to display.</p>
+
+<p>When the attempt is completed the <code class="highlighter-rouge">onEndAttempt</code> event be heard by the second trigger, activating an action which will unlock the navigation (<code class="highlighter-rouge">nav:unlock</code>).</p>
+
+<h2 id="json-example">
+<a id="json-example" class="anchor" href="#json-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON Example</h2>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">...</span><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -238,7 +250,8 @@
 </span><span class="err">...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Here is the same OboNode represented in XML:</p>
+<h2 id="xml-example">
+<a id="xml-example" class="anchor" href="#xml-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML Example</h2>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Assessment&gt;</span>
   <span class="nt">&lt;triggers&gt;</span>
@@ -259,7 +272,6 @@
 <span class="nt">&lt;/Assessment&gt;</span>
 </code></pre></div></div>
 
-<p>When an attempt is started the <a href="obo_content_reference.md#triggers"><code class="highlighter-rouge">onStartAttempt</code></a> event will be broadcast in the Obojobo Draft Viewer. In this example the Assessment OboNode Component will be triggered by this event and will fire the <a href="events_3.3_all.md#nav-lock"><code class="highlighter-rouge">nav:lock</code></a> action. This disables navigation in the system. <a href="events_3.3_all.md#viewer-alert"><code class="highlighter-rouge">viewer:alert</code></a> is also fired - This action will cause a dialog to display in the Obojobo Draft Viewer. When the attempt is completed this OboNode Component will respond to the <a href="obo_content_reference.md#triggers"><code class="highlighter-rouge">onEndAttempt</code></a> trigger and the navigation will then be unlocked via the <a href="events_3.3_all.md#nav-unlock"><code class="highlighter-rouge">nav:unlock</code></a> action.</p>
 
                 </span>
               </div>
@@ -273,6 +285,9 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#example-scenario">Example Scenario</a></li>
+<li class="toc-entry toc-h2"><a href="#json-example">JSON Example</a></li>
+<li class="toc-entry toc-h2"><a href="#xml-example">XML Example</a></li>
 </ul>
 
     </nav>

@@ -15,7 +15,7 @@ This **MUST** be the root OboNode of every Obojobo Draft Document.
 
 ## Required Children
 
-Expects one or more of [*Content*](content.html) or [*Assessment*](assessment.html)
+Expects one or more of {{ 'Content' | obo_node }} or {{ 'Assessment' | obo_node }}
 
 ## Variables Registered
 

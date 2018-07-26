@@ -12,7 +12,7 @@ An AssessmentRubric is a rubric that marks the overall assessment score based on
 | Propterty | Required | Type | Description
 |-
 | type | Required | String | `pass-fail` is the only supported value.
-| mods | no | Array\<*[mod](mod.html)*> | A list of mods which provide extra credit or penalties.
+| mods | no | Array\<{{ 'mod' | obo_node }}> | A list of mods which provide extra credit or penalties.
 | passingAttemptScore | no | Integer 0-100 | Default: `100`. The assessment attempt score required to be rewarded a `passed` status.
 | passedResult | no | Integer 0-100 | Default: `100`. The base assessment score if rewarded a `passed` status. If set to `$attempt_score` this assessment attempt score will be used for this value.
 | failedResult | no | Integer 0-100 | Default: `0`. The base Assessment score if rewarded a `failed` status. If set to `$attempt_score` the current assessment attempt score will be used.  If set to `no-score`, no score will be awarded and scores will not be sent to the LMS.

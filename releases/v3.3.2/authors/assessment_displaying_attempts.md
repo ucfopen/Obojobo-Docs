@@ -3,7 +3,7 @@ title: Displaying Remaining Attempts
 menus: authors_how_to
 ---
 
-The number of attempts used and attempts remaining are availible using [Variables](authors_variables.md).
+The number of attempts used and attempts remaining are availible using [Variables](variables.html).
 
 This example shows how to display it on a start attempt button using two assessment variables:
 
@@ -11,7 +11,7 @@ This example shows how to display it on a start attempt button using two assessm
 * {% raw %}`{{assessment:attemptsTaken}}`{% endraw %}
 
 
-> ActionButton's `label` attribute does not support variables. Use of a textGroup is required.
+> Note: {{ 'ActionButton' | obo_node }}'s `label` attribute does not support variables. Use of a textGroup is required.
 
 ```xml
 <ObojoboDraftDoc>

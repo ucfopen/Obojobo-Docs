@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/content_types.html">Content Types</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/content_types.html">OboXML Content Types</a>
           </li>
         
         </ul>
@@ -106,23 +106,11 @@
         <ul>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_show_assessment_reviews.html">Assesment Reviews & Question Feedback</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_lti_replace_result.html">LTI Score Passback</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_new_quizzes.html">New Questions for each Attempt</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_pretest.html">Adding a Pre-Test</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_show_assessment_reviews.html">Assesment Reviews & Question Feedback</a>
           </li>
         
           <li class="navListItem" >
@@ -130,15 +118,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html">Threshold Scoring</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_displaying_attempts.html">Displaying Remaining Attempts</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/authors_triggers_and_actions.html">Triggers and Actions</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/authors_variables.html">Variables</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
           </li>
         
           <li class="navListItem" >
@@ -150,7 +134,23 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_displaying_attempts.html">Displaying Remaining Attempts</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_lti_replace_result.html">LTI Score Passback</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_new_quizzes.html">New Questions for each Attempt</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html">Threshold Scoring</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/triggers_and_actions.html">Triggers and Actions</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/variables.html">Variables</a>
           </li>
         
         </ul>
@@ -285,7 +285,7 @@
 
 <p>Rubrics specify how an Assessment Score is calculated.</p>
 
-<p>Rubrics allow complex scoring rules outlined by <a href="obo_reference.md#assessmentrubric"><code class="highlighter-rouge">Assessment</code></a>.</p>
+<p>Rubrics allow complex scoring rules outlined by <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em>.</p>
 
 <p>This example will use the default rubric type.</p>
 
@@ -355,7 +355,7 @@
 <h3 id="7-add-a-question-bank">
 <a id="7-add-a-question-bank" class="anchor" href="#7-add-a-question-bank" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Add a Question Bank</h3>
 
-<p>The second <strong>required</strong> child of the Assessment tag is a <a href="obo_reference.md#obojobodraftchunksquestionbank"><code class="highlighter-rouge">QuestionBank</code></a>.</p>
+<p>The second <strong>required</strong> child of the Assessment tag is a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a></em>.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Assessment</span> <span class="na">id=</span><span class="s">"my-assessment"</span> <span class="na">attempts=</span><span class="s">"3"</span> <span class="na">review=</span><span class="s">"always"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;rubric</span> <span class="na">type=</span><span class="s">'attempt'</span><span class="nt">&gt;&lt;/rubric&gt;</span>
@@ -370,7 +370,7 @@
 <h3 id="7-add-a-question">
 <a id="7-add-a-question" class="anchor" href="#7-add-a-question" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Add a Question</h3>
 
-<p>Add a <a href="obo_reference.md#obojobodraftchunksquestion"><code class="highlighter-rouge">Question</code></a> to the Question Bank.</p>
+<p>Add a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html">Question</a></em> to the Question Bank.</p>
 
 <p>Below is a simple multiple choice question with 2 possible answers.</p>
 
@@ -403,7 +403,7 @@
 
 <p>It’s a <strong>required</strong> page that is displayed after the assessment.</p>
 
-<p>The simplest example is a single page for all scores. Define a <a href="obo_reference.html#scoreaction"><code class="highlighter-rouge">ScoreAction</code></a> for all scores (<code class="highlighter-rouge">[0,100]</code>) and a Page containing another ActionButton used to begin another attempt.</p>
+<p>The simplest example is a single page for all scores. Define a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">scoreAction</a></em> for all scores (<code class="highlighter-rouge">[0,100]</code>) and a Page containing another ActionButton used to begin another attempt.</p>
 
 <p>Multiple pages can be added for different feedback depending on attempt score. Perhaps words of encouragement or advice when the student’s score is below a certain threshold.</p>
 
@@ -462,7 +462,7 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p><strong>NOTE</strong>: Although <code class="highlighter-rouge">Page</code> must be first, and <code class="highlighter-rouge">QuestionBank</code> must be second, the order of any <code class="highlighter-rouge">scoreActions</code>, <code class="highlighter-rouge">rubric</code> and <code class="highlighter-rouge">triggers</code> tags are not important.</p>
+  <p><strong>NOTE</strong>: Although <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em> must be first, and <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a></em> must be second, the order of any <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">scoreAction</a></em>, <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> and <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em> tags are not important.</p>
 </blockquote>
 
 <h2 id="complete-example-xml">
@@ -565,7 +565,8 @@
   <li>The student can click the post-attempt page’s ActionButton to try again.</li>
 </ol>
 
-<p><img src="/Obojobo-Docs/docs/assets/assessment_walk_through.gif" alt="Assessment Walk Through"></p>
+<p><img src="/Obojobo-Docs/assets/images/assessment_walk_through.gif" alt="Assessment Walk Through"></p>
+
 
                 </span>
               </div>

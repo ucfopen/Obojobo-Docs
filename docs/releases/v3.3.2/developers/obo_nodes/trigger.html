@@ -8,7 +8,7 @@
   <title>trigger - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="A trigger is a condition that will allow an action to take place when met, and must always be wrapped in a triggers array.Triggers are linked to the OboNode that contains them, and are only fired when the condition is met for that particular node. Ergo, an onClick trigger is only linked to the cl..."/>
+  <meta name="description" content="A listener for a certain event that performs an action when it occurs.Triggers are linked to the OboNode that contains them.  They are only fired when the matching event type is heard for that particular node. Ergo, a trigger listening to the onClick event is only linked to the clicking of the Ac..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem navListItemActive" >
@@ -307,9 +311,13 @@
             <article>
               <div>
                 <span>
-                  <p>A trigger is a condition that will allow an action to take place when met, and must always be wrapped in a triggers array.</p>
+                  <p>A listener for a certain event that performs an action when it occurs.</p>
 
-<p>Triggers are linked to the OboNode that contains them, and are only fired when the condition is met for that particular node. Ergo, an <code class="highlighter-rouge">onClick</code> trigger is only linked to the clicking of one specific button.</p>
+<p>Triggers are linked to the OboNode that contains them.  They are only fired when the matching event <code class="highlighter-rouge">type</code> is heard for that particular node. Ergo, a trigger listening to the <code class="highlighter-rouge">onClick</code> event is only linked to the clicking of the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a></em> it is attached to.</p>
+
+<blockquote>
+  <p>Triggers must always be wrapped in a triggers array.</p>
+</blockquote>
 
 <h2 id="structure">
 <a id="structure" class="anchor" href="#structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structure</h2>
@@ -333,7 +341,7 @@
     <tr>
       <td>actions</td>
       <td>Required</td>
-      <td>Array&lt;<a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html"><em>action</em></a>&gt;</td>
+      <td>Array&lt;<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em>&gt;</td>
       <td>One or more actions to perform when this trigger is run.</td>
     </tr>
   </tbody>
@@ -364,30 +372,30 @@
     <tr>
       <td>onNavEnter</td>
       <td>
-<a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html"><em>Heading</em></a> <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html"><em>Page</em></a> <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html"><em>Question</em></a> <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html"><em>Assessment</em></a>
+<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a></em> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html">Question</a></em> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em>
 </td>
       <td>Fired when a node is navigated to</td>
     </tr>
     <tr>
       <td>onNavExit</td>
       <td>
-<a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html"><em>Heading</em></a> <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html"><em>Page</em></a> <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html"><em>Question</em></a> <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html"><em>Assessment</em></a>
+<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a></em> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html">Question</a></em> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em>
 </td>
       <td>Fired when a node is navigated away from</td>
     </tr>
     <tr>
       <td>onStartAttempt</td>
-      <td><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html"><em>Assessment</em></a></td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em></td>
       <td>Fired when an assessment attempt is started</td>
     </tr>
     <tr>
       <td>onEndAttempt</td>
-      <td><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html"><em>Assessment</em></a></td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em></td>
       <td>Fired when an assessment attempt is submitted</td>
     </tr>
     <tr>
       <td>onClick</td>
-      <td><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html"><em>ActionButton</em></a></td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a></em></td>
       <td>Fired when an ActionButton button is clicked</td>
     </tr>
   </tbody>
@@ -446,7 +454,7 @@
 <span class="nt">&lt;/triggers&gt;</span>
 </code></pre></div></div>
 
-<p>These triggers would be placed in an <strong>ObojoboDraft.Sections.Assessment</strong> node, and would cause the navigation bar to lock when the assessment started, and unlock once the navigation was finished.</p>
+<p>These triggers would be placed in an <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em> node, and would cause the navigation bar to lock when the assessment started, and unlock once the navigation was finished.</p>
 
                 </span>
               </div>

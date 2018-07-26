@@ -11,8 +11,17 @@ Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 
 | Property | Required | Type | Description |
 |-
-| textGroup | Required | [TextGroup](content_textgroup.md) | Expects 1 text item.
+| textGroup | Required | {{ 'textGroup' | obo_node }} | Expects 1 text item.
 | headingLevel | no | Integer | Default: `1`. A value from 1-6 representing the heading level where 1 is the primary heading.
+
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+| onNavEnter | Fired when a node is navigated to
+| onNavExit | Fired when a node is navigated away from
 
 ## Required Children
 

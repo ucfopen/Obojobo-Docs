@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -325,7 +329,7 @@
     <tr>
       <td>scoreActions</td>
       <td>Required</td>
-      <td>Array&lt;<a href="content_scoreaction.md">ScoreAction</a>&gt;</td>
+      <td>Array&lt;<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">scoreAction</a></em>&gt;</td>
       <td>This defines one or more landing pages after the student submits their assessment attempt. Students can be sent to different pages based on their highest Assessment Score.</td>
     </tr>
     <tr>
@@ -344,14 +348,22 @@
     <tr>
       <td>rubric</td>
       <td>no</td>
-      <td><a href="content_rubric.md">Rubric</a></td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em></td>
       <td>Rules that specify how an Assessment Score is calculated from an Attempt Score</td>
+    </tr>
+    <tr>
+      <td>triggers</td>
+      <td>no</td>
+      <td>Array&lt;<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em>&gt;</td>
+      <td>Should contain a trigger for <code class="highlighter-rouge">onClick</code>
+</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="supported-review-values">
-<a id="supported-review-values" class="anchor" href="#supported-review-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Review Values</h3>
+<h3 id="supported-values-for-review">
+<a id="supported-values-for-review" class="anchor" href="#supported-values-for-review" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Values for <code class="highlighter-rouge">review</code>
+</h3>
 
 <table>
   <thead>
@@ -376,6 +388,62 @@
   </tbody>
 </table>
 
+<h2 id="supported-trigger-types">
+<a id="supported-trigger-types" class="anchor" href="#supported-trigger-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Trigger Types</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>onMount</td>
+      <td>Fired when a node is added to the DOM</td>
+    </tr>
+    <tr>
+      <td>onUnmount</td>
+      <td>Fired when a node is removed from the DOM</td>
+    </tr>
+    <tr>
+      <td>onNavEnter</td>
+      <td>Fired when a node is navigated to</td>
+    </tr>
+    <tr>
+      <td>onNavExit</td>
+      <td>Fired when a node is navigated away from</td>
+    </tr>
+    <tr>
+      <td>onStartAttempt</td>
+      <td>Fired when an assessment attempt is started</td>
+    </tr>
+    <tr>
+      <td>onEndAttempt</td>
+      <td>Fired when an assessment attempt is submitted</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="supported-trigger-types-1">
+<a id="supported-trigger-types-1" class="anchor" href="#supported-trigger-types-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Trigger Types</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>onClick</td>
+      <td>Runs when the button is clicked</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="required-children">
 <a id="required-children" class="anchor" href="#required-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Children</h2>
 
@@ -383,9 +451,9 @@
 
 <ol>
   <li>
-<a href="obonode_page.md"><em>Page</em></a>: The initial page shown when a student first navigates to the assessment. This page should contain a <a href="action_button.html"><em>ActionButton</em></a> to start the assessment.</li>
+<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em>: The initial page shown when a student first navigates to the assessment. This page should contain a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a></em> to start the assessment.</li>
   <li>
-<a href="question_bank.html"><em>QuestionBank</em></a>: A question bank that contains all the possible questions contained in the Assessment.</li>
+<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a></em>: A question bank that contains all the possible questions contained in the Assessment.</li>
 </ol>
 
 <h2 id="registered-variables">
@@ -406,6 +474,24 @@
     <tr>
       <td><code class="highlighter-rouge">{{assessment:attemptsAmount}}</code></td>
       <td>The total number of attempts or <code class="highlighter-rouge">unlimited</code> if no attempt limit is set.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="emitted-triggers">
+<a id="emitted-triggers" class="anchor" href="#emitted-triggers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Emitted Triggers</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>onClick</td>
+      <td>Runs when the button is clicked</td>
     </tr>
   </tbody>
 </table>
@@ -518,11 +604,14 @@
       <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#properties">Properties</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#supported-review-values">Supported Review Values</a></li>
+<li class="toc-entry toc-h3"><a href="#supported-values-for-review">Supported Values for review</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
+<li class="toc-entry toc-h2"><a href="#supported-trigger-types-1">Supported Trigger Types</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#registered-variables">Registered Variables</a></li>
+<li class="toc-entry toc-h2"><a href="#emitted-triggers">Emitted Triggers</a></li>
 <li class="toc-entry toc-h2"><a href="#example">Example</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#json">JSON</a></li>

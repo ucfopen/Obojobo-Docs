@@ -5,10 +5,10 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Text Content Reference - Obojobo Next Documentation</title>
+  <title>Text Content Conventions - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="  @TODO: needs a better name, what is “Content”.  This appears to be mostly about TextGroup, which is not clear why that isn’t a OboNode in itselfTextGroupA TextGroup is a series of one or more lines of text with optional styling and additional data defined.TextGroup StructureA TextGroup is an ar..."/>
+  <meta name="description" content="Generally text content in OboNodes resides within TextGroups. TextGroups are just an array of TextItems. Some TextGroups restrict how many textItems they are allowed to contain. Text allows an infinate number, while Figure allows only one.TextItems can be thought of as a line of text. For example..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem navListItemActive" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -296,102 +300,33 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Text Content Reference</h1>
+              <h1 class="postHeaderTitle">Text Content Conventions</h1>
                   
                   
             </header>
             <article>
               <div>
                 <span>
-                  <blockquote>
-  <p>@TODO: needs a better name, what is “Content”.  This appears to be mostly about TextGroup, which is not clear why that isn’t a OboNode in itself</p>
-</blockquote>
+                  <p>Generally text content in OboNodes resides within TextGroups. TextGroups are just an array of TextItems. Some TextGroups restrict how many textItems they are allowed to contain. <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text.html">Text</a></em> allows an infinate number, while <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a></em> allows only one.</p>
 
-<h2 id="textgroup">
-<a id="textgroup" class="anchor" href="#textgroup" aria-hidden="true"><span class="octicon octicon-link"></span></a>TextGroup</h2>
+<p>TextItems can be thought of as a line of text. For example: a sentance, a single list item, or a cell in a table.</p>
 
-<p>A TextGroup is a series of one or more lines of text with optional styling and additional data defined.</p>
+<p>TextItems contain a single StyleableText object.  StyleableText have a string of text and an object that describes the style of characters within that text.</p>
 
-<h3 id="textgroup-structure">
-<a id="textgroup-structure" class="anchor" href="#textgroup-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>TextGroup Structure</h3>
+<h2 id="minimal-example">
+<a id="minimal-example" class="anchor" href="#minimal-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minimal Example</h2>
 
-<p>A TextGroup is an array of one or more <strong>TextItem</strong> objects each containing two properties: <strong>text</strong> and <strong>data</strong>:</p>
+<p>This example is just a single, unstyled line of text.</p>
 
-<ul>
-  <li>
-<code class="highlighter-rouge">text</code> <strong>REQUIRED</strong>: A <a href="obo_content_reference.md#styleabletext"><strong>StyleableText</strong></a> object</li>
-  <li>
-<code class="highlighter-rouge">data</code>: Object: An object containing one or more properties. Currently only <code class="highlighter-rouge">indent</code> is understood. If specified this sets the indentation level of the text item if the chunk type supports indentation (<code class="highlighter-rouge">"indent": 1</code> inserts one tab before the text item, <code class="highlighter-rouge">"indent": 2</code> inserts two tabs and so on).</li>
-</ul>
+<h3 id="example-render">
+<a id="example-render" class="anchor" href="#example-render" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Render</h3>
 
-<h3 id="styleabletext">
-<a id="styleabletext" class="anchor" href="#styleabletext" aria-hidden="true"><span class="octicon octicon-link"></span></a>StyleableText</h3>
-
-<p>A <strong>StyleableText</strong> object contains two properties: <strong>value</strong> and <strong>styleList</strong>:</p>
-
-<ul>
-  <li>
-<code class="highlighter-rouge">value</code> <strong>REQUIRED</strong>: String: The string of text to display.</li>
-  <li>
-<code class="highlighter-rouge">styleList</code>: A <strong>StyleList</strong> object</li>
-</ul>
-
-<h3 id="stylelist">
-<a id="stylelist" class="anchor" href="#stylelist" aria-hidden="true"><span class="octicon octicon-link"></span></a>StyleList</h3>
-
-<p>A <strong>StyleList</strong> is an array of one or more <strong>StyleListItem</strong> objects containing four properties: <strong>type</strong>, <strong>start</strong>, <strong>end</strong> and <strong>data</strong></p>
-
-<ul>
-  <li>
-<code class="highlighter-rouge">type</code> <strong>REQUIRED</strong>: String: Represents what type of styling to apply, must be one of the following:
-    <ul>
-      <li>
-<code class="highlighter-rouge">b</code>: Bold</li>
-      <li>
-<code class="highlighter-rouge">i</code>: Italics</li>
-      <li>
-<code class="highlighter-rouge">del</code>: Strikethrough</li>
-      <li>
-<code class="highlighter-rouge">a</code>: Link</li>
-      <li>
-<code class="highlighter-rouge">q</code>: Quote</li>
-      <li>
-<code class="highlighter-rouge">sup</code>: Superscript / Subscript</li>
-      <li>
-<code class="highlighter-rouge">_latex</code>: Renders the range of text as inline LaTeX math using Katex</li>
-    </ul>
-  </li>
-  <li>
-<code class="highlighter-rouge">start</code> <strong>REQUIRED</strong>: The index of the first character to style</li>
-  <li>
-<code class="highlighter-rouge">end</code> <strong>REQUIRED</strong>: The index of the last character to style - all characters between <code class="highlighter-rouge">start</code> and <code class="highlighter-rouge">end</code> will be styled by <code class="highlighter-rouge">type</code>
-</li>
-  <li>
-<code class="highlighter-rouge">data</code>: Object: The expected value of this property is different depending on the value of <code class="highlighter-rouge">type</code>:
-    <ul>
-      <li>
-<code class="highlighter-rouge">a</code>: Expects an object with an <code class="highlighter-rouge">href</code> property set to a String of the URL to link to.</li>
-      <li>
-<code class="highlighter-rouge">sup</code>: Expects an integer representing the number of levels to superscript or subscript (1 meaning one level of superscript, 2 meaning two levels, -1 meaning one level of subscript and so on)</li>
-      <li>All other types do not require this object</li>
-    </ul>
-  </li>
-</ul>
-
-<p>The text content of <code class="highlighter-rouge">&lt;t&gt;</code> elements can contain a strict sub-set of HTML-like elements.</p>
-
-<h3 id="examples">
-<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
-
-<h4 id="minimal-example">Minimal Example</h4>
-
-<p>The TextGroup for the line</p>
-
-<blockquote>
+<blockquote class="example-html">
   <p>Hello World</p>
 </blockquote>
 
-<p>is shown below:</p>
+<h3 id="json-structure">
+<a id="json-structure" class="anchor" href="#json-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON Structure</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
@@ -405,7 +340,8 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>And in XML:</p>
+<h3 id="xml-structure">
+<a id="xml-structure" class="anchor" href="#xml-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML Structure</h3>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;SomeOboNode&gt;</span>
   <span class="c">&lt;!-- ... --&gt;</span>
@@ -415,17 +351,21 @@
 <span class="nt">&lt;/SomeOboNode&gt;</span>
 </code></pre></div></div>
 
-<h4 id="styled-example">Styled Example</h4>
+<h2 id="text-with-styles-example">
+<a id="text-with-styles-example" class="anchor" href="#text-with-styles-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text with Styles Example</h2>
 
-<p>The TextGroup for the content</p>
+<p>This example uses <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">styleList</a></em> to add style information.</p>
 
-<blockquote>
-  <p>I’ve <strong>seen</strong> things you people wouldn’t believe.</p>
+<h3 id="example-render-1">
+<a id="example-render-1" class="anchor" href="#example-render-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Render</h3>
 
-  <p><a href="https://en.wikipedia.org/wiki/Tears_in_rain_monologue">Attack ships</a> on fire off the shoulder of <em>Orion</em>.</p>
+<blockquote class="example-html">
+  <p>I’ve <b>seen</b> things you people wouldn’t believe. <br>
+<a href="https://en.wikipedia.org/wiki/Tears_in_rain_monologue">Attack ships</a> on fire off the shoulder of <i>Orion</i>.</p>
 </blockquote>
 
-<p>is shown below:</p>
+<h3 id="json-structure-1">
+<a id="json-structure-1" class="anchor" href="#json-structure-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON Structure</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
@@ -466,7 +406,8 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>And in XML:</p>
+<h3 id="xml-structure-1">
+<a id="xml-structure-1" class="anchor" href="#xml-structure-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML Structure</h3>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;SomeOboNode&gt;</span>
   <span class="c">&lt;!-- ... --&gt;</span>
@@ -477,39 +418,69 @@
 <span class="nt">&lt;/SomeOboNode&gt;</span>
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">&lt;t&gt;</code> elements allow styling with a subset of HTML-like styling tags.</p>
+<h3 id="styling-text-with-xml">
+<a id="styling-text-with-xml" class="anchor" href="#styling-text-with-xml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Styling text with XML</h3>
 
-<h5 id="allowed-t-html-like-style-tags">Allowed <code class="highlighter-rouge">&lt;t&gt;</code> HTML-like style tags</h5>
+<p>Using <code class="highlighter-rouge">&lt;t&gt;</code> elements allows styling with a subset of HTML-like styling tags.</p>
 
-<ul>
-  <li>
-<code class="highlighter-rouge">&lt;b&gt;</code>: Bold</li>
-  <li>
-<code class="highlighter-rouge">&lt;i&gt;</code>: Italic</li>
-  <li>
-<code class="highlighter-rouge">&lt;latex&gt;</code>: Latex math equation</li>
-  <li>
-<code class="highlighter-rouge">&lt;a href="address"&gt;</code>: Link</li>
-  <li>
-<code class="highlighter-rouge">&lt;sup&gt;</code>: Superscript</li>
-  <li>
-<code class="highlighter-rouge">&lt;sub&gt;</code>: Subscript</li>
-  <li>
-<code class="highlighter-rouge">&lt;q&gt;</code>: Quote</li>
-  <li>
-<code class="highlighter-rouge">&lt;del&gt;</code>: Strikethrough</li>
-</ul>
+<h4 id="allowed-t-html-like-style-tags">Allowed <code class="highlighter-rouge">&lt;t&gt;</code> HTML-like style tags</h4>
 
-<h4 id="inline-math-example">Inline Math Example</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;b&gt;&lt;/b&gt;</code></td>
+      <td>Bold</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;i&gt;&lt;/i&gt;</code></td>
+      <td>Italic</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;latex&gt;&lt;/latex&gt;</code></td>
+      <td>Latex math equation</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;a href="..."&gt;&lt;/a&gt;</code></td>
+      <td>Link</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;sup&gt;&lt;/sup&gt;</code></td>
+      <td>Superscript</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;sub&gt;&lt;/sub&gt;</code></td>
+      <td>Subscript</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;q&gt;&lt;/q&gt;</code></td>
+      <td>Quote</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;del&gt;&lt;/del&gt;</code></td>
+      <td>Strikethrough</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>The TextGroup for the line</p>
+<h2 id="inline-math-example">
+<a id="inline-math-example" class="anchor" href="#inline-math-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inline Math Example</h2>
 
-<blockquote>
-  <p>Solve for x: <em>10=x+5</em></p>
+<p>Using the <code class="highlighter-rouge">_latex</code> type for a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">styleList</a></em> can be used to render Latex markup.</p>
+
+<h3 id="example-render-2">
+<a id="example-render-2" class="anchor" href="#example-render-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Render</h3>
+<blockquote class="example-html">
+  <p>Solve for x: <code>10=x+5</code></p>
 </blockquote>
 
-<p>is shown below (The equation above renders as italic in this document but will be rendered in a LaTeX style in the Obojobo Document Viewer):</p>
-
+<h3 id="json-example">
+<a id="json-example" class="anchor" href="#json-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON Example</h3>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
   </span><span class="s2">"textGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -529,7 +500,8 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>In XML:</p>
+<h3 id="xml-example">
+<a id="xml-example" class="anchor" href="#xml-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML Example</h3>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;SomeOboNode&gt;</span>
   <span class="c">&lt;!-- ... --&gt;</span>
@@ -539,27 +511,25 @@
 <span class="nt">&lt;/SomeOboNode&gt;</span>
 </code></pre></div></div>
 
-<h5 id="note-on-escaping-characters">Note on escaping characters</h5>
+<h2 id="json-escape-characters">
+<a id="json-escape-characters" class="anchor" href="#json-escape-characters" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON Escape Characters</h2>
 
-<p>Latex expressions such as <code class="highlighter-rouge">\sin(x)</code> use a backslash character. In JSON this should be written as <code class="highlighter-rouge">\\sin(x)</code> since the backslash needs to be escaped for the JSON to be valid. The <code class="highlighter-rouge">start</code> to <code class="highlighter-rouge">end</code> range specified in <code class="highlighter-rouge">styleList</code> should ignore the escaped backslash meaning you should count <code class="highlighter-rouge">\\</code> as a single character rather than two characters. An example of this is shown below:</p>
+<p>Latex expressions such as <code class="highlighter-rouge">\theta</code> use a backslash character. JSON formatting requires the backslash to be escaped with a second backslash: <code class="highlighter-rouge">\\theta</code>.</p>
+
+<p>The <code class="highlighter-rouge">start</code> to <code class="highlighter-rouge">end</code> range specified in <code class="highlighter-rouge">styleList</code> treats the double backslash as a single character, not two.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
   </span><span class="s2">"textGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Theta is </span><span class="se">\\</span><span class="s2">theta and pi is </span><span class="se">\\</span><span class="s2">pi."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Theta is </span><span class="se">\\</span><span class="s2">theta"</span><span class="p">,</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"styleList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_latex"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
           </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_latex"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -567,9 +537,25 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="note-on-multiple-styles">Note on multiple styles</h4>
+<h2 id="overlapping-styles">
+<a id="overlapping-styles" class="anchor" href="#overlapping-styles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overlapping Styles</h2>
 
-<p>Style ranges can overlap or be contained within one another to create text such as <strong>This is bold with <em>italic</em> text.</strong></p>
+<p>Style ranges can overlap or be contained within one another.</p>
+
+<h3 id="example-render-3">
+<a id="example-render-3" class="anchor" href="#example-render-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Render</h3>
+
+<blockquote class="example-html">
+  <p><strong>This is bold with <i>italic</i> text.</strong></p>
+</blockquote>
+
+<h3 id="xml-example-1">
+<a id="xml-example-1" class="anchor" href="#xml-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML Example</h3>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;textGroup&gt;</span>
+  <span class="nt">&lt;t&gt;&lt;b&gt;</span>This is bold with <span class="nt">&lt;i&gt;</span>italic<span class="nt">&lt;/i&gt;</span> text.<span class="nt">&lt;/b&gt;&lt;/t&gt;</span>
+<span class="nt">&lt;/textGroup&gt;</span>
+</code></pre></div></div>
 
                 </span>
               </div>
@@ -583,12 +569,33 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#textgroup">TextGroup</a>
+<li class="toc-entry toc-h2"><a href="#minimal-example">Minimal Example</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#textgroup-structure">TextGroup Structure</a></li>
-<li class="toc-entry toc-h3"><a href="#styleabletext">StyleableText</a></li>
-<li class="toc-entry toc-h3"><a href="#stylelist">StyleList</a></li>
-<li class="toc-entry toc-h3"><a href="#examples">Examples</a></li>
+<li class="toc-entry toc-h3"><a href="#example-render">Example Render</a></li>
+<li class="toc-entry toc-h3"><a href="#json-structure">JSON Structure</a></li>
+<li class="toc-entry toc-h3"><a href="#xml-structure">XML Structure</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#text-with-styles-example">Text with Styles Example</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-render-1">Example Render</a></li>
+<li class="toc-entry toc-h3"><a href="#json-structure-1">JSON Structure</a></li>
+<li class="toc-entry toc-h3"><a href="#xml-structure-1">XML Structure</a></li>
+<li class="toc-entry toc-h3"><a href="#styling-text-with-xml">Styling text with XML</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#inline-math-example">Inline Math Example</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-render-2">Example Render</a></li>
+<li class="toc-entry toc-h3"><a href="#json-example">JSON Example</a></li>
+<li class="toc-entry toc-h3"><a href="#xml-example">XML Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#json-escape-characters">JSON Escape Characters</a></li>
+<li class="toc-entry toc-h2"><a href="#overlapping-styles">Overlapping Styles</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-render-3">Example Render</a></li>
+<li class="toc-entry toc-h3"><a href="#xml-example-1">XML Example</a></li>
 </ul>
 </li>
 </ul>

@@ -5,10 +5,10 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>List > listStyle > indent - Obojobo Next Documentation</title>
+  <title>MCAssessment > MCChoice - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="Defines the visual bullet styles used at a specified indent level in a List, defined in listStyle nodes.For indent levels not defined in a indent, the following defaults will apply:Unordered lists:* Filled circle bullets  * Hollow circle bullets    * Filled square bullets      * (Repeat)Ordered l..."/>
+  <meta name="description" content="A single answer choice in a multiple choice question containing the contents of the answer and optional feedback. Feedback is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).Properties            ..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -165,8 +165,8 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_style.html">List > listStyle</a>
           </li>
         
-          <li class="navListItem navListItemActive" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
+          </li>
+        
+          <li class="navListItem navListItemActive" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -296,38 +300,18 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">List > listStyle > indent</h1>
+              <h1 class="postHeaderTitle">MCAssessment > MCChoice</h1>
                   
-                    <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#content">Content</a></em>
+                    <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#chunk">Chunk</a></em>
                   
                   
-                    <strong>Full Name:</strong> <em>indent</em>
+                    <strong>Full Name:</strong> <em>OboDraft.Chunks.MCAssessment.MCChoice</em>
                   
             </header>
             <article>
               <div>
                 <span>
-                  <p>Defines the visual bullet styles used at a specified indent level in a <em><a href="list.html">List</a></em>, defined in <a href="list_style.html"><em>listStyle</em></a> nodes.</p>
-
-<p>For indent levels not defined in a <em>indent</em>, the following defaults will apply:</p>
-
-<p><strong>Unordered lists</strong>:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Filled circle bullets
-  * Hollow circle bullets
-    * Filled square bullets
-      * (Repeat)
-</code></pre></div></div>
-
-<p><strong>Ordered lists</strong>:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Numbers
-  * Uppercase letters
-    * Uppercase roman numerals
-      * Lowercase letters
-        * Lowercase roman numerals
-          * (Repeat)
-</code></pre></div></div>
+                  <p>A single answer choice in a multiple choice question containing the contents of the answer and optional feedback. Feedback is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).</p>
 
 <h2 id="properties">
 <a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
@@ -343,87 +327,33 @@
   </thead>
   <tbody>
     <tr>
-      <td>type</td>
-      <td>-</td>
-      <td>String</td>
-      <td>Default: <code class="highlighter-rouge">unordered</code>. Allowed values: <code class="highlighter-rouge">unordered</code>, <code class="highlighter-rouge">ordered</code>
-</td>
-    </tr>
-    <tr>
-      <td>start</td>
-      <td>-</td>
+      <td>score</td>
+      <td>Required</td>
       <td>Integer</td>
-      <td>Default: <code class="highlighter-rouge">1</code>. If <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">ordered</code> then this is used as the starting value of the list. For example if set to <code class="highlighter-rouge">3</code> the list will start at 3, then 4, then 5 (and so on).</td>
-    </tr>
-    <tr>
-      <td>bulletStyle</td>
-      <td>-</td>
-      <td>String</td>
-      <td>Defines the type of bullet to display</td>
+      <td>
+<code class="highlighter-rouge">0</code> or <code class="highlighter-rouge">100</code>: Represents the correctness of this answer choice - i.e. A correct answer should have a <code class="highlighter-rouge">score</code> of <code class="highlighter-rouge">100</code> and incorrect answers a <code class="highlighter-rouge">score</code> of <code class="highlighter-rouge">0</code>. A future release may allow for partial credit.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="allowed-bullet-styles-for-unordered-lists">
-<a id="allowed-bullet-styles-for-unordered-lists" class="anchor" href="#allowed-bullet-styles-for-unordered-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Allowed Bullet Styles for Unordered Lists</h3>
+<h2 id="supported-trigger-types">
+<a id="supported-trigger-types" class="anchor" href="#supported-trigger-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Trigger Types</h2>
 
 <table>
   <thead>
     <tr>
-      <th>bulletStyle</th>
+      <th>Action Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>disc</td>
-      <td>Filled circle bullets</td>
+      <td>onMount</td>
+      <td>Fired when a node is added to the DOM</td>
     </tr>
     <tr>
-      <td>circle</td>
-      <td>Hollow circle bullets</td>
-    </tr>
-    <tr>
-      <td>square</td>
-      <td>Filled square bullets</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="allowed-bullet-styles-for-unordered-lists-1">
-<a id="allowed-bullet-styles-for-unordered-lists-1" class="anchor" href="#allowed-bullet-styles-for-unordered-lists-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Allowed Bullet Styles for Unordered Lists</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>bulletStyle</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>decimal</td>
-      <td>1., 2., 3., …</td>
-    </tr>
-    <tr>
-      <td>decimal-leading-zero</td>
-      <td>01., 02., 03., …, 10., 11., …</td>
-    </tr>
-    <tr>
-      <td>lower-alpha</td>
-      <td>a., b., c., …</td>
-    </tr>
-    <tr>
-      <td>upper-alpha</td>
-      <td>A., B., C., …</td>
-    </tr>
-    <tr>
-      <td>lower-roman</td>
-      <td>i., ii., iii., …, vii., ix.</td>
-    </tr>
-    <tr>
-      <td>upper-roman</td>
-      <td>I., II., III., …, VII., IX.</td>
+      <td>onUnmount</td>
+      <td>Fired when a node is removed from the DOM</td>
     </tr>
   </tbody>
 </table>
@@ -431,7 +361,13 @@
 <h2 id="required-children">
 <a id="required-children" class="anchor" href="#required-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Children</h2>
 
-<p>None</p>
+<p>Expects one or two children in order:</p>
+
+<ol>
+  <li>
+<strong>REQUIRED</strong>: An <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAnswer</a></em> OboNode.</li>
+  <li>An <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCFeedback</a></em> OboNode. This is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).</li>
+</ol>
 
 <h2 id="variables-registered">
 <a id="variables-registered" class="anchor" href="#variables-registered" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables Registered</h2>
@@ -444,34 +380,54 @@
 <h3 id="json">
 <a id="json" class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h3>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"indents"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unordered"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"bulletStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"square"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"bulletStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"upper-roman"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.MCAssessment.MCChoice"</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="s2">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.MCAssessment.MCAnswer"</span><span class="p">,</span><span class="w">
+			</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+			</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="s2">"textGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+					</span><span class="p">{</span><span class="w">
+						</span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+							</span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fourty two"</span><span class="w">
+						</span><span class="p">}</span><span class="w">
+					</span><span class="p">}</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">}</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.MCAssessment.MCFeedback"</span><span class="p">,</span><span class="w">
+			</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+			</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="s2">"textGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+					</span><span class="p">{</span><span class="w">
+						</span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+							</span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"That is the answer!"</span><span class="w">
+						</span><span class="p">}</span><span class="w">
+					</span><span class="p">}</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">}</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="oboxml">
-<a id="oboxml" class="anchor" href="#oboxml" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboXML</h3>
+<h3 id="xml-with-obohtml">
+<a id="xml-with-obohtml" class="anchor" href="#xml-with-obohtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML (with OboHTML)</h3>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;listStyles&gt;</span>
-  <span class="nt">&lt;type&gt;</span>ordered<span class="nt">&lt;/type&gt;</span>
-  <span class="nt">&lt;indents&gt;</span>
-    <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"unordered"</span> <span class="na">bulletStyle=</span><span class="s">"square"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"4"</span> <span class="na">type=</span><span class="s">"ordered"</span> <span class="na">start=</span><span class="s">"10"</span> <span class="na">bulletStyle=</span><span class="s">"upper-alpha"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/indents&gt;</span>
-<span class="nt">&lt;/listStyles&gt;</span>
-</code></pre></div></div>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;indents&gt;</span>
-  <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"unordered"</span> <span class="na">bulletStyle=</span><span class="s">"square"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"4"</span> <span class="na">type=</span><span class="s">"ordered"</span> <span class="na">start=</span><span class="s">"10"</span> <span class="na">bulletStyle=</span><span class="s">"upper-alpha"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/indents&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;MCChoice</span> <span class="na">score=</span><span class="s">"100"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;MCAnswer&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fourty two<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/MCAnswer&gt;</span>
+  <span class="nt">&lt;MCFeedback&gt;</span>
+    <span class="nt">&lt;p&gt;</span>That is the answer!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/MCFeedback&gt;</span>
+<span class="nt">&lt;/MCChoice&gt;</span>
 </code></pre></div></div>
 
                 </span>
@@ -486,18 +442,14 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#allowed-bullet-styles-for-unordered-lists">Allowed Bullet Styles for Unordered Lists</a></li>
-<li class="toc-entry toc-h3"><a href="#allowed-bullet-styles-for-unordered-lists-1">Allowed Bullet Styles for Unordered Lists</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
+<li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
 <li class="toc-entry toc-h2"><a href="#example">Example</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#json">JSON</a></li>
-<li class="toc-entry toc-h3"><a href="#oboxml">OboXML</a></li>
+<li class="toc-entry toc-h3"><a href="#xml-with-obohtml">XML (with OboHTML)</a></li>
 </ul>
 </li>
 </ul>

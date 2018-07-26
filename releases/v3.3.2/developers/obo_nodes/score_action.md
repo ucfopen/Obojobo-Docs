@@ -4,14 +4,14 @@ menus: chunks
 full_name: scoreAction
 node_class: content
 ---
-A ScoreAction object contains two properties: **for** and **page**, and are always wrapped in a scoreActions array:
+Defines a {{ 'Page' | obo_node }} to display for certain scoring conditions at the end of an assessment attempt.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
 | for | Required | [Range String](../range_strings.html), Integer, `'no-score'` | A range of score values or a single score.
-| page | Required | [*Page*](page.html) | The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
+| page | Required | {{ 'Page' | obo_node }} | The page to display when a student's highest Assessment Score is matched by the range specified by `for`.
 
 ## Deprecated Properties:
 

@@ -8,7 +8,7 @@
   <title>Triggers and Actions - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="TriggersTriggers have two properties: type and actions:  type REQUIRED: String: This is the event that causes this trigger to run, for example onNavEnter meaning when the user navigates to this node.  actions REQUIRED: Array: One or more actions to perform when this trigger is ran.A list of all c..."/>
+  <meta name="description" content="Triggers and actions are used by document authors to programatically control what happens in the student’s browser.  Note: triggers and actions do not support all the server side Obojobo Events. See the supported values for type on action’s documentation.TriggersA trigger node listens to a certai..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem navListItemActive" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -303,84 +307,39 @@
             <article>
               <div>
                 <span>
-                  <h2 id="triggers">
+                  <p>Triggers and actions are used by document authors to programatically control what happens in the student’s browser.</p>
+
+<blockquote>
+  <p>Note: triggers and actions do not support all the server side <a href="events/obojobo_events.html">Obojobo Events</a>. See the supported values for <code class="highlighter-rouge">type</code> on <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em>’s documentation.</p>
+</blockquote>
+
+<h2 id="triggers">
 <a id="triggers" class="anchor" href="#triggers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Triggers</h2>
 
-<p>Triggers have two properties: <strong>type</strong> and <strong>actions</strong>:</p>
-
-<ul>
-  <li>
-<code class="highlighter-rouge">type</code> <strong>REQUIRED</strong>: String: This is the event that causes this trigger to run, for example <code class="highlighter-rouge">onNavEnter</code> meaning when the user navigates to this node.</li>
-  <li>
-<code class="highlighter-rouge">actions</code> <strong>REQUIRED</strong>: Array<action>: One or more actions to perform when this trigger is ran.</action>
-</li>
-</ul>
-
-<p>A list of all current triggers are listed below:</p>
-
-<ul>
-  <li>
-<code class="highlighter-rouge">onStartAttempt</code> - Fired when an assessment attempt is started</li>
-  <li>
-<code class="highlighter-rouge">onEndAttempt</code> - Fired when an assessment attempt is submitted</li>
-  <li>
-<code class="highlighter-rouge">onNavEnter</code> - Fired when a node is navigated to</li>
-  <li>
-<code class="highlighter-rouge">onNavExit</code> - Fired when a node is navigated away from</li>
-  <li>
-<code class="highlighter-rouge">onClick</code> (Used by <strong><a href="obo_reference.md#obojobodraftchunksactionbutton">ObojoboDraft.Chunks.ActionButton</a></strong>) - Fired when the ActionButton button is clicked</li>
-</ul>
+<p>A <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em> node listens to a certain event and performs an action when it occurs.</p>
 
 <h2 id="actions">
 <a id="actions" class="anchor" href="#actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Actions</h2>
 
-<p>Actions have two properties: <strong>type</strong> and <strong>value</strong>:</p>
+<p>An <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em> is the change that occurs as the result of a event being heard by a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em>.</p>
 
-<ul>
-  <li>
-<code class="highlighter-rouge">type</code> <strong>REQUIRED</strong>: String: The type of action. The meaning of these values are defined in the system.</li>
-  <li>
-<code class="highlighter-rouge">value</code>: Object: An object that can send one or more values along with the action event. The system can then use these values as desired. An example is shown below:</li>
-</ul>
+<h2 id="example">
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nav:goto"</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"page-1"</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<p>Below is an example of a Button that starts an assessment when clicked.</p>
 
-<p>When ran this would navigate the user to the node with an id of <code class="highlighter-rouge">page-1</code>.</p>
-
-<p>A list of actions to fire and their corresponding expected values are listed below:</p>
-
-<ul>
-  <li>
-<code class="highlighter-rouge">nav:goto</code> - Navigate a user to a node. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the node to navigate to.</li>
-  <li>
-<code class="highlighter-rouge">nav:prev</code> - Navigate the user back one.</li>
-  <li>
-<code class="highlighter-rouge">nav:next</code> - Navigate the user forward one.</li>
-  <li>
-<code class="highlighter-rouge">nav:openExternalLink</code> - Navigate a user to an external webpage. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">url</code> property set to the URL to navigate to.</li>
-  <li>
-<code class="highlighter-rouge">nav:lock</code> - Locks navigation.</li>
-  <li>
-<code class="highlighter-rouge">nav:unlock</code> - Unlocks navigation.</li>
-  <li>
-<code class="highlighter-rouge">nav:open</code> - Opens the left-hand navigation drawer.</li>
-  <li>
-<code class="highlighter-rouge">nav:close</code> - Closes the left-hand navigation drawer.</li>
-  <li>
-<code class="highlighter-rouge">nav:toggle</code> - Toggles open or close the navigation drawer.</li>
-  <li>
-<code class="highlighter-rouge">assessment:startAttempt</code> - Begins an assessment attempt. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the <strong><a href="obo_reference.md#obojobodraftsectionsassessment">ObojoboDraft.Sections.Assessment</a></strong> node containing the assessment to start.</li>
-  <li>
-<code class="highlighter-rouge">assessment:endAttempt</code> - Ends an assessment attempt. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the <strong><a href="obo_reference.md#obojobodraftsectionsassessment">ObojoboDraft.Sections.Assessment</a></strong> node containing the assessment to start.</li>
-  <li>
-<code class="highlighter-rouge">js</code> - Runs arbitrary javascript. <code class="highlighter-rouge">value</code> should be a string of javascript code to execute.</li>
-</ul>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ActionButton</span> <span class="na">label=</span><span class="s">"Begin"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;triggers&gt;</span>
+    <span class="nt">&lt;trigger</span> <span class="na">type=</span><span class="s">"onClick"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;actions&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">"assessment:startAttempt"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;value</span> <span class="na">id=</span><span class="s">"assessment"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/action&gt;</span>
+      <span class="nt">&lt;/actions&gt;</span>
+    <span class="nt">&lt;/trigger&gt;</span>
+  <span class="nt">&lt;/triggers&gt;</span>
+<span class="nt">&lt;/ActionButton&gt;</span>
+</code></pre></div></div>
 
                 </span>
               </div>
@@ -396,6 +355,7 @@
       <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#triggers">Triggers</a></li>
 <li class="toc-entry toc-h2"><a href="#actions">Actions</a></li>
+<li class="toc-entry toc-h2"><a href="#example">Example</a></li>
 </ul>
 
     </nav>

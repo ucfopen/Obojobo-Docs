@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>StyleableText - Obojobo Next Documentation</title>
+  <title>textGroup > textItem > styleableText - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
   <meta name="description" content="A StyleableText is a string of text with defined styles for specified ranges.Properties            Property      Required      Type      Description                  value      Required      String      The string of text to display.              styleList      no      StyleList      The styles t..."/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -205,16 +205,12 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a>
           </li>
         
-          <li class="navListItem navListItemActive" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem navListItemActive" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -296,7 +300,7 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">StyleableText</h1>
+              <h1 class="postHeaderTitle">textGroup > textItem > styleableText</h1>
                   
                     <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#content">Content</a></em>
                   
@@ -329,7 +333,7 @@
     <tr>
       <td>styleList</td>
       <td>no</td>
-      <td><a href="stylelist.html"><em>StyleList</em></a></td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleList</a></em></td>
       <td>The styles to apply to the text</td>
     </tr>
   </tbody>
@@ -338,28 +342,6 @@
 <blockquote>
   <p>In OboXML, <code class="highlighter-rouge">&lt;t&gt;</code> and <code class="highlighter-rouge">&lt;p&gt;</code> elements allow styling with a subset of HTML-like styling tags.</p>
 </blockquote>
-
-<h3 id="allowed-html-like-style-tags">
-<a id="allowed-html-like-style-tags" class="anchor" href="#allowed-html-like-style-tags" aria-hidden="true"><span class="octicon octicon-link"></span></a>Allowed HTML-like style tags</h3>
-
-<ul>
-  <li>
-<code class="highlighter-rouge">&lt;b&gt;</code>: Bold</li>
-  <li>
-<code class="highlighter-rouge">&lt;i&gt;</code>: Italic</li>
-  <li>
-<code class="highlighter-rouge">&lt;latex&gt;</code>: Latex math equation</li>
-  <li>
-<code class="highlighter-rouge">&lt;a href="address"&gt;</code>: Link</li>
-  <li>
-<code class="highlighter-rouge">&lt;sup&gt;</code>: Superscript</li>
-  <li>
-<code class="highlighter-rouge">&lt;sub&gt;</code>: Subscript</li>
-  <li>
-<code class="highlighter-rouge">&lt;q&gt;</code>: Quote</li>
-  <li>
-<code class="highlighter-rouge">&lt;del&gt;</code>: Strikethrough</li>
-</ul>
 
 <h2 id="required-children">
 <a id="required-children" class="anchor" href="#required-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Children</h2>
@@ -373,6 +355,8 @@
 
 <h2 id="example">
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Learn more about using text in <a href="../text_content.html">Text Content Conventions</a>, where Obojobo’s <a href="../text_content.html#styling-text-with-xml">supported XML styling tags</a> are detailed.</p>
 
 <h3 id="json">
 <a id="json" class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h3>
@@ -397,7 +381,9 @@
 
 <p>This would produce the following text:</p>
 
-<p><strong>Hello</strong> World</p>
+<blockquote class="example-html">
+  <p><b>Hello</b> World</p>
+</blockquote>
 
 <h3 id="json-inline-math">
 <a id="json-inline-math" class="anchor" href="#json-inline-math" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON (Inline Math)</h3>
@@ -425,9 +411,12 @@
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Theta is <span class="nt">&lt;latex&gt;</span>\theta<span class="nt">&lt;/latex&gt;</span> and pi is <span class="nt">&lt;latex&gt;</span>\pi<span class="nt">&lt;/latex&gt;</span>.
 </code></pre></div></div>
 
-<p>This would produce the following text:</p>
+<p>This would produce the following render:</p>
 
-<p>Theta is ϴ and pi is π</p>
+<blockquote class="example-html">
+  <p>Theta is ϴ and pi is π</p>
+</blockquote>
+
 
                 </span>
               </div>
@@ -441,11 +430,7 @@
     </div>
     <nav class="onPageNav">
       <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#allowed-html-like-style-tags">Allowed HTML-like style tags</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
 <li class="toc-entry toc-h2"><a href="#example">Example</a>

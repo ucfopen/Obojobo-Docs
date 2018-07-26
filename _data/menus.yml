@@ -9,10 +9,11 @@ authors:
 
   - title: How To
     identifier: authors_how_to
+    sort: alphabetical
 
-teachers:
-  - title: Getting Started
-    identifier: teachers_getting_started
+# teachers:
+#   - title: Getting Started
+#     identifier: teachers_getting_started
 
 developers:
   - title: Getting Started

@@ -9,10 +9,11 @@ module Jekyll
       downcase
     end
 
-    def obo_node(node_name)
+    def obo_node(node_name, force_mode = nil)
       base_url =  @context.registers[:site].config['baseurl']
       current_version = @context.registers[:site].config['obo_version']
       current_url = @context.environments.first["page"]["url"]
+
 
       # look in the current page's url to figure out if we have a current version
       pattern = /\/releases\/(v[\d\.]+)\/.+/
@@ -23,10 +24,20 @@ module Jekyll
 
       url = "#{base_url}/releases/#{current_version}/developers/obo_nodes/#{underscore(node_name)}.html"
 
-      if @context.environments.first["page"]["name"].end_with? '.md'
-        '[*'+node_name+'*]('+url+')'
+      if force_mode.nil?
+        render_mode = 'html'
+        if @context.environments.first["page"]["name"].end_with? '.md'
+          render_mode = 'md'
+        end
       else
-        '<a href="'+url+'"><em>'+node_name+'</em></a>'
+        render_mode = force_mode
+      end
+
+
+      if render_mode === 'md'
+        '*['+node_name+']('+url+')*'
+      else
+        '<em><a href="'+url+'">'+node_name+'</a></em>'
       end
 
     end

@@ -286,6 +286,24 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
+blockquote.example-html {
+  background: #f5f2f0;
+  border:0;
+}
+
+blockquote.example-html em {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+blockquote.example-html code {
+  background-color: white;
+}
+
+
 code {
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
@@ -1232,6 +1250,14 @@ input::placeholder {
   margin-top: 50px;
   padding: 0;
   width: 100%;
+}
+
+i {
+  font-style: italic;
+}
+
+b {
+  font-style: bold;
 }
 
 .navigationSlider .slidingNav.slidingNavActive ul {
@@ -2423,12 +2449,21 @@ ol > li:before {
 
 em {
   background: #135bae17;
-  padding: 4px;
+  padding: 1px 4px 3px 4px;
   margin-left: 2px;
   margin-right: 2px;
   border-radius: 2px;
   color: black;
   border: 1px solid #135bae1c;
+}
+
+em:hover {
+  background: #145BAD;
+  color: white;
+}
+
+em:hover a{
+  color:white;
 }
 
 

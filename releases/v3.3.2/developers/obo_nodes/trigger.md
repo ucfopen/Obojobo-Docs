@@ -4,16 +4,18 @@ menus: chunks
 full_name: trigger
 node_class: content
 ---
-A trigger is a condition that will allow an action to take place when met, and must always be wrapped in a triggers array.
+A listener for a certain event that performs an action when it occurs.
 
-Triggers are linked to the OboNode that contains them, and are only fired when the condition is met for that particular node. Ergo, an `onClick` trigger is only linked to the clicking of one specific button.
+Triggers are linked to the OboNode that contains them.  They are only fired when the matching event `type` is heard for that particular node. Ergo, a trigger listening to the `onClick` event is only linked to the clicking of the {{ 'ActionButton' | obo_node }} it is attached to.
+
+> Triggers must always be wrapped in a triggers array.
 
 ## Structure
 
 | Property | Required | Type | Description |
 |-
 | type | Required | String | This is the event that causes this trigger to run. Currently, the system only supports a limited range of triggers in the following OboNodes:
-| actions | Required | Array\<{{ 'action' | obo_node }}\> | One or more actions to perform when this trigger is run.
+| actions | Required | Array<{{ 'action' | obo_node }}> | One or more actions to perform when this trigger is run.
 
 ### Supported Action Types
 
@@ -77,4 +79,4 @@ None
 </triggers>
 ```
 
-These triggers would be placed in an **ObojoboDraft.Sections.Assessment** node, and would cause the navigation bar to lock when the assessment started, and unlock once the navigation was finished.
+These triggers would be placed in an {{ 'Assessment' | obo_node }} node, and would cause the navigation bar to lock when the assessment started, and unlock once the navigation was finished.

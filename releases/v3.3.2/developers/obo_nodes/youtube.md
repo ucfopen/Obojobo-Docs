@@ -13,6 +13,13 @@ A YouTube video
 |-
 | videoId | no | String | The YouTube ID of the video (example: `dQw4w9WgXcQ`)
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+
 ## Required Children
 
 None

@@ -1,5 +1,5 @@
 ---
-title: Content Types
+title: OboXML Content Types
 menus:
   authors_getting_started:
     weight: 3
@@ -25,7 +25,7 @@ Tags: `<h1>`, `<h2>`, `<h3>`, ... `<h6>`
 
 Heading elements will have larger, more visible text used to break up content sections. H1 is the highest, or most important, and h6 being the least.
 
-H2 tags within content pages will be [displayed in the navigation](authors_starter_obo_document.md#navigation-menu).
+H2 tags within content pages will be [displayed in the navigation](first_document.html#navigation-menu).
 
 It's generally advised to use Heading tags following the guidelines for HTML:
 
@@ -78,7 +78,7 @@ This tag will insert a line acting as a break between nodes on a page.
 
 Tags: `<table></table>`, `<tr></tr>`, `<th></th>`, `<td></td>`
 
-[`ObojoboDraft.Chunks.Table`](obo_reference.md#obojobodraftchunkstable) expects an un-nested textGroup of items equal to the number of rows times the number of columns.
+{{ 'Table' | obo_node }} expects an un-nested textGroup of items equal to the number of rows times the number of columns.
 
 ```xml
 <table>

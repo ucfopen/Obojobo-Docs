@@ -1,29 +1,41 @@
 ---
-title: StyleableText > styleList
+title: textGroup > textItem > styleableText > styleList
 menus: chunks
 full_name: styleList
 node_class: content
 ---
-A StyleList is a series of one or more styles to apply to a block of text
+A series of one or more styles to apply to a block of text
 
-## Structure
+## Properties
+
+| Property | Required | Type | Description |
+|-
+| type | Required | String | Represents what type of styling to apply, must be one of the following:
+| start | Required | Integer | The index of the first character to style
+| end | Required | Integer | The index of the last character to style - all characters between `start` and `end` will be styled by `type`
+| data | Required* | Object | Only required for `a` and `sup` types. The expected value of this property is different depending on the value of `type`.
+
+### Supported Values for `type`
 
 A **StyleList** is an array of one or more **StyleListItem** objects containing four properties: **type**, **start**, **end** and **data**
 
-* `type` **REQUIRED** String: Represents what type of styling to apply, must be one of the following:
-  * `b`: Bold
-  * `i`: Italics
-  * `del`: Strikethrough
-  * `a`: Link
-  * `q`: Quote
-  * `sup`: Superscript / Subscript
-  * `_latex`: Renders the range of text as inline LaTeX math using Katex
-* `start` **REQUIRED** Integer: The index of the first character to style
-* `end` **REQUIRED** Integer: The index of the last character to style - all characters between `start` and `end` will be styled by `type`
-* `data` Object: The expected value of this property is different depending on the value of `type`:
-  * `a`: Expects an object with an `href` property set to a String of the URL to link to.
-  * `sup`: Expects an integer representing the number of levels to superscript or subscript (1 meaning one level of superscript, 2 meaning two levels, -1 meaning one level of subscript and so on)
-  * All other types do not require this object
+| Type | Description |
+|-
+| b | Bold
+| i | Italics
+| del | Strikethrough
+| a | Link
+| q | Quote
+| sup | Superscript / Subscript
+| _latex | Renders the range of text as inline LaTeX math using Katex
+
+
+### Supported Values for `data`
+
+| Type | Description |
+|-
+| a | Expects an object with an `href` property set to a String of the URL to link to.
+| sup | Expects an integer representing the number of levels to superscript or subscript (1 meaning one level of superscript, 2 meaning two levels, -1 meaning one level of subscript and so on)
 
 ## Required Children
 
@@ -34,6 +46,8 @@ None
 None
 
 ## Example
+
+Learn more about using text in [Text Content Conventions](../text_content.html).
 
 ### JSON
 
@@ -54,7 +68,3 @@ None
   }
 ]
 ```
-
-When applied to the text string `"Attack ships on fire off the shoulder of Orion."`, these styles appear as:
-
-[Attack ships](https://en.wikipedia.org/wiki/Tears_in_rain_monologue) on fire off the shoulder of _Orion_.

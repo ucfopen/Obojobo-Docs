@@ -14,7 +14,7 @@ Our goal is to allow this structure to be open-ended so that new nodes can be de
 
 Each OboNode has a native JSON representation.  All nodes share the same basic structure.
 
-Here's an example **JSON** structure of a [`ObojoboDraft.Chunks.Break`](obo_reference.md#obojobodraftpagespage) OboNode:
+Here's an example **JSON** structure of a {{ 'Break' | obo_node }} OboNode:
 
 ```json
 {
@@ -47,7 +47,7 @@ Furthermore, some nodes have an alternate HTML-like form called **OboHTML**:
 |-
 | id | Required | String | A unique string to identify the node. No node can share an id with another node. Id's are automatically generated when omitted, but can be set if a reference to this node is needed for extended functionality.
 | type | Required | String | An OboNode Component Identifier that determines which OboNode Component will be used process and render this item.
-| content | no | Object | Properties that define the contents of this node. The [ObojoboDraft.Pages.Page](obo_reference.md#obojobodraftpagespage) node in the example only understands a single property; **title**. Each type of node supports different properties.
+| content | no | Object | Properties that define the contents of this node. The {{ 'Page' | obo_node }} node in the example only understands a single property; **title**. Each type of node supports different properties.
 | children | no | Array\<OboNode> | Each OboNode can have an array of children OboNodes. Different OboNode types may ignore or expect specific types of children.
 
 ## Unused Properties
@@ -77,19 +77,13 @@ These properties haven't been completed and are not required but you will see th
 
 ### Content
 
-> @TODO
+A class of node used in the `content` attribute of other OboNode Components. For example, {{ 'scoreAction' | obo_node }} is a content class node used in the {{ 'Assessment' | obo_node }} node. These **always start with a lowercased letter** to differentiate them from the other classifications.
 
 ## OboNode Reference
 
 {% assign menu = site.menus.chunks %}
-{% if menu.sort == 'alphabetical' %}
-  {% assign childen = (menu | sort_natural: 'title') %}
-{% else %}
-  {% assign childen = menu %}
-{% endif %}
+{% assign childen = (menu | sort_natural: 'title') %}
 
 {% for item in childen %}
-<li class="navListItem">
-<a class="navItem" href="{{ item.url }}">{{ item.title }}</a>
-</li>
+* {{ item.title | split: ' > ' | last | obo_node }}
 {% endfor %}

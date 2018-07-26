@@ -4,10 +4,7 @@ menus: chunks
 full_name: action
 node_class: content
 ---
-> @TODO link to what types support action?
-
-> @TODO Needs Description
-
+The change that occurs as the result of a event being heard by a {{ 'trigger' | obo_node }}.
 
 ## Properties
 
@@ -16,7 +13,7 @@ node_class: content
 | type | Required | String | The type of action. This is limited to the values shown in the table below.
 | value | no | Object |  An object that can send one or more values along with the action event. The system can then use these values as desired.
 
-### Values Allowed For 'type'
+### Supported Values for `type`
 
 | Type Name | Description |
 |-
@@ -29,8 +26,8 @@ node_class: content
 | nav:open | Opens the left-hand navigation drawer.
 | nav:close | Closes the left-hand navigation drawer.
 | nav:toggle | Toggles open or close the navigation drawer.
-| assessment:startAttempt | Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the [*Assessment*](assessment.html) node containing the assessment to start.
-| assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the [*Assessment*](assessment.html) node containing the assessment to start.
+| assessment:startAttempt | Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
+| assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
 | js | Runs arbitrary javascript. `value` should be a string of javascript code to execute.
 
 ## Required Children

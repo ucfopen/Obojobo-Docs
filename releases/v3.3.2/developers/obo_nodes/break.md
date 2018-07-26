@@ -13,6 +13,13 @@ Inserts a break in the document similar to a `<hr>` tag in HTML.
 |-
 | width | no | String | Default: `normal`. Must be either `"normal"` or `"large"`. Specifies if width of the break.
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+
 ## Required Children
 
 None

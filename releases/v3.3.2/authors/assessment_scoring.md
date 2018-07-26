@@ -6,8 +6,8 @@ menu: writing_assessments
 Assessment scoring is one of Obojobo's more powerful features.  Giving Obojobo flexible scoring rules has the side effect of making it a little complex.  This section will outline how Obojobo scores Assessments.
 
 1. Raw Attempt Score is calculated based on question answers.
-2. [*rubric*](../developers/obo_nodes/rubric.html) is used to determine the Attempt Status.
-3. [*rubric*](../developers/obo_nodes/rubric.html) combines Attempt Status and Raw Score into Final Attempt Score.
+2. {{ 'rubric' | obo_node }} is used to determine the Attempt Status.
+3. {{ 'rubric' | obo_node }} combines Attempt Status and Raw Score into Final Attempt Score.
 4. The highest of all Final Attempt Scores becomes the Overall Assessment Score.
 
 ## Raw Attempt Score
@@ -24,7 +24,7 @@ Raw Attempt Score = *Correct questions* / *Total questions* × 100
 
 ## Attempt Status
 
-Attempt Status represents the state of an attempt. It is determined by rules set in the [*rubric*](../developers/obo_nodes/rubric.html). The Attempt Status is used to calculate the Final Attempt Score.
+Attempt Status represents the state of an attempt. It is determined by rules set in the {{ 'rubric' | obo_node }}. The Attempt Status is used to calculate the Final Attempt Score.
 
 ### Possible Values
 
@@ -36,7 +36,7 @@ Attempt Status represents the state of an attempt. It is determined by rules set
 
 ### How Status is Determined
 
-After an attempt is completed the Attempt Status is determined using rules from the [*rubric*](../developers/obo_nodes/rubric.html) as follows:
+After an attempt is completed the Attempt Status is determined using rules from the {{ 'rubric' | obo_node }} as follows:
 
 | Rubric Type   | Raw Attempt Score >= rubric's passingAttemptScore? | Attempts Remain? | Resulting Status |
 |-
@@ -63,7 +63,7 @@ The Final Attempt Score is the score the student receives for an Attempt.  This 
 | Rubric Type   | Assessment Status | Assessment Score |
 |-
 | no rubric   | --         | Raw Attempt Score |
-| pass-fail | passed       | `passedResult` + [*mods*](../developers/obo_nodes/mod.html)           |
+| pass-fail | passed       | `passedResult` + {{ 'mod' | obo_node }}           |
 | pass-fail | failed       | `failedResult`                          |
 | pass-fail | unableToPass |` unableToPassResult`                     |
 

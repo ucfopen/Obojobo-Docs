@@ -10,12 +10,13 @@ The Assessment contains one or more questions. Students start the Assessment the
 
 | Property | Required | Type | Description |
 |-
-| scoreActions | Required | Array<[ScoreAction](content_scoreaction.md)> | This defines one or more landing pages after the student submits their assessment attempt. Students can be sent to different pages based on their highest Assessment Score.
+| scoreActions | Required | Array<{{ 'scoreAction' | obo_node }}> | This defines one or more landing pages after the student submits their assessment attempt. Students can be sent to different pages based on their highest Assessment Score.
 | attempts | no | Integer or `unlimited` | Default: `unlimited`. The number of attempts allowed for this assessment.
 | review | no | String | Default: `never`. Specifies if a full Assessment Review should be shown after an Assessment Attempt Quiz. Supported values shown in table below.
-| rubric | no | [Rubric](content_rubric.md) | Rules that specify how an Assessment Score is calculated from an Attempt Score
+| rubric | no | {{ 'rubric' | obo_node }} | Rules that specify how an Assessment Score is calculated from an Attempt Score
+| triggers | no | Array<{{ 'trigger' | obo_node }}> | Should contain a trigger for `onClick`
 
-### Supported Review Values
+### Supported Values for `review`
 
 | Type Name | Description |
 |-
@@ -23,13 +24,29 @@ The Assessment contains one or more questions. Students start the Assessment the
 | always | After each Assessment Attempt Quiz students can see their responses and the incorrect and correct answers.
 | no-attempts-remaining | If any attempts remain then review acts equivalent to `never`. If no attempts remain then review acts equivalent to `always`. This means that students only see their responses and correct and incorrect answers once they have no attempts left.
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+| onNavEnter | Fired when a node is navigated to
+| onNavExit | Fired when a node is navigated away from
+| onStartAttempt | Fired when an assessment attempt is started
+| onEndAttempt | Fired when an assessment attempt is submitted
+
+## Supported Trigger Types
+
+| Type Name | Description |
+|-
+| onClick | Runs when the button is clicked
 
 ## Required Children
 
 Assessment expects exactly two children in order:
 
-1.  [*Page*](obonode_page.md): The initial page shown when a student first navigates to the assessment. This page should contain a [*ActionButton*](action_button.html) to start the assessment.
-2.  [*QuestionBank*](question_bank.html): A question bank that contains all the possible questions contained in the Assessment.
+1.  {{ 'Page' | obo_node }}: The initial page shown when a student first navigates to the assessment. This page should contain a {{ 'ActionButton' | obo_node }} to start the assessment.
+2.  {{ 'QuestionBank' | obo_node }}: A question bank that contains all the possible questions contained in the Assessment.
 
 ## Registered Variables
 
@@ -37,6 +54,12 @@ Assessment expects exactly two children in order:
 |-
 | `{% raw %}{{assessment:attemptsRemaining}}{% endraw %}` | The number of attempts remaining or `unlimited` if no attempt limit is set.
 | `{% raw %}{{assessment:attemptsAmount}}{% endraw %}` | The total number of attempts or `unlimited` if no attempt limit is set.
+
+## Emitted Triggers
+
+| Type Name | Description |
+|-
+| onClick | Runs when the button is clicked
 
 ## Example
 

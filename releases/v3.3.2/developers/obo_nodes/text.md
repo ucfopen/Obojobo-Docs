@@ -7,12 +7,20 @@ can_be_in_a_question: yes
 ---
 A single block of text similar to a paragraph (`<p>`) tag in HTML.
 
+Learn more about using text in [Text Content Conventions](../text_content.html)
+
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| textGroup | Required | [TextGroup](content_textgroup.md) | Expects 1 or more text items.
+| textGroup | Required | {{ 'textGroup' | obo_node }} | Expects 1 or more text items.
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
 

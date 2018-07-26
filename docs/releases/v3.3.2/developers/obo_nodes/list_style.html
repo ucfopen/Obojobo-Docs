@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -307,7 +311,7 @@
             <article>
               <div>
                 <span>
-                  <p>A ListStyle is a description of how to format an <a href="list.html"><em>List</em></a>.</p>
+                  <p>A ListStyle is a description of how to format an <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list.html">List</a></em>.</p>
 
 <h2 id="properties">
 <a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
@@ -332,7 +336,7 @@
     <tr>
       <td>indents</td>
       <td>-</td>
-      <td>Array&lt;<em><a href="list_indent.html">indent</a></em>&gt;</td>
+      <td>Array&lt;<em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">indent</a></em>&gt;</td>
       <td>An object where the keys are various indent levels and the corresponding values are objects defining the styling options for items at that indent level which override the default styles. Indent levels are zero-indexed so 0 describes the first indent level, 1 is the second indent level and so on.</td>
     </tr>
   </tbody>
@@ -350,6 +354,16 @@
 
 <h2 id="example">
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<h3 id="sample-render">
+<a id="sample-render" class="anchor" href="#sample-render" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Render</h3>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Numbers
+  A. Uppercase letters
+    ■ Square bullets (as defined by the `2` value in `indents`)
+      a. Lowercase letters
+        V. Uppercase roman numerals starting at V. (as defined by the `4` value in `indents`)
+</code></pre></div></div>
 
 <h3 id="json">
 <a id="json" class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h3>
@@ -383,27 +397,6 @@
 <span class="nt">&lt;/listStyles&gt;</span>
 </code></pre></div></div>
 
-<p>This will result in the following list:</p>
-
-<ul>
-  <li>Numbers
-    <ul>
-      <li>Uppercase letters
-        <ul>
-          <li>Square bullets (as defined by the <code class="highlighter-rouge">2</code> value in <code class="highlighter-rouge">indents</code>)
-            <ul>
-              <li>Lowercase letters
-                <ul>
-                  <li>Uppercase roman numerals starting at V. (as defined by the <code class="highlighter-rouge">4</code> value in <code class="highlighter-rouge">indents</code>)</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
 
                 </span>
               </div>
@@ -422,6 +415,7 @@
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
 <li class="toc-entry toc-h2"><a href="#example">Example</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#sample-render">Sample Render</a></li>
 <li class="toc-entry toc-h3"><a href="#json">JSON</a></li>
 <li class="toc-entry toc-h3"><a href="#oboxml">OboXML</a></li>
 </ul>

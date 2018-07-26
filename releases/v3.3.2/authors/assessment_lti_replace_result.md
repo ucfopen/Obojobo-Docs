@@ -21,9 +21,9 @@ If these conditions are met the following will be sent:
 
 Obojobo normally sends the [Final Attempt Score](assessment_scoring.html#final-attempt-score) to the LMS assignment it's linked to.
 
-The [*rubric*](../developers/obo_nodes/rubric.html) attributes can be configured to conditionally send scores when they are above a value.
+The {{ 'rubric' | obo_node }} attributes can be configured to conditionally send scores when they are above a value.
 
-Set the [*rubric*](../developers/obo_nodes/rubric.html) attribute `failingResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
+Set the {{ 'rubric' | obo_node }} attribute `failingResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
 
 This can be useful when the assignment in the LMS is used to prevent access to other parts of the course. By not sending a score back, the LMS will not unlock content that requires a passing score.
 
@@ -122,4 +122,4 @@ When failing with attempts remainaing the `for="no-score"` is always matched.
 Failing with no attempts remaining won't match `for="no-score"` because the `unableToPassResult` attribute is set to a variable that will report a score.  This means that when the student runs out of attempts, failing every time, the score will be recorded based on their highest attempt score. This score will be 0-75, so the `for="[0,75)"` condition is matched.
 
 
-There are several options for `'pass-fail'` rubrics. The full specification is listed in the [**ObojoboDraft.Sections.Assessment**](obo_reference.md#obojobodraftsectionsassessment) documentation.
+There are several options for `'pass-fail'` rubrics. The full specification is listed in the {{ 'Assessment' | obo_node }} documentation.

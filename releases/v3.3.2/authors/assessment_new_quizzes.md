@@ -60,6 +60,8 @@ If allowed a fourth attempt, the selection would wrap around, starting again wit
 
 QuestionBanks can be infinitely be nested, but limiting to two levels is recommended. For a complete technical description on how questions are chosen for Assessment Attempts refer to the [**Assessment Question Selection Algorithm**](assessment_questionAlgorithm.md).
 
+> @TODO - where is the link above?
+
 ## Question Alternates
 
 The above structure can be used to mimic how previous versions of Obojobo implemented **Question Alternates**.

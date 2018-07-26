@@ -5,13 +5,20 @@ full_name: OboDraft.Chunks.Code
 node_class: chunk
 can_be_in_a_question: yes
 ---
-This chunk is fundamentally identical to the [*Text*](text.html) node except the styling of the rendered output is mono-spaced.
+This chunk is fundamentally identical to the {{ 'Text' | obo_node }} node except the styling of the rendered output is mono-spaced.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| textGroup | Required | [*textGroup*](text_group.html) | Expects 1 or more text items.
+| textGroup | Required | {{ 'textGroup' | obo_node }} | Expects 1 or more text items.
+
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
 

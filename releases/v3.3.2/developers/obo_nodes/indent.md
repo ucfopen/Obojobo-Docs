@@ -4,28 +4,28 @@ menus: chunks
 full_name: indent
 node_class: content
 ---
-Defines the visual bullet styles used at a specified indent level in a *[List](list.html)*, defined in [*listStyle*](list_style.html) nodes.
+Defines the visual bullet styles used at a specified indent level in a *[List](list.html)*, defined in {{ 'listStyle' | obo_node }} nodes.
 
 For indent levels not defined in a *indent*, the following defaults will apply:
 
 **Unordered lists**:
 
-```
-* Filled circle bullets
-  * Hollow circle bullets
-    * Filled square bullets
-      * (Repeat)
+```text
+● Filled circle bullets
+  ○ Hollow circle bullets
+    ■ Filled square bullets
+      ● (Repeat)
 ```
 
 **Ordered lists**:
 
-```
-* Numbers
-  * Uppercase letters
-    * Uppercase roman numerals
-      * Lowercase letters
-        * Lowercase roman numerals
-          * (Repeat)
+```text
+1. Numbers
+  A. Uppercase letters
+    I. Uppercase roman numerals
+      a. Lowercase letters
+        i. Lowercase roman numerals
+          1. (Repeat)
 ```
 
 
@@ -37,7 +37,7 @@ For indent levels not defined in a *indent*, the following defaults will apply:
 | start | - | Integer | Default: `1`. If `type` is `ordered` then this is used as the starting value of the list. For example if set to `3` the list will start at 3, then 4, then 5 (and so on).
 | bulletStyle | - | String | Defines the type of bullet to display
 
-### Allowed Bullet Styles for Unordered Lists
+### Supported Unordered List Values for `bulletStyle`
 
 | bulletStyle | Description
 |-
@@ -45,7 +45,7 @@ For indent levels not defined in a *indent*, the following defaults will apply:
 | circle | Hollow circle bullets
 | square | Filled square bullets
 
-### Allowed Bullet Styles for Unordered Lists
+### Supported Ordered List Values for `bulletStyle`
 
 | bulletStyle | Description
 |-

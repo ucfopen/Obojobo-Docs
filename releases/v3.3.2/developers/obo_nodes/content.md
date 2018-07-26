@@ -10,9 +10,16 @@ The content section contains one or more pages of material.
 
 None
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+
 ## Required Children
 
-Expects one or more of [*Page*](page.html)
+Expects one or more of {{ 'Page' | obo_node }}
 
 ## Variables Registered
 

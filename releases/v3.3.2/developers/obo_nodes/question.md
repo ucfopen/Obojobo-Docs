@@ -10,16 +10,22 @@ Either an assessment or practice question. Questions are designed to support mul
 
 | Property | Required | Type | Description |
 |-
-| solution | no | [*Page*](page.html) | A page containing a full-text description of the solution to the problem. If set a button will be available after the question is attempted which will reveal the solution if pressed.
+| solution | no | {{ 'Page' | obo_node }} | A page containing a full-text description of the solution to the problem. If set a button will be available after the question is attempted which will reveal the solution if pressed.
 
+## Supported Trigger Types
+
+| Action Type | Description
+|-
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
 
 {% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
 
 
-1. One or more [Chunk nodes](../obo_node_structure.html#content) ({% for chunk in chunks %} [*{{ chunk.title }}*]({{ site.baseurl }}/{{ chunk.url }}){% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question
-2.  An [*MCAssessment*](mcassessment.html) node - this MUST be the last child.
+1. One or more [Chunk nodes](../obo_node_structure.html#content) ({% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question
+2.  An {{ 'MCAssessment' | obo_node }} node - this MUST be the last child.
 
 ## Variables Registered
 

@@ -12,14 +12,16 @@ Displays a button which can use the `onClick` trigger to perform an action - typ
 | Property | Required | Type | Description |
 |-
 | label | no | String | The label for the button - since this is a string it is not possible to style the button. If you wish to style the text use `textGroup` instead. If this property is not specified then you must specify `textGroup`.
-| textGroup | no | **[TextGroup](content_textgroup.md)** | The text for the button. If this property is not specified then you must specify `label`.
-| triggers | Required | Array<**[Trigger](content_trigger)**> | Should contain a trigger for `onClick`
+| textGroup | no | {{ 'textGroup' | obo_node }} | The text for the button. If this property is not specified then you must specify `label`.
+| triggers | no | Array<{{ 'Trigger' | obo_node }}> | Should contain a trigger for `onClick`
 
-### Supported Trigger Types
+## Supported Trigger Types
 
 | Type Name | Description |
 |-
-| onClick | Runs when the button is clicked
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
+| onClick | Fired when an ActionButton button is clicked
 
 ## Required Children
 

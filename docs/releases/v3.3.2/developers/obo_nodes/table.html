@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -205,16 +205,12 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a>
           </li>
         
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
           <li class="navListItem navListItemActive" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -331,42 +335,30 @@
     <tr>
       <td>textGroup</td>
       <td>Requied</td>
-      <td><a href="content_gridtextgroup">GridTextGroup</a></td>
-      <td>An object containing three properties: <strong>numRows</strong>, <strong>numCols</strong> and <strong>textGroup</strong>.</td>
+      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">gridTextGroup</a></em></td>
+      <td>An object containing the text to display in each table cell.</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="expected-textgroup-value">
-<a id="expected-textgroup-value" class="anchor" href="#expected-textgroup-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected ‘textGroup’ Value</h2>
+<h2 id="supported-trigger-types">
+<a id="supported-trigger-types" class="anchor" href="#supported-trigger-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Trigger Types</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Property</th>
-      <th>Required</th>
-      <th>Type</th>
+      <th>Action Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>numRows</td>
-      <td>Required</td>
-      <td>Integer</td>
-      <td>Number of Rows in the table</td>
+      <td>onMount</td>
+      <td>Fired when a node is added to the DOM</td>
     </tr>
     <tr>
-      <td>numCols</td>
-      <td>Required</td>
-      <td>Integer</td>
-      <td>Number of Columns in the table</td>
-    </tr>
-    <tr>
-      <td>textGroup</td>
-      <td>Required</td>
-      <td>TextGroup</td>
-      <td>Expects a TextGroup of text items equal to <code class="highlighter-rouge">numRows * numCols</code>. The items will be used in order, creating a new row every multiple of <code class="highlighter-rouge">numCols</code>.</td>
+      <td>onUnmount</td>
+      <td>Fired when a node is removed from the DOM</td>
     </tr>
   </tbody>
 </table>
@@ -383,6 +375,26 @@
 
 <h2 id="example">
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<h3 id="sample-render">
+<a id="sample-render" class="anchor" href="#sample-render" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Render</h3>
+
+<blockquote class="example-html">
+  <table>
+    <thead>
+      <tr>
+        <th>First column heading</th>
+        <th>Second column heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First column second row</td>
+        <td>Second column second row</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
 
 <h3 id="json">
 <a id="json" class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h3>
@@ -449,22 +461,6 @@
 <span class="nt">&lt;/table&gt;</span>
 </code></pre></div></div>
 
-<p>This will produce a table similar to the following:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>First column heading</th>
-      <th>Second column heading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>First column second row</td>
-      <td>Second column second row</td>
-    </tr>
-  </tbody>
-</table>
 
                 </span>
               </div>
@@ -479,11 +475,12 @@
     <nav class="onPageNav">
       <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
-<li class="toc-entry toc-h2"><a href="#expected-textgroup-value">Expected ‘textGroup’ Value</a></li>
+<li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
 <li class="toc-entry toc-h2"><a href="#example">Example</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#sample-render">Sample Render</a></li>
 <li class="toc-entry toc-h3"><a href="#json">JSON</a></li>
 <li class="toc-entry toc-h3"><a href="#xml">XML</a></li>
 <li class="toc-entry toc-h3"><a href="#obohtml">OboHTML</a></li>

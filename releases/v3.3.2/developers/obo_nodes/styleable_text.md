@@ -1,5 +1,5 @@
 ---
-title: StyleableText
+title: textGroup > textItem > styleableText
 menus: chunks
 full_name:
 node_class: content
@@ -11,20 +11,10 @@ A StyleableText is a string of text with defined styles for specified ranges.
 | Property | Required | Type | Description |
 |-
 | value | Required | String | The string of text to display.
-| styleList | no | [*StyleList*](stylelist.html) | The styles to apply to the text
+| styleList | no | {{ 'StyleList' | obo_node }} | The styles to apply to the text
 
 > In OboXML, `<t>` and `<p>` elements allow styling with a subset of HTML-like styling tags.
 
-### Allowed HTML-like style tags
-
-* `<b>`: Bold
-* `<i>`: Italic
-* `<latex>`: Latex math equation
-* `<a href="address">`: Link
-* `<sup>`: Superscript
-* `<sub>`: Subscript
-* `<q>`: Quote
-* `<del>`: Strikethrough
 
 ## Required Children
 
@@ -35,6 +25,8 @@ None
 None
 
 ## Example
+
+Learn more about using text in [Text Content Conventions](../text_content.html), where Obojobo's [supported XML styling tags](../text_content.html#styling-text-with-xml) are detailed.
 
 ### JSON
 
@@ -59,7 +51,8 @@ None
 
 This would produce the following text:
 
-**Hello** World
+> <b>Hello</b> World
+{:.example-html}
 
 ### JSON (Inline Math)
 
@@ -87,6 +80,8 @@ This would produce the following text:
 Theta is <latex>\theta</latex> and pi is <latex>\pi</latex>.
 ```
 
-This would produce the following text:
+This would produce the following render:
 
-Theta is ϴ and pi is π
+> Theta is ϴ and pi is π
+{:.example-html}
+

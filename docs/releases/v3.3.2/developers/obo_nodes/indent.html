@@ -5,10 +5,10 @@
 <html lang="en">
 
 <head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Figure - Obojobo Next Documentation</title>
+  <title>List > listStyle > indent - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="An image with an optional image caption shown below.Properties            Property      Required      Type      Description                  alt      Recomended      String      Sets the alt tag of the image.              textGroup      no      textGroup      Used as the caption below the image -..."/>
+  <meta name="description" content="Defines the visual bullet styles used at a specified indent level in a List, defined in listStyle nodes.For indent levels not defined in a indent, the following defaults will apply:Unordered lists:● Filled circle bullets  ○ Hollow circle bullets    ■ Filled square bullets      ● (Repeat)Ordered l..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -145,7 +145,7 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/content.html">Content</a>
           </li>
         
-          <li class="navListItem navListItemActive" >
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a>
           </li>
         
@@ -165,7 +165,7 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_style.html">List > listStyle</a>
           </li>
         
-          <li class="navListItem" >
+          <li class="navListItem navListItemActive" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
@@ -300,18 +300,38 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Figure</h1>
+              <h1 class="postHeaderTitle">List > listStyle > indent</h1>
                   
-                    <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#chunk">Chunk</a></em>
+                    <strong>Node Class:</strong> <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#content">Content</a></em>
                   
                   
-                    <strong>Full Name:</strong> <em>OboDraft.Chunks.Figure</em>
+                    <strong>Full Name:</strong> <em>indent</em>
                   
             </header>
             <article>
               <div>
                 <span>
-                  <p>An image with an optional image caption shown below.</p>
+                  <p>Defines the visual bullet styles used at a specified indent level in a <em><a href="list.html">List</a></em>, defined in <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_style.html">listStyle</a></em> nodes.</p>
+
+<p>For indent levels not defined in a <em>indent</em>, the following defaults will apply:</p>
+
+<p><strong>Unordered lists</strong>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>● Filled circle bullets
+  ○ Hollow circle bullets
+    ■ Filled square bullets
+      ● (Repeat)
+</code></pre></div></div>
+
+<p><strong>Ordered lists</strong>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Numbers
+  A. Uppercase letters
+    I. Uppercase roman numerals
+      a. Lowercase letters
+        i. Lowercase roman numerals
+          1. (Repeat)
+</code></pre></div></div>
 
 <h2 id="properties">
 <a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
@@ -327,109 +347,89 @@
   </thead>
   <tbody>
     <tr>
-      <td>alt</td>
-      <td>Recomended</td>
-      <td>String</td>
-      <td>Sets the alt tag of the image.</td>
-    </tr>
-    <tr>
-      <td>textGroup</td>
-      <td>no</td>
-      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a></em></td>
-      <td>Used as the caption below the image - expects <strong>only</strong> 1 text item if set.</td>
-    </tr>
-    <tr>
-      <td>url</td>
-      <td>no</td>
-      <td>String</td>
-      <td>The external URL to the image.</td>
-    </tr>
-    <tr>
-      <td>size</td>
-      <td>no</td>
-      <td>String</td>
-      <td>Default: <code class="highlighter-rouge">small</code>. One of the following values representing the desired size of the image</td>
-    </tr>
-    <tr>
-      <td>width</td>
-      <td>no</td>
-      <td>String</td>
-      <td>If size is set to <code class="highlighter-rouge">custom</code> then this specifies the width. Has no effect otherwise.</td>
-    </tr>
-    <tr>
-      <td>height</td>
-      <td>no</td>
-      <td>String</td>
-      <td>If size is set to <code class="highlighter-rouge">custom</code> then this specifies the height. Has no effect otherwise.</td>
-    </tr>
-    <tr>
       <td>type</td>
-      <td>Required</td>
+      <td>-</td>
       <td>String</td>
-      <td>The type of action. This is limited to the values shown in the table below.</td>
+      <td>Default: <code class="highlighter-rouge">unordered</code>. Allowed values: <code class="highlighter-rouge">unordered</code>, <code class="highlighter-rouge">ordered</code>
+</td>
     </tr>
     <tr>
-      <td>value</td>
-      <td>no</td>
-      <td>Object</td>
-      <td>An object that can send one or more values along with the action event. The system can then use these values as desired.</td>
+      <td>start</td>
+      <td>-</td>
+      <td>Integer</td>
+      <td>Default: <code class="highlighter-rouge">1</code>. If <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">ordered</code> then this is used as the starting value of the list. For example if set to <code class="highlighter-rouge">3</code> the list will start at 3, then 4, then 5 (and so on).</td>
+    </tr>
+    <tr>
+      <td>bulletStyle</td>
+      <td>-</td>
+      <td>String</td>
+      <td>Defines the type of bullet to display</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="supported-values-for--size">
-<a id="supported-values-for--size" class="anchor" href="#supported-values-for--size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Values for  <code class="highlighter-rouge">size</code>
+<h3 id="supported-unordered-list-values-for-bulletstyle">
+<a id="supported-unordered-list-values-for-bulletstyle" class="anchor" href="#supported-unordered-list-values-for-bulletstyle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Unordered List Values for <code class="highlighter-rouge">bulletStyle</code>
 </h3>
 
 <table>
   <thead>
     <tr>
-      <th>Value</th>
+      <th>bulletStyle</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>small</td>
-      <td>A centered small image</td>
+      <td>disc</td>
+      <td>Filled circle bullets</td>
     </tr>
     <tr>
-      <td>medium</td>
-      <td>A centered larger image</td>
+      <td>circle</td>
+      <td>Hollow circle bullets</td>
     </tr>
     <tr>
-      <td>large</td>
-      <td>An image that spans the width of the page</td>
-    </tr>
-    <tr>
-      <td>custom</td>
-      <td>An image set at native size (image is still restricted by the width of the page)</td>
+      <td>square</td>
+      <td>Filled square bullets</td>
     </tr>
   </tbody>
 </table>
 
-<blockquote>
-  <p>Note: Setting either <code class="highlighter-rouge">width</code> or <code class="highlighter-rouge">height</code> on a <code class="highlighter-rouge">custom</code> image will modify the non-specified dimension proportionally. It’s not recommended to set both <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> as this will not respect the natural aspect-ratio of the image.</p>
-</blockquote>
-
-<h2 id="supported-trigger-types">
-<a id="supported-trigger-types" class="anchor" href="#supported-trigger-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Trigger Types</h2>
+<h3 id="supported-ordered-list-values-for-bulletstyle">
+<a id="supported-ordered-list-values-for-bulletstyle" class="anchor" href="#supported-ordered-list-values-for-bulletstyle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Ordered List Values for <code class="highlighter-rouge">bulletStyle</code>
+</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Action Type</th>
+      <th>bulletStyle</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>onMount</td>
-      <td>Fired when a node is added to the DOM</td>
+      <td>decimal</td>
+      <td>1., 2., 3., …</td>
     </tr>
     <tr>
-      <td>onUnmount</td>
-      <td>Fired when a node is removed from the DOM</td>
+      <td>decimal-leading-zero</td>
+      <td>01., 02., 03., …, 10., 11., …</td>
+    </tr>
+    <tr>
+      <td>lower-alpha</td>
+      <td>a., b., c., …</td>
+    </tr>
+    <tr>
+      <td>upper-alpha</td>
+      <td>A., B., C., …</td>
+    </tr>
+    <tr>
+      <td>lower-roman</td>
+      <td>i., ii., iii., …, vii., ix.</td>
+    </tr>
+    <tr>
+      <td>upper-roman</td>
+      <td>I., II., III., …, VII., IX.</td>
     </tr>
   </tbody>
 </table>
@@ -447,75 +447,38 @@
 <h2 id="example">
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
 
-<h3 id="json-with-caption">
-<a id="json-with-caption" class="anchor" href="#json-with-caption" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON (With caption)</h3>
+<h3 id="json">
+<a id="json" class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h3>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.Figure"</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"medium"</span><span class="p">,</span><span class="w">
-		</span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://lorempixel.com/640/480/city"</span><span class="p">,</span><span class="w">
-		</span><span class="s2">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description of the image"</span><span class="p">,</span><span class="w">
-		</span><span class="s2">"textGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-			</span><span class="p">{</span><span class="w">
-				</span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-					</span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Caption here"</span><span class="w">
-				</span><span class="p">}</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">]</span><span class="w">
-	</span><span class="p">}</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"indents"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unordered"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bulletStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"square"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bulletStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"upper-roman"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="xml-with-caption">
-<a id="xml-with-caption" class="anchor" href="#xml-with-caption" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML (With caption)</h3>
+<h3 id="oboxml">
+<a id="oboxml" class="anchor" href="#oboxml" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboXML</h3>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Figure</span> <span class="na">size=</span><span class="s">"medium"</span> <span class="na">url=</span><span class="s">"http://lorempixel.com/640/480/city"</span> <span class="na">alt=</span><span class="s">"Description of the image"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;textGroup&gt;</span>
-    <span class="nt">&lt;t&gt;</span>Caption here<span class="nt">&lt;/t&gt;</span>
-  <span class="nt">&lt;/textGroup&gt;</span>
-<span class="nt">&lt;/Figure&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;listStyles&gt;</span>
+  <span class="nt">&lt;type&gt;</span>ordered<span class="nt">&lt;/type&gt;</span>
+  <span class="nt">&lt;indents&gt;</span>
+    <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"unordered"</span> <span class="na">bulletStyle=</span><span class="s">"square"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"4"</span> <span class="na">type=</span><span class="s">"ordered"</span> <span class="na">start=</span><span class="s">"10"</span> <span class="na">bulletStyle=</span><span class="s">"upper-alpha"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/indents&gt;</span>
+<span class="nt">&lt;/listStyles&gt;</span>
 </code></pre></div></div>
 
-<h3 id="obohtml-with-caption">
-<a id="obohtml-with-caption" class="anchor" href="#obohtml-with-caption" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboHTML (With caption)</h3>
-
-<p>Captions are always displayed below an image, regardless of the order of the tags</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://lorempixel.com/640/480/city"</span> <span class="na">size=</span><span class="s">"medium"</span> <span class="na">alt=</span><span class="s">"Description of the image"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;figcaption&gt;</span>Caption here<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;indents&gt;</span>
+  <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"unordered"</span> <span class="na">bulletStyle=</span><span class="s">"square"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;indent</span> <span class="na">level=</span><span class="s">"4"</span> <span class="na">type=</span><span class="s">"ordered"</span> <span class="na">start=</span><span class="s">"10"</span> <span class="na">bulletStyle=</span><span class="s">"upper-alpha"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/indents&gt;</span>
 </code></pre></div></div>
-
-<h3 id="json-no-caption">
-<a id="json-no-caption" class="anchor" href="#json-no-caption" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON (No caption)</h3>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.Figure"</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom"</span><span class="p">,</span><span class="w">
-		</span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500"</span><span class="p">,</span><span class="w">
-		</span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://lorempixel.com/640/480/city"</span><span class="p">,</span><span class="w">
-		</span><span class="s2">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description of the image"</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="xml-no-caption">
-<a id="xml-no-caption" class="anchor" href="#xml-no-caption" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML (No caption)</h3>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Figure</span> <span class="na">size=</span><span class="s">"custom"</span> <span class="na">width=</span><span class="s">"500"</span> <span class="na">url=</span><span class="s">"http://lorempixel.com/640/480/city"</span> <span class="na">alt=</span><span class="s">"Description of the image"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<h3 id="obohtml-no-caption">
-<a id="obohtml-no-caption" class="anchor" href="#obohtml-no-caption" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboHTML (No caption)</h3>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://lorempixel.com/640/480/city"</span> <span class="na">width=</span><span class="s">"500"</span> <span class="na">alt=</span><span class="s">"Description of the image"</span><span class="nt">&gt;</span>
-</code></pre></div></div>
-
-<p>Note that the <code class="highlighter-rouge">size="custom"</code> is not required above. Specifying <code class="highlighter-rouge">width</code> and/or <code class="highlighter-rouge">height</code> in <code class="highlighter-rouge">img</code> assumes that size must be <code class="highlighter-rouge">"custom"</code>.</p>
 
                 </span>
               </div>
@@ -531,20 +494,16 @@
       <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#properties">Properties</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#supported-values-for--size">Supported Values for  size</a></li>
+<li class="toc-entry toc-h3"><a href="#supported-unordered-list-values-for-bulletstyle">Supported Unordered List Values for bulletStyle</a></li>
+<li class="toc-entry toc-h3"><a href="#supported-ordered-list-values-for-bulletstyle">Supported Ordered List Values for bulletStyle</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
 <li class="toc-entry toc-h2"><a href="#example">Example</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#json-with-caption">JSON (With caption)</a></li>
-<li class="toc-entry toc-h3"><a href="#xml-with-caption">XML (With caption)</a></li>
-<li class="toc-entry toc-h3"><a href="#obohtml-with-caption">OboHTML (With caption)</a></li>
-<li class="toc-entry toc-h3"><a href="#json-no-caption">JSON (No caption)</a></li>
-<li class="toc-entry toc-h3"><a href="#xml-no-caption">XML (No caption)</a></li>
-<li class="toc-entry toc-h3"><a href="#obohtml-no-caption">OboHTML (No caption)</a></li>
+<li class="toc-entry toc-h3"><a href="#json">JSON</a></li>
+<li class="toc-entry toc-h3"><a href="#oboxml">OboXML</a></li>
 </ul>
 </li>
 </ul>

@@ -28,6 +28,7 @@ Obojobo Event exports will have the following columns:
 | version_number | [Semantic Version](https://semver.org/) of the event itself. Properties can change as Obojobo changes.
 | payload | JSON data of the actual event properties (shown in the rest of this document)
 
+> Note: Obojobo Events cannot be used on the client in {{ 'trigger' | obo_node }} and {{ 'action' | obo_node }} nodes.
 
 ## Visit
 

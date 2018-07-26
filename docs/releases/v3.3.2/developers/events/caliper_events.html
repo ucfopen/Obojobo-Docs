@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -345,10 +349,10 @@
 <p>Occurs when Viewer Client sends one of the following Obojobo events:</p>
 
 <ul>
-  <li><a href="/developers/events/events_all.html#navprev"><code class="highlighter-rouge">nav:prev</code></a></li>
-  <li><a href="/developers/events/events_all.html#navnext"><code class="highlighter-rouge">nav:next</code></a></li>
-  <li><a href="/developers/events/events_all.html#navgoto"><code class="highlighter-rouge">nav:goto</code></a></li>
-  <li><a href="/developers/events/events_all.html#navgotopath"><code class="highlighter-rouge">nav:gotoPath</code></a></li>
+  <li><a href="obojobo_events.html#navprev"><code class="highlighter-rouge">nav:prev</code></a></li>
+  <li><a href="obojobo_events.html#navnext"><code class="highlighter-rouge">nav:next</code></a></li>
+  <li><a href="obojobo_events.html#navgoto"><code class="highlighter-rouge">nav:goto</code></a></li>
+  <li><a href="obojobo_events.html#navgotopath"><code class="highlighter-rouge">nav:gotoPath</code></a></li>
 </ul>
 
 <h4 id="properties">Properties:</h4>
@@ -393,7 +397,7 @@
 
 <h4 id="user-views-a-question">User views a question</h4>
 
-<p>Occurs when Viewer Client sends a <a href="/developers/events/events_all.html#questionview"><code class="highlighter-rouge">question:view</code></a> Obojobo event.</p>
+<p>Occurs when Viewer Client sends a <a href="obojobo_events.html#questionview"><code class="highlighter-rouge">question:view</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -421,7 +425,7 @@
 
 <h4 id="user-views-a-question-explanation">User views a question explanation</h4>
 
-<p>Occurs when Viewer Client sends a <a href="/developers/events/events_all.html#questionshowexplanation"><code class="highlighter-rouge">question:showExplanation</code></a> Obojobo event.</p>
+<p>Occurs when Viewer Client sends a <a href="obojobo_events.html#questionshowexplanation"><code class="highlighter-rouge">question:showExplanation</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -456,7 +460,7 @@
 <h3 id="assessmentitemevent">
 <a id="assessmentitemevent" class="anchor" href="#assessmentitemevent" aria-hidden="true"><span class="octicon octicon-link"></span></a>AssessmentItemEvent</h3>
 
-<p>User selects a response to a question. Viewer Client sends a <a href="/developers/events/events_all.html#questionsetresponse"><code class="highlighter-rouge">question:setResponse</code></a> event.</p>
+<p>User selects a response to a question. Viewer Client sends a <a href="obojobo_events.html#questionsetresponse"><code class="highlighter-rouge">question:setResponse</code></a> event.</p>
 
 <h4 id="answering-a-practice-question">Answering a Practice Question</h4>
 
@@ -521,7 +525,7 @@
 <h3 id="gradeevent">
 <a id="gradeevent" class="anchor" href="#gradeevent" aria-hidden="true"><span class="octicon octicon-link"></span></a>GradeEvent</h3>
 
-<h4 id="a-practice-question-is-scored-when-viewer-client-sends-a-questionscoreset-obojobo-event">A practice question is scored (When Viewer Client sends a <a href="/developers/events/events_all.html#questionscoreset"><code class="highlighter-rouge">question:scoreSet</code></a> Obojobo event).</h4>
+<h4 id="a-practice-question-is-scored-when-viewer-client-sends-a-questionscoreset-obojobo-event">A practice question is scored (When Viewer Client sends a <a href="obojobo_events.html#questionscoreset"><code class="highlighter-rouge">question:scoreSet</code></a> Obojobo event).</h4>
 
 <table>
   <thead>
@@ -604,7 +608,7 @@
 
 <h4 id="user-starts-a-new-visit">User starts a new Visit</h4>
 
-<p>Occurs when App Server sends a <a href="/developers/events/events_all.html#visitstart"><code class="highlighter-rouge">visit:start</code></a> Obojobo event</p>
+<p>Occurs when App Server sends a <a href="obojobo_events.html#visitstart"><code class="highlighter-rouge">visit:start</code></a> Obojobo event</p>
 
 <table>
   <thead>
@@ -635,7 +639,7 @@
 
 <h4 id="user-leaves-a-draft">User leaves a Draft</h4>
 
-<p>Occurs when Viewer Client sends a <a href="/developers/events/events_all.html#viewerclose"><code class="highlighter-rouge">viewer:close</code></a> Obojobo event</p>
+<p>Occurs when Viewer Client sends a <a href="obojobo_events.html#viewerclose"><code class="highlighter-rouge">viewer:close</code></a> Obojobo event</p>
 
 <table>
   <thead>
@@ -759,7 +763,7 @@
 
 <h4 id="user-visits-a-draft">User visits a Draft</h4>
 
-<p>Occurs when App Server sends a <a href="/developers/events/events_all.html#vieweropen"><code class="highlighter-rouge">viewer:open</code></a> Obojobo event</p>
+<p>Occurs when App Server sends a <a href="obojobo_events.html#vieweropen"><code class="highlighter-rouge">viewer:open</code></a> Obojobo event</p>
 
 <table>
   <thead>
@@ -802,7 +806,7 @@
 
 <h4 id="a-question-is-hidden">A question is hidden</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#questionhide"><code class="highlighter-rouge">question:hide</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#questionhide"><code class="highlighter-rouge">question:hide</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -830,7 +834,7 @@
 
 <h4 id="a-question-explanation-is-hidden">A question explanation is hidden</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#questionhideexplanation"><code class="highlighter-rouge">question:hideExplanation</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#questionhideexplanation"><code class="highlighter-rouge">question:hideExplanation</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -863,7 +867,7 @@
 
 <h4 id="nav-menu-is-hidden">Nav menu is hidden</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#navclose"><code class="highlighter-rouge">nav:close</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#navclose"><code class="highlighter-rouge">nav:close</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -897,7 +901,7 @@
 
 <h4 id="nav-menu-is-showed">Nav menu is showed</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#navopen"><code class="highlighter-rouge">nav:open</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#navopen"><code class="highlighter-rouge">nav:open</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -931,7 +935,7 @@
 
 <h4 id="nav-menu-is-showed-1">Nav menu is showed</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#navtoggle"><code class="highlighter-rouge">nav:toggle</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#navtoggle"><code class="highlighter-rouge">nav:toggle</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -965,7 +969,7 @@
 
 <p>####User is no longer loo Nav menu is unlocked</p>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#navunlock"><code class="highlighter-rouge">nav:unlock</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#navunlock"><code class="highlighter-rouge">nav:unlock</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -996,7 +1000,7 @@
 
 <h4 id="nav-menu-is-locked">Nav menu is locked</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#navlock"><code class="highlighter-rouge">nav:lock</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#navlock"><code class="highlighter-rouge">nav:lock</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -1028,7 +1032,7 @@
 
 <h4 id="user-checks-answer-for-a-practice-question">User checks answer for a practice question</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#questioncheckanswer"><code class="highlighter-rouge">question:checkAnswer</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#questioncheckanswer"><code class="highlighter-rouge">question:checkAnswer</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -1058,7 +1062,7 @@
 
 <h4 id="a-practice-question-is-reset">A practice question is reset</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#questionscoreclear"><code class="highlighter-rouge">question:scoreClear</code></a> Obojobo event</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#questionscoreclear"><code class="highlighter-rouge">question:scoreClear</code></a> Obojobo event</p>
 
 <table>
   <thead>
@@ -1089,7 +1093,7 @@
 
 <h4 id="user-is-retries-a-practice-question">User is retries a practice question</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#questionretry"><code class="highlighter-rouge">question:retry</code></a> Obojobo event</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#questionretry"><code class="highlighter-rouge">question:retry</code></a> Obojobo event</p>
 
 <table>
   <thead>
@@ -1123,7 +1127,7 @@
 
 <h4 id="user-has-gone-idle">User has gone idle</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#viewerinactive"><code class="highlighter-rouge">viewer:inactive</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#viewerinactive"><code class="highlighter-rouge">viewer:inactive</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -1162,7 +1166,7 @@
 
 <h4 id="user-is-no-longer-looking-at-the-draft">User is no longer looking at the draft</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#viewerleave"><code class="highlighter-rouge">viewer:leave</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#viewerleave"><code class="highlighter-rouge">viewer:leave</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -1196,7 +1200,7 @@
 
 <h4 id="user-has-returned-from-idle">User has returned from idle</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#viewerreturnfrominactive"><code class="highlighter-rouge">viewer:returnFromInactive</code></a> Obojobo event.</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#viewerreturnfrominactive"><code class="highlighter-rouge">viewer:returnFromInactive</code></a> Obojobo event.</p>
 
 <table>
   <thead>
@@ -1232,7 +1236,7 @@
 
 <h4 id="user-is-again-looking-at-the-draft">User is again looking at the draft</h4>
 
-<p>When Viewer Client sends a <a href="/developers/events/events_all.html#viewerreturn"><code class="highlighter-rouge">viewer:return</code></a> Obojobo event</p>
+<p>When Viewer Client sends a <a href="obojobo_events.html#viewerreturn"><code class="highlighter-rouge">viewer:return</code></a> Obojobo event</p>
 
 <table>
   <thead>

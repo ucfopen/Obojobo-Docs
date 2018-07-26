@@ -8,7 +8,7 @@
   <title>trigger > action - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content="Docusaurus"/>
-  <meta name="description" content="  @TODO link to what types support action?  @TODO Needs DescriptionProperties            Property      Required      Type      Description                  type      Required      String      The type of action. This is limited to the values shown in the table below.              value      no   ..."/>
+  <meta name="description" content="The change that occurs as the result of a event being heard by a trigger.Properties            Property      Required      Type      Description                  type      Required      String      The type of action. This is limited to the values shown in the table below.              value     ..."/>
   <meta name="docsearch:language" content="en"/>
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo"/>
   <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 
           <nav class="slidingNav">
             <ul class="nav-site nav-site-internal">
-              <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li>
+              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
               <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a></li>
               <li class="siteNavGroupActive"><a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a></li>
               <li class=""><a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a></li>
@@ -72,7 +72,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Reference</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
           </li>
         
           <li class="navListItem" >
@@ -166,7 +166,7 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_indent.html">List > listStyle > indent</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
           </li>
         
           <li class="navListItem" >
@@ -174,19 +174,19 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcassessment.html">MCAssessment</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcchoice.html">MCAssessment > MCChoice</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcanswer.html">MCAssessment > MCChoice > MCAnswer</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mcfeedback.html">MCAssessment > MCChoice > MCFeedback</a>
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
           </li>
         
           <li class="navListItem" >
@@ -206,15 +206,11 @@
           </li>
         
           <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">StyleableText</a>
-          </li>
-        
-          <li class="navListItem" >
-            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">StyleableText > styleList</a>
-          </li>
-        
-          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
           </li>
         
           <li class="navListItem" >
@@ -227,6 +223,14 @@
         
           <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+          </li>
+        
+          <li class="navListItem" >
+            <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
           </li>
         
           <li class="navListItem" >
@@ -307,13 +311,7 @@
             <article>
               <div>
                 <span>
-                  <blockquote>
-  <p>@TODO link to what types support action?</p>
-</blockquote>
-
-<blockquote>
-  <p>@TODO Needs Description</p>
-</blockquote>
+                  <p>The change that occurs as the result of a event being heard by a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em>.</p>
 
 <h2 id="properties">
 <a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
@@ -343,8 +341,9 @@
   </tbody>
 </table>
 
-<h3 id="values-allowed-for-type">
-<a id="values-allowed-for-type" class="anchor" href="#values-allowed-for-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Values Allowed For ‘type’</h3>
+<h3 id="supported-values-for-type">
+<a id="supported-values-for-type" class="anchor" href="#supported-values-for-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Values for <code class="highlighter-rouge">type</code>
+</h3>
 
 <table>
   <thead>
@@ -392,11 +391,11 @@
     </tr>
     <tr>
       <td>assessment:startAttempt</td>
-      <td>Begins an assessment attempt. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the <a href="assessment.html"><em>Assessment</em></a> node containing the assessment to start.</td>
+      <td>Begins an assessment attempt. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em> node containing the assessment to start.</td>
     </tr>
     <tr>
       <td>assessment:endAttempt</td>
-      <td>Ends an assessment attempt. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the <a href="assessment.html"><em>Assessment</em></a> node containing the assessment to start.</td>
+      <td>Ends an assessment attempt. <code class="highlighter-rouge">value</code> should be an object with an <code class="highlighter-rouge">id</code> property set to the id of the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em> node containing the assessment to start.</td>
     </tr>
     <tr>
       <td>js</td>
@@ -458,7 +457,7 @@
       <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#properties">Properties</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#values-allowed-for-type">Values Allowed For ‘type’</a></li>
+<li class="toc-entry toc-h3"><a href="#supported-values-for-type">Supported Values for type</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>

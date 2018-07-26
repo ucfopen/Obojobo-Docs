@@ -4,11 +4,13 @@ menus: chunks
 full_name: textGroup
 node_class: content
 ---
-A TextGroup is a series of one or more lines of text with optional styling and additional data defined.
+A group of one or more lines of text. Being a [Content Node Class](../obo_node_structure.html#content), they differ from {{ 'Text' | obo_node }} chunks because textGroups are used as content for many OboNode types.
+
+Learn more about using text in [Text Content Conventions](../text_content.html)
 
 ## Properties
 
-A *textGroup* is an **array** of one or more [*textItem*](text_item.html) objects.
+An **array** of one or more {{ 'textItem' | obo_node }}s.
 
 
 ## Required Children
@@ -27,10 +29,12 @@ None
 "textGroup": [
   {
     "text": {
-      "value": "Hello World"
-    },
-    "data": {
-      "indent": 1
+      "value": "I've seen things you people wouldn't believe"
+    }
+  },
+  {
+    "text": {
+      "value": "Attack ships on fire off the shoulder of Orion."
     }
   }
 ]
@@ -40,9 +44,7 @@ None
 
 ```xml
 <textGroup>
-  <t indent="1">Hello World</t>
+  <t>I've seen things you people wouldn't believe</t>
+  <t>Attack ships on fire off the shoulder of Orion.</t>
 </textGroup>
 ```
-
-This would produce the following text:
-* Hello World

@@ -12,15 +12,14 @@ A table with an optional header row.
 | Property | Required | Type | Description |
 |-
 | header | no | Boolean | If `true` then the first row of this table will be presented as a header row. Will default to `false` if not set.
-| textGroup | Requied | [GridTextGroup](content_gridtextgroup) | An object containing three properties: **numRows**, **numCols** and **textGroup**.
+| textGroup | Requied | {{ 'gridTextGroup' | obo_node }} | An object containing the text to display in each table cell.
 
-## Expected 'textGroup' Value
+## Supported Trigger Types
 
-| Property | Required | Type | Description |
+| Action Type | Description
 |-
-| numRows | Required | Integer | Number of Rows in the table
-| numCols | Required | Integer | Number of Columns in the table
-| textGroup | Required | TextGroup | Expects a TextGroup of text items equal to `numRows * numCols`. The items will be used in order, creating a new row every multiple of `numCols`.
+| onMount | Fired when a node is added to the DOM
+| onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
 
@@ -31,6 +30,13 @@ None
 None
 
 ## Example
+
+### Sample Render
+
+> | First column heading    | Second column heading    |
+> | ----------------------- | ------------------------ |
+> | First column second row | Second column second row |
+{:.example-html}
 
 ### JSON
 
@@ -97,8 +103,3 @@ None
 </table>
 ```
 
-This will produce a table similar to the following:
-
-| First column heading    | Second column heading    |
-| ----------------------- | ------------------------ |
-| First column second row | Second column second row |
