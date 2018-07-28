@@ -9,37 +9,42 @@ module Jekyll
       downcase
     end
 
-    def obo_node(node_name, force_mode = nil)
-      base_url =  @context.registers[:site].config['baseurl']
-      current_version = @context.registers[:site].config['obo_version']
-      current_url = @context.environments.first["page"]["url"]
-
-
+    def version_to_use
       # look in the current page's url to figure out if we have a current version
+      version = version_from_page_path
+
+      # if not, get the current_version from the config
+      version ||= @context.registers[:site].config['obo_version']
+    end
+
+    def version_from_page_path
+      current_url = @context.environments.first["page"]["url"]
       pattern = /\/releases\/(v[\d\.]+)\/.+/
       match = current_url.match(pattern)
       if match
-        current_version = match[1]
+        return match[1]
+      end
+    end
+
+    def current_page_markdown?
+      @context.environments.first["page"]["name"].end_with? '.md'
+    end
+
+    def obo_node(node_name, render_mode = nil)
+      # render_mode defaults to html, if not set
+      if render_mode.nil? and current_page_markdown?
+        render_mode = 'md'
       end
 
-      url = "#{base_url}/releases/#{current_version}/developers/obo_nodes/#{underscore(node_name)}.html"
+      base_url =  @context.registers[:site].config['baseurl']
 
-      if force_mode.nil?
-        render_mode = 'html'
-        if @context.environments.first["page"]["name"].end_with? '.md'
-          render_mode = 'md'
-        end
-      else
-        render_mode = force_mode
-      end
-
+      url = "#{base_url}/releases/#{version_to_use()}/developers/obo_nodes/#{underscore(node_name)}.html"
 
       if render_mode === 'md'
         '*['+node_name+']('+url+')*'
       else
         '<em><a href="'+url+'">'+node_name+'</a></em>'
       end
-
     end
   end
 end

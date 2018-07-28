@@ -18,7 +18,7 @@ None
 | onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
-{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+{% assign chunks = site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
 One or more of the following Chunks: {% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %}{% endfor %}.
 
 ## Variables Registered

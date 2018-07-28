@@ -21,7 +21,7 @@ Either an assessment or practice question. Questions are designed to support mul
 
 ## Required Children
 
-{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+{% assign chunks = site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
 
 
 1. One or more [Chunk nodes](../obo_node_structure.html#content) ({% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question

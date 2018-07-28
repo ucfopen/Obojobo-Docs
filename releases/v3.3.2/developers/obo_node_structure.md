@@ -82,7 +82,7 @@ A class of node used in the `content` attribute of other OboNode Components. For
 ## OboNode Reference
 
 {% assign menu = site.menus.chunks %}
-{% assign childen = (menu | sort_natural: 'title') %}
+{% assign childen = menu | sort_natural: 'title' %}
 
 {% for item in childen %}
 * {{ item.title | split: ' > ' | last | obo_node }}
