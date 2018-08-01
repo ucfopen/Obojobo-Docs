@@ -1,18 +1,20 @@
 ---
 title: Table
 menus: chunks
-full_name: OboDraft.Chunks.Table
+full_name: ObojoboDraft.Chunks.Table
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 A table with an optional header row.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| header | no | Boolean | If `true` then the first row of this table will be presented as a header row. Will default to `false` if not set.
-| textGroup | Requied | {{ 'gridTextGroup' | obo_node }} | An object containing the text to display in each table cell.
+| textGroup | Required | {{ 'gridTextGroup' | obo_node }} | An object containing the text to display in each table cell.
+| header | no | Boolean | Default: `false`. If `true` then the first row of this table will be presented as a header row.
 
 ## Supported Trigger Types
 
@@ -36,7 +38,8 @@ None
 > | First column heading    | Second column heading    |
 > | ----------------------- | ------------------------ |
 > | First column second row | Second column second row |
-{:.example-html}
+>
+> {:.example-html}
 
 ### JSON
 
@@ -102,4 +105,3 @@ None
   </tr>
 </table>
 ```
-

@@ -1,10 +1,12 @@
 ---
 title: List
 menus: chunks
-full_name: OboDraft.Chunks.List
+full_name: ObojoboDraft.Chunks.List
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 A bulleted or numeric list similar to `<ul>` or `<li>` elements in HTML.
 
 ## Properties

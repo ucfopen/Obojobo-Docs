@@ -1,10 +1,12 @@
 ---
 title: Code
 menus: chunks
-full_name: OboDraft.Chunks.Code
+full_name: ObojoboDraft.Chunks.Code
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 This chunk is fundamentally identical to the {{ 'Text' | obo_node }} node except the styling of the rendered output is mono-spaced.
 
 ## Properties
@@ -32,22 +34,22 @@ None
 
 ```json
 {
-  "type": "ObojoboDraft.Chunks.Code",
-  "id": "...",
-  "content": {
-    "textGroup": [
-      {
-        "text": {
-          "value": "let x = 2;"
-        }
-      },
-      {
-        "text": {
-          "value": "return x * 4;
-        }
-      }
-    ]
-  }
+	"type": "ObojoboDraft.Chunks.Code",
+	"id": "...",
+	"content": {
+		"textGroup": [
+			{
+				"text": {
+					"value": "let x = 2;"
+				}
+			},
+			{
+				"text": {
+					"value": "return x * 4;"
+				}
+			}
+		]
+	}
 }
 ```
 

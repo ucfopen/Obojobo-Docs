@@ -1,6 +1,6 @@
 ---
 title: Extra Credit & Penalties
-menus: authors_how_to
+menus: authors_assessments_how_to
 ---
 
 The Assessment Rubric allows extra credit or penalties to be specified. In this example we grant an extra 5 points to a student's first attempt and deduct 5 points from a student's last attempt:

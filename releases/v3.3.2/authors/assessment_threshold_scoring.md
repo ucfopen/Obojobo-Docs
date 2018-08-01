@@ -1,14 +1,13 @@
 ---
 title: Threshold Scoring
-menus: authors_how_to
+menus: authors_assessments_how_to
 ---
 
 Assessment Rubric's `'pass-fail'` type can optionally be used to create a threshold type scoring system.
 
 For example, an assessment can require a score of 75% or higher to pass. When the `passingAttemptScore` is reached, the student's score will be adjusted to the `passingResult` value.
 
-In this example, when the student scores below 75%, the score will be adjusted to 0.  When the student's score is 75% or higher, the score wil be adjusted to `100%`.
-
+In this example, when the student scores below 75%, the score will be adjusted to 0. When the student's score is 75% or higher, the score wil be adjusted to `100%`.
 
 ```xml
 <!-- ... -->

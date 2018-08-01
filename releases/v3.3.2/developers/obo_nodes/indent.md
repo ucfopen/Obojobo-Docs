@@ -1,12 +1,12 @@
 ---
 title: List > listStyle > indent
 menus: chunks
-full_name: indent
-node_class: content
+class: content_block
 ---
-Defines the visual bullet styles used at a specified indent level in a *[List](list.html)*, defined in {{ 'listStyle' | obo_node }} nodes.
 
-For indent levels not defined in a *indent*, the following defaults will apply:
+Defines the visual bullet styles used at a specified indent level in a _[List](list.html)_, defined in {{ 'listStyle' | obo_node }} nodes.
+
+For indent levels not defined in a _indent_, the following defaults will apply:
 
 **Unordered lists**:
 
@@ -28,14 +28,13 @@ For indent levels not defined in a *indent*, the following defaults will apply:
           1. (Repeat)
 ```
 
-
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| type | - | String | Default: `unordered`. Allowed values: `unordered`, `ordered`
-| start | - | Integer | Default: `1`. If `type` is `ordered` then this is used as the starting value of the list. For example if set to `3` the list will start at 3, then 4, then 5 (and so on).
-| bulletStyle | - | String | Defines the type of bullet to display
+| type | no | String | Default: `unordered`. Allowed values: `unordered`, `ordered`
+| start | no | Integer | Default: `1`. If `type` is `ordered` then this is used as the starting value of the list. For example if set to `3` the list will start at 3, then 4, then 5 (and so on).
+| bulletStyle | no | String | Defines the type of bullet to display
 
 ### Supported Unordered List Values for `bulletStyle`
 
@@ -55,7 +54,6 @@ For indent levels not defined in a *indent*, the following defaults will apply:
 | upper-alpha | A., B., C., ...
 | lower-roman | i., ii., iii., ..., vii., ix.
 | upper-roman | I., II., III., ..., VII., IX.
-
 
 ## Required Children
 

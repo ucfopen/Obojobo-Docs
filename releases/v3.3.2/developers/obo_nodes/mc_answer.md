@@ -1,9 +1,11 @@
 ---
 title: MCAssessment > MCChoice > MCAnswer
 menus: chunks
-full_name: OboDraft.Chunks.MCAnswer
+full_name: ObojoboDraft.Chunks.MCAssessment.MCAnswer
+class: obo_node
 node_class: chunk
 ---
+
 This represents the contents of the answer portion of a multiple choice answer choice.
 
 ## Properties
@@ -26,7 +28,6 @@ One or more of the following Chunks: {% for chunk in chunks %} {{ chunk.title | 
 ## Variables Registered
 
 None
-
 
 ## Example
 

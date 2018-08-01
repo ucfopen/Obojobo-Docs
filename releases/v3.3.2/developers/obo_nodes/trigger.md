@@ -1,12 +1,12 @@
 ---
 title: trigger
 menus: chunks
-full_name: trigger
-node_class: content
+class: content_block
 ---
+
 A listener for a certain event that performs an action when it occurs.
 
-Triggers are linked to the OboNode that contains them.  They are only fired when the matching event `type` is heard for that particular node. Ergo, a trigger listening to the `onClick` event is only linked to the clicking of the {{ 'ActionButton' | obo_node }} it is attached to.
+Triggers are linked to the OboNode that contains them. They are only fired when the matching event `type` is heard for that particular node. For example a trigger listening to the `onClick` event is only linked to the clicking of the {{ 'ActionButton' | obo_node }} it is attached to.
 
 > Triggers must always be wrapped in a triggers array.
 
@@ -23,8 +23,8 @@ Triggers are linked to the OboNode that contains them.  They are only fired when
 |-
 | onMount | All | Fired when a node is added to the DOM
 | onUnmount | All | Fired when a node is removed from the DOM
-| onNavEnter | {{ 'Heading' | obo_node }} {{ 'Page' | obo_node }} {{ 'Question' | obo_node }} {{ 'Assessment' | obo_node }}  | Fired when a node is navigated to
-| onNavExit | {{ 'Heading' | obo_node }} {{ 'Page' | obo_node }} {{ 'Question' | obo_node }} {{ 'Assessment' | obo_node }} | Fired when a node is navigated away from
+| onNavEnter | {{ 'Page' | obo_node }} {{ 'Assessment' | obo_node }} | Fired when a node is navigated to
+| onNavExit | {{ 'Page' | obo_node }} {{ 'Assessment' | obo_node }} | Fired when a node is navigated away from
 | onStartAttempt | {{ 'Assessment' | obo_node }} | Fired when an assessment attempt is started
 | onEndAttempt | {{ 'Assessment' | obo_node }} | Fired when an assessment attempt is submitted
 | onClick | {{ 'ActionButton' | obo_node }} | Fired when an ActionButton button is clicked

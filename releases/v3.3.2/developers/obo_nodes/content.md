@@ -1,9 +1,11 @@
 ---
 title: Content
 menus: chunks
-full_name: OboDraft.Sections.Content
+full_name: ObojoboDraft.Sections.Content
+class: obo_node
 node_class: section
 ---
+
 The content section contains one or more pages of material.
 
 ## Properties
@@ -24,7 +26,6 @@ Expects one or more of {{ 'Page' | obo_node }}
 ## Variables Registered
 
 None
-
 
 ## Example
 

@@ -1,9 +1,9 @@
 ---
 title: textGroup > textItem > styleableText > styleList
 menus: chunks
-full_name: styleList
-node_class: content
+class: content_block
 ---
+
 A series of one or more styles to apply to a block of text
 
 ## Properties
@@ -13,7 +13,7 @@ A series of one or more styles to apply to a block of text
 | type | Required | String | Represents what type of styling to apply, must be one of the following:
 | start | Required | Integer | The index of the first character to style
 | end | Required | Integer | The index of the last character to style - all characters between `start` and `end` will be styled by `type`
-| data | Required* | Object | Only required for `a` and `sup` types. The expected value of this property is different depending on the value of `type`.
+| data | Required\* | Object | Only required for `a` and `sup` types. The expected value of this property is different depending on the value of `type`.
 
 ### Supported Values for `type`
 
@@ -27,8 +27,8 @@ A **StyleList** is an array of one or more **StyleListItem** objects containing 
 | a | Link
 | q | Quote
 | sup | Superscript / Subscript
-| _latex | Renders the range of text as inline LaTeX math using Katex
-
+| monospace | Monospace
+| \_latex | Renders the range of text as inline LaTeX math using Katex
 
 ### Supported Values for `data`
 

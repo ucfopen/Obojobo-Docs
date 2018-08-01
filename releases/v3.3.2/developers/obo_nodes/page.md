@@ -1,17 +1,18 @@
 ---
 title: Page
 menus: chunks
-full_name: OboDraft.Pages.Page
+full_name: ObojoboDraft.Pages.Page
+class: obo_node
 node_class: page
 ---
-A generic "page" that can be thought of as a page in a book or an online article.
+
+A page is a collection of one or more Chunks which make up the primary display of the document. Usually students navigate and experience the document one page at a time.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
 | title | no | String | The title of the page displayed in the navigation menu.
-
 
 ## Supported Trigger Types
 

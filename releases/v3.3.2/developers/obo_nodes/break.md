@@ -1,10 +1,12 @@
 ---
 title: Break
 menus: chunks
-full_name: OboDraft.Chunks.Break
+full_name: ObojoboDraft.Chunks.Break
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 Inserts a break in the document similar to a `<hr>` tag in HTML.
 
 ## Properties

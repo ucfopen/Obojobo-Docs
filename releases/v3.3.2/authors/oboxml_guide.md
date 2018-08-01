@@ -1,5 +1,5 @@
 ---
-title: OboXML Content Types
+title: OboXML Guide
 menus:
   authors_getting_started:
     weight: 3
@@ -7,7 +7,7 @@ menus:
 
 The OboXML format has HTML-like tags for text content called OboHTML.
 
-Here is a complete list of the Content tags availible in ObojoboDraft by default.
+Here is a complete list of the OboHTML tags available in ObojoboDraft by default.
 
 ## Paragraph Text
 
@@ -19,9 +19,15 @@ Paragraphs cannot contain other tags, just text.
 <p>Hello world</p>
 ```
 
+You can format text using a subset of HTML tags, for example:
+
+```xml
+<p>Some <b>bold and <i>italic</i> text.</b></p>
+```
+
 ## Headings
 
-Tags: `<h1>`, `<h2>`, `<h3>`, ... `<h6>`
+Tags: `<h1></h1>`, `<h2></h2>` ... `<h6></h6>`
 
 Heading elements will have larger, more visible text used to break up content sections. H1 is the highest, or most important, and h6 being the least.
 
@@ -29,9 +35,9 @@ H2 tags within content pages will be [displayed in the navigation](first_documen
 
 It's generally advised to use Heading tags following the guidelines for HTML:
 
-* Do not user lower level headings just to decrease font size
-* Avoid skipping levels, start at h1 then h2 and so on.
-* Avoid using h1 more than once per page
+- Do not user lower level headings just to decrease font size
+- Avoid skipping levels, start at h1 then h2 and so on.
+- Avoid using h1 more than once per page
 
 ```xml
 <h1>Main heading</h1>
@@ -54,7 +60,7 @@ Unlike HTML, nesting lists is not possible. Instead, Obojobo uses the `indent` p
 
 Tags: `<pre></pre>`
 
-Preformatted text will maintain it's spacing, indents, and line returns for use where spacing and font width are important.
+Preformatted text will maintain its spacing, indents, and line returns for use where spacing and font width are important.
 
 ```xml
 <pre>
@@ -64,9 +70,9 @@ function F(x) {
 </pre>
 ```
 
-## Horizontal Rules / Break
+## Horizontal Rules
 
-Tags: `<hr />` or `<Break />`
+Tags: `<hr />`
 
 This tag will insert a line acting as a break between nodes on a page.
 
@@ -77,8 +83,6 @@ This tag will insert a line acting as a break between nodes on a page.
 ## Tables
 
 Tags: `<table></table>`, `<tr></tr>`, `<th></th>`, `<td></td>`
-
-{{ 'Table' | obo_node }} expects an un-nested textGroup of items equal to the number of rows times the number of columns.
 
 ```xml
 <table>
@@ -97,7 +101,7 @@ Tags: `<table></table>`, `<tr></tr>`, `<th></th>`, `<td></td>`
 
 Tags: `<img />`
 
-Using the size vlaue of `small`, `medium`, or `large` is suggested for most images.
+Using the size value of `small`, `medium`, or `large` is suggested for most images.
 
 ```xml
 <img src="http://lorempixel.com/640/480/city" size="small" />

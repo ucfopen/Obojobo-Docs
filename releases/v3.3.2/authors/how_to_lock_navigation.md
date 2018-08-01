@@ -1,6 +1,6 @@
 ---
 title: Locking Navigation
-menus: authors_how_to
+menus: authors_assessments_how_to
 ---
 
 You can prevent students from leaving the Assessment Attempt once it's started by locking the navigation:

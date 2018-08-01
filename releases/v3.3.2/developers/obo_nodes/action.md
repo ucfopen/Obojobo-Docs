@@ -1,9 +1,9 @@
 ---
 title: trigger > action
 menus: chunks
-full_name: action
-node_class: content
+class: content_block
 ---
+
 The change that occurs as the result of a event being heard by a {{ 'trigger' | obo_node }}.
 
 ## Properties
@@ -11,7 +11,7 @@ The change that occurs as the result of a event being heard by a {{ 'trigger' | 
 | Property | Required | Type | Description |
 |-
 | type | Required | String | The type of action. This is limited to the values shown in the table below.
-| value | no | Object |  An object that can send one or more values along with the action event. The system can then use these values as desired.
+| value | no | Object | An object that can send one or more values along with the action event. The system can then use these values as desired.
 
 ### Supported Values for `type`
 
@@ -28,7 +28,7 @@ The change that occurs as the result of a event being heard by a {{ 'trigger' | 
 | nav:toggle | Toggles open or close the navigation drawer.
 | assessment:startAttempt | Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
 | assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
-| js | Runs arbitrary javascript. `value` should be a string of javascript code to execute.
+| js | **DEPRECATED** - Runs arbitrary javascript. `value` should be a string of javascript code to execute.
 
 ## Required Children
 
@@ -64,4 +64,3 @@ actions:[
   </action>
 </actions>
 ```
-

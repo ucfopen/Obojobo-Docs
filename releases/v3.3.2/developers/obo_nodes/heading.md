@@ -1,10 +1,12 @@
 ---
 title: Heading
 menus: chunks
-full_name: OboDraft.Chunks.Heading
+full_name: ObojoboDraft.Chunks.Heading
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 
 ## Properties
@@ -12,7 +14,7 @@ Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 | Property | Required | Type | Description |
 |-
 | textGroup | Required | {{ 'textGroup' | obo_node }} | Expects 1 text item.
-| headingLevel | no | Integer | Default: `1`. A value from 1-6 representing the heading level where 1 is the primary heading.
+| headingLevel | no | Integer | Default: `1`. A value from 1 to 6 representing the heading level where 1 is the primary heading.
 
 ## Supported Trigger Types
 
@@ -20,8 +22,6 @@ Creates headings similar to `<H1>` to `<H6>` tags in HTML.
 |-
 | onMount | Fired when a node is added to the DOM
 | onUnmount | Fired when a node is removed from the DOM
-| onNavEnter | Fired when a node is navigated to
-| onNavExit | Fired when a node is navigated away from
 
 ## Required Children
 

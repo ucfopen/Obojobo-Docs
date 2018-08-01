@@ -4,10 +4,10 @@
 <head>
   <meta charSet="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Assessment > scoreActions - Obojobo Next Documentation</title>
+  <title>Question Selection Algorithm - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Defines a Page to display for certain scoring conditions at the end of an assessment attempt.Properties            Property      Required      Type      Description                  for      Required      Range String, Number, &#39;no-score&#39;      A range of score values or a single score. Valid numer..." />
+  <meta name="description" content="This describes how an Assessment Attempt quiz is generated:  Add the top-most QuestionBank to the list of Assessment Attempt Questions.  On the top-most QuestionBank run the FindQuestions routine outlined below:FindQuestions(QuestionBank QB):  Sort QB’s Question and QuestionBank children by the f..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
   <meta property="og:type" content="website" />
@@ -135,7 +135,7 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">Assessment > rubric > mod</a>
           </li>
         
-          <li class="navListItem navListItemActive" >
+          <li class="navListItem" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment > scoreActions</a>
           </li>
         
@@ -266,7 +266,7 @@
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/glossary.html">Obojobo Glossary</a>
           </li>
         
-          <li class="navListItem" >
+          <li class="navListItem navListItemActive" >
             <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/question_selection_algorithm.html">Question Selection Algorithm</a>
           </li>
         
@@ -314,124 +314,36 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Assessment > scoreActions</h1>
-              
-              <strong>Class:</strong>
-              <em>
-                <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#content-blocks">Content Block</a>
-              </em>
+              <h1 class="postHeaderTitle">Question Selection Algorithm</h1>
               
             </header>
             <article>
               <div>
                 <span>
-                  <p>Defines a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em> to display for certain scoring conditions at the end of an assessment attempt.</p>
+                  <p>This describes how an Assessment Attempt quiz is generated:</p>
 
-<h2 id="properties">
-<a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
+<ol>
+  <li>Add the top-most QuestionBank to the list of <em>Assessment Attempt Questions</em>.</li>
+  <li>On the top-most QuestionBank run the <strong>FindQuestions</strong> routine outlined below:</li>
+</ol>
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Required</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>for</td>
-      <td>Required</td>
-      <td>
-<a href="../range_strings.html">Range String</a>, Number, <code class="highlighter-rouge">'no-score'</code>
-</td>
-      <td>A range of score values or a single score. Valid numeric values are 0 to 100.</td>
-    </tr>
-    <tr>
-      <td>page</td>
-      <td>Required</td>
-      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a></em></td>
-      <td>The page to display when a student’s highest Assessment Score is matched by the range specified by <code class="highlighter-rouge">for</code>.</td>
-    </tr>
-  </tbody>
-</table>
+<p><strong>FindQuestions</strong>(QuestionBank <em>QB</em>):</p>
 
-<h2 id="deprecated-properties">
-<a id="deprecated-properties" class="anchor" href="#deprecated-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deprecated Properties:</h2>
-
-<p>The <code class="highlighter-rouge">from</code> and <code class="highlighter-rouge">to</code> properties have been replaced by the <code class="highlighter-rouge">for</code> property.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>from</td>
-      <td>Number</td>
-      <td>The start of the score range (0 to 100)</td>
-    </tr>
-    <tr>
-      <td>to</td>
-      <td>Number</td>
-      <td>The end of the score range (0 to 100)</td>
-    </tr>
-  </tbody>
-</table>
-
-<blockquote>
-  <p>Use <code class="highlighter-rouge">for</code>. If you do not specify <code class="highlighter-rouge">for</code> you must specify both <code class="highlighter-rouge">from</code> and <code class="highlighter-rouge">to</code> and these properties may be removed in a future release.</p>
-</blockquote>
-
-<h2 id="example">
-<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
-
-<h3 id="json">
-<a id="json" class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h3>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"scoreActions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"for"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[0,100)"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Pages.Page"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"for"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Pages.Page"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="oboxml">
-<a id="oboxml" class="anchor" href="#oboxml" aria-hidden="true"><span class="octicon octicon-link"></span></a>OboXML</h3>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;scoreActions&gt;</span>
-  <span class="nt">&lt;scoreAction</span> <span class="na">for=</span><span class="s">"[0,100)"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Page&gt;</span>
-      <span class="c">&lt;!-- Page content here --&gt;</span>
-    <span class="nt">&lt;/Page&gt;</span>
-  <span class="nt">&lt;/scoreAction&gt;</span>
-  <span class="nt">&lt;scoreAction</span> <span class="na">for=</span><span class="s">"100"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Page&gt;</span>
-      <span class="c">&lt;!-- Page content here --&gt;</span>
-    <span class="nt">&lt;/Page&gt;</span>
-  <span class="nt">&lt;/scoreAction&gt;</span>
-<span class="nt">&lt;/scoreActions&gt;</span>
-</code></pre></div></div>
-
-<p>In this example students who receive a 100% are shown a successful landing page - all other scores direct students to a failing landing page. Define a single ScoreAction with a <code class="highlighter-rouge">for</code> attribute of <code class="highlighter-rouge">'[0-100]'</code> if you do not wish to direct students to different pages dependent on their attempt scores. If you are using a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> that can award <code class="highlighter-rouge">no-score</code> you must also include a <code class="highlighter-rouge">for="no-score"</code> ScoreAction.</p>
+<ol>
+  <li>Sort <em>QB</em>’s Question and QuestionBank children by the following criteria
+    <ul>
+      <li>If <code class="highlighter-rouge">select</code> is <code class="highlighter-rouge">sequential</code>: Document order</li>
+      <li>If <code class="highlighter-rouge">select</code> is <code class="highlighter-rouge">random</code>: Random</li>
+      <li>If <code class="highlighter-rouge">select</code> is <code class="highlighter-rouge">random-unseen</code>: Number of times this child has been used in an Assessment Attempt quiz. If two children have been used an equal number of times then sort these two children randomly.</li>
+    </ul>
+  </li>
+  <li>Select the top-most number of children equal to <code class="highlighter-rouge">choose</code>. If <code class="highlighter-rouge">choose</code> is greater than the number of children to choose then select all children. Replace <em>QB</em> in the <em>Assessment Attempt Questions</em> list with all selected children.</li>
+  <li>For every <em>Child</em> in <em>QB</em>’s children:
+    <ol>
+      <li>Run <strong>FindQuestions</strong>(<em>Child</em>)</li>
+    </ol>
+  </li>
+</ol>
 
                 </span>
               </div>
@@ -446,14 +358,6 @@
 
       <nav class="onPageNav">
         <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
-<li class="toc-entry toc-h2"><a href="#deprecated-properties">Deprecated Properties:</a></li>
-<li class="toc-entry toc-h2"><a href="#example">Example</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#json">JSON</a></li>
-<li class="toc-entry toc-h3"><a href="#oboxml">OboXML</a></li>
-</ul>
-</li>
 </ul>
       </nav>
 
