@@ -84,7 +84,7 @@ Chunks are individual pieces of content, for example a paragraph of text, a list
 
 An OboNode's `content` property contains all of the data needed for that OboNode to function. Some content properties are simply primitive values such as `title` which is a string representing the title of the OboNode. Other content properties are objects with their own definitions and structures. Since these are important to the function of OboNodes we refer to them as Content Blocks.
 
-Different OboNodes require and understand different Content Blocks. For example, both {{ 'Text' | obo_node }} and {{ 'List' | obo_node }} Chunks expects a {{ 'textGroup' | obo_node }} Content Block but only {{ 'List' | obo_node }} understands the {{ 'listStyle' || obo_node }} Content Block.
+Different OboNodes require and understand different Content Blocks. For example, both {{ 'Text' | obo_node }} and {{ 'List' | obo_node }} Chunks expects a {{ 'textGroup' | obo_node }} Content Block but only {{ 'List' | obo_node }} understands the {{ 'listStyle' | obo_node }} Content Block.
 
 In XML Content Blocks are represented as a child element to the OboNode they are a part of. These **always start with a lower-cased letter** to differentiate them from the other classifications.
 
@@ -93,9 +93,9 @@ In XML Content Blocks are represented as a child element to the OboNode they are
 ## OboNode & Content Block Reference
 
 {% assign menu = site.menus.chunks %}
-{% assign childen = (menu | sort_natural: 'title') %}
+{% assign children = (menu | sort_natural: 'title') %}
 
-{% for item in childen %}
+{% for item in children %}
 
 - {{ item.title | split: ' > ' | last | obo_node }}
   {% endfor %}

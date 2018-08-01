@@ -27,7 +27,7 @@ menu: dev_misc
 
 **Content Block**: Objects defined on the `content` property of **OboNodes**, for example {{ 'textGroup' | obo_node }}.
 
-**OboXML Content Block Element**: An XML element in an OboXML document representing a content block attribute of an OboNode Component, for example `<scoreActions>`. Lower-cased. Additional parsers or extensions can parse these elements to construct a conformant content attribute for the resulting Obojobo Draft Document.
+**OboXML Content Block Element**: An XML element in an OboXML document representing a content block attribute of an OboNode Component, for example `<scoreActions>`. Lowercased. Additional parsers or extensions can parse these elements to construct a conformant content attribute for the resulting Obojobo Draft Document.
 
 **OboHTML Element**: An XML element which mimics the syntax of HTML elements (for example `<p>` or `<h1>`). These elements are read by the OboXML Parser and are converted into their OboXML representation. These are provided to make writing OboXML easier by providing a familiar and less verbose syntax for common tasks.
 
@@ -67,4 +67,4 @@ menu: dev_misc
 
 ## Misc
 
-**Visit**: Used to represent a view of a specific document by a specific user. The Visit is used to correlate all of the data about the viewing session.
+**Visit**: Used to represent a view of a specific document by a specific user. The Visit is used to corrilate all of the data about the viewing session.

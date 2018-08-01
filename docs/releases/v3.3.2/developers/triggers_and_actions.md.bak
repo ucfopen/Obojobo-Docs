@@ -4,10 +4,10 @@
 <head>
   <meta charSet="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Code - Obojobo Next Documentation</title>
+  <title>Triggers and Actions - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="This chunk is fundamentally identical to the Text node except the styling of the rendered output is mono-spaced.Properties            Property      Required      Type      Description                  textGroup      Required      textGroup      Expects 1 or more text items.      Supported Trigger..." />
+  <meta name="description" content="Triggers and actions are used by document authors to programatically control what happens in the student&#39;s browser.&gt; Note: Triggers and actions do not support all the server side [Obojobo Events](events/obojobo_events.html). See the supported values for `type` on action&#39;s documentation.## Trigger..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
   <meta property="og:type" content="website" />
@@ -86,7 +86,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/triggers_and_actions.html">Triggers and Actions</a>
     </li>
     
-    <li class="navListItem">
+    <li class="navListItem navListItemActive">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/triggers_and_actions.md.bak">Triggers and Actions</a>
     </li>
     
@@ -140,7 +140,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/break.html">Break</a>
     </li>
     
-    <li class="navListItem navListItemActive">
+    <li class="navListItem">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/code.html">Code</a>
     </li>
     
@@ -310,116 +310,41 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Code</h1>
+              <h1 class="postHeaderTitle">Triggers and Actions</h1>
               
-              <strong>Class:</strong>
-              <em>
-                <a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_node_structure.html#chunk">Chunk OboNode</a>
-              </em>
-              
-              <strong>&nbsp;Full Name:</strong>
-              <em>ObojoboDraft.Chunks.Code</em>
-               
             </header>
             <article>
               <div>
                 <span>
-                  <p>This chunk is fundamentally identical to the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text.html">Text</a></em> node except the styling of the rendered output is mono-spaced.</p>
+                  Triggers and actions are used by document authors to programatically control what happens in the student's browser.
 
-<h2 id="properties">
-<a id="properties" class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
+&gt; Note: Triggers and actions do not support all the server side [Obojobo Events](events/obojobo_events.html). See the supported values for `type` on <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em>'s documentation.
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Required</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>textGroup</td>
-      <td>Required</td>
-      <td><em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a></em></td>
-      <td>Expects 1 or more text items.</td>
-    </tr>
-  </tbody>
-</table>
+## Triggers
 
-<h2 id="supported-trigger-types">
-<a id="supported-trigger-types" class="anchor" href="#supported-trigger-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Trigger Types</h2>
+A <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em> node listens to a certain event and performs an action when it occurs.
 
-<table>
-  <thead>
-    <tr>
-      <th>Action Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>onMount</td>
-      <td>Fired when a node is added to the DOM</td>
-    </tr>
-    <tr>
-      <td>onUnmount</td>
-      <td>Fired when a node is removed from the DOM</td>
-    </tr>
-  </tbody>
-</table>
+## Actions
 
-<h2 id="required-children">
-<a id="required-children" class="anchor" href="#required-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Children</h2>
+An <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">action</a></em> is the change that occurs as the result of a event being heard by a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a></em>.
 
-<p>None</p>
+## Example
 
-<h2 id="variables-registered">
-<a id="variables-registered" class="anchor" href="#variables-registered" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables Registered</h2>
+Below is an example of a Button that starts an assessment when clicked.
 
-<p>None</p>
-
-<h2 id="example-json">
-<a id="example-json" class="anchor" href="#example-json" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example JSON</h2>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ObojoboDraft.Chunks.Code"</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="s2">"textGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-			</span><span class="p">{</span><span class="w">
-				</span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-					</span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"let x = 2;"</span><span class="w">
-				</span><span class="p">}</span><span class="w">
-			</span><span class="p">},</span><span class="w">
-			</span><span class="p">{</span><span class="w">
-				</span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-					</span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"return x * 4;"</span><span class="w">
-				</span><span class="p">}</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">]</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h2 id="example-xml">
-<a id="example-xml" class="anchor" href="#example-xml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example XML</h2>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Code&gt;</span>
-  <span class="nt">&lt;textGroup&gt;</span>
-    <span class="nt">&lt;t&gt;</span>let x = 2;<span class="nt">&lt;/t&gt;</span>
-    <span class="nt">&lt;t&gt;</span>return x * 4;<span class="nt">&lt;/t&gt;</span>
-  <span class="nt">&lt;/textGroup&gt;</span>
-<span class="nt">&lt;/Code&gt;</span>
-</code></pre></div></div>
-
-<h2 id="example-obohtml">
-<a id="example-obohtml" class="anchor" href="#example-obohtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example OboHTML</h2>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;pre&gt;</span>let x = 2;
-return x * 4;<span class="nt">&lt;/pre&gt;</span>
-</code></pre></div></div>
+```xml
+<actionbutton label="Begin">
+  <triggers>
+    <trigger type="onClick">
+      <actions>
+        <action type="assessment:startAttempt">
+          <value id="assessment">
+        </value></action>
+      </actions>
+    </trigger>
+  </triggers>
+</actionbutton>
+```
 
                 </span>
               </div>
@@ -434,13 +359,6 @@ return x * 4;<span class="nt">&lt;/pre&gt;</span>
 
       <nav class="onPageNav">
         <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
-<li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
-<li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
-<li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
-<li class="toc-entry toc-h2"><a href="#example-json">Example JSON</a></li>
-<li class="toc-entry toc-h2"><a href="#example-xml">Example XML</a></li>
-<li class="toc-entry toc-h2"><a href="#example-obohtml">Example OboHTML</a></li>
 </ul>
       </nav>
 

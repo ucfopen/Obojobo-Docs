@@ -4,10 +4,10 @@
 <head>
   <meta charSet="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Limiting Attempts - Obojobo Next Documentation</title>
+  <title>Threshold Scoring - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Adding an attempt limit will restrict the number of times a student can submit an assessment score. If omitted, it defaults to &quot;unlimited&quot;.Allowed Values: &quot;unlimited&quot;, integers from &quot;1&quot; to &quot;256&quot;&amp;lt;ObojoboDraftDoc&amp;gt;  &amp;lt;Module&amp;gt;    &amp;lt;Content&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/Content&amp;gt;    &amp;lt;A..." />
+  <meta name="description" content="Assessment Rubric&#39;s `&#39;pass-fail&#39;` type can optionally be used to create a threshold type scoring system.For example, an assessment can require a score of 75% or higher to pass. When the `passingAttemptScore` is reached, the student&#39;s score will be adjusted to the `passingResult` value.In this exa..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
   <meta property="og:type" content="website" />
@@ -136,7 +136,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
     </li>
     
-    <li class="navListItem navListItemActive">
+    <li class="navListItem">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_limit_attempts.html">Limiting Attempts</a>
     </li>
     
@@ -168,7 +168,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html">Threshold Scoring</a>
     </li>
     
-    <li class="navListItem">
+    <li class="navListItem navListItemActive">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.md.bak">Threshold Scoring</a>
     </li>
     
@@ -217,35 +217,52 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Limiting Attempts</h1>
+              <h1 class="postHeaderTitle">Threshold Scoring</h1>
               
             </header>
             <article>
               <div>
                 <span>
-                  <p>Adding an attempt limit will restrict the number of times a student can submit an assessment score. If omitted, it defaults to <code class="highlighter-rouge">"unlimited"</code>.</p>
+                  Assessment Rubric's `'pass-fail'` type can optionally be used to create a threshold type scoring system.
 
-<p><strong>Allowed Values</strong>: <code class="highlighter-rouge">"unlimited"</code>, integers from <code class="highlighter-rouge">"1"</code> to <code class="highlighter-rouge">"256"</code></p>
+For example, an assessment can require a score of 75% or higher to pass. When the `passingAttemptScore` is reached, the student's score will be adjusted to the `passingResult` value.
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ObojoboDraftDoc&gt;</span>
-  <span class="nt">&lt;Module&gt;</span>
-    <span class="nt">&lt;Content&gt;</span> <span class="c">&lt;!-- ... --&gt;</span> <span class="nt">&lt;/Content&gt;</span>
+In this example, when the student scores below 75%, the score will be adjusted to 0. When the student's score is 75% or higher, the score wil be adjusted to `100%`.
 
-    <span class="nt">&lt;Assessment</span> <span class="na">id=</span><span class="s">"my-assessment"</span> <span class="na">attempts=</span><span class="s">"3"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;/Assessment&gt;</span>
+```xml
+<!-- ... -->
+    <assessment id="my-assessment">
+      <page> <!-- ... --> </page>
+      <questionbank> <!-- ... --> </questionbank>
 
-  <span class="nt">&lt;/Module&gt;</span>
-<span class="nt">&lt;/ObojoboDraftDoc&gt;</span>
-</code></pre></div></div>
+      <rubric type="pass-fail" passingattemptscore="75" passingresult="100" failingresult="0"></rubric>
 
-<blockquote>
-  <p>There are many different and nuanced reasons to use attempt limits. Consider what the module’s purpose is and what role the attempt limit plays for all types of students.</p>
+      <!-- ... -->
+    </assessment>
+<!-- ... -->
+```
 
-  <p>Low attempt limits are high-stress, but can be valuable for laser-focused evaluations. Conversely, high limits can allow more opportunities for struggling students to perform well. However, they can also encourage guessing.</p>
+This feature can be combined with Score Action Pages to display specialized messages to the student.
 
-  <p>There are many theories and practices here with no generic rules that apply to all learning models.</p>
-</blockquote>
+```xml
+<!-- ... -->
+    <assessment id="my-assessment">
+      <page> <!-- ... --> </page>
+      <questionbank> <!-- ... --> </questionbank>
+      <rubric type="pass-fail" passingattemptscore="75" passingresult="100" failingresult="0"></rubric>
+
+      <scoreactions>
+        <scoreaction for="0">
+          <page> <!-- Failing page --> </page>
+        </scoreaction>
+        <scoreaction for="100">
+          <page> <!-- Passing page --> </page>
+        </scoreaction>
+      </scoreactions>
+
+    </assessment>
+<!-- ... -->
+```
 
                 </span>
               </div>

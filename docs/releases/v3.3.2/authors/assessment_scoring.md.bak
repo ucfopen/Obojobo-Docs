@@ -4,10 +4,10 @@
 <head>
   <meta charSet="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Limiting Attempts - Obojobo Next Documentation</title>
+  <title>Assessment Scoring - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Adding an attempt limit will restrict the number of times a student can submit an assessment score. If omitted, it defaults to &quot;unlimited&quot;.Allowed Values: &quot;unlimited&quot;, integers from &quot;1&quot; to &quot;256&quot;&amp;lt;ObojoboDraftDoc&amp;gt;  &amp;lt;Module&amp;gt;    &amp;lt;Content&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/Content&amp;gt;    &amp;lt;A..." />
+  <meta name="description" content="As a default assessment scoring in Obojobo is simple. Each attempt score is an average of all question responses and the Overall Assessment Score is the highest of these scores. However, you can modify how scores are calculated using a rubric. The rubic is a very powerful feature that allows for ..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
   <meta property="og:type" content="website" />
@@ -107,7 +107,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_scoring.html">Assessment Scoring</a>
     </li>
     
-    <li class="navListItem">
+    <li class="navListItem navListItemActive">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_scoring.md.bak">Assessment Scoring</a>
     </li>
     
@@ -136,7 +136,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
     </li>
     
-    <li class="navListItem navListItemActive">
+    <li class="navListItem">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_limit_attempts.html">Limiting Attempts</a>
     </li>
     
@@ -217,35 +217,100 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Limiting Attempts</h1>
+              <h1 class="postHeaderTitle">Assessment Scoring</h1>
               
             </header>
             <article>
               <div>
                 <span>
-                  <p>Adding an attempt limit will restrict the number of times a student can submit an assessment score. If omitted, it defaults to <code class="highlighter-rouge">"unlimited"</code>.</p>
+                  As a default assessment scoring in Obojobo is simple. Each attempt score is an average of all question responses and the Overall Assessment Score is the highest of these scores. However, you can modify how scores are calculated using a <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em>. The rubic is a very powerful feature that allows for flexible scoring rules but can make scoring a little complex. This section will outline in detail how Obojobo scores Assessments.
 
-<p><strong>Allowed Values</strong>: <code class="highlighter-rouge">"unlimited"</code>, integers from <code class="highlighter-rouge">"1"</code> to <code class="highlighter-rouge">"256"</code></p>
+## Overview
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ObojoboDraftDoc&gt;</span>
-  <span class="nt">&lt;Module&gt;</span>
-    <span class="nt">&lt;Content&gt;</span> <span class="c">&lt;!-- ... --&gt;</span> <span class="nt">&lt;/Content&gt;</span>
+1.  Raw Attempt Score is calculated based on question answers.
+2.  <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> is used to determine the Attempt Status.
+3.  <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> combines Attempt Status and Raw Score into Post-Rubric Score.
+4.  The highest of all Post-Rubric Scores becomes the Overall Assessment Score.
 
-    <span class="nt">&lt;Assessment</span> <span class="na">id=</span><span class="s">"my-assessment"</span> <span class="na">attempts=</span><span class="s">"3"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;/Assessment&gt;</span>
+## Raw Attempt Score
 
-  <span class="nt">&lt;/Module&gt;</span>
-<span class="nt">&lt;/ObojoboDraftDoc&gt;</span>
-</code></pre></div></div>
+Raw Attempt Scores are calculated as an average of all question responses:
 
-<blockquote>
-  <p>There are many different and nuanced reasons to use attempt limits. Consider what the module’s purpose is and what role the attempt limit plays for all types of students.</p>
+### Possible Values
 
-  <p>Low attempt limits are high-stress, but can be valuable for laser-focused evaluations. Conversely, high limits can allow more opportunities for struggling students to perform well. However, they can also encourage guessing.</p>
+- 0-100
 
-  <p>There are many theories and practices here with no generic rules that apply to all learning models.</p>
-</blockquote>
+### Calculation
+
+Raw Attempt Score = _Correct questions_ / _Total questions_ × 100
+
+## Attempt Status
+
+Attempt Status represents the state of an attempt. It is determined by rules set in the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em>. The Attempt Status is used to calculate the Post-Rubric Score.
+
+### Possible Values
+
+| Value | Description
+|-
+| passed | Student passed the attempt.
+| failed | Student failed the attempt.
+| unableToPass | Student has no attempts remaining and did not achieve a `passed` status for any of thier attempts.
+
+### How Status is Determined
+
+After an attempt is completed the Attempt Status is determined using rules from the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> as follows:
+
+| Rubric Type | Raw Attempt Score &gt;= rubric's passingAttemptScore? | Attempts Remain? | Resulting Status |
+|-
+| -- | -- | -- | passed |
+| pass-fail | Yes | -- | passed |
+| pass-fail | No | Yes | failed |
+| pass-fail | No | No | unableToPass |
+
+&gt; Any completed Attempt when not using a rubric will result in a `passed` status.
+
+## Post-Rubric Score
+
+The Post-Rubric Score is the score the student receives for an Attempt. This score is what they'll see when reviewing an attempt. It can include changes like bonuses or deductions from score [_mods_](../developers/obo_nodes/mod.html)
+
+### Possible Values
+
+- 0-100
+- `null` (`"no-score"`)
+
+&gt; `no-score` is a special value that represents that the module has no grade. In this case, no score will be sent to an LMS. In rubrics and scoreActions it is indicated with `"no-score"`. In assessment result data it is indicated as `null`.
+
+### Calcuation
+
+| Rubric Type | Assessment Status | Post-Rubric Score |
+|-
+| (no rubric) | -- | Raw Attempt Score |
+| pass-fail | passed | `passedResult` + <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">mod</a></em>(s) |
+| pass-fail | failed | `failedResult` |
+| pass-fail | unableToPass |`unableToPassResult` |
+
+&gt; Post-Rubric Score is limited to the range between 0-100, regardless of mods.
+&gt;
+&gt; | property              |   value |
+&gt; | :-------------------- | ------: |
+&gt; | `passedResult`        |      98 |
+&gt; | mods                  |      +5 |
+&gt; | **Post-Rubric Score** | **100** |
+
+## Overall Assessment Score
+
+The Overall Assessment Score combines multiple attempts into a single score for this Assessment. In cases where Obojobo sends scores to an LMS (like an LTI assignment), this score is what is sent to the LMS.
+
+&gt; It is possible to control what Obojobo sends to an integrated LMS. See [LTI Score Passback](../authors/assessment_lti_replace_result.html)
+
+### Possible Values
+
+- 0 - 100
+- `null` (no-score)
+
+### Calculation
+
+The highest Post-Rubric Score for a student, for this assessment, across all attempts.
 
                 </span>
               </div>

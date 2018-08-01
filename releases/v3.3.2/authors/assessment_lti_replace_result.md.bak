@@ -9,7 +9,7 @@ Assessment attempt score will be sent to the LMS (via LTI's [`replaceResult`](ht
 
 1.  Not in preview mode
 2.  The module was launched from an LMS using LTI
-3.  The LTI launch included a [`lis_outcome_service_url`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2) parameter
+3.  The LTI launch included a [`lis_outcome_service_url`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2) paramater
 4.  [Final Attempt Score](assessment_scoring.html#final-attempt-score) is not `null` (no-score)
 
 If these conditions are met the following will be sent:
@@ -47,7 +47,7 @@ This example sets the threshold to send scores back at 75%.
 
 ## Final Attempt Scores
 
-It may be useful to withhold the score till all attempts are used. In that case, it is possible to control which score is sent back to the LMS using rubric's `unableToPassResult` attribute.
+It may be useful to withold the score till all attempts are used. In that case, it is possible to control which score is sent back to the LMS using rubric's `unableToPassResult` attribute.
 
 In this example the highest failing attempt score will be sent.
 
@@ -108,7 +108,7 @@ ScoreAction Pages can be added for all three conditions:
 
 How does the logic matches those three conditions?
 
-When failing with attempts remaining the `for="no-score"` is always matched.
+When failing with attempts remainaing the `for="no-score"` is always matched.
 
 `passingAttemptScore` is set to 75, and the `passingResult` is set to the `$attempt_score` variable. This means in a passing condition, the score will be **75+**, matching `for="[75,100]"`.
 

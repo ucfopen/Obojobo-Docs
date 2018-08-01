@@ -4,10 +4,10 @@
 <head>
   <meta charSet="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Limiting Attempts - Obojobo Next Documentation</title>
+  <title>LTI Score Passback - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Adding an attempt limit will restrict the number of times a student can submit an assessment score. If omitted, it defaults to &quot;unlimited&quot;.Allowed Values: &quot;unlimited&quot;, integers from &quot;1&quot; to &quot;256&quot;&amp;lt;ObojoboDraftDoc&amp;gt;  &amp;lt;Module&amp;gt;    &amp;lt;Content&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/Content&amp;gt;    &amp;lt;A..." />
+  <meta name="description" content="## When are Scores SentAssessment attempt score will be sent to the LMS (via LTI&#39;s [`replaceResult`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-4)) if the following conditions are met:1.  Not in preview mode2.  The module was launched from an LMS using LTI3.  The LTI launch inclu..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
   <meta property="og:type" content="website" />
@@ -136,7 +136,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_extra_credit.html">Extra Credit & Penalties</a>
     </li>
     
-    <li class="navListItem navListItemActive">
+    <li class="navListItem">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_limit_attempts.html">Limiting Attempts</a>
     </li>
     
@@ -144,7 +144,7 @@
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/how_to_lock_navigation.html">Locking Navigation</a>
     </li>
     
-    <li class="navListItem">
+    <li class="navListItem navListItemActive">
       <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/authors/assessment_lti_replace_result.md.bak">LTI Score Passback</a>
     </li>
     
@@ -217,35 +217,107 @@
         <div class="wrapper">
           <div class="post">
             <header class="postHeader">
-              <h1 class="postHeaderTitle">Limiting Attempts</h1>
+              <h1 class="postHeaderTitle">LTI Score Passback</h1>
               
             </header>
             <article>
               <div>
                 <span>
-                  <p>Adding an attempt limit will restrict the number of times a student can submit an assessment score. If omitted, it defaults to <code class="highlighter-rouge">"unlimited"</code>.</p>
+                  ## When are Scores Sent
 
-<p><strong>Allowed Values</strong>: <code class="highlighter-rouge">"unlimited"</code>, integers from <code class="highlighter-rouge">"1"</code> to <code class="highlighter-rouge">"256"</code></p>
+Assessment attempt score will be sent to the LMS (via LTI's [`replaceResult`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-4)) if the following conditions are met:
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ObojoboDraftDoc&gt;</span>
-  <span class="nt">&lt;Module&gt;</span>
-    <span class="nt">&lt;Content&gt;</span> <span class="c">&lt;!-- ... --&gt;</span> <span class="nt">&lt;/Content&gt;</span>
+1.  Not in preview mode
+2.  The module was launched from an LMS using LTI
+3.  The LTI launch included a [`lis_outcome_service_url`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2) paramater
+4.  [Final Attempt Score](assessment_scoring.html#final-attempt-score) is not `null` (no-score)
 
-    <span class="nt">&lt;Assessment</span> <span class="na">id=</span><span class="s">"my-assessment"</span> <span class="na">attempts=</span><span class="s">"3"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;/Assessment&gt;</span>
+If these conditions are met the following will be sent:
 
-  <span class="nt">&lt;/Module&gt;</span>
-<span class="nt">&lt;/ObojoboDraftDoc&gt;</span>
-</code></pre></div></div>
+**LTI Score** = Highest(**Assessment Score**) / 100
 
-<blockquote>
-  <p>There are many different and nuanced reasons to use attempt limits. Consider what the module’s purpose is and what role the attempt limit plays for all types of students.</p>
+## Limiting Score Passback
 
-  <p>Low attempt limits are high-stress, but can be valuable for laser-focused evaluations. Conversely, high limits can allow more opportunities for struggling students to perform well. However, they can also encourage guessing.</p>
+Obojobo normally sends the [Final Attempt Score](assessment_scoring.html#final-attempt-score) to the LMS assignment it's linked to.
 
-  <p>There are many theories and practices here with no generic rules that apply to all learning models.</p>
-</blockquote>
+The <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> attributes can be configured to conditionally send scores when they are above a value.
+
+Set the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> attribute `failingResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
+
+This can be useful when the assignment in the LMS is used to prevent access to other parts of the course. By not sending a score back, the LMS will not unlock content that requires a passing score.
+
+```xml
+<!-- ... -->
+    <assessment id="my-assessment" attempts="3">
+      <!-- ... -->
+
+      <rubric type="pass-fail" passingattemptscore="75" passingresult="$attempt_score" failingresult="no-score"></rubric>
+
+      <!-- ... -->
+    </assessment>
+<!-- ... -->
+```
+
+This example sets the threshold to send scores back at 75%.
+
+## Final Attempt Scores
+
+It may be useful to withold the score till all attempts are used. In that case, it is possible to control which score is sent back to the LMS using rubric's `unableToPassResult` attribute.
+
+In this example the highest failing attempt score will be sent.
+
+```xml
+<!-- ... -->
+    <assessment id="my-assessment" attempts="3">
+      <!-- ... -->
+
+      <rubric type="pass-fail" passingattemptscore="75" passingresult="$attempt_score" failingresult="no-score" unabletopassresult="$highest_attempt_score"></rubric>
+
+      <!-- ... -->
+    </assessment>
+<!-- ... -->
+```
+
+## Combining with Score Action Pages
+
+ScoreAction Pages can be added for all three conditions:
+
+- Passing `for="[75,100]"`
+- Failing with attempts remaining `for="no-score"`
+- Failing with **no** attempts remaining `for="[0,75)"`
+
+```xml
+<!-- ... -->
+    <assessment id="my-assessment" attempts="3">
+      <!-- ... -->
+
+      <rubric type="pass-fail" passingattemptscore="75" passingresult="$attempt_score" failingresult="no-score" unabletopassresult="$highest_attempt_score"></rubric>
+
+      <scoreactions>
+        <scoreaction for="no-score">
+          <page> <!-- Failing page --> </page>
+        </scoreaction>
+        <scoreaction for="[0,75)">
+          <page> <!-- Failing after all attempts used --> </page>
+        </scoreaction>
+        <scoreaction for="[75,100]">
+          <page> <!-- Passing page --> </page>
+        </scoreaction>
+      </scoreactions>
+
+    </assessment>
+<!-- ... -->
+```
+
+How does the logic matches those three conditions?
+
+When failing with attempts remainaing the `for="no-score"` is always matched.
+
+`passingAttemptScore` is set to 75, and the `passingResult` is set to the `$attempt_score` variable. This means in a passing condition, the score will be **75+**, matching `for="[75,100]"`.
+
+Failing with no attempts remaining won't match `for="no-score"` because the `unableToPassResult` attribute is set to a variable that will report a score. This means that when the student runs out of attempts, failing every time, the score will be recorded based on their highest attempt score. This score will be 0-75, so the `for="[0,75)"` condition is matched.
+
+There are several options for `'pass-fail'` rubrics. The full specification is listed in the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a></em> documentation.
 
                 </span>
               </div>

@@ -3,7 +3,7 @@ title: Displaying Remaining Attempts
 menus: authors_assessments_how_to
 ---
 
-The number of attempts used and attempts remaining are availible using [Variables](variables.html).
+The number of attempts used and attempts remaining are available using [Variables](variables.html).
 
 This example shows how to display it on a start attempt button using two assessment variables:
 

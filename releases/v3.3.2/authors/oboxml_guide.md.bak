@@ -119,7 +119,7 @@ Tags: `<figure></figure>`, `<figcaption></figcaption>`
 
 Figure syntax allows you to quickly create a figure with a caption. Both `<img>` and `<figcaption>` tags must be included.
 
-Tag order is ignored - captions are always displayed below an image.
+Tag order is ingnored - captions are always displayed below an image.
 
 ```xml
 <figure>

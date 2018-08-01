@@ -11,7 +11,7 @@ Obojobo Modules are designed to combine content and targeted assessment into a s
 
 Assessments are how Obojobo creates and collects scores. While practice questions can be created throughout the content section, they are not usable for collecting score data.
 
-Assessment scores are used to evaluate a students knowledge or mastery of the Module's content. Assessment scores can be exported and automatically transferred to an LMS grade-book.
+Assessment scores are used to evaluate a students knowledge or mastery of the Module's content. Assessment scores can be exported and automatically transferred to an LMS's gradebook.
 
 Currently Obojobo supports only a single Assessment per Module.
 
@@ -36,7 +36,7 @@ Add the Assessment's `id` attribute with a unique identifier of your liking, we'
 </ObojoboDraftDoc>
 ```
 
-> The examples will omit the Doc, Module and Content tags as we continue in this guide.
+> The examples will ommit the Doc, Module and Content tags as we continue in this guide.
 
 ### 2. Set the Number of Attempts (optional)
 
@@ -76,7 +76,7 @@ In the example below we've specified to always show assessment review:
 
 ### 4. Add a Scoring Rubric (optional)
 
-Rubrics allow you to define how scores are calculated. You can do things like requiring students to achieve an 80% or higher attempt score. Rubrics have several options and since this is our first assessment we'll leave it out for now. Take a look at the Assessments How To section if you'd like to investigate what you can do with rubrics.
+Rubrics allow you to define how scores are calculated. You can do things like requiring students to achieve an 80% or higher attempt score. Rubics have several options and since this is our first assessment we'll leave it out for now. Take a look at the Assessments How To section if you'd like to investigate what you can do with rubrics.
 
 ### 5. Add an Intro Page
 
@@ -294,7 +294,7 @@ Here's a full example of the step-by-step assessment created in the previous ste
         </scoreAction>
       </scoreActions>
 
-      <!-- Lock Navigation during an attempt -->
+      <!-- Lock Navigation durring an attempt -->
       <triggers>
         <trigger type="onStartAttempt">
           <actions>
