@@ -10,10 +10,10 @@
   <meta name="generator" content="Docusaurus" />
   <meta name="description" content="{{ content | strip_html | strip_newlines | truncate: 300 | escape }}" />
   <meta name="docsearch:language" content="en" />
-  <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://obojobo.ucf.edu/index.html" />
-  <meta property="og:description" content="By default after an Assessment Attempt is completed the student is shown which questions they got correct and incorrect, however they are not able to see the question choices, their responses or the correct answers. Additionally if any Assessment Questions have feedback or solutions these will not be displayed."
+  <meta property="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}" />
+  <meta property="og:description" content="{{ content | strip_html | strip_newlines | truncate: 300 | escape }}"
   />
   <meta name="twitter:card" content="summary" />
   <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
