@@ -43,7 +43,7 @@ Within our ObojoboDraftDoc, there is always a `<Module>` element. You can define
 
 Add some text to the Content section. A `<Content>`, `<Page>`, `<p>` (paragraph), and the text itself will be added into the Module
 
-Notice the `<p>` paragraph tag has been adopted from standard HTML. Obojobo supports a number of regular HTML tags for text described in the [OboXML Content Types](content_types.html).
+Notice the `<p>` paragraph tag has been adopted from standard HTML. Obojobo supports a number of regular HTML tags for text described in the [Text Content Conventions](../developers/text_content.html).
 
 ```xml
 <ObojoboDraftDoc>

@@ -1,5 +1,5 @@
 ---
-title: Assessment > scoreActions
+title: Assessment > scoreAction
 menus: chunks
 class: content_block
 ---

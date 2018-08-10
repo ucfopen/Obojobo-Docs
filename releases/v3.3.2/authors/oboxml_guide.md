@@ -31,7 +31,7 @@ Tags: `<h1></h1>`, `<h2></h2>` ... `<h6></h6>`
 
 Heading elements will have larger, more visible text used to break up content sections. H1 is the highest, or most important, and h6 being the least.
 
-H2 tags within content pages will be [displayed in the navigation](first_document.html#navigation-menu).
+H2 tags within content pages will be [displayed in the navigation](./#navigation-menu).
 
 It's generally advised to use Heading tags following the guidelines for HTML:
 

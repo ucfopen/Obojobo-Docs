@@ -40,3 +40,6 @@ defaults:
     values:
       layout: "default"
       toc: true # turn on toc by default
+
+exclude:
+  - Rakefile

@@ -107,12 +107,12 @@
               {% if page.class == "content_block" %}
               <strong>Class:</strong>
               <em>
-                <a href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/obo_node_structure.html#content-blocks">Content Block</a>
+                <a href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/#content-blocks">Content Block</a>
               </em>
               {% elsif page.class == "obo_node" %}
               <strong>Class:</strong>
               <em>
-                <a href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/obo_node_structure.html#{{ page.node_class }}">{{ page.node_class | capitalize }} OboNode</a>
+                <a href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/#{{ page.node_class }}">{{ page.node_class | capitalize }} OboNode</a>
               </em>
               {% if page.full_name %}
               <strong>&nbsp;Full Name:</strong>
@@ -141,13 +141,11 @@
     </div>
     <footer class="nav-footer" id="footer">
       <div id="github-footer">
-        <a href="https://github.com/ucfopen/Obojobo">Obojobo on GitHub</a>
-        <a class="github-button" data-icon="octicon-star" data-count-href="" data-show-count="true" data-count-aria-label="# stargazers on GitHub"
-          aria-label="Star this project on GitHub">Star</a>
+        <a href="https://github.com/ucfopen/Obojobo">Visit Obojobo on GitHub</a>
       </div>
-      <a href="/" target="_blank" rel="noreferrer noopener" class="fbOpenSource">
+      <span class="fbOpenSource">
         <img src="{{ site.baseurl }}/assets/images/obojobo_white.svg" alt="Obojobo" width="300" height="45" />
-      </a>
+      </span>
       <section class="copyright">Obojobo™ © 2018 University of Central Florida</section>
     </footer>
   </div>

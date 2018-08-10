@@ -92,6 +92,27 @@
  
 
 <div class="navGroup">
+  <h3 class="navGroupCategoryTitle">Misc Dev Topics</h3>
+  <ul>
+    
+    <li class="navListItem">
+      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/glossary.html">Obojobo Glossary</a>
+    </li>
+    
+    <li class="navListItem">
+      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/question_selection_algorithm.html">Question Selection Algorithm</a>
+    </li>
+    
+    <li class="navListItem">
+      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/range_strings.html">Range Strings</a>
+    </li>
+    
+  </ul>
+</div>
+
+ 
+
+<div class="navGroup">
   <h3 class="navGroupCategoryTitle">Events Reference</h3>
   <ul>
     
@@ -129,7 +150,7 @@
     </li>
     
     <li class="navListItem">
-      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment > scoreActions</a>
+      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment > scoreAction</a>
     </li>
     
     <li class="navListItem">
@@ -241,28 +262,7 @@
     </li>
     
     <li class="navListItem">
-      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/youtube.html">YouTube</a>
-    </li>
-    
-  </ul>
-</div>
-
- 
-
-<div class="navGroup">
-  <h3 class="navGroupCategoryTitle">Misc Dev Topics</h3>
-  <ul>
-    
-    <li class="navListItem">
-      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/glossary.html">Obojobo Glossary</a>
-    </li>
-    
-    <li class="navListItem">
-      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/question_selection_algorithm.html">Question Selection Algorithm</a>
-    </li>
-    
-    <li class="navListItem">
-      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/range_strings.html">Range Strings</a>
+      <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/you_tube.html">YouTube</a>
     </li>
     
   </ul>
@@ -594,6 +594,42 @@ In most cases, these events are useful for research data analysis.  In which cas
 <h2 id="question">
 <a id="question" class="anchor" href="#question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question</h2>
 
+<h3 id="questionscoreset">
+<a id="questionscoreset" class="anchor" href="#questionscoreset" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:scoreSet</em>
+</h3>
+
+<p>Occurs when the user is viewing the explanation (aka. solution) of a question.</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="properties-8">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>score</td>
+      <td>The score value (0-100)</td>
+    </tr>
+    <tr>
+      <td>itemId</td>
+      <td>The id of the item that was scored</td>
+    </tr>
+    <tr>
+      <td>context</td>
+      <td>The context when this score was set</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="questionshowexplanation">
 <a id="questionshowexplanation" class="anchor" href="#questionshowexplanation" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:showExplanation</em>
 </h3>
@@ -605,7 +641,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-8">Properties</h4>
+<h4 id="properties-9">Properties</h4>
 
 <table>
   <thead>
@@ -633,7 +669,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="properties-9">Properties</h4>
+<h4 id="properties-10">Properties</h4>
 
 <table>
   <thead>
@@ -666,7 +702,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-10">Properties</h4>
+<h4 id="properties-11">Properties</h4>
 
 <table>
   <thead>
@@ -694,7 +730,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-11">Properties</h4>
+<h4 id="properties-12">Properties</h4>
 
 <table>
   <thead>
@@ -722,7 +758,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>2.1.0</dd>
 </dl>
 
-<h4 id="properties-12">Properties</h4>
+<h4 id="properties-13">Properties</h4>
 
 <table>
   <thead>
@@ -770,7 +806,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-13">Properties</h4>
+<h4 id="properties-14">Properties</h4>
 
 <table>
   <thead>
@@ -798,7 +834,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-14">Properties</h4>
+<h4 id="properties-15">Properties</h4>
 
 <table>
   <thead>
@@ -826,7 +862,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="properties-15">Properties</h4>
+<h4 id="properties-16">Properties</h4>
 
 <table>
   <thead>
@@ -858,7 +894,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="properties-16">Properties</h4>
+<h4 id="properties-17">Properties</h4>
 
 <table>
   <thead>
@@ -890,7 +926,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>2.0.0</dd>
 </dl>
 
-<h4 id="properties-17">Properties</h4>
+<h4 id="properties-18">Properties</h4>
 
 <table>
   <thead>
@@ -986,7 +1022,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-18">Properties</h4>
+<h4 id="properties-19">Properties</h4>
 
 <table>
   <thead>
@@ -1029,7 +1065,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-19">Properties</h4>
+<h4 id="properties-20">Properties</h4>
 
 <table>
   <thead>
@@ -1061,7 +1097,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-20">Properties</h4>
+<h4 id="properties-21">Properties</h4>
 
 <table>
   <thead>
@@ -1093,7 +1129,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-21">Properties</h4>
+<h4 id="properties-22">Properties</h4>
 
 <table>
   <thead>
@@ -1125,7 +1161,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-22">Properties</h4>
+<h4 id="properties-23">Properties</h4>
 
 <table>
   <thead>
@@ -1157,7 +1193,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-23">Properties</h4>
+<h4 id="properties-24">Properties</h4>
 
 <p>None</p>
 
@@ -1172,7 +1208,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-24">Properties</h4>
+<h4 id="properties-25">Properties</h4>
 
 <p>None</p>
 
@@ -1187,7 +1223,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-25">Properties</h4>
+<h4 id="properties-26">Properties</h4>
 
 <p>None</p>
 
@@ -1202,7 +1238,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-26">Properties</h4>
+<h4 id="properties-27">Properties</h4>
 
 <p>None</p>
 
@@ -1217,7 +1253,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-27">Properties</h4>
+<h4 id="properties-28">Properties</h4>
 
 <table>
   <thead>
@@ -1249,7 +1285,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-28">Properties</h4>
+<h4 id="properties-29">Properties</h4>
 
 <table>
   <thead>
@@ -1277,7 +1313,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>2.0.0</dd>
 </dl>
 
-<h4 id="properties-29">Properties</h4>
+<h4 id="properties-30">Properties</h4>
 
 <table>
   <thead>
@@ -1346,7 +1382,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-30">Properties</h4>
+<h4 id="properties-31">Properties</h4>
 
 <table>
   <thead>
@@ -1501,6 +1537,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 </li>
 <li class="toc-entry toc-h2"><a href="#question">Question</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#questionscoreset">question:scoreSet</a></li>
 <li class="toc-entry toc-h3"><a href="#questionshowexplanation">question:showExplanation</a></li>
 <li class="toc-entry toc-h3"><a href="#questionhideexplanation">question:hideExplanation</a></li>
 <li class="toc-entry toc-h3"><a href="#questioncheckanswer">question:checkAnswer</a></li>
@@ -1546,13 +1583,11 @@ In most cases, these events are useful for research data analysis.  In which cas
     </div>
     <footer class="nav-footer" id="footer">
       <div id="github-footer">
-        <a href="https://github.com/ucfopen/Obojobo">Obojobo on GitHub</a>
-        <a class="github-button" data-icon="octicon-star" data-count-href="" data-show-count="true" data-count-aria-label="# stargazers on GitHub"
-          aria-label="Star this project on GitHub">Star</a>
+        <a href="https://github.com/ucfopen/Obojobo">Visit Obojobo on GitHub</a>
       </div>
-      <a href="/" target="_blank" rel="noreferrer noopener" class="fbOpenSource">
+      <span class="fbOpenSource">
         <img src="/Obojobo-Docs/assets/images/obojobo_white.svg" alt="Obojobo" width="300" height="45" />
-      </a>
+      </span>
       <section class="copyright">Obojobo™ © 2018 University of Central Florida</section>
     </footer>
   </div>

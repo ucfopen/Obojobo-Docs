@@ -19,14 +19,14 @@ developers:
   - title: Getting Started
     identifier: developers_getting_started
 
+  - title: Misc Dev Topics
+    identifier: dev_misc
+    sort: alphabetical
+
   - title: Events Reference
     identifier: developers_events
 
   - title: OboNode & Content Block Reference
     identifier: chunks
-    sort: alphabetical
-
-  - title: Misc Dev Topics
-    identifier: dev_misc
     sort: alphabetical
 

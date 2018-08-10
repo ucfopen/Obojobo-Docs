@@ -10,7 +10,7 @@ Assessment attempt score will be sent to the LMS (via LTI's [`replaceResult`](ht
 1.  Not in preview mode
 2.  The module was launched from an LMS using LTI
 3.  The LTI launch included a [`lis_outcome_service_url`](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2) parameter
-4.  [Final Attempt Score](assessment_scoring.html#final-attempt-score) is not `null` (no-score)
+4.  [Overall Assessment Score](assessment_scoring.html#overall-assessment-score) is not `null` (no-score)
 
 If these conditions are met the following will be sent:
 
@@ -18,7 +18,7 @@ If these conditions are met the following will be sent:
 
 ## Limiting Score Passback
 
-Obojobo normally sends the [Final Attempt Score](assessment_scoring.html#final-attempt-score) to the LMS assignment it's linked to.
+Obojobo normally sends the [Overall Assessment Score](assessment_scoring.html#overall-assessment-score) to the LMS assignment it's linked to.
 
 The {{ 'rubric' | obo_node }} attributes can be configured to conditionally send scores when they are above a value.
 

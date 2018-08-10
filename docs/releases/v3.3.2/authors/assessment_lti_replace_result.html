@@ -7,7 +7,7 @@
   <title>LTI Score Passback - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="When are Scores SentAssessment attempt score will be sent to the LMS (via LTI’s replaceResult) if the following conditions are met:  Not in preview mode  The module was launched from an LMS using LTI  The LTI launch included a lis_outcome_service_url parameter  Final Attempt Score is not null (no..." />
+  <meta name="description" content="When are Scores SentAssessment attempt score will be sent to the LMS (via LTI’s replaceResult) if the following conditions are met:  Not in preview mode  The module was launched from an LMS using LTI  The LTI launch included a lis_outcome_service_url parameter  Overall Assessment Score is not nul..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Assesment Reviews &amp; Question Feedback · Obojobo" />
   <meta property="og:type" content="website" />
@@ -213,7 +213,7 @@
   <li>The module was launched from an LMS using LTI</li>
   <li>The LTI launch included a <a href="https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-2"><code class="highlighter-rouge">lis_outcome_service_url</code></a> parameter</li>
   <li>
-<a href="assessment_scoring.html#final-attempt-score">Final Attempt Score</a> is not <code class="highlighter-rouge">null</code> (no-score)</li>
+<a href="assessment_scoring.html#overall-assessment-score">Overall Assessment Score</a> is not <code class="highlighter-rouge">null</code> (no-score)</li>
 </ol>
 
 <p>If these conditions are met the following will be sent:</p>
@@ -223,7 +223,7 @@
 <h2 id="limiting-score-passback">
 <a id="limiting-score-passback" class="anchor" href="#limiting-score-passback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limiting Score Passback</h2>
 
-<p>Obojobo normally sends the <a href="assessment_scoring.html#final-attempt-score">Final Attempt Score</a> to the LMS assignment it’s linked to.</p>
+<p>Obojobo normally sends the <a href="assessment_scoring.html#overall-assessment-score">Overall Assessment Score</a> to the LMS assignment it’s linked to.</p>
 
 <p>The <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> attributes can be configured to conditionally send scores when they are above a value.</p>
 
@@ -348,13 +348,11 @@
     </div>
     <footer class="nav-footer" id="footer">
       <div id="github-footer">
-        <a href="https://github.com/ucfopen/Obojobo">Obojobo on GitHub</a>
-        <a class="github-button" data-icon="octicon-star" data-count-href="" data-show-count="true" data-count-aria-label="# stargazers on GitHub"
-          aria-label="Star this project on GitHub">Star</a>
+        <a href="https://github.com/ucfopen/Obojobo">Visit Obojobo on GitHub</a>
       </div>
-      <a href="/" target="_blank" rel="noreferrer noopener" class="fbOpenSource">
+      <span class="fbOpenSource">
         <img src="/Obojobo-Docs/assets/images/obojobo_white.svg" alt="Obojobo" width="300" height="45" />
-      </a>
+      </span>
       <section class="copyright">Obojobo™ © 2018 University of Central Florida</section>
     </footer>
   </div>

@@ -134,7 +134,7 @@ The second **required** child of the Assessment tag is a {{ 'QuestionBank' | obo
 </Assessment>
 ```
 
-> We're keeping it simple for now but QuestionBanks have some options to allow you to create randomized and different assessment attempt quizzes. Take a look at {{ 'QuestionBank' | obo_node }} and [New Questions for each Attempt](/authors/assessment_new_quizzes.html) to see how it's done.
+> We're keeping it simple for now but QuestionBanks have some options to allow you to create randomized and different assessment attempt quizzes. Take a look at {{ 'QuestionBank' | obo_node }} and [New Questions for each Attempt](assessment_new_quizzes.html) to see how it's done.
 
 ### 8. Add a Question
 
@@ -200,7 +200,7 @@ The simplest example is a single page for all scores. Define a {{ 'scoreAction' 
 </Assessment>
 ```
 
-> Multiple pages can be added for different feedback depending on attempt score. Perhaps you could direct students to additional learning materials when their score is below a certain threshold. View [Post-Attempt Pages](/authors/post_attempt_pages.html) to see how its done.
+> Multiple pages can be added for different feedback depending on attempt score. Perhaps you could direct students to additional learning materials when their score is below a certain threshold. View [Post-Attempt Pages](post_attempt_pages.html) to see how its done.
 
 ### 10. Add Triggers to lock and unlock Navigation
 

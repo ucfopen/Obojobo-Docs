@@ -4,7 +4,7 @@ menus: chunks
 class: content_block
 ---
 
-A group of one or more lines of text. Being a [Content Node Class](../obo_node_structure.html#content), they differ from {{ 'Text' | obo_node }} chunks because textGroups are used as content for many OboNode types.
+A group of one or more lines of text. Being a [Content Block](../#content-blocks), they differ from {{ 'Text' | obo_node }} chunks because textGroups are used as content for many OboNode types.
 
 Learn more about using text in [Text Content Conventions](../text_content.html)
 
