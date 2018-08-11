@@ -162,6 +162,23 @@ Occurs when the user is again viewing the draft page, either by changing tabs or
 
 ## Question
 
+### *question:scoreSet*
+
+Occurs when the user is viewing the explanation (aka. solution) of a question.
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Properties
+
+| Property | Description |
+|-
+| score | The score value (0-100)
+| itemId | The id of the item that was scored
+| context | The context when this score was set
+
 ### *question:showExplanation*
 
 Occurs when the user is viewing the explanation (aka. solution) of a question.

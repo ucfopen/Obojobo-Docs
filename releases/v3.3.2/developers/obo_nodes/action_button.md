@@ -1,10 +1,12 @@
 ---
 title: ActionButton
 menus: chunks
-full_name: OboDraft.Chunks.ActionButton
+full_name: ObojoboDraft.Chunks.ActionButton
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 Displays a button which can use the `onClick` trigger to perform an action - typically to start assessment or navigate the user elsewhere.
 
 ## Properties

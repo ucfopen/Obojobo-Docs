@@ -42,6 +42,7 @@ defaults:
       toc: true # turn on toc by default
 
 exclude:
-  - 'README.md'
-  - 'Gemfile'
-  - 'Gemfile.lock'
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock

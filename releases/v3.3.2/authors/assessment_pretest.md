@@ -1,6 +1,6 @@
 ---
 title: Adding a Pre-Test
-menus: authors_how_to
+menus: authors_assessments_how_to
 ---
 
 Using navigation lock and unlock events and the `start` property of the Module OboNode students can be directed to the Assessment first, requiring them to attempt the Assessment before they can explore the rest of the document.
@@ -44,4 +44,3 @@ After the first attempt the landing page is no longer displayed so the `onMount`
   </Module>
 </ObojoboDraftDoc>
 ```
-
