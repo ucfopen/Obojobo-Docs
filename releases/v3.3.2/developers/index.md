@@ -93,7 +93,7 @@ In XML Content Blocks are represented as a child element to the OboNode they are
 ## OboNode & Content Block Reference
 
 {% assign menu = site.menus.chunks %}
-{% assign children = (menu | sort_natural: 'title') %}
+{% assign children = menu | sort_natural: 'title' %}
 
 {% for item in children %}
 

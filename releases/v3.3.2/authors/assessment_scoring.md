@@ -3,7 +3,7 @@ title: Assessment Scoring
 menu: writing_assessments
 ---
 
-As a default assessment scoring in Obojobo is simple. Each attempt score is an average of all question responses and the Overall Assessment Score is the highest of these scores. However, you can modify how scores are calculated using a {{ 'rubric' | obo_node }}. The rubric is a very powerful feature that allows for flexible scoring rules but can make scoring a little complex. This section will outline in detail how Obojobo scores Assessments.
+Default assessment scoring in Obojobo is simple. Each attempt score is an average of all question responses and the Overall Assessment Score is the highest of these scores. However, you can modify how scores are calculated using a {{ 'rubric' | obo_node }}. The rubric is a very powerful feature that allows for flexible scoring rules but can make scoring a little complex. This section will outline in detail how Obojobo scores Assessments.
 
 ## Overview
 

@@ -1,5 +1,7 @@
-<!DOCTYPE html> {% assign split_url = page.url | split: '/' %} {% assign current_menu = split_url[3] %} {% assign menu = site.menus[current_menu]
-%}
+<!DOCTYPE html>
+{% assign split_url = page.url | split: '/' %}
+{% assign current_menu = split_url[3] %}
+{% assign menu = site.menus[current_menu] %}
 <html lang="en">
 
 <head>
