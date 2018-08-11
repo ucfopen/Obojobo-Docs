@@ -1,33 +1,33 @@
 ---
 title: Figure
 menus: chunks
-full_name: OboDraft.Chunks.Figure
+full_name: ObojoboDraft.Chunks.Figure
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 An image with an optional image caption shown below.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| alt | Recomended | String | Sets the alt tag of the image.
+| alt | Recommended | String | Sets the alt tag of the image - this is strongly recommended since a screen reader can use this text to describe the image to someone who is visually-impaired.
+| url | Recommended | String | The external URL to the image.
 | textGroup | no | {{ 'textGroup' | obo_node }} | Used as the caption below the image - expects **only** 1 text item if set.
-| url | no | String | The external URL to the image.
 | size | no | String | Default: `small`. One of the following values representing the desired size of the image
 | width | no | String | If size is set to `custom` then this specifies the width. Has no effect otherwise.
 | height | no | String | If size is set to `custom` then this specifies the height. Has no effect otherwise.
-| type | Required | String | The type of action. This is limited to the values shown in the table below.
-| value | no | Object |  An object that can send one or more values along with the action event. The system can then use these values as desired.
 
-### Supported Values for  `size`
+### Supported Values for `size`
 
 | Value | Description |
 |-
-| small  | A centered small image
-| medium | A centered larger image
-| large  | An image that spans the width of the page
-| custom | An image set at native size (image is still restricted by the width of the page)
+| small | A centered small image
+| medium | A centered image that spans the width of the text content of a page
+| large | A centered image that spans the full width of the page column, extending past the text
+| custom | An image set at a specific size (or native size if width and height is not defined). The image is still restricted by the width of the page.
 
 > Note: Setting either `width` or `height` on a `custom` image will modify the non-specified dimension proportionally. It's not recommended to set both `width` and `height` as this will not respect the natural aspect-ratio of the image.
 
@@ -82,6 +82,7 @@ None
 ### OboHTML (With caption)
 
 Captions are always displayed below an image, regardless of the order of the tags
+
 ```xml
 <figure>
   <img src="http://lorempixel.com/640/480/city" size="medium" alt="Description of the image">
@@ -116,4 +117,4 @@ Captions are always displayed below an image, regardless of the order of the tag
 <img src="http://lorempixel.com/640/480/city" width="500" alt="Description of the image">
 ```
 
-Note that the `size="custom"` is not required above. Specifying `width` and/or `height` in `img` assumes that size must be `"custom"`.
+> In OboHTML `size="custom"` is not required if `width` and/or `height` is specified - in this case `img` assumes that size must be `"custom"`. `size="custom"` is still required in JSON or XML.

@@ -1,9 +1,11 @@
 ---
 title: MCAssessment > MCChoice > MCAnswer
 menus: chunks
-full_name: OboDraft.Chunks.MCAnswer
+full_name: ObojoboDraft.Chunks.MCAssessment.MCAnswer
+class: obo_node
 node_class: chunk
 ---
+
 This represents the contents of the answer portion of a multiple choice answer choice.
 
 ## Properties
@@ -19,14 +21,13 @@ None
 
 ## Required Children
 
-{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+{% assign chunks = site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
 
 One or more of the following Chunks: {% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %}{% endfor %}.
 
 ## Variables Registered
 
 None
-
 
 ## Example
 

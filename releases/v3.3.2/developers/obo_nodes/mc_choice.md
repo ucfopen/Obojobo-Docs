@@ -1,16 +1,20 @@
 ---
 title: MCAssessment > MCChoice
 menus: chunks
-full_name: OboDraft.Chunks.MCAssessment.MCChoice
+full_name: ObojoboDraft.Chunks.MCAssessment.MCChoice
+class: obo_node
 node_class: chunk
 ---
+
 A single answer choice in a multiple choice question containing the contents of the answer and optional feedback. Feedback is not displayed in an Assessment Attempt Quiz but is displayed outside Assessment or in Assessment Review (when full Assessment Review is being shown).
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| score | Required | Integer | `0` or `100`: Represents the correctness of this answer choice - i.e. A correct answer should have a `score` of `100` and incorrect answers a `score` of `0`. A future release may allow for partial credit.
+| score | Required | Integer | `0` or `100`: Represents the correctness of this answer choice - i.e. A correct answer should have a `score` of `100` and incorrect answers a `score` of `0`.
+
+> Partial credit is not supported - values must be either `0` or `100`, not a value in-between. A future release may allow for partial credit.
 
 ## Supported Trigger Types
 

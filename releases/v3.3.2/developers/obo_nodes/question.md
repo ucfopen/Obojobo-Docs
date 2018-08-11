@@ -1,16 +1,18 @@
 ---
 title: Question
 menus: chunks
-full_name: OboDraft.Chunks.Question
+full_name: ObojoboDraft.Chunks.Question
+class: obo_node
 node_class: chunk
 ---
+
 Either an assessment or practice question. Questions are designed to support multiple types of scoring but currently only multiple choice questions are implemented. A question is constructed using several different node types.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| solution | no | {{ 'Page' | obo_node }} | A page containing a full-text description of the solution to the problem. If set a button will be available after the question is attempted which will reveal the solution if pressed.
+| solution | no | {{ 'Page' | obo_node }} | A page containing a full-text description of the solution to the problem. If this is set a button will be available after the question is attempted which will reveal the solution if pressed. This button is hidden when the question is used in an assessment but will show up in a full assessment review.
 
 ## Supported Trigger Types
 
@@ -21,10 +23,9 @@ Either an assessment or practice question. Questions are designed to support mul
 
 ## Required Children
 
-{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+{% assign chunks = site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
 
-
-1. One or more [Chunk nodes](../obo_node_structure.html#content) ({% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question
+1.  One or more [Chunk nodes](../#chunk) ({% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question
 2.  An {{ 'MCAssessment' | obo_node }} node - this MUST be the last child.
 
 ## Variables Registered

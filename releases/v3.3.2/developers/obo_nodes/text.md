@@ -1,10 +1,12 @@
 ---
 title: Text
 menus: chunks
-full_name: OboDraft.Chunks.Text
+full_name: ObojoboDraft.Chunks.Text
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 A single block of text similar to a paragraph (`<p>`) tag in HTML.
 
 Learn more about using text in [Text Content Conventions](../text_content.html)

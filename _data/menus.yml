@@ -7,8 +7,8 @@ authors:
   - title: Writing Assessments
     identifier: writing_assessments
 
-  - title: How To
-    identifier: authors_how_to
+  - title: Assessments How To
+    identifier: authors_assessments_how_to
     sort: alphabetical
 
 # teachers:
@@ -19,14 +19,14 @@ developers:
   - title: Getting Started
     identifier: developers_getting_started
 
+  - title: Misc Dev Topics
+    identifier: dev_misc
+    sort: alphabetical
+
   - title: Events Reference
     identifier: developers_events
 
-  - title: OboNodes Reference
+  - title: OboNode & Content Block Reference
     identifier: chunks
-    sort: alphabetical
-
-  - title: Misc Dev Topics
-    identifier: dev_misc
     sort: alphabetical
 

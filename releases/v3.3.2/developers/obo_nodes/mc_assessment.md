@@ -1,22 +1,23 @@
 ---
 title: MCAssessment
 menus: chunks
-full_name: OboDraft.Chunks.MCAssessment
+full_name: ObojoboDraft.Chunks.MCAssessment
+class: obo_node
 node_class: chunk
 ---
+
 This is the multiple choice portion of a question containing several answer choices.
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| responseType | no | String | Default: `pick-one`.  Defines what type of multiple choice question this is - Must be one of the following values
+| responseType | no | String | Default: `pick-one`. Defines what type of multiple choice question this is. Possible values are enumerated below.
 | correctLabels | no | String | Default: `Correct!|You got it!|Great job!|That's right!`. A `|` seperated list of labels to display when a non-assessment Question is answered correctly. One label will be selected at random. In Assessment Review this value is ignored (`'Correct!'` is always displayed instead).
 | incorrectLabels | no | String | Default: `Incorrect`. A `|` seperated list of labels to display when a non-assessment Question is answered incorrectly. One label will be selected at random.
 | shuffle | no | Boolean | Default: `true`. If `false` then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.
 
-
-### Supported Values for  'responseType'
+### Supported Values for 'responseType'
 
 | Value | Description
 |-
@@ -38,7 +39,6 @@ One or more {{ 'MCChoice' | obo_node }} nodes.
 ## Variables Registered
 
 None
-
 
 ## Example
 

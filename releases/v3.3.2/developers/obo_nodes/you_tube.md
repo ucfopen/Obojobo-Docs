@@ -1,17 +1,19 @@
 ---
 title: YouTube
 menus: chunks
-full_name: OboDraft.Chunks.YouTube
+full_name: ObojoboDraft.Chunks.YouTube
+class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
+
 A YouTube video
 
 ## Properties
 
 | Property | Required | Type | Description |
 |-
-| videoId | no | String | The YouTube ID of the video (example: `dQw4w9WgXcQ`)
+| videoId | Recommended | String | The YouTube ID of the video (example: `dQw4w9WgXcQ`)
 
 ## Supported Trigger Types
 

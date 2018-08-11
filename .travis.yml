@@ -1,0 +1,13 @@
+language: ruby
+cache: bundler
+install: bundle install
+
+script:
+  # Run the tests (checks links/etc)
+  # then build if that doesn't fail
+  - bundle exec rake test && bundle exec rake build
+  # check for changes in the docs directory
+  # add all changes in docs
+  - git add ./docs
+  # check for any different files in the cache
+  - git diff --cached --exit-code ./docs

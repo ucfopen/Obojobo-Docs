@@ -7,9 +7,9 @@ Range strings are used to briefly describe a range of values.
 
 ## Range String Syntax
 
-`( or [` + `Integer` + `,` + `Integer` + `) or ]`
+`( or [` + `Number` + `,` + `Number` + `) or ]`
 
-Where supported, you can use variables in place of Integers.
+Where supported, you can use variables in place of numbers.
 
 ## Examples
 

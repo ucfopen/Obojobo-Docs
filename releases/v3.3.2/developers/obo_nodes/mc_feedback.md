@@ -1,9 +1,11 @@
 ---
 title: MCAssessment > MCChoice > MCFeedback
 menus: chunks
-full_name: OboDraft.Chunks.MCFeedback
+full_name: ObojoboDraft.Chunks.MCAssessment.MCFeedback
+class: obo_node
 node_class: chunk
 ---
+
 This represents the contents of the feedback of a multiple choice answer choice. It is functionally identical to an {{ 'MCAnswer' | obo_node }}, but displays below a MCAssessment after the question has been answered
 
 ## Properties
@@ -18,7 +20,8 @@ None
 | onUnmount | Fired when a node is removed from the DOM
 
 ## Required Children
-{% assign chunks = (site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
+
+{% assign chunks = site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
 One or more of the following Chunks: {% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %}{% endfor %}.
 
 ## Variables Registered

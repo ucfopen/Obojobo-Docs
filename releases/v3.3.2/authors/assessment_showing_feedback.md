@@ -1,6 +1,6 @@
 ---
-title: Assesment Reviews & Question Feedback
-menus: authors_how_to
+title: Reviews & Question Feedback
+menus: authors_assessments_how_to
 ---
 
 By default after an Assessment Attempt is completed the student is shown which questions they got correct and incorrect, however they are not able to see the question choices, their responses or the correct answers. Additionally if any Assessment Questions have feedback or solutions these will not be displayed.
