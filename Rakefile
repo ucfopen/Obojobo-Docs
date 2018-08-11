@@ -9,7 +9,6 @@ task :dev do
   sh "bundle exec jekyll serve --livereload"
 end
 
-
 task :test do
   # build into a test directory that has the 'baseurl' encorperated
   sh "bundle exec jekyll build -d _test/Obojobo-Docs"
