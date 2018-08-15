@@ -10,12 +10,12 @@
   <title>IFrame - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Allows you to add an iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenereo for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://).Properties     ..." />
+  <meta name="description" content="Allows you to add an iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, ..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="IFrame - Obojobo Next Documentation" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/i_frame.html" />
-  <meta property="og:description" content="Allows you to add an iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenereo for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://).Properties     ..."
+  <meta property="og:url" content="http://localhost:4000/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/i_frame.html" />
+  <meta property="og:description" content="Allows you to add an iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, ..."
   />
   <meta name="twitter:card" content="summary" />
   <link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -333,7 +333,7 @@
                   <p>Allows you to add an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a> containing a webpage or wep app from elsewhere on the internet.</p>
 
 <blockquote>
-  <p>Note: Iframes are a complex security scenereo for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://).</p>
+  <p>Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, some sites can block being loaded in an iframe. Make sure you test your iframe to validate that it loads as expected.</p>
 </blockquote>
 
 <h2 id="properties">
@@ -350,64 +350,10 @@
   </thead>
   <tbody>
     <tr>
-      <td>type</td>
-      <td>no</td>
-      <td>String</td>
-      <td>Default: <code class="highlighter-rouge">media</code>. Sets the default behavior of the iframe to be more suitable for one of the allowed options: <code class="highlighter-rouge">media</code> or <code class="highlighter-rouge">webpage</code>.</td>
-    </tr>
-    <tr>
-      <td>newWindow</td>
-      <td>no</td>
-      <td>Boolean</td>
-      <td>Default: <code class="highlighter-rouge">false</code> unless <code class="highlighter-rouge">type</code> property is <code class="highlighter-rouge">webpage</code>.  Displays a link under the iframe that allows the viewer to open the src url in a new window.</td>
-    </tr>
-    <tr>
-      <td>border</td>
-      <td>no</td>
-      <td>Boolean</td>
-      <td>Default: <code class="highlighter-rouge">false</code> unless <code class="highlighter-rouge">type</code> property is <code class="highlighter-rouge">webpage</code>.  Displays a border around the iframe to help distinguish the content from the document.</td>
-    </tr>
-    <tr>
-      <td>fit</td>
-      <td>no</td>
-      <td>String</td>
-      <td>Default: <code class="highlighter-rouge">scale</code> unless <code class="highlighter-rouge">type</code> property is <code class="highlighter-rouge">webpage</code>, then default is <code class="highlighter-rouge">scroll</code>. Allowed values are <code class="highlighter-rouge">scale</code> and <code class="highlighter-rouge">scroll</code>.</td>
-    </tr>
-    <tr>
       <td>src</td>
-      <td>no</td>
+      <td>Recommended</td>
       <td>String</td>
-      <td>The url of the iframe content to display.</td>
-    </tr>
-    <tr>
-      <td>width</td>
-      <td>no</td>
-      <td>Integer</td>
-      <td>The width in pixels to display the iframe at full width.</td>
-    </tr>
-    <tr>
-      <td>height</td>
-      <td>no</td>
-      <td>Integer</td>
-      <td>The height in pixels to display the iframe at full width.</td>
-    </tr>
-    <tr>
-      <td>zoom</td>
-      <td>no</td>
-      <td>Intiger</td>
-      <td>Default: <code class="highlighter-rouge">1</code>. The scale factor to apply to the content. <code class="highlighter-rouge">1</code> is 100%, <code class="highlighter-rouge">1.5</code> is 150%.</td>
-    </tr>
-    <tr>
-      <td>newWindowSrc</td>
-      <td>no</td>
-      <td>String</td>
-      <td>Default: value of <code class="highlighter-rouge">src</code> property. An optional url to load when the user clicks the Open in a New Window button (if enabled).</td>
-    </tr>
-    <tr>
-      <td>autoload</td>
-      <td>no</td>
-      <td>Boolean</td>
-      <td>Default: <code class="highlighter-rouge">false</code>. Controls weather the content of the iframe is loaded when the page it’s contained in is shown or if the viewer must click to load the content.</td>
+      <td>The url of the iframe content to display. If the protocol is missing (<code class="highlighter-rouge">https://</code> or <code class="highlighter-rouge">http://</code>) then <code class="highlighter-rouge">//</code> will be automatically prepended, enforcing the same protocol that Obojobo is using.</td>
     </tr>
     <tr>
       <td>title</td>
@@ -416,11 +362,78 @@
       <td>Default: <code class="highlighter-rouge">src</code> value. The title to display above the iframe.  This value is also used for screen readers.</td>
     </tr>
     <tr>
+      <td>type</td>
+      <td>no</td>
+      <td>String</td>
+      <td>Default: <code class="highlighter-rouge">media</code>. Sets the default behavior of the iframe to be more suitable for one of the allowed options: <code class="highlighter-rouge">media</code> or <code class="highlighter-rouge">webpage</code>.</td>
+    </tr>
+    <tr>
+      <td>border</td>
+      <td>no</td>
+      <td>Boolean</td>
+      <td>Default: <code class="highlighter-rouge">false</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">media</code>, <code class="highlighter-rouge">true</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">webpage</code>.  Displays a border around the iframe to help distinguish the content from the document.</td>
+    </tr>
+    <tr>
+      <td>fit</td>
+      <td>no</td>
+      <td>String</td>
+      <td>Default: <code class="highlighter-rouge">scale</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">media</code>, <code class="highlighter-rouge">scroll</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">webpage</code>. Defines how the iframe will handle when constrained by a reduced amount of available space. Allowed values are <code class="highlighter-rouge">scale</code> and <code class="highlighter-rouge">scroll</code>. <code class="highlighter-rouge">scale</code> causes the width, height and contents of the iframe to scale down proportionally. This means the visible content of the iframe is the same at any size. <code class="highlighter-rouge">scroll</code> will keep the height the same but the width will be reduced. The content inside the iframe will remain the same size however less content will be visible without scrolling inside the iframe.</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>no</td>
+      <td>Integer</td>
+      <td>The width in pixels to display the iframe. If not specified then the iframe will be at full width.</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>no</td>
+      <td>Integer</td>
+      <td>The height in pixels to display the iframe. If not specified the iframe will be set to a default height.</td>
+    </tr>
+    <tr>
+      <td>initialZoom</td>
+      <td>no</td>
+      <td>Intiger</td>
+      <td>Default: <code class="highlighter-rouge">1</code>. The scale factor to apply to the content. <code class="highlighter-rouge">1</code> is 100%, <code class="highlighter-rouge">1.5</code> is 150%.</td>
+    </tr>
+    <tr>
+      <td>autoload</td>
+      <td>no</td>
+      <td>Boolean</td>
+      <td>Default: <code class="highlighter-rouge">false</code>. If <code class="highlighter-rouge">true</code> the iframe will be loaded when the page is loaded. If <code class="highlighter-rouge">false</code> then the iframe won’t be loaded until the user clicks on the iframe. The default of <code class="highlighter-rouge">false</code> is recommended to help with page load times.</td>
+    </tr>
+    <tr>
       <td>controls</td>
       <td>no</td>
       <td>String</td>
-      <td>Default: <code class="highlighter-rouge">reload</code> unless <code class="highlighter-rouge">type</code> property is <code class="highlighter-rouge">webpage</code>, then default is <code class="highlighter-rouge">zoom,reload</code>. A comma seperated list of controls from the available controls: <code class="highlighter-rouge">zoom</code> and <code class="highlighter-rouge">reload</code>
-</td>
+      <td>Default: <code class="highlighter-rouge">"reload"</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">media</code>, <code class="highlighter-rouge">"zoom,reload,new-window"</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">webpage</code>. A comma seperated list of controls from the available controls: <code class="highlighter-rouge">zoom</code>, <code class="highlighter-rouge">reload</code> and <code class="highlighter-rouge">new-window</code> (See below)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="options-for-controls">
+<a id="options-for-controls" class="anchor" href="#options-for-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options for controls:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>zoom</td>
+      <td>Displays zoom controls below the iframe allowing the user to increase or decrease the contents inside the iframe.</td>
+    </tr>
+    <tr>
+      <td>reload</td>
+      <td>Displays a button below the iframe to reload the iframe.</td>
+    </tr>
+    <tr>
+      <td>new-window</td>
+      <td>Displays a link under the iframe that allows the user to open the src url in a new window.</td>
     </tr>
   </tbody>
 </table>
@@ -494,7 +507,11 @@
 
       <nav class="onPageNav">
         <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
+<li class="toc-entry toc-h2"><a href="#properties">Properties</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#options-for-controls">Options for controls:</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>
