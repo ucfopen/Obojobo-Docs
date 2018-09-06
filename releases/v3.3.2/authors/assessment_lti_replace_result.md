@@ -22,7 +22,7 @@ Obojobo normally sends the [Overall Assessment Score](assessment_scoring.html#ov
 
 The {{ 'rubric' | obo_node }} attributes can be configured to conditionally send scores when they are above a value.
 
-Set the {{ 'rubric' | obo_node }} attribute `failingResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
+Set the {{ 'rubric' | obo_node }} attribute `failedResult="no-score"` to prevent any score below the value of `passingAttemptScore` from being sent to the LMS.
 
 This can be useful when the assignment in the LMS is used to prevent access to other parts of the course. By not sending a score back, the LMS will not unlock content that requires a passing score.
 
@@ -34,8 +34,8 @@ This can be useful when the assignment in the LMS is used to prevent access to o
       <rubric
         type="pass-fail"
         passingAttemptScore="75"
-        passingResult="$attempt_score"
-        failingResult="no-score"
+        passedResult="$attempt_score"
+        failedResult="no-score"
       />
 
       <!-- ... -->
@@ -59,8 +59,8 @@ In this example the highest failing attempt score will be sent.
       <rubric
         type="pass-fail"
         passingAttemptScore="75"
-        passingResult="$attempt_score"
-        failingResult="no-score"
+        passedResult="$attempt_score"
+        failedResult="no-score"
         unableToPassResult="$highest_attempt_score"
       />
 
@@ -85,8 +85,8 @@ ScoreAction Pages can be added for all three conditions:
       <rubric
         type="pass-fail"
         passingAttemptScore="75"
-        passingResult="$attempt_score"
-        failingResult="no-score"
+        passedResult="$attempt_score"
+        failedResult="no-score"
         unableToPassResult="$highest_attempt_score"
       />
 
@@ -110,7 +110,7 @@ How does the logic matches those three conditions?
 
 When failing with attempts remaining the `for="no-score"` is always matched.
 
-`passingAttemptScore` is set to 75, and the `passingResult` is set to the `$attempt_score` variable. This means in a passing condition, the score will be **75+**, matching `for="[75,100]"`.
+`passingAttemptScore` is set to 75, and the `passedResult` is set to the `$attempt_score` variable. This means in a passing condition, the score will be **75+**, matching `for="[75,100]"`.
 
 Failing with no attempts remaining won't match `for="no-score"` because the `unableToPassResult` attribute is set to a variable that will report a score. This means that when the student runs out of attempts, failing every time, the score will be recorded based on their highest attempt score. This score will be 0-75, so the `for="[0,75)"` condition is matched.
 

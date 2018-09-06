@@ -137,7 +137,7 @@ Assessment expects exactly two children in order:
   <QuestionBank choose="3" select="random">
     <!-- ... -->
   </QuestionBank>
-  <rubric type="pass-fail" passingAttemptScore="80" passingResult="$attempt_score" failingResult="0">
+  <rubric type="pass-fail" passingAttemptScore="80" passedResult="$attempt_score" failedResult="0">
     <mods>
       <mod attemptCondition="1" reward="5" />
     </mods>
