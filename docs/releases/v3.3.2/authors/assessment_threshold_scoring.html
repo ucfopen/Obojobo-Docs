@@ -10,12 +10,12 @@
   <title>Threshold Scoring - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Assessment Rubric’s &#39;pass-fail&#39; type can optionally be used to create a threshold type scoring system.For example, an assessment can require a score of 75% or higher to pass. When the passingAttemptScore is reached, the student’s score will be adjusted to the passingResult value.In this example, ..." />
+  <meta name="description" content="Assessment Rubric’s &#39;pass-fail&#39; type can optionally be used to create a threshold type scoring system.For example, an assessment can require a score of 75% or higher to pass. When the passingAttemptScore is reached, the student’s score will be adjusted to the passedResult value.In this example, w..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="Threshold Scoring - Obojobo Next Documentation" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/authors/assessment_threshold_scoring.html" />
-  <meta property="og:description" content="Assessment Rubric’s &#39;pass-fail&#39; type can optionally be used to create a threshold type scoring system.For example, an assessment can require a score of 75% or higher to pass. When the passingAttemptScore is reached, the student’s score will be adjusted to the passingResult value.In this example, ..."
+  <meta property="og:description" content="Assessment Rubric’s &#39;pass-fail&#39; type can optionally be used to create a threshold type scoring system.For example, an assessment can require a score of 75% or higher to pass. When the passingAttemptScore is reached, the student’s score will be adjusted to the passedResult value.In this example, w..."
   />
   <meta name="twitter:card" content="summary" />
   <link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -214,7 +214,7 @@
                 <span>
                   <p>Assessment Rubric’s <code class="highlighter-rouge">'pass-fail'</code> type can optionally be used to create a threshold type scoring system.</p>
 
-<p>For example, an assessment can require a score of 75% or higher to pass. When the <code class="highlighter-rouge">passingAttemptScore</code> is reached, the student’s score will be adjusted to the <code class="highlighter-rouge">passingResult</code> value.</p>
+<p>For example, an assessment can require a score of 75% or higher to pass. When the <code class="highlighter-rouge">passingAttemptScore</code> is reached, the student’s score will be adjusted to the <code class="highlighter-rouge">passedResult</code> value.</p>
 
 <p>In this example, when the student scores below 75%, the score will be adjusted to 0. When the student’s score is 75% or higher, the score will be adjusted to <code class="highlighter-rouge">100%</code>.</p>
 
@@ -226,8 +226,8 @@
       <span class="nt">&lt;rubric</span>
         <span class="na">type=</span><span class="s">"pass-fail"</span>
         <span class="na">passingAttemptScore=</span><span class="s">"75"</span>
-        <span class="na">passingResult=</span><span class="s">"100"</span>
-        <span class="na">failingResult=</span><span class="s">"0"</span>
+        <span class="na">passedResult=</span><span class="s">"100"</span>
+        <span class="na">failedResult=</span><span class="s">"0"</span>
       <span class="nt">/&gt;</span>
 
       <span class="c">&lt;!-- ... --&gt;</span>
@@ -244,8 +244,8 @@
       <span class="nt">&lt;rubric</span>
         <span class="na">type=</span><span class="s">"pass-fail"</span>
         <span class="na">passingAttemptScore=</span><span class="s">"75"</span>
-        <span class="na">passingResult=</span><span class="s">"100"</span>
-        <span class="na">failingResult=</span><span class="s">"0"</span>
+        <span class="na">passedResult=</span><span class="s">"100"</span>
+        <span class="na">failedResult=</span><span class="s">"0"</span>
       <span class="nt">/&gt;</span>
 
       <span class="nt">&lt;scoreActions&gt;</span>

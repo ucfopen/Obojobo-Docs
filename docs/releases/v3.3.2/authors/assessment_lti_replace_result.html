@@ -236,7 +236,7 @@
 
 <p>The <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> attributes can be configured to conditionally send scores when they are above a value.</p>
 
-<p>Set the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> attribute <code class="highlighter-rouge">failingResult="no-score"</code> to prevent any score below the value of <code class="highlighter-rouge">passingAttemptScore</code> from being sent to the LMS.</p>
+<p>Set the <em><a href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">rubric</a></em> attribute <code class="highlighter-rouge">failedResult="no-score"</code> to prevent any score below the value of <code class="highlighter-rouge">passingAttemptScore</code> from being sent to the LMS.</p>
 
 <p>This can be useful when the assignment in the LMS is used to prevent access to other parts of the course. By not sending a score back, the LMS will not unlock content that requires a passing score.</p>
 
@@ -247,8 +247,8 @@
       <span class="nt">&lt;rubric</span>
         <span class="na">type=</span><span class="s">"pass-fail"</span>
         <span class="na">passingAttemptScore=</span><span class="s">"75"</span>
-        <span class="na">passingResult=</span><span class="s">"$attempt_score"</span>
-        <span class="na">failingResult=</span><span class="s">"no-score"</span>
+        <span class="na">passedResult=</span><span class="s">"$attempt_score"</span>
+        <span class="na">failedResult=</span><span class="s">"no-score"</span>
       <span class="nt">/&gt;</span>
 
       <span class="c">&lt;!-- ... --&gt;</span>
@@ -272,8 +272,8 @@
       <span class="nt">&lt;rubric</span>
         <span class="na">type=</span><span class="s">"pass-fail"</span>
         <span class="na">passingAttemptScore=</span><span class="s">"75"</span>
-        <span class="na">passingResult=</span><span class="s">"$attempt_score"</span>
-        <span class="na">failingResult=</span><span class="s">"no-score"</span>
+        <span class="na">passedResult=</span><span class="s">"$attempt_score"</span>
+        <span class="na">failedResult=</span><span class="s">"no-score"</span>
         <span class="na">unableToPassResult=</span><span class="s">"$highest_attempt_score"</span>
       <span class="nt">/&gt;</span>
 
@@ -303,8 +303,8 @@
       <span class="nt">&lt;rubric</span>
         <span class="na">type=</span><span class="s">"pass-fail"</span>
         <span class="na">passingAttemptScore=</span><span class="s">"75"</span>
-        <span class="na">passingResult=</span><span class="s">"$attempt_score"</span>
-        <span class="na">failingResult=</span><span class="s">"no-score"</span>
+        <span class="na">passedResult=</span><span class="s">"$attempt_score"</span>
+        <span class="na">failedResult=</span><span class="s">"no-score"</span>
         <span class="na">unableToPassResult=</span><span class="s">"$highest_attempt_score"</span>
       <span class="nt">/&gt;</span>
 
@@ -328,7 +328,7 @@
 
 <p>When failing with attempts remaining the <code class="highlighter-rouge">for="no-score"</code> is always matched.</p>
 
-<p><code class="highlighter-rouge">passingAttemptScore</code> is set to 75, and the <code class="highlighter-rouge">passingResult</code> is set to the <code class="highlighter-rouge">$attempt_score</code> variable. This means in a passing condition, the score will be <strong>75+</strong>, matching <code class="highlighter-rouge">for="[75,100]"</code>.</p>
+<p><code class="highlighter-rouge">passingAttemptScore</code> is set to 75, and the <code class="highlighter-rouge">passedResult</code> is set to the <code class="highlighter-rouge">$attempt_score</code> variable. This means in a passing condition, the score will be <strong>75+</strong>, matching <code class="highlighter-rouge">for="[75,100]"</code>.</p>
 
 <p>Failing with no attempts remaining won’t match <code class="highlighter-rouge">for="no-score"</code> because the <code class="highlighter-rouge">unableToPassResult</code> attribute is set to a variable that will report a score. This means that when the student runs out of attempts, failing every time, the score will be recorded based on their highest attempt score. This score will be 0-75, so the <code class="highlighter-rouge">for="[0,75)"</code> condition is matched.</p>
 
