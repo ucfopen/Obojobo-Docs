@@ -8,7 +8,7 @@ The number of attempts used and attempts remaining are available using [Variable
 This example shows how to display it on a start attempt button using two assessment variables:
 
 - {% raw %}`{{assessment:attemptsRemaining}}`{% endraw %}
-- {% raw %}`{{assessment:attemptsTaken}}`{% endraw %}
+- {% raw %}`{{assessment:attemptsAmount}}`{% endraw %}
 
 > Note: {{ 'ActionButton' | obo_node }}'s `label` attribute does not support variables. Use of a textGroup is required.
 
@@ -42,7 +42,7 @@ This example shows how to display it on a start attempt button using two assessm
       <scoreActions>
         <scoreAction for="[0,100]">
           <Page>
-            <p>You have taken {% raw %}{{assessment:attemptsTaken}}{% endraw %} attempts.</p>
+            <p>You have {% raw %}{{assessment:attemptsRemaining}}{% endraw %} out of {% raw %}{{assessment:attemptsAmount}}{% endraw %} attempts remaining.</p>
             <ActionButton>
               <textGroup>
                 <t>Start Attempt ({% raw %}{{assessment:attemptsRemaining}}{% endraw %} remaining)</t>
