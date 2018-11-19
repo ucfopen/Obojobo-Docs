@@ -2,7 +2,6 @@
 title: IFrame
 menus: chunks
 full_name: OboDraft.Chunks.IFrame
-class: obo_node
 node_class: chunk
 can_be_in_a_question: yes
 ---
