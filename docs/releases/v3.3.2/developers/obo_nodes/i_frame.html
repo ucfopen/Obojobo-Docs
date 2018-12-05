@@ -10,12 +10,12 @@
   <title>IFrame - Obojobo Next Documentation</title>
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Allows you to add an iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, ..." />
+  <meta name="description" content="An iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, some sites can blo..." />
   <meta name="docsearch:language" content="en" />
   <meta property="og:title" content="IFrame - Obojobo Next Documentation" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/i_frame.html" />
-  <meta property="og:description" content="Allows you to add an iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, ..."
+  <meta property="og:description" content="An iframe containing a webpage or wep app from elsewhere on the internet.  Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, some sites can blo..."
   />
   <meta name="twitter:card" content="summary" />
   <link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -322,10 +322,10 @@
             <article>
               <div>
                 <span>
-                  <p>Allows you to add an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a> containing a webpage or wep app from elsewhere on the internet.</p>
+                  <p>An <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a> containing a webpage or wep app from elsewhere on the internet.</p>
 
 <blockquote>
-  <p>Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, some sites can block being loaded in an iframe. Make sure you test your iframe to validate that it loads as expected.</p>
+  <p>Note: Iframes are a complex security scenario for viewers of your module. If Obojobo is hosted on a secure domain (https://) the viewer’s browser will not load insecure web sites (http://). Additionally, some sites can block being loaded in an iframe. Make sure to test the iframe to validate that it loads as expected.</p>
 </blockquote>
 
 <h2 id="properties">
@@ -345,13 +345,13 @@
       <td>src</td>
       <td>Recommended</td>
       <td>String</td>
-      <td>The url of the iframe content to display. If the protocol is missing (<code class="highlighter-rouge">https://</code> or <code class="highlighter-rouge">http://</code>) then <code class="highlighter-rouge">//</code> will be automatically prepended, enforcing the same protocol that Obojobo is using.</td>
+      <td>The url of the iframe content to display. If the protocol is missing (<code class="highlighter-rouge">https://</code> or <code class="highlighter-rouge">http://</code>) then <code class="highlighter-rouge">//</code> will be automatically prepended, enforcing the same protocol that Obojobo is using. If Obojobo is hosted on a secure domain (<code class="highlighter-rouge">https://</code>) the viewer’s browser will not load insecure web sites (<code class="highlighter-rouge">http://</code>). Additionally, some sites can block being loaded in an iframe. Make sure to test the iframe to validate that it loads as expected.</td>
     </tr>
     <tr>
       <td>title</td>
       <td>Recommended</td>
       <td>String</td>
-      <td>Default: <code class="highlighter-rouge">src</code> value. The title to display above the iframe.  This value is also used for screen readers.</td>
+      <td>Default: <code class="highlighter-rouge">src</code> value. The title to display above the iframe. This value is also used for screen readers.</td>
     </tr>
     <tr>
       <td>type</td>
@@ -363,7 +363,7 @@
       <td>border</td>
       <td>no</td>
       <td>Boolean</td>
-      <td>Default: <code class="highlighter-rouge">false</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">media</code>, <code class="highlighter-rouge">true</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">webpage</code>.  Displays a border around the iframe to help distinguish the content from the document.</td>
+      <td>Default: <code class="highlighter-rouge">false</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">media</code>, <code class="highlighter-rouge">true</code> if <code class="highlighter-rouge">type</code> is <code class="highlighter-rouge">webpage</code>. Displays a border around the iframe to help distinguish the content from the document.</td>
     </tr>
     <tr>
       <td>fit</td>
@@ -386,7 +386,7 @@
     <tr>
       <td>initialZoom</td>
       <td>no</td>
-      <td>Intiger</td>
+      <td>Integer</td>
       <td>Default: <code class="highlighter-rouge">1</code>. The scale factor to apply to the content. <code class="highlighter-rouge">1</code> is 100%, <code class="highlighter-rouge">1.5</code> is 150%.</td>
     </tr>
     <tr>
@@ -475,7 +475,6 @@
 		</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpage"</span><span class="p">,</span><span class="w">
 		</span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ucf.edu"</span><span class="p">,</span><span class="w">
 		</span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"University of Central Florida Homepage"</span><span class="w">
-
 	</span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
