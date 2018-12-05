@@ -10,7 +10,7 @@ A series of one or more styles to apply to a block of text
 
 | Property | Required | Type | Description |
 |-
-| type | Required | String | Represents what type of styling to apply, must be one of the following:
+| type | Required | String | Represents what type of styling to apply. See the supported values in the table below.
 | start | Required | Integer | The index of the first character to style
 | end | Required | Integer | The index of the character where the style ends. All characters between `start` (inclusive) and `end` (exclusive) will be styled by `type`.
 | data | Required\* | Object | Only required for `a` and `sup` types. The expected value of this property is different depending on the value of `type`.
@@ -65,6 +65,12 @@ Learn more about using text in [Text Content Conventions](../text_content.html).
     "type": "i",
     "start": 41,
     "end": 46
+  },
+  {
+    "type": "sup",
+    "start": 15,
+    "end": 16,
+    "data": 1
   }
 ]
 ```
