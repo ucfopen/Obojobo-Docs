@@ -11,7 +11,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<!-- Global CSS -->
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
 
@@ -41,7 +41,15 @@
 				<div class="tagline">
 					<p>A new, clean educational content platform.</p>
 					<p>Designed to be enjoyable to use and enable real research.</p>
+
 				</div><!--//tagline-->
+				<div class="images">
+					<div class="siema">
+						<img alt="Screenshot of Obojobo Next content page." src="/Obojobo-Docs/assets/images/screenshot1.png">
+						<img alt="Screenshot of Obojobo Next question." src="/Obojobo-Docs/assets/images/screenshot2.png">
+						<img alt="Screenshot of Obojobo Next question with LaTeX math equations" src="/Obojobo-Docs/assets/images/screenshot3.png">
+					</div>
+				</div>
 			</div><!--//container-->
 		</header><!--//header-->
 
@@ -54,7 +62,7 @@
 								<span aria-hidden="true" class="icon icon_puzzle_alt"></span>
 							</div><!--//icon-holder-->
 							<h3 class="title">Authors</h3>
-							<p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+							<p class="intro">Learn more about authoring and creating modules using Obojobo.</p>
 							<a class="link" href="/Obojobo-Docs/releases/v3.3.2/authors/"><span></span></a>
 						</div><!--//item-inner-->
 					</div><!--//item-->
@@ -64,7 +72,7 @@
 								<span aria-hidden="true" class="icon icon_datareport_alt"></span>
 							</div><!--//icon-holder-->
 							<h3 class="title">Developers</h3>
-							<p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+							<p class="intro">Documentation for developing on the Obojobo platform.</p>
 							<a class="link" href="/Obojobo-Docs/releases/v3.3.2/developers/"><span></span></a>
 						</div><!--//item-inner-->
 					</div><!--//item-->
@@ -98,6 +106,11 @@
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
 	<script type="text/javascript" src="/Obojobo-Docs/assets/js/main.js"></script>
+	<script src="/Obojobo-Docs/assets/js/siema.min.js"></script>
+	<script>
+		var siema = new Siema({ loop:true });
+		setInterval(siema.next.bind(siema), 3000)
+	</script>
 
 </body>
 </html>

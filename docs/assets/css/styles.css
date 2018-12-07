@@ -1112,6 +1112,13 @@ select {
 .landing-page .tagline .text-highlight {
   color: #266f71;
 }
+.landing-page .images {
+  margin-top: 20px;
+}
+.landing-page .images img {
+  width: 600px;
+  border-radius: 3px;
+}
 .landing-page .fa-heart {
   color: #EA5395;
 }
