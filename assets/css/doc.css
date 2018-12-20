@@ -1,3 +1,29 @@
+.styled-select {
+	/*background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+	/* height: 29px; */
+	overflow: hidden;
+	width: 142px;
+	align-items: center;
+	border: 0;
+	color: #fff;
+	display: flex;
+	flex-flow: row nowrap;
+	height: 34px;
+	z-index: 10000;
+	margin-left: 10px;
+}
+.styled-select select {
+	color: white;
+	border: none;
+	background: #ffffff21;
+
+	font-size: 14px;
+	height: 29px;
+	padding: 5px; /* If you add too much padding here, the options won't show in IE */
+	width: 100%;
+	display: block;
+}
+
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
  *
@@ -733,10 +759,14 @@ blockquote {
 	background: #145bad;
 	color: #fff;
 	min-height: 50px;
-	padding: 8px 0;
+	/* padding: 8px 0; */
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
+}
+
+.headerWrapper {
+	padding: 8px 20px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -783,6 +813,37 @@ blockquote {
 	margin: 0;
 	margin-left: 10px;
 	text-decoration: underline;
+}
+
+.older-version-banner {
+	background: #e21a59;
+	color: #fff;
+	/* min-height: 50px; */
+	/* padding: 8px 0; */
+	height: 50px;
+	text-align: center;
+	width: 100%;
+}
+.older-version-banner > span {
+	vertical-align: middle;
+	margin-right: 2px;
+}
+.older-version-banner a {
+	display: inline;
+	/* background: #00000021; */
+	/* padding: 4px 10px; */
+	/* border-radius: 3px; */
+	/* border: 1px solid #ffffff21; */
+	/* box-shadow: 0 1px 0 #00000021; */
+	vertical-align: middle;
+	margin-left: 2px;
+	text-decoration: underline;
+	/* font-weight: bold; */
+}
+.older-version-banner .warning {
+	font-size: 23px;
+	margin-right: 5px;
+	vertical-align: middle;
 }
 
 @media (max-width: 480px) {
@@ -1337,6 +1398,10 @@ b {
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	width: 0;
+}
+
+.navPusher.is-older-version {
+	padding-top: 150px;
 }
 
 @media screen and (min-width: 1024px) {

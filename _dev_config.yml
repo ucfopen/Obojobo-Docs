@@ -1,0 +1,2 @@
+exclude:
+  - 'releases/v*'
