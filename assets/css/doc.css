@@ -1,6 +1,4 @@
 .styled-select {
-	/*background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
-	/* height: 29px; */
 	overflow: hidden;
 	width: 142px;
 	align-items: center;
@@ -823,10 +821,13 @@ blockquote {
 	height: 50px;
 	text-align: center;
 	width: 100%;
+	padding: 8px 20px;
+	margin-top: 50px;
 }
 .older-version-banner > span {
 	vertical-align: middle;
 	margin-right: 2px;
+	display: none;
 }
 .older-version-banner a {
 	display: inline;
@@ -844,6 +845,17 @@ blockquote {
 	font-size: 23px;
 	margin-right: 5px;
 	vertical-align: middle;
+	display: none;
+}
+
+@media only screen and (min-width: 736px) {
+	.older-version-banner > span {
+		display: inline;
+	}
+
+	.older-version-banner .warning {
+		display: inline;
+	}
 }
 
 @media (max-width: 480px) {
@@ -1412,10 +1424,17 @@ b {
 		min-height: calc(100vh - 50px);
 		padding-top: 50px;
 	}
+	.navPusher.is-older-version {
+		padding-top: 50px;
+	}
 
 	/* those make the footer sticky and work even in IE 11 */
 	.navPusher > :first-child {
 		flex-grow: 1;
+	}
+
+	.older-version-banner {
+		margin-top: 0;
 	}
 }
 
@@ -1592,6 +1611,10 @@ b {
 	.docMainWrapper .mainContainer {
 		min-width: 0; /* Hack needed for flex-basis to work properly. */
 	}
+
+	.is-older-version .docMainWrapper .mainContainer {
+		margin-top: 40px;
+	}
 }
 
 .edit-page-link {
@@ -1653,6 +1676,11 @@ b {
 		position: sticky;
 		overflow-y: scroll;
 		top: 50px; /* Height of navbar */
+	}
+
+	.is-older-version .docsNavContainer {
+		top: 100px;
+		height: calc(100vh - 100px);
 	}
 }
 
@@ -2053,6 +2081,10 @@ b {
 			z-index: 10;
 		}
 
+		.tocActive .is-older-version .onPageNav {
+			top: 198px;
+		}
+
 		.tocActive .navToggle,
 		.tocActive .navBreadcrumb h2 {
 			visibility: hidden;
@@ -2083,11 +2115,16 @@ b {
 			align-self: flex-start;
 			display: block;
 			flex: 0 0 240px;
-			max-height: calc(100vh - 90px); /* Sync with top */
+			max-height: calc(100vh - 100px); /* Sync with top */
 			overflow-y: auto;
 			position: -webkit-sticky;
 			position: sticky;
-			top: 90px;
+			top: 100px;
+		}
+
+		.is-older-version .onPageNav {
+			max-height: calc(100vh - 150px); /* Sync with top */
+			top: 150px;
 		}
 
 		.onPageNav > .toc-headings {
@@ -2292,6 +2329,7 @@ b {
 	padding-bottom: 2em;
 	padding-top: 2em;
 	position: relative;
+	margin-top: 30px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -2426,14 +2464,6 @@ footer.nav-footer {
 	margin: 0 0.5em;
 	vertical-align: middle;
 }
-
-/*.mainContainer .wrapper .post h3 {
-	font-size: 140%;
-	display: inline-block;
-	background-color: #afb3c7;
-	color: white;
-	padding: 0.1em 1em;
-}*/
 
 .mainContainer .wrapper ul li {
 	margin: 0 0 12px 0;

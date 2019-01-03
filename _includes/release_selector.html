@@ -1,0 +1,21 @@
+<div class="styled-select">
+	<select class="release-select">
+		{% for version in page.docs_versions %}
+		<option
+			{% if version == page.docs_version %}selected{% endif %}
+			value="{{ site.baseurl }}{{ page.docs_versions_page_urls[version] }}"
+			>{{ version }}{% if version == page.latest_docs_version %} (Latest){% endif %}</option
+		>
+		{% endfor %}
+	</select>
+</div>
+
+<script>
+	var releasesSelectEl = document.getElementsByTagName('select')[
+		document.getElementsByTagName('select').length - 1
+	]
+
+	releasesSelectEl.addEventListener('change', function(event) {
+		window.location = event.target.value
+	})
+</script>

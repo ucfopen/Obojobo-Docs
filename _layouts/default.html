@@ -14,7 +14,7 @@
 		<meta name="docsearch:language" content="en" />
 		<meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}" />
+		<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 		<meta
 			property="og:description"
 			content="{{ content | strip_html | strip_newlines | truncate: 300 | escape }}"
@@ -40,23 +40,23 @@
 						/>
 						<h2 class="headerTitleWithLogo">Obojobo</h2>
 					</a>
-					{% releases %}
+					{% include release_selector.html %}
 					<div class="navigationWrapper navigationSlider">
 						<nav class="slidingNav">
 							<ul class="nav-site nav-site-internal">
 								<!--
-									<li class="{% if current_menu == 'teachers' %}siteNavGroupActive{% endif %}"><a href="{{ site.baseurl }}/releases/{{ site.obo_version }}/teachers/" target="_self">Teachers</a></li>
+									<li class="{% if current_menu == 'teachers' %}siteNavGroupActive{% endif %}"><a href="{{ site.baseurl }}/releases/v{{ page.docs_version }}/teachers/" target="_self">Teachers</a></li>
 								-->
 								<li class="{% if current_menu == 'authors' %}siteNavGroupActive{% endif %}">
 									<a
-										href="{{ site.baseurl }}/releases/{{ site.obo_version }}/authors/"
+										href="{{ site.baseurl }}/releases/v{{ page.docs_version }}/authors/"
 										target="_self"
 										>Authors</a
 									>
 								</li>
 								<li class="{% if current_menu == 'developers' %}siteNavGroupActive{% endif %}">
 									<a
-										href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/"
+										href="{{ site.baseurl }}/releases/v{{ page.docs_version }}/developers/"
 										target="_self"
 										>Developers</a
 									>
@@ -69,13 +69,17 @@
 					</div>
 				</header>
 			</div>
-			<div class="older-version-banner wrapper headerWrapper">
+			{% if page.is_older_docs_version %}
+			<div class="older-version-banner">
 				<span><span class="warning">⚠️</span> This page is for an older version.</span>
-				<a href="#">&rarr; Go to the latest version</a>
+				<a href="{{ site.baseurl }}{{ page.latest_url }}"
+					>Go to the latest version ({{ page.latest_docs_version }})</a
+				>
 			</div>
+			{% endif %}
 		</div>
 
-		<div class="navPusher is-older-version">
+		<div class="navPusher {% if page.is_older_docs_version %}is-older-version{% endif %}">
 			<div class="docMainWrapper wrapper">
 				<div class="container docsNavContainer" id="docsNav">
 					<nav class="toc">
@@ -130,14 +134,18 @@
 								{% if page.class == "content_block" %} <strong>Class:</strong>
 								<em>
 									<a
-										href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/#content-blocks"
+										href="{{ site.baseurl }}/releases/v{{
+											page.docs_version
+										}}/developers/#content-blocks"
 										>Content Block</a
 									>
 								</em>
 								{% elsif page.class == "obo_node" %} <strong>Class:</strong>
 								<em>
 									<a
-										href="{{ site.baseurl }}/releases/{{ site.obo_version }}/developers/#{{ page.node_class }}"
+										href="{{ site.baseurl }}/releases/v{{ page.docs_version }}/developers/#{{
+											page.node_class
+										}}"
 										>{{ page.node_class | capitalize }} OboNode</a
 									>
 								</em>
