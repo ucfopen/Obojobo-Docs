@@ -8,7 +8,7 @@
 		<meta name="generator" content="Docusaurus" />
 		<meta
 			name="description"
-			content="The number of attempts used and attempts remaining are available using Variables.This example shows how to display it on a start attempt button using two assessment variables:  {{assessment:attemptsRemaining}}  {{assessment:attemptsTaken}}  Note: ActionButton’s label attribute does not support va..."
+			content="The number of attempts used and attempts remaining are available using Variables.This example shows how to display it on a start attempt button using two assessment variables:  {{assessment:attemptsRemaining}}  {{assessment:attemptsAmount}}  Note: ActionButton’s label attribute does not support v..."
 		/>
 		<meta name="docsearch:language" content="en" />
 		<meta property="og:title" content="Displaying Remaining Attempts - Obojobo Next Documentation" />
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/authors/assessment_displaying_attempts.html" />
 		<meta
 			property="og:description"
-			content="The number of attempts used and attempts remaining are available using Variables.This example shows how to display it on a start attempt button using two assessment variables:  {{assessment:attemptsRemaining}}  {{assessment:attemptsTaken}}  Note: ActionButton’s label attribute does not support va..."
+			content="The number of attempts used and attempts remaining are available using Variables.This example shows how to display it on a start attempt button using two assessment variables:  {{assessment:attemptsRemaining}}  {{assessment:attemptsAmount}}  Note: ActionButton’s label attribute does not support v..."
 		/>
 		<meta name="twitter:card" content="summary" />
 		<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -250,7 +250,7 @@
 
 <ul>
   <li><code class="highlighter-rouge">{{assessment:attemptsRemaining}}</code></li>
-  <li><code class="highlighter-rouge">{{assessment:attemptsTaken}}</code></li>
+  <li><code class="highlighter-rouge">{{assessment:attemptsAmount}}</code></li>
 </ul>
 
 <blockquote>
@@ -286,7 +286,7 @@
       <span class="nt">&lt;scoreActions&gt;</span>
         <span class="nt">&lt;scoreAction</span> <span class="na">for=</span><span class="s">"[0,100]"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;Page&gt;</span>
-            <span class="nt">&lt;p&gt;</span>You have taken {{assessment:attemptsTaken}} attempts.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>You have {{assessment:attemptsRemaining}} out of {{assessment:attemptsAmount}} attempts remaining.<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;ActionButton&gt;</span>
               <span class="nt">&lt;textGroup&gt;</span>
                 <span class="nt">&lt;t&gt;</span>Start Attempt ({{assessment:attemptsRemaining}} remaining)<span class="nt">&lt;/t&gt;</span>
