@@ -74,7 +74,7 @@ namespace :releases do
   task :delete, [:version] do |task, args|
     if args.version === nil
       puts "Usage:    bundle exec rake releases:delete[:version]"
-      puts "Example:  bundle exec rake releases:delete[3.3.0]"
+      puts "Example:  bundle exec rake releases:delete['3.3.0']"
       abort
     end
 
@@ -93,7 +93,7 @@ namespace :releases do
   task :new_version, [:new_version] do |task, args|
     if args.new_version === nil
       puts "Usage:    bundle exec rake releases:new_version[:version]"
-      puts "Example:  bundle exec rake releases:new_version[9.8.7]"
+      puts "Example:  bundle exec rake releases:new_version['9.8.7']"
       abort
     end
 
