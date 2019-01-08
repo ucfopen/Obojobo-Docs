@@ -50,7 +50,7 @@ Occurs when a new visit is created. The visit is not considered started until th
 
 ### *visit:start*
 
-Occurs after a visit is created, marking the visit as actually starting. Not all visits that are created are started.
+Occurs when a visit is started after its creation. Not all visits that are created are started.
 
 <dl>
 	<dt>Version</dt>
