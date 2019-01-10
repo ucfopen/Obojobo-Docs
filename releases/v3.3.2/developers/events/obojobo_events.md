@@ -12,7 +12,7 @@ They have a data dump csv full of events they are trying to make sense of in ord
 
 Obojobo Events are used to announce and record actions.
 They may be initiated on the server or client, and can be listened to in order to trigger other actions.
-In most cases, these events are useful for research data analysis. In which case, researchers are likely to receive a csv full of events. This document outlines what those events mean.
+These events can be useful for research and data analysis. This document provides details about the different events.
 
 Obojobo Event exports will have the following columns:
 
@@ -50,7 +50,7 @@ Occurs when a new visit is created. The visit is not considered started until th
 
 ### *visit:start*
 
-Occurs after a visit is created, marking the visit as actually starting. Not all visits that are created are started.
+Occurs when a visit is started after its creation. Not all visits that are created are started.
 
 <dl>
 	<dt>Version</dt>
