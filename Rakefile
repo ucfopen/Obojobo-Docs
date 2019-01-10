@@ -59,12 +59,18 @@ namespace :releases do
       abort
     end
 
+    release_versions = get_release_versions()
+    if release_versions.include?(args.new_version)
+      puts "Release #{args.new_version} already exists."
+      abort
+    end
+
     source_dir = "./releases/v#{args.source_version}"
 
     if(!File.directory?(source_dir))
       puts "No release found at '#{source_dir}'"
       puts "Must be one of:"
-      puts get_release_versions()
+      puts release_versions
       abort
     end
 
