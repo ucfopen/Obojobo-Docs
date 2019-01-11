@@ -757,7 +757,6 @@ blockquote {
 	background: #145bad;
 	color: #fff;
 	min-height: 50px;
-	/* padding: 8px 0; */
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
@@ -1627,28 +1626,12 @@ b {
 /* End of Docs Main */
 
 /* Start of Docs Navigation */
-.docs-prevnext {
-	margin: 20px 0;
-}
-
-.docs-prevnext:after {
-	clear: both;
-	content: ' ';
-	display: table; /* clearfix */
-}
-
 .docs-next {
 	float: right;
 }
 
 .docs-prev {
 	float: left;
-}
-
-@media only screen and (max-width: 735px) {
-	.docs-prevnext {
-		height: 40px;
-	}
 }
 /* End of Docs Navigation */
 

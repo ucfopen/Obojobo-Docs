@@ -43,11 +43,11 @@ Obojobo-Docs/
 - Run `bundle exec rake dev`
 - Go to http://127.0.0.1:4000/Obojobo-Docs/ in your browser
 
-Updating the files in the `./releases` directory should auto-update in your browser.
+The files in the `./releases` directory will auto-update in your browser when they are modified.
 
 Use the version selector drop-down on a documentation page to switch between versions. Note that this selector is only aware of the list of versions in `./releases` and may result in a 404 if the current file does not exist in the newly selected version.
 
-> Note regarding `latest`: The first time the `dev` command is run the `./releases/latest/` directory will be updated however it will not be ran again afterwards. You'll need to re-run this command (or run `bundle exec rake releases:dev_update_latest`) if you need this directory updated.
+> Note regarding `latest`: The first time the `dev` command is run the `./releases/latest/` directory will be updated. You'll need to re-run this command (or run `bundle exec rake releases:dev_update_latest`) if you need to update the `./releases/latest` directory.
 
 ## Creating a new version
 
