@@ -1,3 +1,27 @@
+.styled-select {
+	overflow: hidden;
+	width: 142px;
+	align-items: center;
+	border: 0;
+	color: #fff;
+	display: flex;
+	flex-flow: row nowrap;
+	height: 34px;
+	z-index: 10000;
+	margin-left: 10px;
+}
+.styled-select select {
+	color: white;
+	border: none;
+	background: #ffffff21;
+
+	font-size: 14px;
+	height: 29px;
+	padding: 5px; /* If you add too much padding here, the options won't show in IE */
+	width: 100%;
+	display: block;
+}
+
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
  *
@@ -733,10 +757,13 @@ blockquote {
 	background: #145bad;
 	color: #fff;
 	min-height: 50px;
-	padding: 8px 0;
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
+}
+
+.headerWrapper {
+	padding: 8px 20px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -783,6 +810,46 @@ blockquote {
 	margin: 0;
 	margin-left: 10px;
 	text-decoration: underline;
+}
+
+.older-version-banner {
+	background: #e21a59;
+	color: #fff;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	padding: 8px 20px;
+	margin-top: 50px;
+}
+
+.older-version-banner > span {
+	vertical-align: middle;
+	margin-right: 2px;
+	display: none;
+}
+
+.older-version-banner a {
+	display: inline;
+	vertical-align: middle;
+	margin-left: 2px;
+	text-decoration: underline;
+}
+
+.older-version-banner .warning {
+	font-size: 23px;
+	margin-right: 5px;
+	vertical-align: middle;
+	display: none;
+}
+
+@media only screen and (min-width: 736px) {
+	.older-version-banner > span {
+		display: inline;
+	}
+
+	.older-version-banner .warning {
+		display: inline;
+	}
 }
 
 @media (max-width: 480px) {
@@ -1339,6 +1406,10 @@ b {
 	width: 0;
 }
 
+.navPusher.is-older-version {
+	padding-top: 150px;
+}
+
 @media screen and (min-width: 1024px) {
 	.navPusher {
 		display: flex;
@@ -1347,10 +1418,17 @@ b {
 		min-height: calc(100vh - 50px);
 		padding-top: 50px;
 	}
+	.navPusher.is-older-version {
+		padding-top: 50px;
+	}
 
 	/* those make the footer sticky and work even in IE 11 */
 	.navPusher > :first-child {
 		flex-grow: 1;
+	}
+
+	.older-version-banner {
+		margin-top: 0;
 	}
 }
 
@@ -1527,6 +1605,10 @@ b {
 	.docMainWrapper .mainContainer {
 		min-width: 0; /* Hack needed for flex-basis to work properly. */
 	}
+
+	.is-older-version .docMainWrapper .mainContainer {
+		margin-top: 40px;
+	}
 }
 
 .edit-page-link {
@@ -1544,28 +1626,12 @@ b {
 /* End of Docs Main */
 
 /* Start of Docs Navigation */
-.docs-prevnext {
-	margin: 20px 0;
-}
-
-.docs-prevnext:after {
-	clear: both;
-	content: ' ';
-	display: table; /* clearfix */
-}
-
 .docs-next {
 	float: right;
 }
 
 .docs-prev {
 	float: left;
-}
-
-@media only screen and (max-width: 735px) {
-	.docs-prevnext {
-		height: 40px;
-	}
 }
 /* End of Docs Navigation */
 
@@ -1588,6 +1654,11 @@ b {
 		position: sticky;
 		overflow-y: scroll;
 		top: 50px; /* Height of navbar */
+	}
+
+	.is-older-version .docsNavContainer {
+		top: 100px;
+		height: calc(100vh - 100px);
 	}
 }
 
@@ -1988,6 +2059,10 @@ b {
 			z-index: 10;
 		}
 
+		.tocActive .is-older-version .onPageNav {
+			top: 198px;
+		}
+
 		.tocActive .navToggle,
 		.tocActive .navBreadcrumb h2 {
 			visibility: hidden;
@@ -2018,11 +2093,16 @@ b {
 			align-self: flex-start;
 			display: block;
 			flex: 0 0 240px;
-			max-height: calc(100vh - 90px); /* Sync with top */
+			max-height: calc(100vh - 100px); /* Sync with top */
 			overflow-y: auto;
 			position: -webkit-sticky;
 			position: sticky;
-			top: 90px;
+			top: 100px;
+		}
+
+		.is-older-version .onPageNav {
+			max-height: calc(100vh - 150px); /* Sync with top */
+			top: 150px;
 		}
 
 		.onPageNav > .toc-headings {
@@ -2227,6 +2307,7 @@ b {
 	padding-bottom: 2em;
 	padding-top: 2em;
 	position: relative;
+	margin-top: 30px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -2361,14 +2442,6 @@ footer.nav-footer {
 	margin: 0 0.5em;
 	vertical-align: middle;
 }
-
-/*.mainContainer .wrapper .post h3 {
-	font-size: 140%;
-	display: inline-block;
-	background-color: #afb3c7;
-	color: white;
-	padding: 0.1em 1em;
-}*/
 
 .mainContainer .wrapper ul li {
 	margin: 0 0 12px 0;
