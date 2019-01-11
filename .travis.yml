@@ -9,5 +9,5 @@ script:
   # check for changes in the docs directory
   # add all changes in docs
   - git add ./docs
-  # check for any different files in the cache
-  - git diff --cached --exit-code ./docs
+  # check for any different files in the cache (exclude redirects.json which can cause a non-zero exit code)
+  - git diff -- . ':(exclude)docs/redirects.json' --cached --exit-code ./docs/

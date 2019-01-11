@@ -1,331 +1,359 @@
-<!DOCTYPE html>
-
-
-
+<!DOCTYPE html>   
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Obojobo Event Reference - Obojobo Next Documentation</title>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content="Docusaurus" />
+		<meta
+			name="description"
+			content="Obojobo Events are used to announce and record actions.They may be initiated on the server or client, and can be listened to in order to trigger other actions.These events can be useful for research and data analysis. This document provides details about the different events.Obojobo Event exports..."
+		/>
+		<meta name="docsearch:language" content="en" />
+		<meta property="og:title" content="Obojobo Event Reference - Obojobo Next Documentation" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/developers/events/obojobo_events.html" />
+		<meta
+			property="og:description"
+			content="Obojobo Events are used to announce and record actions.They may be initiated on the server or client, and can be listened to in order to trigger other actions.These events can be useful for research and data analysis. This document provides details about the different events.Obojobo Event exports..."
+		/>
+		<meta name="twitter:card" content="summary" />
+		<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
+		<link
+			rel="stylesheet"
+			href="//cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css"
+		/>
+		<link rel="stylesheet" href="/Obojobo-Docs/assets/css/doc.css" />
+	</head>
 
-<head>
-  <meta charSet="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Obojobo Event Reference - Obojobo Next Documentation</title>
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content="Docusaurus" />
-  <meta name="description" content="Obojobo Events are used to announce and record actions.They may be initiated on the server or client, and can be listened to in order to trigger other actions.In most cases, these events are useful for research data analysis.  In which case, researchers are likely to receive a csv full of events...." />
-  <meta name="docsearch:language" content="en" />
-  <meta property="og:title" content="Obojobo Event Reference - Obojobo Next Documentation" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/developers/events/obojobo_events.html" />
-  <meta property="og:description" content="Obojobo Events are used to announce and record actions.They may be initiated on the server or client, and can be listened to in order to trigger other actions.In most cases, these events are useful for research data analysis.  In which case, researchers are likely to receive a csv full of events...."
-  />
-  <meta name="twitter:card" content="summary" />
-  <link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css">
-  <link rel="stylesheet" href="/Obojobo-Docs/assets/css/doc.css" />
-</head>
+	<body class="sideNavVisible separateOnPageNav">
+		<div class="fixedHeaderContainer">
+			<div class="headerWrapper wrapper">
+				<header>
+					<a href="/Obojobo-Docs/">
+						<img
+							class="logo"
+							src="/Obojobo-Docs/assets/images/obojobo_white.svg"
+							alt="Obojobo"
+						/>
+						<h2 class="headerTitleWithLogo">Obojobo</h2>
+					</a>
+					<div class="styled-select">
+	<select class="release-select">
+		
+		<option
+			selected
+			value="/Obojobo-Docs/releases/v3.3.2/developers/events/obojobo_events.html"
+			>3.3.2 (Latest)</option
+		>
+		
+	</select>
+</div>
 
-<body class="sideNavVisible separateOnPageNav">
-  <div class="fixedHeaderContainer">
-    <div class="headerWrapper wrapper">
-      <header>
-        <a href="/Obojobo-Docs/">
-          <img class="logo" src="/Obojobo-Docs/assets/images/obojobo_white.svg" alt="Obojobo" />
-          <h2 class="headerTitleWithLogo">Obojobo</h2>
-        </a>
-        <div class="navigationWrapper navigationSlider">
+<script>
+	var releasesSelectEl = document.getElementsByTagName('select')[
+		document.getElementsByTagName('select').length - 1
+	]
 
-          <nav class="slidingNav">
-            <ul class="nav-site nav-site-internal">
-              <!-- <li class=""><a href="/Obojobo-Docs/releases/v3.3.2/teachers/" target="_self">Teachers</a></li> -->
-              <li class="">
-                <a href="/Obojobo-Docs/releases/v3.3.2/authors/" target="_self">Authors</a>
-              </li>
-              <li class="siteNavGroupActive">
-                <a href="/Obojobo-Docs/releases/v3.3.2/developers/" target="_self">Developers</a>
-              </li>
-              <li class="">
-                <a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a>
-              </li>
-            </ul>
-          </nav>
+	releasesSelectEl.addEventListener('change', function(event) {
+		window.location = event.target.value
+	})
+</script>
 
-        </div>
-      </header>
-    </div>
-  </div>
-  <div class="navPusher">
-    <div class="docMainWrapper wrapper">
-      <div class="container docsNavContainer" id="docsNav">
-        <nav class="toc">
-          <div class="toggleNav">
-            <section class="navWrapper wrapper">
-              <div class="navBreadcrumb wrapper">
-                <div class="navToggle" id="navToggler">
-                  <i></i>
-                </div>
-                <h2>
-                  <i>›</i>
-                  <span>Developers Section Topics</span>
-                </h2>
-                <div class="tocToggler" id="tocToggler">
-                  <i class="icon-toc"></i>
-                </div>
-              </div>
-              <div class="navGroups">
-                
-  
-    
+					<div class="navigationWrapper navigationSlider">
+						<nav class="slidingNav">
+							<ul class="nav-site nav-site-internal">
+								<li class="">
+									<a
+										href="/Obojobo-Docs/releases/v3.3.2/authors/"
+										target="_self"
+										>Authors</a
+									>
+								</li>
+								<li class="siteNavGroupActive">
+									<a
+										href="/Obojobo-Docs/releases/v3.3.2/developers/"
+										target="_self"
+										>Developers</a
+									>
+								</li>
+								<li class="">
+									<a href="https://github.com/ucfopen/Obojobo" target="_self">GitHub</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+			</div>
+			
+		</div>
 
-    <div class="navGroup">
-      <h3 class="navGroupCategoryTitle">Getting Started</h3>
-      <ul>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/">OboNode Structure</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/triggers_and_actions.html">Triggers and Actions</a>
-        </li>
-        
-      </ul>
-    </div>
+		<div class="navPusher ">
+			<div class="docMainWrapper wrapper">
+				<div class="container docsNavContainer" id="docsNav">
+					<nav class="toc">
+						<div class="toggleNav">
+							<section class="navWrapper wrapper">
+								<div class="navBreadcrumb wrapper">
+									<div class="navToggle" id="navToggler"><i></i></div>
+									<h2>
+										<i>›</i> <span>Developers Section Topics</span>
+									</h2>
+									<div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div>
+								</div>
+								<div class="navGroups">    
 
-  
-    
+<div class="navGroup">
+	<h3 class="navGroupCategoryTitle">Getting Started</h3>
+	<ul>
+		 
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/">OboNode Structure</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/text_content.html">Text Content Conventions</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/triggers_and_actions.html">Triggers and Actions</a>
+		</li>
+		 
+	</ul>
+</div>
 
-    <div class="navGroup">
-      <h3 class="navGroupCategoryTitle">Misc Dev Topics</h3>
-      <ul>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/glossary.html">Obojobo Glossary</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/question_selection_algorithm.html">Question Selection Algorithm</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/range_strings.html">Range Strings</a>
-        </li>
-        
-      </ul>
-    </div>
+ 
 
-  
-    
+<div class="navGroup">
+	<h3 class="navGroupCategoryTitle">Misc Dev Topics</h3>
+	<ul>
+		 
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/glossary.html">Obojobo Glossary</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/question_selection_algorithm.html">Question Selection Algorithm</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/range_strings.html">Range Strings</a>
+		</li>
+		 
+	</ul>
+</div>
 
-    <div class="navGroup">
-      <h3 class="navGroupCategoryTitle">Events Reference</h3>
-      <ul>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/events/caliper_events.html">Caliper Event Reference</a>
-        </li>
-        
-        <li class="navListItem navListItemActive">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/events/obojobo_events.html">Obojobo Event Reference</a>
-        </li>
-        
-      </ul>
-    </div>
+ 
 
-  
-    
+<div class="navGroup">
+	<h3 class="navGroupCategoryTitle">Events Reference</h3>
+	<ul>
+		 
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/events/caliper_events.html">Caliper Event Reference</a>
+		</li>
+		  
+		<li class="navListItem navListItemActive">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/events/obojobo_events.html">Obojobo Event Reference</a>
+		</li>
+		 
+	</ul>
+</div>
 
-    <div class="navGroup">
-      <h3 class="navGroupCategoryTitle">OboNode & Content Block Reference</h3>
-      <ul>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">Assessment > rubric</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">Assessment > rubric > mod</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment > scoreAction</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/break.html">Break</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/code.html">Code</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/content.html">Content</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/html.html">HTML</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list.html">List</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_style.html">List > listStyle</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/math_equation.html">MathEquation</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/module.html">Module</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html">Question</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text.html">Text</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">trigger > action</a>
-        </li>
-        
-        <li class="navListItem">
-          <a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/you_tube.html">YouTube</a>
-        </li>
-        
-      </ul>
-    </div>
+ 
 
-  
+<div class="navGroup">
+	<h3 class="navGroupCategoryTitle">OboNode & Content Block Reference</h3>
+	<ul>
+		 
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action_button.html">ActionButton</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/assessment.html">Assessment</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/rubric.html">Assessment > rubric</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mod.html">Assessment > rubric > mod</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/score_action.html">Assessment > scoreAction</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/break.html">Break</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/code.html">Code</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/content.html">Content</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/figure.html">Figure</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/heading.html">Heading</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/html.html">HTML</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list.html">List</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/list_style.html">List > listStyle</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/indent.html">List > listStyle > indent</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/math_equation.html">MathEquation</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_assessment.html">MCAssessment</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_choice.html">MCAssessment > MCChoice</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_answer.html">MCAssessment > MCChoice > MCAnswer</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/mc_feedback.html">MCAssessment > MCChoice > MCFeedback</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/module.html">Module</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/page.html">Page</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question.html">Question</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/question_bank.html">QuestionBank</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/table.html">Table</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/grid_text_group.html">Table > gridTextGroup</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text.html">Text</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_group.html">textGroup</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/text_item.html">textGroup > textItem</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/styleable_text.html">textGroup > textItem > styleableText</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html">textGroup > textItem > styleableText > styleList</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/trigger.html">trigger</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/action.html">trigger > action</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/you_tube.html">YouTube</a>
+		</li>
+		 
+	</ul>
+</div>
 
+ 
+</div>
+							</section>
+						</div>
+						<script>
+							document.addEventListener('DOMContentLoaded', function() {
+								createToggler('#navToggler', '#docsNav', 'docsSliderActive')
+								createToggler('#tocToggler', 'body', 'tocActive')
 
-              </div>
-            </section>
-          </div>
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
-              createToggler('#tocToggler', 'body', 'tocActive');
+								const headings = document.querySelector('.toc-headings')
+								headings &&
+									headings.addEventListener(
+										'click',
+										function(event) {
+											if (event.target.tagName === 'A') {
+												document.body.classList.remove('tocActive')
+											}
+										},
+										false
+									)
 
-              const headings = document.querySelector('.toc-headings');
-              headings && headings.addEventListener('click', function (event) {
-                if (event.target.tagName === 'A') {
-                  document.body.classList.remove('tocActive');
-                }
-              }, false);
+								function createToggler(togglerSelector, targetSelector, className) {
+									var toggler = document.querySelector(togglerSelector)
+									var target = document.querySelector(targetSelector)
 
-              function createToggler(togglerSelector, targetSelector, className) {
-                var toggler = document.querySelector(togglerSelector);
-                var target = document.querySelector(targetSelector);
+									toggler.onclick = function(event) {
+										event.preventDefault()
 
-                toggler.onclick = function (event) {
-                  event.preventDefault();
-
-                  target.classList.toggle(className);
-                };
-              }
-            });
-          </script>
-        </nav>
-      </div>
-      <div class="container mainContainer">
-        <div class="wrapper">
-          <div class="post">
-            <header class="postHeader">
-              <h1 class="postHeaderTitle">Obojobo Event Reference</h1>
-              
-            </header>
-            <article>
-              <div>
-                <span>
-                  <!-- Writing this document:
+										target.classList.toggle(className)
+									}
+								}
+							})
+						</script>
+					</nav>
+				</div>
+				<div class="container mainContainer">
+					<div class="wrapper">
+						<div class="post">
+							<header class="postHeader">
+								<h1 class="postHeaderTitle">Obojobo Event Reference</h1>
+								
+							</header>
+							<article>
+								<div>
+									<span> <!-- Writing this document:
 
 This is for people who don't have the ability/time to glean this info directly from the source code.
 They have a data dump csv full of events they are trying to make sense of in order to build a report. -->
 
 <p>Obojobo Events are used to announce and record actions.
 They may be initiated on the server or client, and can be listened to in order to trigger other actions.
-In most cases, these events are useful for research data analysis.  In which case, researchers are likely to receive a csv full of events. This document outlines what those events mean.</p>
+These events can be useful for research and data analysis. This document provides details about the different events.</p>
 
 <p>Obojobo Event exports will have the following columns:</p>
 
@@ -420,7 +448,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 <a id="visitstart" class="anchor" href="#visitstart" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>visit:start</em>
 </h3>
 
-<p>Occurs after a visit is created, marking the visit as actually starting.  Not all visits that are created are started.</p>
+<p>Occurs when a visit is started after its creation. Not all visits that are created are started.</p>
 
 <dl>
 	<dt>Version</dt>
@@ -626,6 +654,50 @@ In most cases, these events are useful for research data analysis.  In which cas
   </thead>
   <tbody>
     <tr>
+      <td>id</td>
+      <td>A generated UUID to represent this score</td>
+    </tr>
+    <tr>
+      <td>score</td>
+      <td>The score value (0-100)</td>
+    </tr>
+    <tr>
+      <td>itemId</td>
+      <td>The id of the item that was scored</td>
+    </tr>
+    <tr>
+      <td>context</td>
+      <td>The context when this score was set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="questionscoreclear">
+<a id="questionscoreclear" class="anchor" href="#questionscoreclear" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:scoreClear</em>
+</h3>
+
+<p>Occurs when the score for a question was reset.</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="properties-9">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>The UUID to the score that was cleared. This UUID was generated by a previous <em>question:scoreSet</em> event for this question.</td>
+    </tr>
+    <tr>
       <td>score</td>
       <td>The score value (0-100)</td>
     </tr>
@@ -651,7 +723,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-9">Properties</h4>
+<h4 id="properties-10">Properties</h4>
 
 <table>
   <thead>
@@ -679,7 +751,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="properties-10">Properties</h4>
+<h4 id="properties-11">Properties</h4>
 
 <table>
   <thead>
@@ -712,7 +784,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-11">Properties</h4>
+<h4 id="properties-12">Properties</h4>
 
 <table>
   <thead>
@@ -740,7 +812,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-12">Properties</h4>
+<h4 id="properties-13">Properties</h4>
 
 <table>
   <thead>
@@ -768,7 +840,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>2.1.0</dd>
 </dl>
 
-<h4 id="properties-13">Properties</h4>
+<h4 id="properties-14">Properties</h4>
 
 <table>
   <thead>
@@ -816,7 +888,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-14">Properties</h4>
+<h4 id="properties-15">Properties</h4>
 
 <table>
   <thead>
@@ -844,7 +916,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-15">Properties</h4>
+<h4 id="properties-16">Properties</h4>
 
 <table>
   <thead>
@@ -861,43 +933,14 @@ In most cases, these events are useful for research data analysis.  In which cas
   </tbody>
 </table>
 
-<h3 id="questionattemptstart">
-<a id="questionattemptstart" class="anchor" href="#questionattemptstart" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:attemptStart</em>
+<h2 id="assessment">
+<a id="assessment" class="anchor" href="#assessment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assessment</h2>
+
+<h3 id="assessmentattemptstart">
+<a id="assessmentattemptstart" class="anchor" href="#assessmentattemptstart" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>assessment:attemptStart</em>
 </h3>
 
 <p>Occurs when an assessment attempt has started.</p>
-
-<dl>
-	<dt>Version</dt>
-	<dd>1.1.0</dd>
-</dl>
-
-<h4 id="properties-16">Properties</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>attemptId</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>attemptCount</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="questionattemptend">
-<a id="questionattemptend" class="anchor" href="#questionattemptend" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:attemptEnd</em>
-</h3>
-
-<p>Occurs when an assessment attempt has ended.</p>
 
 <dl>
 	<dt>Version</dt>
@@ -925,8 +968,40 @@ In most cases, these events are useful for research data analysis.  In which cas
   </tbody>
 </table>
 
-<h3 id="questionattemptscored">
-<a id="questionattemptscored" class="anchor" href="#questionattemptscored" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:attemptScored</em>
+<h3 id="assessmentattemptend">
+<a id="assessmentattemptend" class="anchor" href="#assessmentattemptend" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>assessment:attemptEnd</em>
+</h3>
+
+<p>Occurs when an assessment attempt has ended.</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.1.0</dd>
+</dl>
+
+<h4 id="properties-18">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>attemptId</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>attemptCount</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="assessmentattemptscored">
+<a id="assessmentattemptscored" class="anchor" href="#assessmentattemptscored" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>assessment:attemptScored</em>
 </h3>
 
 <p>Occurs when an assessment attempt has been scored.</p>
@@ -936,7 +1011,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 	<dd>2.0.0</dd>
 </dl>
 
-<h4 id="properties-18">Properties</h4>
+<h4 id="properties-19">Properties</h4>
 
 <table>
   <thead>
@@ -1017,46 +1092,6 @@ In most cases, these events are useful for research data analysis.  In which cas
     <tr>
       <td>scoreDetails.assessmentModdedScore</td>
       <td>The final assessment score after rewards are applied</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="questionscoreclear">
-<a id="questionscoreclear" class="anchor" href="#questionscoreclear" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:scoreClear</em>
-</h3>
-
-<p>Occurs when the score for a question was reset.</p>
-
-<dl>
-	<dt>Version</dt>
-	<dd>1.0.0</dd>
-</dl>
-
-<h4 id="properties-19">Properties</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>A generated UUID to represent this score</td>
-    </tr>
-    <tr>
-      <td>score</td>
-      <td>The score value (0-100)</td>
-    </tr>
-    <tr>
-      <td>itemId</td>
-      <td>The id of the item that was scored</td>
-    </tr>
-    <tr>
-      <td>context</td>
-      <td>The context when this score was set</td>
     </tr>
   </tbody>
 </table>
@@ -1515,20 +1550,14 @@ In most cases, these events are useful for research data analysis.  In which cas
     </tr>
   </tbody>
 </table>
+ </span>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
 
-                </span>
-              </div>
-            </article>
-          </div>
-          <div class="docs-prevnext">
-            <!-- <a class="docs-prev button" href="/docs/assessment_locking_navigation.html">← Locking Navigation</a> -->
-            <!-- <a class="docs-next button" href="/docs/assessment_displaying_attempts.html">Displaying Remaining Attempts →</a> -->
-          </div>
-        </div>
-      </div>
-
-      <nav class="onPageNav">
-        <ul class="section-nav">
+				<nav class="onPageNav"><ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#visit">Visit</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#visitcreate">visit:create</a></li>
@@ -1548,6 +1577,7 @@ In most cases, these events are useful for research data analysis.  In which cas
 <li class="toc-entry toc-h2"><a href="#question">Question</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#questionscoreset">question:scoreSet</a></li>
+<li class="toc-entry toc-h3"><a href="#questionscoreclear">question:scoreClear</a></li>
 <li class="toc-entry toc-h3"><a href="#questionshowexplanation">question:showExplanation</a></li>
 <li class="toc-entry toc-h3"><a href="#questionhideexplanation">question:hideExplanation</a></li>
 <li class="toc-entry toc-h3"><a href="#questioncheckanswer">question:checkAnswer</a></li>
@@ -1555,10 +1585,13 @@ In most cases, these events are useful for research data analysis.  In which cas
 <li class="toc-entry toc-h3"><a href="#questionsetresponse">question:setResponse</a></li>
 <li class="toc-entry toc-h3"><a href="#questionview">question:view</a></li>
 <li class="toc-entry toc-h3"><a href="#questionhide">question:hide</a></li>
-<li class="toc-entry toc-h3"><a href="#questionattemptstart">question:attemptStart</a></li>
-<li class="toc-entry toc-h3"><a href="#questionattemptend">question:attemptEnd</a></li>
-<li class="toc-entry toc-h3"><a href="#questionattemptscored">question:attemptScored</a></li>
-<li class="toc-entry toc-h3"><a href="#questionscoreclear">question:scoreClear</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#assessment">Assessment</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#assessmentattemptstart">assessment:attemptStart</a></li>
+<li class="toc-entry toc-h3"><a href="#assessmentattemptend">assessment:attemptEnd</a></li>
+<li class="toc-entry toc-h3"><a href="#assessmentattemptscored">assessment:attemptScored</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#navigation">Navigation</a>
@@ -1587,23 +1620,25 @@ In most cases, these events are useful for research data analysis.  In which cas
 <li class="toc-entry toc-h3"><a href="#lti-gradebook-status-values">LTI Gradebook Status values:</a></li>
 </ul>
 </li>
-</ul>
-      </nav>
+</ul></nav>
+			</div>
+			<footer class="nav-footer" id="footer">
+				<div id="github-footer">
+					<a href="https://github.com/ucfopen/Obojobo">Visit Obojobo on GitHub</a>
+				</div>
+				<span class="fbOpenSource">
+					<img
+						src="/Obojobo-Docs/assets/images/obojobo_white.svg"
+						alt="Obojobo"
+						width="300"
+						height="45"
+					/>
+				</span>
+				<section class="copyright">Obojobo™ © 2018 University of Central Florida</section>
+			</footer>
+		</div>
 
-    </div>
-    <footer class="nav-footer" id="footer">
-      <div id="github-footer">
-        <a href="https://github.com/ucfopen/Obojobo">Visit Obojobo on GitHub</a>
-      </div>
-      <span class="fbOpenSource">
-        <img src="/Obojobo-Docs/assets/images/obojobo_white.svg" alt="Obojobo" width="300" height="45" />
-      </span>
-      <section class="copyright">Obojobo™ © 2018 University of Central Florida</section>
-    </footer>
-  </div>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js"></script>
-</body>
-
+		<script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js"></script>
+	</body>
 </html>
