@@ -65,6 +65,14 @@ namespace :releases do
       abort
     end
 
+    # Ensure the given new version is a valid version string:
+    begin
+      Gem::Version.new(args.new_version)
+    rescue
+      puts "#{args.new_version} is not a valid version number."
+      abort
+    end
+
     source_dir = "./releases/v#{args.source_version}"
 
     if(!File.directory?(source_dir))

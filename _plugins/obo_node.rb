@@ -12,11 +12,9 @@ module Jekyll
     def obo_node(node_name, force_mode = nil)
       base_url =  @context.registers[:site].config['baseurl']
       current_url = @context.environments.first["page"]["url"]
-      pattern = /\/releases\/(v[\d\.]+)\/.+/
-      match = current_url.match(pattern)
-      current_version = match[1]
+      current_version = @context.environments.first["page"]["docs_version"]
 
-      url = "#{base_url}/releases/#{current_version}/developers/obo_nodes/#{underscore(node_name)}.html"
+      url = "#{base_url}/releases/v#{current_version}/developers/obo_nodes/#{underscore(node_name)}.html"
 
       if force_mode.nil?
         render_mode = 'html'

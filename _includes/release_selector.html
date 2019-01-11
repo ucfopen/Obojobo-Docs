@@ -1,6 +1,6 @@
 <div class="styled-select">
 	<select class="release-select">
-		{% for version in page.docs_versions | reverse %}
+		{% assign versions = page.docs_versions | reverse %}{% for version in versions %}
 		<option
 			{% if version == page.docs_version %}selected{% endif %}
 			value="{{ site.baseurl }}{{ page.docs_versions_page_urls[version] }}"

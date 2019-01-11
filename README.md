@@ -2,11 +2,11 @@
 
 This is the repository for the Obojobo Next documentation (View the current docs at https://ucfopen.github.io/Obojobo-Docs/).
 
-Our documentation is versioned and built off of Jekyll.
+Our documentation is versioned and built using Jekyll.
 
 # File Structure & Versioning
 
-The actual markdown content for the releases are versioned and located in the `/releases` directory. Since Jekyll does not support versioning natively our system of versioning is explained here. Here's an example of the project's file structure:
+The actual markdown content for the releases are versioned and located in the `/releases` directory. Since Jekyll does not support versioning natively, our system of versioning is explained here. Here's an example of the project's file structure:
 
 ```
 Obojobo-Docs/
@@ -19,9 +19,9 @@ Obojobo-Docs/
 		latest/
 ```
 
-`./docs/` contain the output files. `./releases/` contain the versioned source files.
+`./docs/` contains the output files. `./releases/` contains the versioned source files.
 
-`./releases/latest/` is a copy of the files inside the most recent version (in this example, 3.3.3) except each file contains a redirect to the file in the most recent version. This creates a URL to the latest version of a file. In the example above, if a file `./releases/v3.3.3/some-page.md` exists then a redirect-only version of that file will be placed in `./releases/latest/some-page.md`. The result of this is that when the docs are built the URL `http://.../releases/latest/some-page` will redirect to `http://.../releases/v3.3.3/some-page`.
+`./releases/latest/` is a copy of the files inside the most recent version (in this example, 3.3.3), except each file contains a redirect to the file in the most recent version. This creates a URL to the latest version of a file. In the example above, if a file `./releases/v3.3.3/some-page.md` exists, a redirect-only version of that file will be placed in `./releases/latest/some-page.md`. When the docs are built the URL `http://.../releases/latest/some-page` will redirect to `http://.../releases/v3.3.3/some-page`.
 
 > Note: `./releases/latest` only creates redirects for files in the newest version - it will not create a redirect for any files that only exist in an older version. For example, if `./releases/v3.3.2/example.md` exists but `./releases/v3.3.3/example.md` does not then no redirect will exist in `./releases/latest`.
 
