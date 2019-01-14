@@ -25,15 +25,6 @@ module Jekyll
 
       url = "#{base_url}/releases/v#{current_version}/developers/obo_nodes/#{underscore(node_name)}.html"
 
-      # menus = @context.registers[:site].data["menus"]["developers"].inspect
-      # # @context.registers[:site].data["menus"].each { |x| puts x }
-      # puts @context.registers[:site].data["menus"].to_yaml
-      # abort
-      # # menus = @context.environments.first["page"].inspect
-      # puts 'menus='
-      # puts menus
-      # abort
-
       if render_mode === 'md'
         '*['+node_name+']('+url+')*'
       else
