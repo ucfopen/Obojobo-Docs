@@ -9,23 +9,6 @@ module Jekyll
       downcase
     end
 
-    def version_to_use
-      # look in the current page's url to figure out if we have a current version
-      version = version_from_page_path
-
-      # if not, get the current_version from the config
-      version ||= @context.registers[:site].config['obo_version']
-    end
-
-    def version_from_page_path
-      current_url = @context.environments.first["page"]["url"]
-      pattern = /\/releases\/(v[\d\.]+)\/.+/
-      match = current_url.match(pattern)
-      if match
-        return match[1]
-      end
-    end
-
     def current_page_markdown?
       @context.environments.first["page"]["name"].end_with? '.md'
     end
@@ -37,8 +20,19 @@ module Jekyll
       end
 
       base_url =  @context.registers[:site].config['baseurl']
+      current_url = @context.environments.first["page"]["url"]
+      current_version = @context.environments.first["page"]["docs_version"]
 
-      url = "#{base_url}/releases/#{version_to_use()}/developers/obo_nodes/#{underscore(node_name)}.html"
+      url = "#{base_url}/releases/v#{current_version}/developers/obo_nodes/#{underscore(node_name)}.html"
+
+      # menus = @context.registers[:site].data["menus"]["developers"].inspect
+      # # @context.registers[:site].data["menus"].each { |x| puts x }
+      # puts @context.registers[:site].data["menus"].to_yaml
+      # abort
+      # # menus = @context.environments.first["page"].inspect
+      # puts 'menus='
+      # puts menus
+      # abort
 
       if render_mode === 'md'
         '*['+node_name+']('+url+')*'

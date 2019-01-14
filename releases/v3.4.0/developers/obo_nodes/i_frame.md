@@ -20,10 +20,12 @@ An [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) co
 | border | no | Boolean | Default: `false` if `type` is `media`, `true` if `type` is `webpage`. Displays a border around the iframe to help distinguish the content from the document.
 | fit | no | String | Default: `scale` if `type` is `media`, `scroll` if `type` is `webpage`. Defines how the iframe will handle when constrained by a reduced amount of available space. Allowed values are `scale` and `scroll`. `scale` causes the width, height and contents of the iframe to scale down proportionally. This means the visible content of the iframe is the same at any size. `scroll` will keep the height the same but the width will be reduced. The content inside the iframe will remain the same size however less content will be visible without scrolling inside the iframe.
 | width | no | Integer | The width in pixels to display the iframe. If not specified then the iframe will be at full width.
-| height | no | Integer | The height in pixels to display the iframe. If not specified the iframe will be set to a default height.
+| height | no | Integer | The height in pixels to display the iframe. If not specified the iframe will be set to a default height of 500 pixels.
 | initialZoom | no | Integer | Default: `1`. The scale factor to apply to the content. `1` is 100%, `1.5` is 150%.
 | autoload | no | Boolean | Default: `false`. If `true` the iframe will be loaded when the page is loaded. If `false` then the iframe won't be loaded until the user clicks on the iframe. The default of `false` is recommended to help with page load times.
 | controls | no | String | Default: `"reload"` if `type` is `media`, `"zoom,reload,new-window"` if `type` is `webpage`. A comma seperated list of controls from the available controls: `zoom`, `reload` and `new-window` (See below)
+
+> Events and `autoload`: When a student clicks to display an iframe a `media:show` event is cataloged. If `autoload` is true the iframe will load instantly and no `media:show` event will be emitted.
 
 ### Options for controls:
 
