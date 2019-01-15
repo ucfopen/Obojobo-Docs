@@ -91,10 +91,9 @@ In XML Content Blocks are represented as a child element to the OboNode they are
 
 ## OboNode & Content Block Reference
 
-{% assign menu = site.menus.chunks | map: 'title' %}
-{% assign children = menu | only_chunks_for_docs_version %}
+{% assign titles = site.menus.chunks | menu_titles %}
+{% assign node_names = titles | obo_node_names_for_version %}
+{% for node_name in node_names %}
 
-{% for item in children %}
-
-- {{ item | split: ' > ' | last | obo_node }}
+- {{ node_name | split: ' > ' | last | obo_node }}
   {% endfor %}
