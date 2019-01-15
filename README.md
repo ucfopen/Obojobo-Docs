@@ -47,7 +47,7 @@ The files in the `./releases` directory will auto-update in your browser when th
 
 Use the version selector drop-down on a documentation page to switch between versions. Note that this selector is only aware of the list of versions in `./releases` and may result in a 404 if the current file does not exist in the newly selected version.
 
-> Note regarding `latest`: The first time the `dev` command is run the `./releases/latest/` directory will be updated. You'll need to re-run this command (or run `bundle exec rake releases:dev_update_latest`) if you need to update the `./releases/latest` directory.
+> Note regarding `latest`: The first time the `dev` command is run the `./releases/latest/` directory will be updated. You'll need to re-run this command (or run `bundle exec rake releases:update_latest`) if you need to update the `./releases/latest` directory.
 
 ## Creating a new version
 
@@ -179,14 +179,8 @@ This will create a new directory for the destination version based on the source
 
 Deletes all source files for the given version. In this example this command would delete the `./releases/v3.3.3` folder.
 
-## Update the latest redirects (for production)
+## Update the latest redirects
 
 - Run `bundle exec rake releases:update_latest`
 
-This will update the `./releases/latest` folder which contain redirects to the pages of the current latest version. The redirect URLs are generated using the `url` and `baseurl` values specified in `./_config.yml`.
-
-## Update the latest redirects (for development)
-
-- Run `bundle exec rake releases:dev_update_latest`
-
-This is the same as above except the redirect URLs generated will be local (at `http://127.0.0.1:4000`).
+This will update the `./releases/latest` folder which contain redirects to the pages of the current latest version.
