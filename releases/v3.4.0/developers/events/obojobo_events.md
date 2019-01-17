@@ -32,7 +32,7 @@ Obojobo Event exports will have the following columns:
 
 ## Visit
 
-### _visit:create_
+### *visit:create*
 
 Occurs when a new visit is created. The visit is not considered started until the `visit:start` Event occurs.
 
@@ -48,7 +48,7 @@ Occurs when a new visit is created. The visit is not considered started until th
 | visitId | id of the visit created
 | deactivatedVisitId | id of the deactivated visit
 
-### _visit:start_
+### *visit:start*
 
 Occurs when a visit is started after its creation. Not all visits that are created are started.
 
@@ -65,7 +65,7 @@ Occurs when a visit is started after its creation. Not all visits that are creat
 
 ## Viewer
 
-### _viewer:open_
+### *viewer:open*
 
 Occurs when the user has opened a document in the Obojobo Veiwer.
 
@@ -80,7 +80,7 @@ Occurs when the user has opened a document in the Obojobo Veiwer.
 |-
 | visitId | id of the visit User/draft
 
-### _viewer:close_
+### *viewer:close*
 
 Occurs when the user closed the browser window containing the Obojobo Viewer.
 
@@ -93,7 +93,7 @@ Occurs when the user closed the browser window containing the Obojobo Viewer.
 
 None
 
-### _viewer:inactive_
+### *viewer:inactive*
 
 Occurs when the user has not interacted with the page in the last 10 minutes.
 
@@ -109,7 +109,7 @@ Occurs when the user has not interacted with the page in the last 10 minutes.
 | lastActiveTime | ECMAScript Date string representation of the last recorded time of interactivity
 | inactiveDuration | The amount of time in milliseconds recorded with no measured interactivity (10 minutes)
 
-### _viewer:returnFromInactive_
+### *viewer:returnFromInactive*
 
 Occurs when the user has interacted with the page after having not interacted with the page for 10 minutes or more.
 
@@ -126,7 +126,7 @@ Occurs when the user has interacted with the page after having not interacted wi
 | inactiveDuration | The updated amount of time in milliseconds recorded with no measured interactivity
 | relatedEventId | The id of the corresponding `viewer:inactive` event
 
-### _viewer:leave_
+### *viewer:leave*
 
 Occurs when the user has hidden the draft page, either by changing tabs or minimizing the window. Corresponds to the `visibilitychange` browser event and `document.hidden` browser value.
 
@@ -139,7 +139,7 @@ Occurs when the user has hidden the draft page, either by changing tabs or minim
 
 None
 
-### _viewer:return_
+### *viewer:return*
 
 Occurs when the user is again viewing the draft page, either by changing tabs or re-selecting the window.
 
@@ -156,7 +156,7 @@ Occurs when the user is again viewing the draft page, either by changing tabs or
 
 ## Question
 
-### _question:scoreSet_
+### *question:scoreSet*
 
 Occurs when the user is viewing the explanation (aka. solution) of a question.
 
@@ -174,7 +174,7 @@ Occurs when the user is viewing the explanation (aka. solution) of a question.
 | itemId | The id of the item that was scored
 | context | The context when this score was set
 
-### _question:scoreClear_
+### *question:scoreClear*
 
 Occurs when the score for a question was reset.
 
@@ -192,7 +192,7 @@ Occurs when the score for a question was reset.
 | itemId | The id of the item that was scored
 | context | The context when this score was set
 
-### _question:showExplanation_
+### *question:showExplanation*
 
 Occurs when the user is viewing the explanation (aka. solution) of a question.
 
@@ -207,7 +207,7 @@ Occurs when the user is viewing the explanation (aka. solution) of a question.
 |-
 | questionId | The id of the corresponding Question
 
-### _question:hideExplanation_
+### *question:hideExplanation*
 
 Occurs when the user or ViewerClient has hidden a question explanation.
 
@@ -223,7 +223,7 @@ Occurs when the user or ViewerClient has hidden a question explanation.
 | questionId | The id of the corresponding Question
 | actor | Either `'user'` or `'viewerClient'`
 
-### _question:checkAnswer_
+### *question:checkAnswer*
 
 Occurs when the user is checking their answer to a question.
 
@@ -238,7 +238,7 @@ Occurs when the user is checking their answer to a question.
 |-
 | questionId | The id of the corresponding Question
 
-### _question:retry_
+### *question:retry*
 
 Occurs when the user is reattempting a question. Previous responses and scores are hidden.
 
@@ -253,7 +253,7 @@ Occurs when the user is reattempting a question. Previous responses and scores a
 |-
 | questionId | The id of the corresponding Question
 
-### _question:setResponse_
+### *question:setResponse*
 
 Occurs when the user has selected a response to a question.
 
@@ -273,7 +273,7 @@ Occurs when the user has selected a response to a question.
 | assessmentId |
 | attemptId |
 
-### _question:view_
+### *question:view*
 
 Occurs when the user has activated a question, making it visible.
 
@@ -288,7 +288,7 @@ Occurs when the user has activated a question, making it visible.
 |-
 | questionId | The id of the corresponding Question
 
-### _question:hide_
+### *question:hide*
 
 Occurs when a question has been hidden.
 
@@ -305,7 +305,7 @@ Occurs when a question has been hidden.
 
 ## Assessment
 
-### _assessment:attemptStart_
+### *assessment:attemptStart*
 
 Occurs when an assessment attempt has started.
 
@@ -321,7 +321,7 @@ Occurs when an assessment attempt has started.
 | attemptId |
 | attemptCount |
 
-### _assessment:attemptEnd_
+### *assessment:attemptEnd*
 
 Occurs when an assessment attempt has ended.
 
@@ -337,7 +337,7 @@ Occurs when an assessment attempt has ended.
 | attemptId |
 | attemptCount |
 
-### _assessment:attemptScored_
+### *assessment:attemptScored*
 
 Occurs when an assessment attempt has been scored.
 
@@ -370,7 +370,7 @@ Occurs when an assessment attempt has been scored.
 
 ## Navigation
 
-### _nav:gotoPath_
+### *nav:gotoPath*
 
 Occurs when the user has clicked on a navigation link or button and has moved to another area in the document.
 
@@ -386,7 +386,7 @@ Occurs when the user has clicked on a navigation link or button and has moved to
 | from | OboNode id that user is navigating from
 | to | OboNode id that user is navigating to
 
-### _nav:goto_
+### *nav:goto*
 
 Occurs when the user has clicked a button which fires a `nav:goto` event and has now moved to another area in the document
 
@@ -402,7 +402,7 @@ Occurs when the user has clicked a button which fires a `nav:goto` event and has
 | from | OboNode id that user is navigating from
 | to | OboNode id that user is navigating to
 
-### _nav:prev_
+### *nav:prev*
 
 Occurs when the user has clicked on the 'previous' button and has moved back one step in the document's navigation.
 
@@ -418,7 +418,7 @@ Occurs when the user has clicked on the 'previous' button and has moved back one
 | from | OboNode id that user is navigating from
 | to | OboNode id that user is navigating to
 
-### _nav:next_
+### *nav:next*
 
 Occurs when the user has clicked on the 'next' button and has moved ahead one step in the document's navigation.
 
@@ -434,7 +434,7 @@ Occurs when the user has clicked on the 'next' button and has moved ahead one st
 | from | OboNode id that user is navigating from
 | to | OboNode id that user is navigating to
 
-### _nav:lock_
+### *nav:lock*
 
 Occurs when the navigation has been locked.
 
@@ -447,7 +447,7 @@ Occurs when the navigation has been locked.
 
 None
 
-### _nav:unlock_
+### *nav:unlock*
 
 Occurs when the navigation has been unlocked.
 
@@ -460,7 +460,7 @@ Occurs when the navigation has been unlocked.
 
 None
 
-### _nav:close_
+### *nav:close*
 
 Occurs when the navigation sidebar has been closed.
 
@@ -473,7 +473,7 @@ Occurs when the navigation sidebar has been closed.
 
 None
 
-### _nav:open_
+### *nav:open*
 
 Occurs when the navigation sidebar has been opened.
 
@@ -486,7 +486,7 @@ Occurs when the navigation sidebar has been opened.
 
 None
 
-### _nav:toggle_
+### *nav:toggle*
 
 Occurs when the navigation sidebar has been changed from open to closed or closed to open.
 
@@ -505,7 +505,7 @@ Occurs when the navigation sidebar has been changed from open to closed or close
 
 > Currently media events are used exclusively for the IFrame OboNode.
 
-### _media:show_
+### *media:show*
 
 Occurs when an IFrame is shown.
 
@@ -522,7 +522,7 @@ Occurs when an IFrame is shown.
 |-
 | id | id of the OboNode shown
 
-### _media:hide_
+### *media:hide*
 
 Occurs when an IFrame is hidden - Either by an event or when an OboNode (like a Page) containing an IFrame is navigated away from.
 
@@ -538,7 +538,7 @@ Occurs when an IFrame is hidden - Either by an event or when an OboNode (like a 
 | id | id of the OboNode hidden
 | actor | Either `'user'` or `'viewerClient'`
 
-### _media:setZoom_
+### *media:setZoom*
 
 Occurs when an IFrame with the `zoom` control enabled is zoomed in or out.
 
@@ -557,7 +557,7 @@ Occurs when an IFrame with the `zoom` control enabled is zoomed in or out.
 
 > Zoom is stored as a number > 0 representing the zoom percentage of the media. For example, `1` means the media is at `100%`, `1.5` represents `150%` and so on.
 
-### _media:resetZoom_
+### *media:resetZoom*
 
 Occurs when an IFrame with the `zoom` control enabled is reset to its original size.
 
@@ -578,7 +578,7 @@ Occurs when an IFrame with the `zoom` control enabled is reset to its original s
 
 ## LTI
 
-### _lti:launch_
+### *lti:launch*
 
 Occurs when an LTI launch was started successfully.
 
@@ -593,7 +593,7 @@ Occurs when an LTI launch was started successfully.
 |-
 | launchId |
 
-### _lti:replaceResult_
+### *lti:replaceResult*
 
 Occurs when an LTI [replaceResult](https://www.imsglobal.org/specs/ltiomv1p0/specification#toc-4) message is sent to alter the user's score in LMS (aka Tool Consumer). This event is created regardless of the ReplaceResult being successful.
 
@@ -618,7 +618,7 @@ Occurs when an LTI [replaceResult](https://www.imsglobal.org/specs/ltiomv1p0/spe
 | result.outcomeServiceURL | This is the same as `body.lis_outcome_service_url`
 | result.gradebookStatus | See **LTI Gradebook Status values** below
 
-### _lti:pickerLaunch_
+### *lti:pickerLaunch*
 
 Occurs when the LTI document picker was launched from a LMS (Tool Consumer).
 
