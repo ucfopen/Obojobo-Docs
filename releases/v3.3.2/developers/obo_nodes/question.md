@@ -23,9 +23,7 @@ Either an assessment or practice question. Questions are designed to support mul
 
 ## Required Children
 
-{% assign chunks = site.pages | where: "can_be_in_a_question", 'true' | sort: 'title' %}
-
-1.  One or more [Chunk nodes](../#chunk) ({% for chunk in chunks %} {{ chunk.title | obo_node }}{% if forloop.last == false %},{% endif %} {% endfor %}) - This is how you create the actual question
+1.  One or more [Chunk nodes](../#chunk) ({% include obo_nodes_that_can_be_in_a_question.md %}) - This is how you create the actual question
 2.  An {{ 'MCAssessment' | obo_node }} node - this MUST be the last child.
 
 ## Variables Registered

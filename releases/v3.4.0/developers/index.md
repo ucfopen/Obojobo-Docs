@@ -3,7 +3,6 @@ title: OboNode Structure
 menus:
   developers_getting_started:
     weight: -2
-
 ---
 
 The OboNode is a data structure which defines the use of an OboNode Component and its related data & content. Multiple OboNodes comprise an Obojobo Draft Document.
@@ -92,10 +91,9 @@ In XML Content Blocks are represented as a child element to the OboNode they are
 
 ## OboNode & Content Block Reference
 
-{% assign menu = site.menus.chunks %}
-{% assign children = menu | sort_natural: 'title' %}
+{% assign titles = site.menus.chunks | menu_titles %}
+{% assign node_names = titles | obo_node_names_for_version %}
+{% for node_name in node_names %}
 
-{% for item in children %}
-
-- {{ item.title | split: ' > ' | last | obo_node }}
+- {{ node_name | split: ' > ' | last | obo_node }}
   {% endfor %}

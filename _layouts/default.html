@@ -44,9 +44,6 @@
 					<div class="navigationWrapper navigationSlider">
 						<nav class="slidingNav">
 							<ul class="nav-site nav-site-internal">
-								<!--
-									<li class="{% if current_menu == 'teachers' %}siteNavGroupActive{% endif %}"><a href="{{ site.baseurl }}/releases/v{{ page.docs_version }}/teachers/" target="_self">Teachers</a></li>
-								-->
 								<li class="{% if current_menu == 'authors' %}siteNavGroupActive{% endif %}">
 									<a
 										href="{{ site.baseurl }}/releases/v{{ page.docs_version }}/authors/"
@@ -157,14 +154,6 @@
 									<span> {{ content | inject_anchors }} </span>
 								</div>
 							</article>
-						</div>
-						<div class="docs-prevnext">
-							<!--
-								<a class="docs-prev button" href="/docs/assessment_locking_navigation.html">← Locking Navigation</a>
-							-->
-							<!--
-								<a class="docs-next button" href="/docs/assessment_displaying_attempts.html">Displaying Remaining Attempts →</a>
-							-->
 						</div>
 					</div>
 				</div>
