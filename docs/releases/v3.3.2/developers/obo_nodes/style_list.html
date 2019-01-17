@@ -8,7 +8,7 @@
 		<meta name="generator" content="Docusaurus" />
 		<meta
 			name="description"
-			content="A series of one or more styles to apply to a block of textProperties            Property      Required      Type      Description                  type      Required      String      Represents what type of styling to apply, must be one of the following:              start      Required      Inte..."
+			content="A series of one or more styles to apply to a block of textProperties            Property      Required      Type      Description                  type      Required      String      Represents what type of styling to apply. See the supported values in the table below.              start      Req..."
 		/>
 		<meta name="docsearch:language" content="en" />
 		<meta property="og:title" content="textGroup > textItem > styleableText > styleList - Obojobo Next Documentation" />
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.3.2/developers/obo_nodes/style_list.html" />
 		<meta
 			property="og:description"
-			content="A series of one or more styles to apply to a block of textProperties            Property      Required      Type      Description                  type      Required      String      Represents what type of styling to apply, must be one of the following:              start      Required      Inte..."
+			content="A series of one or more styles to apply to a block of textProperties            Property      Required      Type      Description                  type      Required      String      Represents what type of styling to apply. See the supported values in the table below.              start      Req..."
 		/>
 		<meta name="twitter:card" content="summary" />
 		<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -372,7 +372,7 @@
       <td>type</td>
       <td>Required</td>
       <td>String</td>
-      <td>Represents what type of styling to apply, must be one of the following:</td>
+      <td>Represents what type of styling to apply. See the supported values in the table below.</td>
     </tr>
     <tr>
       <td>start</td>
@@ -384,8 +384,7 @@
       <td>end</td>
       <td>Required</td>
       <td>Integer</td>
-      <td>The index of the last character to style - all characters between <code class="highlighter-rouge">start</code> and <code class="highlighter-rouge">end</code> will be styled by <code class="highlighter-rouge">type</code>
-</td>
+      <td>The index of the character where the style ends. All characters between <code class="highlighter-rouge">start</code> (inclusive) and <code class="highlighter-rouge">end</code> (exclusive) will be styled by <code class="highlighter-rouge">type</code>.</td>
     </tr>
     <tr>
       <td>data</td>
@@ -499,6 +498,12 @@
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"i"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w">
     </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">46</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sup"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
