@@ -1326,6 +1326,158 @@ These events can be useful for research and data analysis. This document provide
   </tbody>
 </table>
 
+<h2 id="media">
+<a id="media" class="anchor" href="#media" aria-hidden="true"><span class="octicon octicon-link"></span></a>Media</h2>
+
+<blockquote>
+  <p>Currently media events are used exclusively for the IFrame OboNode.</p>
+</blockquote>
+
+<h3 id="mediashow">
+<a id="mediashow" class="anchor" href="#mediashow" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>media:show</em>
+</h3>
+
+<p>Occurs when an IFrame is shown.</p>
+
+<blockquote>
+  <p>This event is not fired if the IFrame is automatically loaded (Using the <code class="highlighter-rouge">autoload</code> property).</p>
+</blockquote>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="properties-29">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>id of the OboNode shown</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mediahide">
+<a id="mediahide" class="anchor" href="#mediahide" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>media:hide</em>
+</h3>
+
+<p>Occurs when an IFrame is hidden - Either by an event or when an OboNode (like a Page) containing an IFrame is navigated away from.</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="properties-30">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>id of the OboNode hidden</td>
+    </tr>
+    <tr>
+      <td>actor</td>
+      <td>Either <code class="highlighter-rouge">'user'</code> or <code class="highlighter-rouge">'viewerClient'</code>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mediasetzoom">
+<a id="mediasetzoom" class="anchor" href="#mediasetzoom" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>media:setZoom</em>
+</h3>
+
+<p>Occurs when an IFrame with the <code class="highlighter-rouge">zoom</code> control enabled is zoomed in or out.</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="properties-31">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>id of the OboNode where the zoom level has changed</td>
+    </tr>
+    <tr>
+      <td>previousZoom</td>
+      <td>The zoom level before the <code class="highlighter-rouge">media:setZoom</code> event was fired</td>
+    </tr>
+    <tr>
+      <td>zoom</td>
+      <td>The new zoom level</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Zoom is stored as a number &gt; 0 representing the zoom percentage of the media. For example, <code class="highlighter-rouge">1</code> means the media is at <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">1.5</code> represents <code class="highlighter-rouge">150%</code> and so on.</p>
+</blockquote>
+
+<h3 id="mediaresetzoom">
+<a id="mediaresetzoom" class="anchor" href="#mediaresetzoom" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>media:resetZoom</em>
+</h3>
+
+<p>Occurs when an IFrame with the <code class="highlighter-rouge">zoom</code> control enabled is reset to its original size.</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="properties-32">Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>id of the OboNode where the zoom level has changed</td>
+    </tr>
+    <tr>
+      <td>previousZoom</td>
+      <td>The zoom level before the <code class="highlighter-rouge">media:resetZoom</code> event was fired</td>
+    </tr>
+    <tr>
+      <td>zoom</td>
+      <td>The new zoom level (which will be the starting zoom level when the OboNode was first shown).</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Zoom is stored as a number &gt; 0 representing the zoom percentage of the media. For example, <code class="highlighter-rouge">1</code> means the media is at <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">1.5</code> represents <code class="highlighter-rouge">150%</code> and so on.</p>
+</blockquote>
+
 <h2 id="lti">
 <a id="lti" class="anchor" href="#lti" aria-hidden="true"><span class="octicon octicon-link"></span></a>LTI</h2>
 
@@ -1340,7 +1492,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-29">Properties</h4>
+<h4 id="properties-33">Properties</h4>
 
 <table>
   <thead>
@@ -1368,7 +1520,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>2.0.0</dd>
 </dl>
 
-<h4 id="properties-30">Properties</h4>
+<h4 id="properties-34">Properties</h4>
 
 <table>
   <thead>
@@ -1437,7 +1589,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="properties-31">Properties</h4>
+<h4 id="properties-35">Properties</h4>
 
 <table>
   <thead>
@@ -1615,6 +1767,14 @@ These events can be useful for research and data analysis. This document provide
 <li class="toc-entry toc-h3"><a href="#navclose">nav:close</a></li>
 <li class="toc-entry toc-h3"><a href="#navopen">nav:open</a></li>
 <li class="toc-entry toc-h3"><a href="#navtoggle">nav:toggle</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#media">Media</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mediashow">media:show</a></li>
+<li class="toc-entry toc-h3"><a href="#mediahide">media:hide</a></li>
+<li class="toc-entry toc-h3"><a href="#mediasetzoom">media:setZoom</a></li>
+<li class="toc-entry toc-h3"><a href="#mediaresetzoom">media:resetZoom</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#lti">LTI</a>

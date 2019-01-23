@@ -303,7 +303,6 @@ Occurs when a question has been hidden.
 |-
 | questionId | The id of the corresponding Question
 
-
 ## Assessment
 
 ### *assessment:attemptStart*
@@ -501,6 +500,81 @@ Occurs when the navigation sidebar has been changed from open to closed or close
 | Property | Description |
 |-
 | open | `true` if navigation sidebar was changed to open, `false` if sidebar was changed to closed.
+
+## Media
+
+> Currently media events are used exclusively for the IFrame OboNode.
+
+### *media:show*
+
+Occurs when an IFrame is shown.
+
+> This event is not fired if the IFrame is automatically loaded (Using the `autoload` property).
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Properties
+
+| Property | Description |
+|-
+| id | id of the OboNode shown
+
+### *media:hide*
+
+Occurs when an IFrame is hidden - Either by an event or when an OboNode (like a Page) containing an IFrame is navigated away from.
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Properties
+
+| Property | Description |
+|-
+| id | id of the OboNode hidden
+| actor | Either `'user'` or `'viewerClient'`
+
+### *media:setZoom*
+
+Occurs when an IFrame with the `zoom` control enabled is zoomed in or out.
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Properties
+
+| Property | Description |
+|-
+| id | id of the OboNode where the zoom level has changed
+| previousZoom | The zoom level before the `media:setZoom` event was fired
+| zoom | The new zoom level
+
+> Zoom is stored as a number > 0 representing the zoom percentage of the media. For example, `1` means the media is at `100%`, `1.5` represents `150%` and so on.
+
+### *media:resetZoom*
+
+Occurs when an IFrame with the `zoom` control enabled is reset to its original size.
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Properties
+
+| Property | Description |
+|-
+| id | id of the OboNode where the zoom level has changed
+| previousZoom | The zoom level before the `media:resetZoom` event was fired
+| zoom | The new zoom level (which will be the starting zoom level when the OboNode was first shown).
+
+> Zoom is stored as a number > 0 representing the zoom percentage of the media. For example, `1` means the media is at `100%`, `1.5` represents `150%` and so on.
 
 ## LTI
 
