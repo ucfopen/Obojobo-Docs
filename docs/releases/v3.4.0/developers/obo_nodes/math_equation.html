@@ -8,7 +8,7 @@
 		<meta name="generator" content="Docusaurus" />
 		<meta
 			name="description"
-			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              alt      Recommended      String      Used as the text content which..."
+			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              alt      Recommended      String      The text to be read when the e..."
 		/>
 		<meta name="docsearch:language" content="en" />
 		<meta property="og:title" content="MathEquation - Obojobo Next Documentation" />
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.4.0/developers/obo_nodes/math_equation.html" />
 		<meta
 			property="og:description"
-			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              alt      Recommended      String      Used as the text content which..."
+			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              alt      Recommended      String      The text to be read when the e..."
 		/>
 		<meta name="twitter:card" content="summary" />
 		<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -389,7 +389,7 @@
       <td>alt</td>
       <td>Recommended</td>
       <td>String</td>
-      <td>Used as the text content which is read when this equation is encountered by a screen-reader. If not specified the <code class="highlighter-rouge">latex</code> value is used instead.</td>
+      <td>The text to be read when the equation is encountered by a screen-reader. If not specified, the <code class="highlighter-rouge">latex</code> value is used. It is recommended to include a human-readable form of the equation, as the <code class="highlighter-rouge">latex</code> value may be difficult for screen-reader users to understand.</td>
     </tr>
     <tr>
       <td>align</td>
