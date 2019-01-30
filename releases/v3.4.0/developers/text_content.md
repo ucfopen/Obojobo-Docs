@@ -148,7 +148,10 @@ Using the `_latex` type for a {{ 'styleList' | obo_node }} can be used to render
         {
           "type": "_latex",
           "start": 13,
-          "end": 19
+          "end": 19,
+          "data": {
+            "alt": "10 equals x plus 5"
+          }
         }
       ]
     }
@@ -162,7 +165,7 @@ Using the `_latex` type for a {{ 'styleList' | obo_node }} can be used to render
 <SomeOboNode>
   <!-- ... -->
   <textGroup>
-    <t>Solve for x: <latex>10=x+5</latex></t>
+    <t>Solve for x: <latex alt="10 equals x plus 5">10=x+5</latex></t>
   </textGroup>
 </SomeOboNode>
 ```
@@ -185,7 +188,10 @@ The `start` to `end` range specified in `styleList` treats the double backslash 
         {
           "type": "_latex",
           "start": 9,
-          "end": 15
+          "end": 15,
+          "data": {
+            "alt": "theta"
+          }
         }
       ]
     }

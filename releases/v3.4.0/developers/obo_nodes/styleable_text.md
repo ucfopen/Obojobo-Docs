@@ -60,12 +60,18 @@ This would produce the following text:
     {
       "type": "_latex",
       "start": 9,
-      "end": 15
+      "end": 15,
+      "data": {
+        "alt": "theta"
+      }
     },
     {
       "type": "_latex",
       "start": 26,
-      "end": 29
+      "end": 29,
+      "data": {
+        "alt": "pi"
+      }
     }
   ]
 }
@@ -74,7 +80,7 @@ This would produce the following text:
 ### OboXML (Inline Math)
 
 ```xml
-Theta is <latex>\theta</latex> and pi is <latex>\pi</latex>.
+Theta is <latex alt="theta">\theta</latex> and pi is <latex alt="pi">\pi</latex>.
 ```
 
 This would produce the following render:
