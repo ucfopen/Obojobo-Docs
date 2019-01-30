@@ -8,7 +8,7 @@
 		<meta name="generator" content="Docusaurus" />
 		<meta
 			name="description"
-			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              align      no      String      Default left: Either left, center or ..."
+			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              alt      Recommended      String      Used as the text content which..."
 		/>
 		<meta name="docsearch:language" content="en" />
 		<meta property="og:title" content="MathEquation - Obojobo Next Documentation" />
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.4.0/developers/obo_nodes/math_equation.html" />
 		<meta
 			property="og:description"
-			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              align      no      String      Default left: Either left, center or ..."
+			content="A LaTeX math equation rendered with KatexProperties            Property      Required      Type      Description                  latex      Required      String      The LaTeX string to render (example: y=\sin(2x))              alt      Recommended      String      Used as the text content which..."
 		/>
 		<meta name="twitter:card" content="summary" />
 		<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -386,6 +386,12 @@
       <td>The LaTeX string to render (example: <code class="highlighter-rouge">y=\sin(2x)</code>)</td>
     </tr>
     <tr>
+      <td>alt</td>
+      <td>Recommended</td>
+      <td>String</td>
+      <td>Used as the text content which is read when this equation is encountered by a screen-reader. If not specified the <code class="highlighter-rouge">latex</code> value is used instead.</td>
+    </tr>
+    <tr>
       <td>align</td>
       <td>no</td>
       <td>String</td>
@@ -450,6 +456,7 @@
 	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
 	</span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
 		</span><span class="s2">"latex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"y=</span><span class="se">\\</span><span class="s2">sin(2x)"</span><span class="p">,</span><span class="w">
+		</span><span class="s2">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"y equals sine of 2 x"</span><span class="p">,</span><span class="w">
 		</span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(1.1)"</span><span class="w">
 	</span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -458,7 +465,7 @@
 <h3 id="xml">
 <a id="xml" class="anchor" href="#xml" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML</h3>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;MathEquation</span> <span class="na">latex=</span><span class="s">"y=\sin(2x)"</span> <span class="na">label=</span><span class="s">"(1.1)"</span> <span class="nt">/&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;MathEquation</span> <span class="na">latex=</span><span class="s">"y=\sin(2x)"</span> <span class="na">alt=</span><span class="s">"y equals sine of 2 x"</span> <span class="na">label=</span><span class="s">"(1.1)"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
  </span>
 								</div>
