@@ -14,19 +14,9 @@ namespace :releases do
     get_release_versions().last
   end
 
-  def get_docs_url
-    config = YAML.load_file('./_config.yml')
-    "#{config['url']}#{config['baseurl']}"
-  end
-
-  def get_dev_docs_url
-    config = YAML.load_file('./_config.yml')
-    "http://127.0.0.1:4000#{config['baseurl']}"
-  end
-
-  def update_latest(docs_url)
+  def update_latest()
     latest_release_dir = "/releases/v#{get_latest_release_version}"
-    redirect_base_url = "#{docs_url}#{latest_release_dir}"
+    redirect_base_url = "#{latest_release_dir}"
 
     if File.directory? "./releases/latest"
       FileUtils.remove_dir "./releases/latest"
@@ -115,11 +105,7 @@ namespace :releases do
   end
 
   task :update_latest do
-    update_latest get_docs_url
-  end
-
-  task :dev_update_latest do
-    update_latest get_dev_docs_url
+    update_latest
   end
 end
 
@@ -129,7 +115,7 @@ task :build do
 end
 
 task :dev do
-  sh "bundle exec rake releases:dev_update_latest"
+  sh "bundle exec rake releases:update_latest"
   sh "bundle exec jekyll serve --livereload --trace"
 end
 

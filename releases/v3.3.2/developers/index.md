@@ -56,8 +56,7 @@ These properties haven't been completed and are not required but you will see th
 
 | Property | Type | Description
 |-
-| metadata | Object | Meta information about this node. Currently this information is ignored and should be left as `{}` if set. This may be removed in a future release.
-| index | Integer | The position of this item relative to its siblings. Currently this information is ignored - the order of nodes in the document dictate the rendering order instead. These values should be left as `0` (or any integer) if set. This may be removed in a future release.
+| metadata | Object | Meta information about this node. Currently this information is ignored and should be left as `{} if set. This may be removed in a future release. | index | Integer | The position of this item relative to its siblings. Currently this information is ignored - the order of nodes in the document dictate the rendering order instead. These values should be left as`0` (or any integer) if set. This may be removed in a future release.
 
 > **Note:** OboNode examples in the rest of the document will exclude these properties
 
@@ -91,11 +90,9 @@ In XML Content Blocks are represented as a child element to the OboNode they are
 
 ## OboNode & Content Block Reference
 
-{% assign menu = site.menus.chunks | map: 'title' %}
-{% assign children = menu | uniq %}
-{% assign children = children | sort_natural %}
+{% assign titles = site.menus.chunks | menu_titles %}
+{% assign node_names = titles | obo_node_names_for_version %}
+{% for node_name in node_names %}
 
-{% for item in children %}
-
-- {{ item | split: ' > ' | last | obo_node }}
+- {{ node_name | split: ' > ' | last | obo_node }}
   {% endfor %}
