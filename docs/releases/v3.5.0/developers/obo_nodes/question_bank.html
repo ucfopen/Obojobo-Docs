@@ -8,7 +8,7 @@
 		<meta name="generator" content="Docusaurus" />
 		<meta
 			name="description"
-			content="Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.Properties            Property      Required      Type      Description                  choose      no      Integer or Infinity      Default: Infinity. The number..."
+			content="Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.Properties            Property      Required      Type      Description                  choose      no      Integer or all      Default: all. The number of childr..."
 		/>
 		<meta name="docsearch:language" content="en" />
 		<meta property="og:title" content="QuestionBank - Obojobo Next Documentation" />
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://ucfopen.github.io/Obojobo-Docs/releases/v3.5.0/developers/obo_nodes/question_bank.html" />
 		<meta
 			property="og:description"
-			content="Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.Properties            Property      Required      Type      Description                  choose      no      Integer or Infinity      Default: Infinity. The number..."
+			content="Question banks contain one or more questions or other question banks with rules to describe how to select some subset of its children.Properties            Property      Required      Type      Description                  choose      no      Integer or all      Default: all. The number of childr..."
 		/>
 		<meta name="twitter:card" content="summary" />
 		<link rel="shortcut icon" href="/Obojobo-Docs/assets/images/favicon.ico" />
@@ -388,9 +388,9 @@
     <tr>
       <td>choose</td>
       <td>no</td>
-      <td>Integer or <code class="highlighter-rouge">Infinity</code>
+      <td>Integer or <code class="highlighter-rouge">all</code>
 </td>
-      <td>Default: <code class="highlighter-rouge">Infinity</code>. The number of children (1 or greater) to “choose” when selecting which children to display. If greater then the total number of children QuestionBank will choose all children.</td>
+      <td>Default: <code class="highlighter-rouge">all</code>. The number of children (1 or greater) to “choose” when selecting which children to display. If greater then the total number of children QuestionBank will choose all children. Invalid values will behave as <code class="highlighter-rouge">all</code>, and choose all children</td>
     </tr>
     <tr>
       <td>select</td>
