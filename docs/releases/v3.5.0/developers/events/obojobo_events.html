@@ -574,7 +574,7 @@ These events can be useful for research and data analysis. This document provide
 
 <dl>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 
 <h4 id="properties-5">Properties</h4>
@@ -597,7 +597,7 @@ These events can be useful for research and data analysis. This document provide
     </tr>
     <tr>
       <td>relatedEventId</td>
-      <td>The id of the corresponding <code class="highlighter-rouge">viewer:inactive</code> event</td>
+      <td>The id of the corresponding <code class="highlighter-rouge">viewer:inactive</code> Obojobo event</td>
     </tr>
   </tbody>
 </table>
@@ -625,7 +625,7 @@ These events can be useful for research and data analysis. This document provide
 
 <dl>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
+	<dd>2.0.0</dd>
 </dl>
 
 <h4 id="properties-7">Properties</h4>
@@ -640,7 +640,15 @@ These events can be useful for research and data analysis. This document provide
   <tbody>
     <tr>
       <td>relatedEventId</td>
-      <td>The id of the corresponding <code class="highlighter-rouge">viewer:leave</code> event</td>
+      <td>The id of the corresponding <code class="highlighter-rouge">viewer:leave</code> Obojobo event</td>
+    </tr>
+    <tr>
+      <td>leftTime</td>
+      <td>ECMAScript Date string representation of the recorded time when the tab/window went inactive</td>
+    </tr>
+    <tr>
+      <td>duration</td>
+      <td>The amount of time in milliseconds recorded in which the tab/window was not active</td>
     </tr>
   </tbody>
 </table>
