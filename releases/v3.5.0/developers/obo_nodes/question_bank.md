@@ -12,7 +12,7 @@ Question banks contain one or more questions or other question banks with rules 
 
 | Property | Required | Type | Description |
 |-
-| choose | no | Integer or `Infinity` | Default: `Infinity`. The number of children (1 or greater) to "choose" when selecting which children to display. If greater then the total number of children QuestionBank will choose all children.
+| choose | no | Integer or `all` | Default: `all`. The number of children (1 or greater) to "choose" when selecting which children to display. If greater then the total number of children QuestionBank will choose all children. Invalid values will behave as `all`, and choose all children
 | select | no | String | Default: `sequential`. Describes how the question bank "selects" children - Expected to be one of the following values:
 
 ### Supported Values for `select`
