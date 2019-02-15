@@ -115,7 +115,7 @@ Occurs when the user has interacted with the page after having not interacted wi
 
 <dl>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 
 #### Properties
@@ -124,7 +124,7 @@ Occurs when the user has interacted with the page after having not interacted wi
 |-
 | lastActiveTime | ECMAScript Date string representation of the last recorded time of interactivity
 | inactiveDuration | The updated amount of time in milliseconds recorded with no measured interactivity
-| relatedEventId | The id of the corresponding `viewer:inactive` event
+| relatedEventId | The id of the corresponding `viewer:inactive` Obojobo event
 
 ### *viewer:leave*
 
@@ -145,14 +145,16 @@ Occurs when the user is again viewing the draft page, either by changing tabs or
 
 <dl>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
+	<dd>2.0.0</dd>
 </dl>
 
 #### Properties
 
 | Property | Description |
 |-
-| relatedEventId | The id of the corresponding `viewer:leave` event
+| relatedEventId | The id of the corresponding `viewer:leave` Obojobo event
+| leftTime | ECMAScript Date string representation of the recorded time when the tab/window went inactive
+| duration | The amount of time in milliseconds recorded in which the tab/window was not active
 
 ## Question
 

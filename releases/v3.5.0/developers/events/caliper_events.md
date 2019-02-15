@@ -14,8 +14,7 @@ All events (unless otherwise noted) contain these properties:
 | id | Generated UUID
 | edApp | [_System IRI_](#caliper-entities-and-iris)
 | federatedSession | [_Launch IRI_](#caliper-entities-and-iris)
-| extensions.previewMode | True if this is a preview session, false otherwise
-
+| extensions.internalEventId | The id for the associated Obojobo event
 
 ### NavigationEvent
 
@@ -23,10 +22,10 @@ All events (unless otherwise noted) contain these properties:
 
 Occurs when Viewer Client sends one of the following Obojobo events:
 
-* [`nav:prev`](obojobo_events.html#navprev)
-* [`nav:next`](obojobo_events.html#navnext)
-* [`nav:goto`](obojobo_events.html#navgoto)
-* [`nav:gotoPath`](obojobo_events.html#navgotopath)
+- [`nav:prev`](obojobo_events.html#navprev)
+- [`nav:next`](obojobo_events.html#navnext)
+- [`nav:goto`](obojobo_events.html#navgoto)
+- [`nav:gotoPath`](obojobo_events.html#navgotopath)
 
 #### Properties:
 
@@ -37,7 +36,6 @@ Occurs when Viewer Client sends one of the following Obojobo events:
 | object | [_OboNode IRI_](#caliper-entities-and-iris) the user is navigating to
 | referrer | [_OboNode IRI_](#caliper-entities-and-iris) the user is coming from
 | extensions.navType | `next`, `prev`, `goto` or `gotoPath`
-
 
 ### ViewEvent
 
@@ -62,7 +60,6 @@ Occurs when Viewer Client sends a [`question:showExplanation`](obojobo_events.ht
 | object | [_OboNode IRI_](#caliper-entities-and-iris) of Question being viewed
 | target | [_OboNode with Context IRI_](#caliper-entities-and-iris) of the Question explanation being viewed. `:contextName`=`explanation`
 
-
 ### AssessmentItemEvent
 
 User selects a response to a question. Viewer Client sends a [`question:setResponse`](obojobo_events.html#questionsetresponse) event.
@@ -84,7 +81,6 @@ User selects a response to a question. Viewer Client sends a [`question:setRespo
 | action | `Completed`
 | target | [_OboNode IRI_](#caliper-entities-and-iris) of Question being responded to
 | object | [_Attempt IRI_](#caliper-entities-and-iris)
-
 
 ### GradeEvent
 
@@ -111,7 +107,6 @@ User selects a response to a question. Viewer Client sends a [`question:setRespo
 | extensions.assessmentScore | null or a float (0-100),
 | extensions.ltiScoreSent | null or a float (0-1)
 
-
 ### SessionEvent
 
 #### User starts a new Visit
@@ -136,7 +131,6 @@ Occurs when Viewer Client sends a [`viewer:close`](obojobo_events.html#viewerclo
 | target | [_Draft IRI_](#caliper-entities-and-iris)
 | action | `LoggedOut`
 
-
 ### AssessmentEvent
 
 #### User has started an assessment attempt
@@ -156,7 +150,6 @@ Occurs when Viewer Client sends a [`viewer:close`](obojobo_events.html#viewerclo
 | object | [_Assessment IRI_](#caliper-entities-and-iris)
 | generated | [_Attempt IRI_](#caliper-entities-and-iris)
 | action | `Submitted`
-
 
 ### ToolUseEvent
 
@@ -181,12 +174,9 @@ Occurs when App Server sends a [`viewer:open`](obojobo_events.html#vieweropen) O
 | generated | [_Visit IRI_](#caliper-entities-and-iris)
 | extensions.deactivatedVisitId | Id of a Visit that was deactivated by this new visit
 
-
-
 ## Obojobo Specific Types
 
 Additionally some generic events are created where existing Caliper events aren't appropriate:
-
 
 ### Hid
 
@@ -221,7 +211,6 @@ When Viewer Client sends a [`nav:close`](obojobo_events.html#navclose) Obojobo e
 | action | `Hid`
 | object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being hidden. `:entity` = `nav`
 
-
 ### Showed
 
 #### Nav menu is showed
@@ -233,7 +222,6 @@ When Viewer Client sends a [`nav:open`](obojobo_events.html#navopen) Obojobo eve
 | actor | [_User IRI_](#caliper-entities-and-iris) or [_Viewer Client IRI_](#caliper-entities-and-iris)
 | action | `Showed`
 | object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being showed. `:entity` = `nav`
-
 
 ### Toggled
 
@@ -247,7 +235,6 @@ When Viewer Client sends a [`nav:toggle`](obojobo_events.html#navtoggle) Obojobo
 | action | `Toggled`
 | object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being toggled. `:entity` = `nav`
 
-
 ### Activated
 
 ####User is no longer loo Nav menu is unlocked
@@ -260,7 +247,6 @@ When Viewer Client sends a [`nav:unlock`](obojobo_events.html#navunlock) Obojobo
 | action | `Activated`
 | object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being unlocked (:entity = `nav`)
 
-
 ### Deactivated
 
 #### Nav menu is locked
@@ -271,8 +257,7 @@ When Viewer Client sends a [`nav:lock`](obojobo_events.html#navlock) Obojobo eve
 |-
 | actor | [_Viewer Client IRI_](#caliper-entities-and-iris)
 | action | `Deactivated`
-| object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris)  of the NavMenu item being locked. `:entity` = `nav`
-
+| object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being locked. `:entity` = `nav`
 
 ### Submitted
 
@@ -284,8 +269,7 @@ When Viewer Client sends a [`question:checkAnswer`](obojobo_events.html#question
 |-
 | actor | [_User IRI_](#caliper-entities-and-iris)
 | action | `Submitted`
-| Object | [_Practice Question Attempt IRI_](#caliper-entities-and-iris)
-
+| object | [_Practice Question Attempt IRI_](#caliper-entities-and-iris)
 
 ### Reset
 
@@ -311,7 +295,6 @@ When Viewer Client sends a [`question:retry`](obojobo_events.html#questionretry)
 | object | [_Draft IRI_](#caliper-entities-and-iris)
 | target | [_Practice Question Attempt IRI_](#caliper-entities-and-iris)
 
-
 ### Ab<!--r-->andoned
 
 #### User has gone idle
@@ -327,7 +310,6 @@ When Viewer Client sends a [`viewer:inactive`](obojobo_events.html#viewerinactiv
 | extensions.lastActiveTime | ECMAScript Date toString value
 | extensions.inactiveDuration | milliseconds
 
-
 #### User is no longer looking at the draft
 
 When Viewer Client sends a [`viewer:leave`](obojobo_events.html#viewerleave) Obojobo event.
@@ -338,7 +320,6 @@ When Viewer Client sends a [`viewer:leave`](obojobo_events.html#viewerleave) Obo
 | actor | [_User IRI_](#caliper-entities-and-iris)
 | object | [_Draft IRI_](#caliper-entities-and-iris)
 | extensions.type | `leave`
-
 
 ### Resumed
 
@@ -368,7 +349,6 @@ When Viewer Client sends a [`viewer:return`](obojobo_events.html#viewerreturn) O
 | extension.inactiveDuration | milliseconds
 | extension.relatedEventId | id of [Abandoned Event](#abandoned)
 
-
 ### VisitCreate
 
 #### User has loaded a draft page
@@ -380,8 +360,6 @@ When Viewer Client sends a [`viewer:return`](obojobo_events.html#viewerreturn) O
 | object | [_Draft IRI_](#caliper-entities-and-iris)
 | generated | [_Visit IRI_](#caliper-entities-and-iris)
 | extensions.deactivatedVisitId | id of visit that was deactivated
-
-
 
 ## Caliper Entities and IRIs
 
@@ -403,8 +381,6 @@ When Viewer Client sends a [`viewer:return`](obojobo_events.html#viewerreturn) O
 | _Picker IRI_ | [SoftwareApplication](https://github.com/IMSGlobal/caliper-spec/blob/master/caliper-spec.md#softwareApplication) | `/api/picker`
 | _Visit IRI_ | [Entity](https://github.com/IMSGlobal/caliper-spec/blob/master/caliper-spec.md#entity) | `/api/visit/:visitId`
 
-
-
 ## Caliper Enity Subtypes
 
 According to [Caliper's Entity](https://github.com/IMSGlobal/caliper-spec/blob/master/caliper-spec.md#entity) description:
@@ -412,7 +388,6 @@ According to [Caliper's Entity](https://github.com/IMSGlobal/caliper-spec/blob/m
 > A Caliper Entity is a generic type that represents objects that participate in learning-related activities. A variety of Entity subtypes have been defined in order to better describe people, groups, organizations, digital content, courses, software applications, and other objects that constitute the "stuff" of a Caliper Event. Each Entity is provisioned with a modest set of properties or attributes that support discovery and description.
 
 Below are the custom entity subtypes used in Obojobo.
-
 
 ### Practice Question Score:
 
@@ -425,7 +400,6 @@ Below are the custom entity subtypes used in Obojobo.
 | dateCreated | DateTime |
 | attempt | [_Practice Question Attempt IRI_](#caliper-entities-and-iris)
 | scoredBy | [_Viewer Client_](#caliper-entities-and-iris)
-
 
 ### Assessment Attempt Score:
 
