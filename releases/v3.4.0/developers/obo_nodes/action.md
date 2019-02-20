@@ -29,7 +29,6 @@ The change that occurs as the result of a event being heard by a {{ 'trigger' | 
 | assessment:startAttempt | Begins an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
 | assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
 | viewer:alert | Displays a popup dialog. `value` should be an object with a `message` property (the main text of the dialog) and optionally a `title` property (the title of the dialog).
-| js | **DEPRECATED** - Runs arbitrary javascript. `value` should be a string of javascript code to execute.
 
 ## Required Children
 
