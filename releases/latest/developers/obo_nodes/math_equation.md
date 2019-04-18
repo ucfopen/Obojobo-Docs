@@ -1,4 +1,4 @@
 ---
 title: MathEquation
-redirect_to: "/releases/v3.4.0/developers/obo_nodes/math_equation"
+redirect_to: "/releases/v4.0.0/developers/obo_nodes/math_equation"
 ---

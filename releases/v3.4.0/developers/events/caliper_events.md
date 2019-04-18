@@ -14,8 +14,6 @@ All events (unless otherwise noted) contain these properties:
 | id | Generated UUID
 | edApp | [_System IRI_](#caliper-entities-and-iris)
 | federatedSession | [_Launch IRI_](#caliper-entities-and-iris)
-| extensions.previewMode | True if this is a preview session, false otherwise
-
 
 ### NavigationEvent
 

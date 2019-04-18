@@ -124,7 +124,6 @@ Occurs when the user has interacted with the page after having not interacted wi
 |-
 | lastActiveTime | ECMAScript Date string representation of the last recorded time of interactivity
 | inactiveDuration | The updated amount of time in milliseconds recorded with no measured interactivity
-| relatedEventId | The id of the corresponding `viewer:inactive` event
 
 ### *viewer:leave*
 
@@ -152,7 +151,7 @@ Occurs when the user is again viewing the draft page, either by changing tabs or
 
 | Property | Description |
 |-
-| relatedEventId | The id of the corresponding `viewer:leave` event
+| relatedEventId | The id of the corresponding `viewer:leave` Caliper event
 
 ## Question
 
