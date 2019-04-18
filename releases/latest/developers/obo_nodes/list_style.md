@@ -1,4 +1,4 @@
 ---
 title: List > listStyle
-redirect_to: "/releases/v3.5.0/developers/obo_nodes/list_style"
+redirect_to: "/releases/v4.0.0/developers/obo_nodes/list_style"
 ---
