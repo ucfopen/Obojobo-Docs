@@ -1980,7 +1980,7 @@ b {
 	position: relative;
 }
 .onPageNav:after {
-	content: 'Table of Contents';
+	content: 'On This Page';
 	position: absolute;
 	top: 0;
 	left: 0;
