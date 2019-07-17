@@ -1,4 +1,4 @@
 ---
 title: Extra Credit & Penalties
-redirect_to: "/releases/v4.0.0/authors/assessment_extra_credit"
+redirect_to: "/releases/v5.0.0/authors/assessment_extra_credit"
 ---
