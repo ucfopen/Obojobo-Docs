@@ -16,9 +16,7 @@
 title: Obojobo Next Documentation
 description: >-
   Learning Objects, Reinvented
-baseurl: '/Obojobo-Docs' # the subpath of your site, e.g. /blog
-url: 'https://ucfopen.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: materia_ucf
+url: 'https://5d94b0294a80411cdafe6125--serene-mahavira-1cedc9.netlify.com' # the base hostname & protocol for your site, e.g. http://example.com
 github_username: ucfopen
 destination: docs
 
