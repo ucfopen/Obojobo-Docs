@@ -12,7 +12,7 @@ A single answer choice in a multiple choice question containing the contents of 
 
 | Property | Required | Type | Description |
 |-
-| score | Required | Integer | `0` or `100`: Represents the correctness of this answer choice - i.e. A correct answer should have a `score` of `100` and incorrect answers a `score` of `0`.
+| score | For default questions | Integer | `0` or `100`: Represents the correctness of this answer choice - i.e. A correct answer should have a `score` of `100` and incorrect answers a `score` of `0`. This value is ignored for survey questions.
 
 > Partial credit is not supported - values must be either `0` or `100`, not a value in-between. A future release may allow for partial credit.
 

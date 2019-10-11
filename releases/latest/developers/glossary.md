@@ -1,4 +1,4 @@
 ---
 title: Obojobo Glossary
-redirect_to: "/releases/v6.0.0/developers/glossary"
+redirect_to: "/releases/v5.0.1/developers/glossary"
 ---

@@ -1,4 +1,4 @@
 ---
 title: Table
-redirect_to: "/releases/v6.0.0/developers/obo_nodes/table"
+redirect_to: "/releases/v5.0.1/developers/obo_nodes/table"
 ---

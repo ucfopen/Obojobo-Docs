@@ -12,10 +12,8 @@ Either an assessment or practice question. Questions are designed to support mul
 
 | Property | Required | Type | Description |
 |-
-| type | no | String | Default: `default`. Defines the type of question - either a standard question (`default`) or a survey question (`survey`).
-| solution | no | {{ 'Page' | obo_node }} | A page containing a full-text description of the solution to the problem. If this is set a button will be available after the question is attempted which will reveal the solution if pressed. This button is hidden when the question is used in an assessment but will show up in a full assessment review.
-
-> Survey questions have no score or feedback.
+| type | no | String | Default: `default`. Must be either `default` or `survey`. `survey` will create an un-graded question, all other values will create a standard practice or assessment question.
+| solution | no | {{ 'Page' | obo_node }} | A page containing a full-text description of the solution to the problem. If this is set a button will be available after the question is attempted which will reveal the solution if pressed. This button is only available for `default` type questions and is hidden when the question is used in an assessment (but will show up in a full assessment review).
 
 ## Supported Trigger Types
 
@@ -152,7 +150,7 @@ None
 ### XML (and OboHTML)
 
 ```xml
-<Question type="default">
+<Question>
   <p>What is 2+2?</p>
   <MCAssessment responseType="pick-one" shuffle="false">
     <MCChoice score="0">

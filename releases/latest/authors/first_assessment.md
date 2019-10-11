@@ -1,4 +1,4 @@
 ---
 title: Creating Your First Assessment
-redirect_to: "/releases/v6.0.0/authors/first_assessment"
+redirect_to: "/releases/v5.0.1/authors/first_assessment"
 ---
