@@ -1,4 +1,4 @@
 ---
 title: Module
-redirect_to: "/releases/v4.0.0/developers/obo_nodes/module"
+redirect_to: "/releases/v6.0.0/developers/obo_nodes/module"
 ---
