@@ -1,4 +1,4 @@
 ---
 title: textGroup
-redirect_to: "/releases/v5.0.1/developers/obo_nodes/text_group"
+redirect_to: "/releases/v6.0.1/developers/obo_nodes/text_group"
 ---

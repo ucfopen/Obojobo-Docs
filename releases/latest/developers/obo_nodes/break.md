@@ -1,4 +1,4 @@
 ---
 title: Break
-redirect_to: "/releases/v5.0.1/developers/obo_nodes/break"
+redirect_to: "/releases/v6.0.1/developers/obo_nodes/break"
 ---
