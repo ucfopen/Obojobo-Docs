@@ -223,18 +223,6 @@ When Viewer Client sends a [`nav:open`](obojobo_events.html#navopen) Obojobo eve
 | action | `Showed`
 | object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being showed. `:entity` = `nav`
 
-### Toggled
-
-#### Nav menu is showed
-
-When Viewer Client sends a [`nav:toggle`](obojobo_events.html#navtoggle) Obojobo event.
-
-| Property | Value |
-|-
-| actor | [_User IRI_](#caliper-entities-and-iris) or [_Viewer Client IRI_](#caliper-entities-and-iris)
-| action | `Toggled`
-| object | [_Viewer Client Enity IRI_](#caliper-entities-and-iris) of the NavMenu item being toggled. `:entity` = `nav`
-
 ### Activated
 
 ####User is no longer loo Nav menu is unlocked
