@@ -1,4 +1,4 @@
 ---
 title: Assessment Scoring
-redirect_to: "/releases/v4.0.0/authors/assessment_scoring"
+redirect_to: "/releases/v6.0.1/authors/assessment_scoring"
 ---
