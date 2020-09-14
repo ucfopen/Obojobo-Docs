@@ -1,4 +1,4 @@
 ---
 title: OboXML Guide
-redirect_to: "/releases/v6.0.1/authors/oboxml_guide"
+redirect_to: "/releases/v10.0.0/authors/oboxml_guide"
 ---
