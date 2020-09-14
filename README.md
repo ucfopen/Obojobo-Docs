@@ -31,7 +31,7 @@ Obojobo-Docs/
 
 ## Installing
 
-- Run `bundle install`
+- Run `bundle install --path vendor/bundle`
 
 ### Requirements
 
