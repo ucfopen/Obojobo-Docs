@@ -1,2 +1,4 @@
 _test
 .DS_Store
+.bundle
+vendor
