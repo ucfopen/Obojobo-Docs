@@ -1,4 +1,4 @@
 ---
 title: Variables
-redirect_to: "/releases/v10.1.0/authors/variables"
+redirect_to: "/releases/v11.0.0/authors/variables"
 ---
