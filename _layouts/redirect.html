@@ -2,12 +2,12 @@
 <html lang="en-US">
 	<meta charset="utf-8" />
 	<title>Redirecting&hellip;</title>
-	<link rel="canonical" href="{{ page.redirect_to }}" />
+	<link rel="canonical" href="{{ page.redirect_to | relative_url }}" />
 	<script>
-		location = '{{ page.redirect_to }}'
+		location = '{{ page.redirect_to | relative_url}}'
 	</script>
-	<meta http-equiv="refresh" content="0; url={{ page.redirect_to }}" />
+	<meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}" />
 	<meta name="robots" content="noindex" />
 	<h1>Redirecting&hellip;</h1>
-	<a href="{{ page.redirect_to }}">Click here if you are not redirected.</a>
+	<a href="{{ page.redirect_to | relative_url }}">Click here if you are not redirected.</a>
 </html>
