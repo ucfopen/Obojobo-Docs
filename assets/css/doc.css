@@ -22,6 +22,10 @@
 	display: block;
 }
 
+.styled-select select option {
+	background-color: #145bad;
+}
+
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
  *
