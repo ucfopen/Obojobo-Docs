@@ -14,6 +14,7 @@ namespace :releases do
     if args.source_version === nil || args.new_version === nil
       puts "Usage:    bundle exec rake releases:create[:source_version,:new_version]"
       puts "Example:  bundle exec rake releases:create['3.3.2','3.4.0']"
+      puts "Example:  bundle exec rake 'releases:create[3.3.2,3.4.0]'
       abort
     end
 
@@ -24,9 +25,7 @@ namespace :releases do
     end
 
     # Ensure the given new version is a valid version string:
-    begin
-      Gem::Version.new(args.new_version)
-    rescue
+    unless Gem::Version.correct?(args.new_version)
       puts "#{args.new_version} is not a valid version number."
       abort
     end
@@ -47,6 +46,7 @@ namespace :releases do
     if args.version === nil
       puts "Usage:    bundle exec rake releases:delete[:version]"
       puts "Example:  bundle exec rake releases:delete['3.3.0']"
+      puts "Example:  bundle exec rake 'releases:delete[3.3.0]'"
       abort
     end
 
@@ -66,6 +66,7 @@ namespace :releases do
     if args.new_version === nil
       puts "Usage:    bundle exec rake releases:new_version[:version]"
       puts "Example:  bundle exec rake releases:new_version['9.8.7']"
+      puts "Example:  bundle exec rake 'releases:new_version[9.8.7]'"
       abort
     end
 
