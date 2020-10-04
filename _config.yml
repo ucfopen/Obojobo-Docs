@@ -20,7 +20,7 @@ baseurl: '/Obojobo-Docs' # the subpath of your site, e.g. /blog
 url: 'https://ucfopen.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: materia_ucf
 github_username: ucfopen
-destination: docs
+destination: _site
 
 markdown: kramdown
 

@@ -14,7 +14,7 @@ namespace :releases do
     if args.source_version === nil || args.new_version === nil
       puts "Usage:    bundle exec rake releases:create[:source_version,:new_version]"
       puts "Example:  bundle exec rake releases:create['3.3.2','3.4.0']"
-      puts "Example:  bundle exec rake 'releases:create[3.3.2,3.4.0]'
+      puts "Example:  bundle exec rake 'releases:create[3.3.2,3.4.0]'"
       abort
     end
 
