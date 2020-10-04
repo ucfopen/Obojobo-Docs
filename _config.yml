@@ -27,7 +27,6 @@ markdown: kramdown
 plugins:
   - jekyll-menus # left side group navigation menu
   - jekyll-toc # right side in-page table of contents menu
-  # - jekyll-redirect-from # Allows /releases/latest to redirect
 
 toc:
   min_level: 1 # default: 1
