@@ -25,7 +25,7 @@ Obojobo-Docs/
 
 > Note: `./releases/latest` only creates redirects for files in the newest version - it will not create a redirect for any files that only exist in an older version. For example, if `./releases/v3.3.2/example.md` exists but `./releases/v3.3.3/example.md` does not then no redirect will exist in `./releases/latest`.
 
-> The `./releases/latest` directory is updated when the docs are built or on the first run when developing. There are also rake commands to do this (see "Update the latest redirects" below).
+> The `./releases/latest` directory is not required as the latest redirects are created automatically.
 
 # Getting Started
 
