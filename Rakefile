@@ -2,41 +2,9 @@ require 'html-proofer'
 require 'yaml'
 require 'find'
 require 'fileutils'
+require_relative '_plugins/get_release_versions'
 
 namespace :releases do
-  def get_release_versions
-    dirs = Dir.glob('./releases/v*').select {|f| File.directory? f}
-    dirs = dirs.map {|d| d.gsub("./releases/v", "")}
-    dirs.sort_by { |v| Gem::Version.new(v) }
-  end
-
-  def get_latest_release_version
-    get_release_versions().last
-  end
-
-  def update_latest()
-    latest_release_dir = "/releases/v#{get_latest_release_version}"
-    redirect_base_url = "#{latest_release_dir}"
-
-    if File.directory? "./releases/latest"
-      FileUtils.remove_dir "./releases/latest"
-    end
-
-    Find.find(".#{latest_release_dir}") do |path|
-      if path.downcase =~ /.*\.md$/
-        contents = YAML.load_file(path)
-        new_url = path.gsub(".#{latest_release_dir}", "").gsub(/\.md$/, "")
-        new_contents = { "title" => contents["title"], "redirect_to" => "#{redirect_base_url}#{new_url}" }
-        new_md_file_path = path.gsub(latest_release_dir, "/releases/latest")
-        new_md_file_dir = File.dirname(new_md_file_path)
-
-        # Make directories (if they don't exist):
-        FileUtils.mkdir_p new_md_file_dir
-        # Write new md file
-        File.open(new_md_file_path, 'w') { |f| f.write "#{new_contents.to_yaml}---" }
-      end
-    end
-  end
 
   task :list do
     puts get_release_versions()
@@ -104,18 +72,13 @@ namespace :releases do
     sh "bundle exec rake releases:create['#{get_latest_release_version}','#{args.new_version}']"
   end
 
-  task :update_latest do
-    update_latest
-  end
 end
 
 task :build do
-  sh "bundle exec rake releases:update_latest"
   sh "bundle exec jekyll build --trace"
 end
 
 task :dev do
-  sh "bundle exec rake releases:update_latest"
   sh "bundle exec jekyll serve --livereload --trace"
 end
 
