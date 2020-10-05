@@ -1,4 +1,4 @@
 ---
 title: Assessment > rubric
-redirect_to: "/releases/v11.0.0/developers/obo_nodes/rubric"
+redirect_to: "/releases/v10.2.0/developers/obo_nodes/rubric"
 ---
