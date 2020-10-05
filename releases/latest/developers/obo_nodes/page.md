@@ -1,4 +1,4 @@
 ---
 title: Page
-redirect_to: "/releases/v10.2.0/developers/obo_nodes/page"
+redirect_to: "/releases/v11.0.0/developers/obo_nodes/page"
 ---
