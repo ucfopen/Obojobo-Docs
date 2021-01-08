@@ -1,2 +1,6 @@
 _test
 .DS_Store
+.bundle
+vendor
+docs
+_site
