@@ -20,14 +20,13 @@ baseurl: '/Obojobo-Docs' # the subpath of your site, e.g. /blog
 url: 'https://ucfopen.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: materia_ucf
 github_username: ucfopen
-destination: docs
+destination: _site
 
 markdown: kramdown
 
 plugins:
   - jekyll-menus # left side group navigation menu
   - jekyll-toc # right side in-page table of contents menu
-  - jekyll-redirect-from # Allows /releases/latest to redirect
 
 toc:
   min_level: 1 # default: 1
