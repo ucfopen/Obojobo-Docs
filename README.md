@@ -149,9 +149,7 @@ This creates a new latest version from the previous latest version (by copying f
 
 # Committing & Building Docs for Production
 
-1. Run `bundle exec rake build` - This will update the `./releases/latest` folder, then build the `./docs` folder for production.
-1. Run `bundle exec rake test` - This will run the HTML Proofer on the content and return any errors (such as bad links).
-1. Commit
+Docs on the master branch are built and published automatically via GitHub actions.
 
 # Additional rake commands:
 
@@ -177,8 +175,6 @@ This will create a new directory for the destination version based on the source
 
 Deletes all source files for the given version. In this example this command would delete the `./releases/v3.3.3` folder.
 
-## Update the latest redirects
+## Testing links
 
-- Run `bundle exec rake releases:update_latest`
-
-This will update the `./releases/latest` folder which contain redirects to the pages of the current latest version.
+- Run `bundle exec rake test` - This will run the HTML Proofer on the content and return any errors (such as bad links).
