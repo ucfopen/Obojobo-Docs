@@ -30,7 +30,7 @@ The change that occurs as the result of a event being heard by a {{ 'trigger' | 
 | assessment:endAttempt | Ends an assessment attempt. `value` should be an object with an `id` property set to the id of the {{ 'Assessment' | obo_node }} node containing the assessment to start.
 | viewer:alert | Displays a popup dialog. `value` should be an object with a `message` property (the main text of the dialog) and optionally a `title` property (the title of the dialog).
 | viewer:scrollToTop | Scrolls page to the top. `value` is optional, but if specified, should be an object with a `animateScroll` property. If `animateScroll` is true then the page will smoothly scroll to the top, otherwise, the page will jump to the top.
-| focus:component | Moves DOM focus to an OboNode (for example, a {{ 'Question' | obo_node }}). `value` should be an object with an `id` property set to the id of the OboNode to focus on. Optionally you can also specify `fade:true` to visually fade other elements on the page and `animateScroll:true` to smoothly scroll to the element.
+| focus:component | Moves DOM focus to an OboNode (for example, a {{ 'Question' | obo_node }}). `value` should be an object with an `id` property set to the id of the OboNode to focus on. Optionally you can also specify `fade:true` to visually fade other elements on the page. If the OboNode to focus on is not visible the page will jump so that it is visible to the user. You can optionally specify `animateScroll:true` to smoothly scroll to the element instead, or `preventScroll:true` to prevent the page from scrolling (not recommended).
 
 ## Required Children
 
