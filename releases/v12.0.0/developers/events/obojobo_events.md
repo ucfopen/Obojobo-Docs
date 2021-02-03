@@ -404,6 +404,21 @@ Occurs when an assessment attempt has been scored.
 | originalScoreId | If this attempt was imported then this is the internal `assessmentScoreId` of the assessment score that was imported. Otherwise `null`.
 | originalAttemptId | If this attempt was imported then this is the internal `attemptId` of the attempt that was imported. Otherwise `null`.
 
+### _assessment:attemptInvalidated_
+
+Occurs when an assessment attempt has been invalidated because the module was updated after the user started it.
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Payload
+
+| Property | Description |
+|-
+| attemptId |
+
 ## Navigation
 
 ### _nav:gotoPath_
