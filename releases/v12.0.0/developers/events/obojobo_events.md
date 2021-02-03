@@ -406,7 +406,7 @@ Occurs when an assessment attempt has been scored.
 
 ### _assessment:attemptInvalidated_
 
-Occurs when an assessment attempt has been invalidated because the module was updated after the user started it.
+Occurs when an assessment attempt has been invalidated because the module was updated after the user started the attempt.
 
 <dl>
 	<dt>Version</dt>
