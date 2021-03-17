@@ -99,15 +99,11 @@ task :dev_version, [:version] do |task, args|
 end
 
 task :dev_latest_version do
-  # puts ""
-  # puts "This task will only watch 'releases/v#{get_latest_release_version()}'. Changes to other release versions will be ignored!".yellow
-  # puts ""
-  # sh "WATCH_LATEST_ONLY=true bundle exec jekyll serve --livereload --trace"
   sh "bundle exec rake dev_version[#{get_latest_release_version()}]"
 end
 
 task :test do
-  # build into a test directory that has the 'baseurl' encorperated
+  # build into a test directory that has the 'baseurl' incorporated
   sh "bundle exec rake build"
   sh "bundle exec jekyll build -d _test/Obojobo-Docs"
 
