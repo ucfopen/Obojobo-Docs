@@ -40,12 +40,37 @@ Obojobo-Docs/
 
 # Developing the docs
 
+## To work on just the latest version of the docs (recommended):
+
+- Run `bundle exec rake dev_latest_version`
+- Go to http://127.0.0.1:4000/Obojobo-Docs/ in your browser
+
+The files in the highest numbered `release` directory will auto-update in your browser when they are modified.
+
+> This command is faster to run as Jekyll does not need to update all the files across several versions.
+
+## To work on a specific version of the docs:
+
+- Run `bundle exec rake dev_version["VERSION_NUMBER"]`
+- (Example `bundle exec rake dev_version["5.6.7"]`)
+- Go to http://127.0.0.1:4000/Obojobo-Docs/ in your browser
+
+The files in the `release` directory for the given version will auto-update in your browser when they are modified.
+
+> This command is faster to run as Jekyll does not need to update all the files across several versions.
+
+## To work on all versions of the docs:
+
 - Run `bundle exec rake dev`
 - Go to http://127.0.0.1:4000/Obojobo-Docs/ in your browser
 
 The files in the `./releases` directory will auto-update in your browser when they are modified.
 
-Use the version selector drop-down on a documentation page to switch between versions. Note that this selector is only aware of the list of versispaons in `./releases` and may result in a 404 if the current file does not exist in the newly selected version.
+> This command can be slow to run depending on the number of release versions in the repository!
+
+## Switching versions
+
+Use the version selector drop-down on a documentation page to switch between versions. Note that this selector is only aware of the list of versions in `./releases` and may result in a 404 if the current file does not exist in the newly selected version.
 
 ## Creating a new version
 

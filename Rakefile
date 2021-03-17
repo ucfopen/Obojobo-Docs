@@ -2,6 +2,7 @@ require 'html-proofer'
 require 'yaml'
 require 'find'
 require 'fileutils'
+require 'colorize'
 require_relative '_plugins/get_release_versions'
 
 namespace :releases do
@@ -81,6 +82,28 @@ end
 
 task :dev do
   sh "bundle exec jekyll serve --livereload --trace"
+end
+
+task :dev_version, [:version] do |task, args|
+  if args.version === nil
+    puts "Usage:   bundle exec rake dev_version[:version]"
+    puts "Example: bundle exec rake dev_version['9.8.7']"
+    puts "Example: bundle exec rake 'dev_version[9.8.7]'"
+    abort
+  end
+
+  puts ""
+  puts "This task will only watch 'releases/v#{args.version}'. Changes to other release versions will be ignored!".yellow
+  puts ""
+  sh "WATCH_VERSION=#{args.version} bundle exec jekyll serve --livereload --trace"
+end
+
+task :dev_latest_version do
+  # puts ""
+  # puts "This task will only watch 'releases/v#{get_latest_release_version()}'. Changes to other release versions will be ignored!".yellow
+  # puts ""
+  # sh "WATCH_LATEST_ONLY=true bundle exec jekyll serve --livereload --trace"
+  sh "bundle exec rake dev_version[#{get_latest_release_version()}]"
 end
 
 task :test do
