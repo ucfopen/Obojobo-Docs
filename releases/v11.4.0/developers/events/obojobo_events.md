@@ -677,9 +677,6 @@ Occurs when the LTI document picker was launched from a LMS (Tool Consumer).
 
 ### _materia:ltiLaunchWidget_
 
-<!-- {"endpoint": "https://localhost/embed/LuALo/test", "resourceLinkId": "37d9060b-dd4d-4507-a461-81db49139581", "lisResultSourcedId": "ab481f5b-602c-4363-894b-75da73e08fd2_37d9060b-dd4d-4507-a461-81db49139581"} -->
-
-
 Occurs when a Materia widget is launched in the Obojobo Viewer.
 
 <dl>
@@ -698,8 +695,6 @@ Occurs when a Materia widget is launched in the Obojobo Viewer.
 ### _materia:ltiPickerLaunch_
 
 Occurs when an author selects a Materia widget to embed in the Obojobo Visual Editor.
-<!--
-{"nodeId": "22aa6b58-4afe-40fe-be49-9eee131c3329", "endpoint": "https://localhost/lti/picker"} -->
 
 <dl>
 	<dt>Version</dt>
@@ -714,8 +709,6 @@ Occurs when an author selects a Materia widget to embed in the Obojobo Visual Ed
 | endpoint | The URL of the picker UI that is loaded (e.g. `https://materia.ucf.edu/lti/picker`)
 
 ### _materia:ltiScorePassback_
-
-<!-- {"success": true, "messageId": "b0df9d43-c153-43f2-81fa-c1c6b3d95baa", "materiaHost": "https://localhost", "messageRefId": "604fd7fe2fd5f", "resourceLinkId": "22aa6b58-4afe-40fe-be49-9eee131c3329", "lisResultSourcedId": "0e2c7c7d-2e8d-4e84-930a-0a1ee3601329_22aa6b58-4afe-40fe-be49-9eee131c3329"} -->
 
 Occurs when Materia sends a score back via LTI. Specifically this is fired after Materia sends an LTI `replaceResultRequest` request.
 

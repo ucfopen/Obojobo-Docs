@@ -1,6 +1,8 @@
 require 'jekyll-watch'
 require_relative './get_release_versions'
 
+# Modified from https://stackoverflow.com/questions/36861397/exclude-jekyll-directory-from-watch-but-not-build
+
 if(ENV["WATCH_VERSION"])
   module Jekyll
     module Watcher
