@@ -19,6 +19,7 @@ An image with an optional image caption shown below.
 | size | no | String | Default: `small`. One of the following values representing the desired size of the image
 | width | no | String | If size is set to `custom` then this specifies the width. Has no effect otherwise.
 | height | no | String | If size is set to `custom` then this specifies the height. Has no effect otherwise.
+| captionWidth | no | String | Default: `image-width`. Defines the width of captions. Has no effect if `size` is set to `large` or `medium`.
 
 ### Supported Values for `size`
 
@@ -30,6 +31,13 @@ An image with an optional image caption shown below.
 | custom | An image set at a specific size (or native size if width and height is not defined). The image is still restricted by the width of the page.
 
 > Note: Setting either `width` or `height` on a `custom` image will modify the non-specified dimension proportionally. It's not recommended to set both `width` and `height` as this will not respect the natural aspect-ratio of the image.
+
+### Supported Values for `captionWidth`
+
+| Value | Description |
+|-
+| image-width | The width of the caption will match the width of the image
+| text-width | The width of the caption will extend past the width of the image and will only wrap at the text content boundaries
 
 ## Supported Trigger Types
 

@@ -124,6 +124,9 @@ Using `<t>` elements allows styling with a subset of HTML-like styling tags.
 | `<q></q>` | Quote
 | `<del></del>` | Strikethrough
 | `<code></code>` | Monospaced
+| `<color text="#990000"></color>` | Colored text
+
+> The `text` attribute in `<color>` can be any valid CSS color string. However for cross-browser compatibility we recommend you stick to hex codes, rgb(), hsl() or named colors. For example, `#FF0000`, `rgb(255,0,0)`, `hsl(0,100%,50%)`, or `red`.
 
 ## Inline Math Example
 

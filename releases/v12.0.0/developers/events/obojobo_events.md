@@ -69,11 +69,28 @@ Occurs when a visit is started after its creation. Not all visits that are creat
 
 ### _viewer:open_
 
-Occurs when the user has opened a document in the Obojobo Veiwer.
+Occurs when the user has opened a document in the Obojobo Viewer.
 
 <dl>
 	<dt>Version</dt>
 	<dd>1.1.0</dd>
+</dl>
+
+#### Payload
+
+| Property | Description |
+|-
+| visitId | id of the visit User/draft
+
+> It's possible for the user to open the module in a new tab. In that case, they viewer may have "opened" but the user is not yet looking at the module. Use `viewer:initialView` for a more accurate measurement of when a user is first interacting with and viewing a module.
+
+### _viewer:initialView_
+
+Occurs when the module has loaded, is able to be interacted with, and the user is looking at the page.
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
 </dl>
 
 #### Payload
@@ -147,14 +164,14 @@ Occurs when the user is again viewing the draft page, either by changing tabs or
 
 <dl>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 #### Payload
 
 | Property | Description |
 |-
-| relatedEventId | The id of the corresponding `viewer:leave` Obojobo event
+| relatedEventId | The id of the corresponding `viewer:leave` Obojobo event, or the string `"not available"` if no corresponding related event id could be found
 | leftTime | ECMAScript Date string representation of the recorded time when the tab/window went inactive
 | duration | The amount of time in milliseconds recorded in which the tab/window was not active
 
