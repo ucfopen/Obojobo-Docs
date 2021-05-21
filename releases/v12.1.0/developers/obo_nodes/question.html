@@ -327,7 +327,23 @@
 		<li class="navListItem">
 			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/module.html">Module</a>
 		</li>
-		                          
+		    
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_assessment.html">NumericAssessment</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_choice.html">NumericAssessment > NumericChoice</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_answer.html">NumericAssessment > NumericChoice > NumericAnswer</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_feedback.html">NumericAssessment > NumericChoice > NumericFeedback</a>
+		</li>
+		                        
 		<li class="navListItem">
 			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/page.html">Page</a>
 		</li>
@@ -462,6 +478,55 @@
       <td><em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/page.html">Page</a></em></td>
       <td>A page containing a full-text description of the solution to the problem. If this is set a button will be available after the question is attempted which will reveal the solution if pressed. This button is only available for <code class="highlighter-rouge">default</code> type questions and is hidden when the question is used in an assessment (but will show up in a full assessment review).</td>
     </tr>
+    <tr>
+      <td>revealAnswer</td>
+      <td>no</td>
+      <td>String</td>
+      <td>Default: <code class="highlighter-rouge">default</code>. Determines when the “Reveal Answer” button should be displayed for practice questions.</td>
+    </tr>
+    <tr>
+      <td>correctLabels</td>
+      <td>no</td>
+      <td>String</td>
+      <td>Default: <code class="highlighter-rouge">Correct!|You got it!|Great job!|That's right!</code> for default questions, <code class="highlighter-rouge">Response recorded</code> for survey questions. A <code class="highlighter-rouge">|</code> seperated list of labels to display when a non-assessment Question is answered correctly. One label will be selected at random. In Assessment Review this value is ignored (<code class="highlighter-rouge">'Correct!'</code> is always displayed instead for default questions, and <code class="highlighter-rouge">'Response recorded'</code> is always displayed for survey questions).</td>
+    </tr>
+    <tr>
+      <td>incorrectLabels</td>
+      <td>no</td>
+      <td>String</td>
+      <td>Default: <code class="highlighter-rouge">Incorrect</code>. A <code class="highlighter-rouge">|</code> seperated list of labels to display when a non-assessment Question is answered incorrectly. One label will be selected at random. This value is ignored for survey questions.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="supported-values-for-revealanswer">
+<a id="supported-values-for-revealanswer" class="anchor" href="#supported-values-for-revealanswer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported values for <code class="highlighter-rouge">revealAnswer</code>
+</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>default</td>
+      <td>Allow the type of question to determine when/if to show the Reveal Answer button (never for Multiple Choice questions, when-incorrect for Numeric questions)</td>
+    </tr>
+    <tr>
+      <td>never</td>
+      <td>The button will never be shown for this question</td>
+    </tr>
+    <tr>
+      <td>always</td>
+      <td>The button will be shown when the question is unanswered or if answered incorrectly</td>
+    </tr>
+    <tr>
+      <td>when-incorrect</td>
+      <td>The button will only be shown when a question is answered incorrectly</td>
+    </tr>
   </tbody>
 </table>
 
@@ -493,7 +558,7 @@
 <ol>
   <li>One or more <a href="../#chunk">Chunk nodes</a> (    <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/action_button.html">ActionButton</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/break.html">Break</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/code.html">Code</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/figure.html">Figure</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/heading.html">Heading</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/html.html">HTML</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/i_frame.html">IFrame</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/list.html">List</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/materia.html">Materia</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/math_equation.html">MathEquation</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/table.html">Table</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/text.html">Text</a></em>,  <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/you_tube.html">YouTube</a></em> 
 ) - This is how you create the actual question</li>
-  <li>An <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/mc_assessment.html">MCAssessment</a></em> node - this MUST be the last child.</li>
+  <li>An <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/mc_assessment.html">MCAssessment</a></em> or <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_assessment.html">NumericAssessment</a></em> node - this MUST be the last child.</li>
 </ol>
 
 <h2 id="variables-registered">
@@ -659,6 +724,7 @@
 
 				<nav class="onPageNav"><ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
+<li class="toc-entry toc-h2"><a href="#supported-values-for-revealanswer">Supported values for revealAnswer</a></li>
 <li class="toc-entry toc-h2"><a href="#supported-trigger-types">Supported Trigger Types</a></li>
 <li class="toc-entry toc-h2"><a href="#required-children">Required Children</a></li>
 <li class="toc-entry toc-h2"><a href="#variables-registered">Variables Registered</a></li>

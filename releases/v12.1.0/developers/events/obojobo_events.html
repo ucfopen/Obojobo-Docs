@@ -327,7 +327,23 @@
 		<li class="navListItem">
 			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/module.html">Module</a>
 		</li>
-		                          
+		    
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_assessment.html">NumericAssessment</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_choice.html">NumericAssessment > NumericChoice</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_answer.html">NumericAssessment > NumericChoice > NumericAnswer</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_feedback.html">NumericAssessment > NumericChoice > NumericFeedback</a>
+		</li>
+		                        
 		<li class="navListItem">
 			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/page.html">Page</a>
 		</li>
@@ -881,7 +897,7 @@ These events can be useful for research and data analysis. This document provide
 
 <dl>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 
 <h4 id="payload-12">Payload</h4>
@@ -897,6 +913,10 @@ These events can be useful for research and data analysis. This document provide
     <tr>
       <td>questionId</td>
       <td>The id of the corresponding Question</td>
+    </tr>
+    <tr>
+      <td>context</td>
+      <td>The context (string) when the explanation was shown</td>
     </tr>
     <tr>
       <td>actor</td>
@@ -950,6 +970,38 @@ These events can be useful for research and data analysis. This document provide
   </tbody>
 </table>
 
+<h3 id="questionrevealanswer">
+<a id="questionrevealanswer" class="anchor" href="#questionrevealanswer" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:revealAnswer</em>
+</h3>
+
+<p>Occurs when the user clicks the Reveal Answer button</p>
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+<h4 id="payload-14">Payload</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>questionId</td>
+      <td>The id of the corresponding Question</td>
+    </tr>
+    <tr>
+      <td>context</td>
+      <td>The context (string) when the user is checking their answer</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="questionsubmitresponse">
 <a id="questionsubmitresponse" class="anchor" href="#questionsubmitresponse" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>question:submitResponse</em>
 </h3>
@@ -961,7 +1013,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-14">Payload</h4>
+<h4 id="payload-15">Payload</h4>
 
 <table>
   <thead>
@@ -997,7 +1049,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="payload-15">Payload</h4>
+<h4 id="payload-16">Payload</h4>
 
 <table>
   <thead>
@@ -1026,10 +1078,10 @@ These events can be useful for research and data analysis. This document provide
 
 <dl>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 
-<h4 id="payload-16">Payload</h4>
+<h4 id="payload-17">Payload</h4>
 
 <table>
   <thead>
@@ -1045,11 +1097,15 @@ These events can be useful for research and data analysis. This document provide
     </tr>
     <tr>
       <td>targetId</td>
-      <td>The id of the OboNode item that was interacted with</td>
+      <td>The id of the OboNode item that was interacted with, if it exists. Otherwise <code class="highlighter-rouge">null</code>.</td>
     </tr>
     <tr>
       <td>response</td>
       <td>The state of the response of the question</td>
+    </tr>
+    <tr>
+      <td>sendResponseImmediately</td>
+      <td>If true then this event was sent as soon as the user created this response. If false then the event was sent sometime after the response was captured.</td>
     </tr>
     <tr>
       <td>context</td>
@@ -1077,7 +1133,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="payload-17">Payload</h4>
+<h4 id="payload-18">Payload</h4>
 
 <table>
   <thead>
@@ -1109,7 +1165,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="payload-18">Payload</h4>
+<h4 id="payload-19">Payload</h4>
 
 <table>
   <thead>
@@ -1144,7 +1200,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.1.0</dd>
 </dl>
 
-<h4 id="payload-19">Payload</h4>
+<h4 id="payload-20">Payload</h4>
 
 <table>
   <thead>
@@ -1176,7 +1232,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.3.0</dd>
 </dl>
 
-<h4 id="payload-20">Payload</h4>
+<h4 id="payload-21">Payload</h4>
 
 <table>
   <thead>
@@ -1220,7 +1276,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>2.2.0</dd>
 </dl>
 
-<h4 id="payload-21">Payload</h4>
+<h4 id="payload-22">Payload</h4>
 
 <table>
   <thead>
@@ -1333,7 +1389,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-22">Payload</h4>
+<h4 id="payload-23">Payload</h4>
 
 <table>
   <thead>
@@ -1364,7 +1420,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-23">Payload</h4>
+<h4 id="payload-24">Payload</h4>
 
 <table>
   <thead>
@@ -1396,7 +1452,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-24">Payload</h4>
+<h4 id="payload-25">Payload</h4>
 
 <table>
   <thead>
@@ -1428,7 +1484,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-25">Payload</h4>
+<h4 id="payload-26">Payload</h4>
 
 <table>
   <thead>
@@ -1460,7 +1516,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-26">Payload</h4>
+<h4 id="payload-27">Payload</h4>
 
 <table>
   <thead>
@@ -1492,7 +1548,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-27">Payload</h4>
+<h4 id="payload-28">Payload</h4>
 
 <p>None</p>
 
@@ -1507,7 +1563,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-28">Payload</h4>
+<h4 id="payload-29">Payload</h4>
 
 <p>None</p>
 
@@ -1522,7 +1578,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-29">Payload</h4>
+<h4 id="payload-30">Payload</h4>
 
 <p>None</p>
 
@@ -1537,7 +1593,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-30">Payload</h4>
+<h4 id="payload-31">Payload</h4>
 
 <p>None</p>
 
@@ -1563,7 +1619,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-31">Payload</h4>
+<h4 id="payload-32">Payload</h4>
 
 <table>
   <thead>
@@ -1591,7 +1647,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-32">Payload</h4>
+<h4 id="payload-33">Payload</h4>
 
 <table>
   <thead>
@@ -1624,7 +1680,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-33">Payload</h4>
+<h4 id="payload-34">Payload</h4>
 
 <table>
   <thead>
@@ -1664,7 +1720,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-34">Payload</h4>
+<h4 id="payload-35">Payload</h4>
 
 <table>
   <thead>
@@ -1707,7 +1763,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-35">Payload</h4>
+<h4 id="payload-36">Payload</h4>
 
 <table>
   <thead>
@@ -1735,7 +1791,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>2.1.0</dd>
 </dl>
 
-<h4 id="payload-36">Payload</h4>
+<h4 id="payload-37">Payload</h4>
 
 <table>
   <thead>
@@ -1808,7 +1864,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-37">Payload</h4>
+<h4 id="payload-38">Payload</h4>
 
 <table>
   <thead>
@@ -1847,7 +1903,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-38">Payload</h4>
+<h4 id="payload-39">Payload</h4>
 
 <table>
   <thead>
@@ -1891,7 +1947,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-39">Payload</h4>
+<h4 id="payload-40">Payload</h4>
 
 <table>
   <thead>
@@ -1935,7 +1991,7 @@ These events can be useful for research and data analysis. This document provide
 	<dd>1.0.0</dd>
 </dl>
 
-<h4 id="payload-40">Payload</h4>
+<h4 id="payload-41">Payload</h4>
 
 <table>
   <thead>
@@ -2118,6 +2174,7 @@ These events can be useful for research and data analysis. This document provide
 <li class="toc-entry toc-h3"><a href="#questionshowexplanation">question:showExplanation</a></li>
 <li class="toc-entry toc-h3"><a href="#questionhideexplanation">question:hideExplanation</a></li>
 <li class="toc-entry toc-h3"><a href="#questioncheckanswer">question:checkAnswer</a></li>
+<li class="toc-entry toc-h3"><a href="#questionrevealanswer">question:revealAnswer</a></li>
 <li class="toc-entry toc-h3"><a href="#questionsubmitresponse">question:submitResponse</a></li>
 <li class="toc-entry toc-h3"><a href="#questionretry">question:retry</a></li>
 <li class="toc-entry toc-h3"><a href="#questionsetresponse">question:setResponse</a></li>

@@ -327,7 +327,23 @@
 		<li class="navListItem">
 			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/module.html">Module</a>
 		</li>
-		                          
+		    
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_assessment.html">NumericAssessment</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_choice.html">NumericAssessment > NumericChoice</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_answer.html">NumericAssessment > NumericChoice > NumericAnswer</a>
+		</li>
+		  
+		<li class="navListItem">
+			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/numeric_feedback.html">NumericAssessment > NumericChoice > NumericFeedback</a>
+		</li>
+		                        
 		<li class="navListItem">
 			<a class="navItem" href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/page.html">Page</a>
 		</li>
@@ -457,6 +473,26 @@
       <td>Default: <code class="highlighter-rouge">pick-one</code>. Defines what type of multiple choice question this is. Possible values are enumerated below.</td>
     </tr>
     <tr>
+      <td>shuffle</td>
+      <td>no</td>
+      <td>Boolean</td>
+      <td>Default: <code class="highlighter-rouge">true</code>. If <code class="highlighter-rouge">false</code> then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="deprecated-properties">
+<a id="deprecated-properties" class="anchor" href="#deprecated-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deprecated Properties</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Property</td>
+      <td>Required</td>
+      <td>Type</td>
+      <td>Description</td>
+    </tr>
+    <tr>
       <td>correctLabels</td>
       <td>no</td>
       <td>String</td>
@@ -468,14 +504,12 @@
       <td>String</td>
       <td>Default: <code class="highlighter-rouge">Incorrect</code>. A <code class="highlighter-rouge">|</code> seperated list of labels to display when a non-assessment Question is answered incorrectly. One label will be selected at random. This value is ignored for survey questions.</td>
     </tr>
-    <tr>
-      <td>shuffle</td>
-      <td>no</td>
-      <td>Boolean</td>
-      <td>Default: <code class="highlighter-rouge">true</code>. If <code class="highlighter-rouge">false</code> then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.</td>
-    </tr>
   </tbody>
 </table>
+
+<blockquote>
+  <p>These properties in version 12.0.0 and earlier were defined on MCAssessment nodes, but now should be defined on <em><a href="/Obojobo-Docs/releases/v12.1.0/developers/obo_nodes/question.html">Question</a></em> nodes.</p>
+</blockquote>
 
 <h3 id="supported-values-for-responsetype">
 <a id="supported-values-for-responsetype" class="anchor" href="#supported-values-for-responsetype" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Values for ‘responseType’</h3>
@@ -589,7 +623,8 @@
 				</div>
 
 				<nav class="onPageNav"><ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#properties">Properties</a>
+<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
+<li class="toc-entry toc-h2"><a href="#deprecated-properties">Deprecated Properties</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#supported-values-for-responsetype">Supported Values for ‘responseType’</a></li>
 </ul>
