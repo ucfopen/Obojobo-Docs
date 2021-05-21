@@ -235,7 +235,7 @@ Occurs when the user or ViewerClient has hidden a question explanation.
 
 <dl>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 
 #### Payload
@@ -243,6 +243,7 @@ Occurs when the user or ViewerClient has hidden a question explanation.
 | Property | Description |
 |-
 | questionId | The id of the corresponding Question
+| context | The context (string) when the explanation was shown
 | actor | Either `'user'` or `'viewerClient'`
 
 ### _question:checkAnswer_
@@ -263,6 +264,22 @@ Occurs when the user is checking their answer to a graded question.
 | response | The state of the response of the question
 | scoreId | Internal id of the question score
 | score | The score value (0-100)
+
+### _question:revealAnswer_
+
+Occurs when the user clicks the Reveal Answer button
+
+<dl>
+	<dt>Version</dt>
+	<dd>1.0.0</dd>
+</dl>
+
+#### Payload
+
+| Property | Description |
+|-
+| questionId | The id of the corresponding Question
+| context | The context (string) when the user is checking their answer
 
 ### _question:submitResponse_
 
@@ -303,7 +320,7 @@ Occurs when the user has selected a response to a question.
 
 <dl>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 
 #### Payload
@@ -311,8 +328,9 @@ Occurs when the user has selected a response to a question.
 | Property | Description |
 |-
 | questionId | The id of the corresponding Question
-| targetId | The id of the OboNode item that was interacted with
+| targetId | The id of the OboNode item that was interacted with, if it exists. Otherwise `null`.
 | response | The state of the response of the question
+| sendResponseImmediately | If true then this event was sent as soon as the user created this response. If false then the event was sent sometime after the response was captured.
 | context |
 | assessmentId |
 | attemptId |
