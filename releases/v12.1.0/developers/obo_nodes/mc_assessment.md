@@ -13,9 +13,15 @@ This is the multiple choice portion of a question containing several answer choi
 | Property | Required | Type | Description |
 |-
 | responseType | no | String | Default: `pick-one`. Defines what type of multiple choice question this is. Possible values are enumerated below.
+| shuffle | no | Boolean | Default: `true`. If `false` then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.
+
+## Deprecated Properties
+
+| Property | Required | Type | Description |
 | correctLabels | no | String | Default: `Correct!|You got it!|Great job!|That's right!` for default questions, `Response recorded` for survey questions. A `|` seperated list of labels to display when a non-assessment Question is answered correctly. One label will be selected at random. In Assessment Review this value is ignored (`'Correct!'` is always displayed instead for default questions, and `'Response recorded'` is always displayed for survey questions).
 | incorrectLabels | no | String | Default: `Incorrect`. A `|` seperated list of labels to display when a non-assessment Question is answered incorrectly. One label will be selected at random. This value is ignored for survey questions.
-| shuffle | no | Boolean | Default: `true`. If `false` then the answer choices will be listed in document order. Otherwise answer choices will be shuffled.
+
+> These properties in version 12.0.0 and earlier were defined on MCAssessment nodes, but now should be defined on {{ 'Question' | obo_node }} nodes.
 
 ### Supported Values for 'responseType'
 
